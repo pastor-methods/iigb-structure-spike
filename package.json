@@ -10,7 +10,8 @@
     "bootstrap-sass": "3.3.6"
   },
   "scripts": {
-    "start": "node build && node server"
+    "start": "node server.js",
+    "postinstall": "node build.js"
   },
   "devDependencies": {
     "metalsmith": "^2.1.0",
