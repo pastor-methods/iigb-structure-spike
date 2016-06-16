@@ -20,6 +20,6 @@
   },
   "scripts": {
     "start": "node server.js",
-    "postinstall": "node build.js"
+
   }
 }
