@@ -1,81 +1,82 @@
+"use strict";
+
 var metalsmith  = require('metalsmith'),
     markdown    = require('metalsmith-markdown'),
     layouts     = require('metalsmith-layouts'),
     collections = require('metalsmith-collections'),
     permalinks  = require('metalsmith-permalinks'),
+    branch      = require('metalsmith-branch'),
     sass        = require('metalsmith-sass'),
     Handlebars  = require('handlebars'),
     fs          = require('fs'),
     path        = require('path'),
+    _           = require('lodash'),
     metalsmithExpress = require('metalsmith-express');
 
-
-// var makeLangFolder = function(files, metalsmith, done) {
-//
-//     meta = metalsmith.metadata();
-//     for (var file in files) {
-//         var type = files[file].type;
-//         if (type == "partial" || type == "code") {
-//             delete files[file];
-//         }
-//     }
-//     done();
-// };
-
-// var parseContentForSnippet = function (files, metalsmith, done) {
-//     var contents;
-//     var cleancontents;
-//     var snippet;
-//     var snippetclean;
-//
-//     Object.keys(files).forEach(function (file) {
-//         var type = files[file].type;
-//         contents = files[file].contents.toString();
-//         if (type == "partial") {
-//
-//             try {
-//                 cleancontents = contents.replace(/\[snippet\][\s\S]*?\[\/snippet\]/i, "");
-//
-//                 snippet = contents.match(/\[snippet\][\s\S]*?\[\/snippet\]/i);
-//
-//                 if (snippet) {
-//                     snippetclean = snippet[0];
-//
-//                     snippetclean = snippetclean.replace(/\[snippet\]/, "");
-//                     snippetclean = snippetclean.replace(/\[\/snippet\]/, "");
-//
-//                     const buffsnippet = new Buffer(snippetclean);
-//                     files[file].snippet = buffsnippet;
-//
-//                     const buffcontents = new Buffer(cleancontents);
-//                     files[file].contents = buffcontents;
-//
-//                 } else {
-//                     cleancontents = null;
-//                     contents = null;
-//                     snippet = null;
-//                     snippetclean = null;
-//                 }
-//             } catch(err) {
-//                 return err.message;
-//             }
-//         }
-//     });
-//     done();
-// };
+var languages = '\/us\/|\/de\/|\/zh\/';
 
 var makeLangFolder = function(files, metalsmith, done) {
-    
-    var re = '\/us\/';
     for (var file in files) {
-        if (file.match(re)) {
+        if (file.match(languages)) {
             var fileUrlTmp = file.split('/');
             var startLang = fileUrlTmp.splice(-2, 1);
             var fileUrl = fileUrlTmp.unshift(startLang);
-                fileUrl = fileUrlTmp.join('/');
+            fileUrl = fileUrlTmp.join('/');
             var data = files[file];
             delete files[file];
             files[fileUrl] = data;
+        }
+    }
+    done();
+};
+
+var makeIndex = function(files, metalsmith, done) {
+    var folders = [];
+    var filesWithLang = [];
+    for (var file in files) {
+        if (file.match(languages)) {
+            var folder = path.dirname(file);
+            files[file].pathLang = folder;
+            filesWithLang.push(files[file]);
+            folders.push(folder);
+        }
+    }
+
+    //find unique folder paths
+    folders = _.uniq(folders);
+
+    //concat the files in those paths
+    for (var i=0; i < folders.length; i++) {
+        var folderPath = folders[i];
+        var toIndex = '';
+        var templateIndexName = '';
+        var toToc = [];
+        for (var j=0; j < filesWithLang.length; j++) {
+            var fileWithLang = filesWithLang[j];
+            if (fileWithLang.pathLang == folderPath) {
+                if (fileWithLang.indexTemplate) {
+                    templateIndexName = fileWithLang.indexTemplate;
+                }
+                toIndex += fileWithLang.contents.toString();
+                toToc.push(fileWithLang.title);
+            }
+        }
+        files[folderPath + '/index.html'] = {
+            layout: templateIndexName,
+            contents: new Buffer(toIndex),
+            toc: toToc
+        };
+    }
+    done();
+
+};
+
+var deletePartialMarkdownFiles = function(files, metalsmith, done) {
+    var meta = metalsmith.metadata();
+    for (var file in files) {
+        var type = files[file].type;
+        if (type == "partial") {
+            delete files[file];
         }
     }
     done();
@@ -132,28 +133,21 @@ Handlebars.registerHelper('if_ne', function (a, b, opts) {
 });
 
 metalsmith(__dirname)
-    // .use(metalsmithExpress({
-    //     "liveReload": true,
-    //     "liveReloadPort": 35729,
-    //     "middleware": []
-    // }))
-    .use(makeLangFolder)
     .use(layouts({
         engine: 'handlebars'
     }))
-    .use(collections({
-        makeIndex: {
-            pattern: '*.md',
-            sortBy: 'order'
-        }
-    }))
     .use(markdown())
-    .use(sass({
-        "files": "assets/sass/*.scss",
-        "includePaths": "assets/sass",
-        "outputDir": "assets/css",
-        "outputStyle": "compressed"
+    .use(makeIndex)
+    .use(layouts({
+        engine: 'handlebars'
     }))
+    .use(makeLangFolder)
+    .use(sass({
+        file: "scss/*.scss",
+        outputDir: '/assets/css',
+        outputStyle: "compressed"
+    }))
+    .use(deletePartialMarkdownFiles)
     .destination('./build')
     .build(function (err) {
         if (err) console.log(err)

@@ -1,9 +1,7 @@
 ---
 title: Intro
-language: us
-layout: test.html
 type: partial
+indexTemplate: page.html
 order: 1
 ---
-
-Film
+Landing page

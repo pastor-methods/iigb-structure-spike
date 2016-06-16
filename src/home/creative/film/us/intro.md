@@ -1,7 +1,7 @@
 ---
 title: Intro
-layout: test.html
+type: partial
 order: 1
 ---
 
-Creative
+Film intro
