@@ -10,8 +10,7 @@ var metalsmith  = require('metalsmith'),
     Handlebars  = require('handlebars'),
     fs          = require('fs'),
     path        = require('path'),
-    _           = require('lodash'),
-    metalsmithExpress = require('metalsmith-express');
+    _           = require('lodash');
 
 var languages = '\/us\/|\/de\/|\/zh\/';
 
