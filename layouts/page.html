@@ -1,11 +1,22 @@
 {{> header}}
-
+{{> header-nav}}
+<div class="jumbotron">
+	<div class="container">
+		<h1>{{title}}</h1>
+		<p>{{message}}</p>
+		<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
+	</div>
+</div>
     <ul>
         {{#each toc}}
         <li>{{this}}</li>
         {{/each}}
     </ul>
-
+<div class="container">
+<div class="row">
+<div class="col-md-8">
     {{{contents}}}
-
+</div>
+</div>
+</div>
 {{> footer}}
