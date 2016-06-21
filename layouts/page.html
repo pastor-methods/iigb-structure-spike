@@ -10,7 +10,18 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-12">
-		    <ul>
+			<ul>
+				{{#each subSector}}
+				<li>{{this}}</li>
+				{{/each}}
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<ul>
 		        {{#each toc}}
 		        <li>{{this}}</li>
 		        {{/each}}
