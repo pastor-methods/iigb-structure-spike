@@ -12,12 +12,16 @@ var metalsmith  = require('metalsmith'),
     path        = require('path'),
     _           = require('lodash');
 
-var languages = '\/us\/|\/de\/|\/zh\/';
+var languages = '\/us\/|\/de\/|\/cn\/';
 
 var makeLangFolder = function(files, metalsmith, done) {
     for (var file in files) {
         if (file.match(languages)) {
             var fileUrlTmp = file.split('/');
+            //removes the folder 'home'
+            if (fileUrlTmp[0] === 'home') {
+                fileUrlTmp.shift();
+            }
             var startLang = fileUrlTmp.splice(-2, 1);
             var fileUrl = fileUrlTmp.unshift(startLang);
             fileUrl = fileUrlTmp.join('/');
@@ -47,14 +51,40 @@ var makeIndex = function(files, metalsmith, done) {
     //concat the files in those paths
     for (var i=0; i < folders.length; i++) {
         var folderPath = folders[i];
+        var sector = [];
+        var subSector = [];
+        var folderUrlTmp = folderPath.split('/');
+        var lang = folderUrlTmp[folderUrlTmp.length-1];
+        var filteredByLang = folders.filter(RegExp.prototype.test.bind(new RegExp(lang)));
         var toIndex = '';
         var templateIndexName = '';
         var toToc = [];
         for (var j=0; j < filesWithLang.length; j++) {
             var fileWithLang = filesWithLang[j];
             if (fileWithLang.pathLang == folderPath) {
+                //add a layout to the index file
                 if (fileWithLang.indexTemplate) {
                     templateIndexName = fileWithLang.indexTemplate;
+                }
+                //check for sector
+                if (folderUrlTmp.length === 2) {
+                    for (var f in filteredByLang) {
+                        var breakFolderName = filteredByLang[f].split('/');
+                        if (breakFolderName.length === 3) {
+                            sector.push(breakFolderName[1]);
+                        }
+                    }
+                    sector = _.uniq(sector);
+                }
+                //check for subsector
+                if (folderUrlTmp.length === 3) {
+                    for (var f in filteredByLang) {
+                        var breakFolderName = filteredByLang[f].split('/');
+                        if (breakFolderName.length === 4) {
+                            subSector.push(breakFolderName[2]);
+                        }
+                    }
+                    subSector = _.uniq(subSector);
                 }
                 toIndex += fileWithLang.contents.toString();
                 toToc.push(fileWithLang.title);
@@ -63,18 +93,14 @@ var makeIndex = function(files, metalsmith, done) {
         files[folderPath + '/index.html'] = {
             layout: templateIndexName,
             contents: new Buffer(toIndex),
+            sector: sector,
+            subSector: subSector,
             toc: toToc
         };
     }
-    done();
-
-};
-
-var deletePartialMarkdownFiles = function(files, metalsmith, done) {
-    var meta = metalsmith.metadata();
+    //delete partial files
     for (var file in files) {
-        var type = files[file].type;
-        if (type == "partial") {
+        if (path.basename(file) !== "index.html") {
             delete files[file];
         }
     }
@@ -147,10 +173,8 @@ metalsmith(__dirname)
         outputDir: '/assets/css',
         outputStyle: "compressed"
     }))
-    .use(deletePartialMarkdownFiles)
     .destination('./build')
     .build(function (err) {
         if (err) console.log(err)
     });
-
 
