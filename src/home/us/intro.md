@@ -1,6 +1,5 @@
 ---
 title: Intro
-type: partial
 indexTemplate: home.html
 ---
 <div class="jumbotron">
