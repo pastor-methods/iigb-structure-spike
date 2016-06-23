@@ -1,39 +1,50 @@
 {{> header}}
 {{> header-nav}}
 <div class="jumbotron">
-	<div class="container">
-		<h1>{{title}}</h1>
-		<p>{{message}}</p>
-		<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
-	</div>
+    <div class="container">
+        <h1>{{title}}</h1>
+        <p>{{message}}</p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
+        <p>video: {{fullVideo}}</p>
+    </div>
 </div>
 <div class="container">
-	<div class="row">
-		<div class="col-md-12">
-			<ul>
-				{{#each subSector}}
-				<li>{{this}}</li>
-				{{/each}}
-			</ul>
-		</div>
-	</div>
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Explore your <span class="ukti-lowercase">{{sector}}</span> sub sector</h2>
+            <div class="row">
+                <ul class="ukti-in-this-section">
+                    {{#each subSector}}
+                    <li>{{this}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+
+    </div>
 </div>
 <div class="container">
-	<div class="row">
-		<div class="col-md-12">
-			<ul>
-		        {{#each toc}}
-		        <li>{{this}}</li>
-		        {{/each}}
-		    </ul>
-		</div>
-	</div>
+    <div class="row">
+        <div class="col-md-8">
+            <h2>On this page</h2>
+            <div class="row">
+                <ul class="ukti-toc">
+                    {{#each toc}}
+                    <li>{{this}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <h2>Resources</h2>
+        </div>
+    </div>
 </div>
 <div class="container">
-<div class="row">
-<div class="col-md-8">
-    {{{contents}}}
-</div>
-</div>
+    <div class="row">
+        <div class="col-md-8">
+            {{{contents}}}
+        </div>
+    </div>
 </div>
 {{> footer}}

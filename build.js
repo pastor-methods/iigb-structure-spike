@@ -1,20 +1,20 @@
 "use strict";
 
-var metalsmith  = require('metalsmith'),
-    markdown    = require('metalsmith-markdown'),
-    layouts     = require('metalsmith-layouts'),
+var metalsmith = require('metalsmith'),
+    markdown = require('metalsmith-markdown'),
+    layouts = require('metalsmith-layouts'),
     collections = require('metalsmith-collections'),
-    permalinks  = require('metalsmith-permalinks'),
-    branch      = require('metalsmith-branch'),
-    sass        = require('metalsmith-sass'),
-    Handlebars  = require('handlebars'),
-    fs          = require('fs'),
-    path        = require('path'),
-    _           = require('lodash');
+    permalinks = require('metalsmith-permalinks'),
+    branch = require('metalsmith-branch'),
+    sass = require('metalsmith-sass'),
+    Handlebars = require('handlebars'),
+    fs = require('fs'),
+    path = require('path'),
+    _ = require('lodash');
 
 var languages = '\/us\/|\/de\/|\/cn\/';
 
-var makeLangFolder = function(files, metalsmith, done) {
+var makeLangFolder = function (files, metalsmith, done) {
     for (var file in files) {
         if (file.match(languages)) {
             var fileUrlTmp = file.split('/');
@@ -33,57 +33,136 @@ var makeLangFolder = function(files, metalsmith, done) {
     done();
 };
 
-var makeIndex = function(files, metalsmith, done) {
+var makeIndex = function (files, metalsmith, done) {
     var folders = [];
-    var filesWithLang = [];
+    var filesWithLang = {};
+    var section = {};
+    var sector = {};
+    var subSector = {};
+    var cn = {};
+    section.cn = {name: '', image: '', thumbnail: '', heroVideo: '', fullVideo: '', heroImage: ''};
+    sector.cn = {name: '', image: '', thumbnail: '', heroVideo: '', fullVideo: '', heroImage: ''};
+    subSector.cn = {name: '', image: '', thumbnail: '', heroVideo: '', fullVideo: '', heroImage: ''};
+    var de = {};
+    section.de = {name: '', image: '', thumbnail: '', heroVideo: '', fullVideo: '', heroImage: ''};
+    sector.de = {name: '', image: '', thumbnail: '', heroVideo: '', fullVideo: '', heroImage: ''};
+    subSector.de = {name: '', image: '', thumbnail: '', heroVideo: '', fullVideo: '', heroImage: ''};
+    var us = {};
+    section.us = {name: '', image: '', thumbnail: '', heroVideo: '', fullVideo: '', heroImage: ''};
+    sector.us = {name: '', image: '', thumbnail: '', heroVideo: '', fullVideo: '', heroImage: ''};
+    subSector.us = {name: '', image: '', thumbnail: '', heroVideo: '', fullVideo: '', heroImage: ''};
     for (var file in files) {
         if (file.match(languages)) {
-            var folder = path.dirname(file);
-            files[file].pathLang = folder;
-            filesWithLang.push(files[file]);
-            folders.push(folder);
+            var folderPath = path.dirname(file);
+            folders.push(folderPath);
+            files[file].pathLang = folderPath;
+            var filePath = files[file].pathLang.split('/');
+            var lang = filePath[filePath.length - 1];
+            var filePathLength = files[file].pathLang.split('/').length;
+            if (filePathLength === 3) {
+                console.log(files[file])
+                var x = files[file].pathLang.split('/');
+                if (!section[lang].name) {
+                    section[lang].name = x[1];
+                }
+                if (!section[lang].image) {
+                    section[lang].image = files[file].image;
+                }
+                if (!section[lang].thumbnail) {
+                    section[lang].thumbnail = files[file].thumbnail;
+                }
+                if (!section[lang].heroVideo) {
+                    section[lang].heroVideo = files[file].heroVideo;
+                }
+                if (!section[lang].fullVideo) {
+                    section[lang].fullVideo = files[file].fullVideo;
+                }
+                if (section[lang].heroImage) {
+                    section[lang].heroImage = files[file].heroImage;
+                }
+            }
+            console.log(section.de)
+            if (filePathLength === 4) {
+                sector[lang].files.push(files[file]);
+            }
+            if (filePathLength === 5) {
+                subSector[lang].files.push(files[file]);
+            }
         }
     }
 
-    //find unique folder paths
-    folders = _.uniq(folders);
 
-    //concat the files in those paths
-    for (var i=0; i < folders.length; i++) {
+    // concat the files in those paths
+    for (var i = 0; i < folders.length; i++) {
         var folderPath = folders[i];
-        var sector = [];
-        var subSector = [];
+        // var section = {};
+        // var sector = {};
+        // var subSector = {};
         var folderUrlTmp = folderPath.split('/');
-        var lang = folderUrlTmp[folderUrlTmp.length-1];
+        var lang = folderUrlTmp[folderUrlTmp.length - 1];
         var filteredByLang = folders.filter(RegExp.prototype.test.bind(new RegExp(lang)));
+        // console.log(filteredByLang)
         var toIndex = '';
         var templateIndexName = '';
+        var thumbnailPath = '';
+        var heroVideoPath = '';
+        var heroImagePath = '';
+        var fullVideoPath = '';
         var toToc = [];
-        for (var j=0; j < filesWithLang.length; j++) {
+        for (var j = 0; j < filesWithLang.length; j++) {
             var fileWithLang = filesWithLang[j];
             if (fileWithLang.pathLang == folderPath) {
                 //add a layout to the index file
                 if (fileWithLang.indexTemplate) {
                     templateIndexName = fileWithLang.indexTemplate;
                 }
-                //check for sector
+                //add a thumbnail path to the index file
+                if (fileWithLang.thumbnail) {
+                    thumbnailPath = fileWithLang.thumbnail;
+                }
+                //add a hero video path to the index file
+                if (fileWithLang.heroVideo) {
+                    heroVideoPath = fileWithLang.heroVideo;
+                }
+                //add a hero image path to the index file
+                if (fileWithLang.heroImage) {
+                    heroImagePath = fileWithLang.heroImage;
+                }
+                //add a full video path to the index file
+                if (fileWithLang.fullVideo) {
+                    fullVideoPath = fileWithLang.fullVideo;
+                }
+                //check for main sections
                 if (folderUrlTmp.length === 2) {
                     for (var f in filteredByLang) {
                         var breakFolderName = filteredByLang[f].split('/');
                         if (breakFolderName.length === 3) {
-                            sector.push(breakFolderName[1]);
+                            section = {title: breakFolderName[1]};
+                            // console.log(fileWithLang)
                         }
                     }
-                    sector = _.uniq(sector);
+                    section = _.uniq(section);
                 }
-                //check for subsector
+                //check for sectors
                 if (folderUrlTmp.length === 3) {
                     for (var f in filteredByLang) {
                         var breakFolderName = filteredByLang[f].split('/');
                         if (breakFolderName.length === 4) {
-                            subSector.push(breakFolderName[2]);
+                            sector.push(breakFolderName[2]);
                         }
                     }
+                    sector = _.uniq(sector);
+                }
+                //check for subsectors
+                if (folderUrlTmp.length === 4) {
+                    for (var f in filteredByLang) {
+                        var breakFolderName = filteredByLang[f].split('/');
+                        if (breakFolderName.length === 5) {
+                            sector.push(breakFolderName[2]);
+                            subSector.push(breakFolderName[3]);
+                        }
+                    }
+                    sector = _.uniq(sector);
                     subSector = _.uniq(subSector);
                 }
                 toIndex += fileWithLang.contents.toString();
@@ -92,7 +171,12 @@ var makeIndex = function(files, metalsmith, done) {
         }
         files[folderPath + '/index.html'] = {
             layout: templateIndexName,
+            thumbnail: thumbnailPath,
+            heroVideo: heroVideoPath,
+            heroImage: heroImagePath,
+            fullVideo: fullVideoPath,
             contents: new Buffer(toIndex),
+            section: section,
             sector: sector,
             subSector: subSector,
             toc: toToc
@@ -118,6 +202,16 @@ Handlebars.registerHelper('slug', function (content) {
     var removeChars = spacesToDashes.replace(/[^a-zA-Z0-9\- ]/g, "");
     return removeChars;
 });
+
+// helper to lower case
+Handlebars.registerHelper('lower', function (content) {
+    if (content && typeof content === 'string') {
+        return content.toLowerCase();
+    } else {
+        return content.toString().toLowerCase();
+    }
+});
+
 
 // helper to update date, format: 10 Mar 2014
 Handlebars.registerHelper('date', function () {
@@ -149,16 +243,8 @@ Handlebars.registerHelper('if_eq', function (a, b, opts) {
         return opts.inverse(this);
 });
 
-// if not equals helpers
-Handlebars.registerHelper('if_ne', function (a, b, opts) {
-    if (a != b) {
-        return opts.fn(this);
-    } else {
-        return opts.inverse(this);
-    }
-});
-
 metalsmith(__dirname)
+// .use(makeIndex)
     .use(layouts({
         engine: 'handlebars'
     }))
@@ -177,4 +263,13 @@ metalsmith(__dirname)
     .build(function (err) {
         if (err) console.log(err)
     });
+
+// if not equals helpers
+Handlebars.registerHelper('if_ne', function (a, b, opts) {
+    if (a != b) {
+        return opts.fn(this);
+    } else {
+        return opts.inverse(this);
+    }
+});
 
