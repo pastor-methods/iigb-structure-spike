@@ -56,6 +56,7 @@ var makeIndex = function (files, metalsmith, done) {
         var heroVideoPath = '';
         var heroImagePath = '';
         var fullVideoPath = '';
+        var pageTitle = '';
         var intro = '';
         var toToc = [];
         for (var j = 0; j < filesWithLang.length; j++) {
@@ -87,6 +88,10 @@ var makeIndex = function (files, metalsmith, done) {
                 if (fileWithLang.fullVideo) {
                     fullVideoPath = fileWithLang.fullVideo;
                 }
+                //add a title to the index file
+                if (fileWithLang.pageTitle) {
+                    pageTitle = fileWithLang.pageTitle;
+                }
                 //add an intro text to the index file
                 if (fileWithLang.intro) {
                     intro = fileWithLang.intro;
@@ -101,6 +106,7 @@ var makeIndex = function (files, metalsmith, done) {
             heroVideo: heroVideoPath,
             heroImage: heroImagePath,
             fullVideo: fullVideoPath,
+            pageTitle: pageTitle,
             intro: intro,
             folder: folderName,
             contents: new Buffer(toIndex),
@@ -226,11 +232,11 @@ metalsmith(__dirname)
         engine: 'handlebars'
     }))
     .use(makeLangFolder)
-    // .use(sass({
-    //     file: "scss/main.scss",
-    //     outputDir: '/assets/css',
-    //     outputStyle: "compressed"
-    // }))
+    .use(sass({
+        file: "scss/main.scss",
+        outputDir: '/assets/css',
+        outputStyle: "compressed"
+    }))
     .destination('./build')
     .build(function (err) {
         if (err) console.log(err)
