@@ -3,9 +3,6 @@
 var metalsmith = require('metalsmith'),
     markdown = require('metalsmith-markdown'),
     layouts = require('metalsmith-layouts'),
-    collections = require('metalsmith-collections'),
-    permalinks = require('metalsmith-permalinks'),
-    branch = require('metalsmith-branch'),
     sass = require('metalsmith-sass'),
     Handlebars = require('handlebars'),
     fs = require('fs'),
@@ -125,10 +122,12 @@ var makeIndex = function (files, metalsmith, done) {
             }
         };
     }
-    //delete partial files
+    // delete partial files
     for (var file in files) {
-        if (path.basename(file) !== "index.html") {
-            delete files[file];
+        if (path.extname(file) === ".html") {
+            if (path.basename(file) !== "index.html") {
+                delete files[file];
+            }
         }
     }
 
@@ -227,11 +226,11 @@ metalsmith(__dirname)
         engine: 'handlebars'
     }))
     .use(makeLangFolder)
-    .use(sass({
-        file: "scss/*.scss",
-        outputDir: '/assets/css',
-        outputStyle: "compressed"
-    }))
+    // .use(sass({
+    //     file: "scss/main.scss",
+    //     outputDir: '/assets/css',
+    //     outputStyle: "compressed"
+    // }))
     .destination('./build')
     .build(function (err) {
         if (err) console.log(err)
