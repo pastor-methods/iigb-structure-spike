@@ -1,34 +1,64 @@
 {{> header}}
 {{> header-nav}}
 <style>
+    body {
+        background-color: #F3F3F3;
+        font-size: 16px;
+    }
+
     .container {
-        background-image: #ffffff url('../assets/img/creative.jpeg') no-repeat center center;
+        background-color: #FFFFFF;
+    }
+
+    .ukti-img-responsive {
+        width: 100%;
+        height: auto;
+        float: left
+    }
+
+    .ukti-toc {
+        background-color: #E3E3E3;
+    }
+
+    .ukti-resources {
+        background-color: #F2F2F2;
+        border: 3px solid #797979;
+        border-radius: 10px;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
 </style>
-<div class="jumbotron">
-    <div class="container">
-        <h1>{{title}}</h1>
-        <p>{{message}}</p>
+<!--<div class="jumbotron">-->
+<div class="container">
+    <img src="../assets/img/creative.jpg" alt="" class="ukti-img-responsive">
+    <div style="background-color: #fff; position: absolute; top: 70%; left: 12%; padding: 20px">
+        <h1>{{pageTitle}}</h1>
+        <p>{{intro}}</p>
         <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
-        <p>video: {{fullVideo}}</p>
     </div>
+    <p>video: {{fullVideo}}</p>
 </div>
+<!--</div>-->
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h2>Explore your <span class="ukti-lowercase">{{folder}}</span> sub sector</h2>
+            <h2>Explore your {{folder}} sub sector</h2>
             <div class="row">
-                <ul class="ukti-in-this-section">
-                    {{#each subLevel}}
-                    <li>{{this.name}} thumbnail: {{this.thumbnail}}</li>
-                    {{/each}}
-                </ul>
+                {{#each subLevel}}
+                <article class="col-md-4">
+                    <img src="../assets/img/{{this.thumbnail}}" class="ukti-img-responsive">
+                    <h4 class="js-equal-height">
+                        <a class="" href="">{{this.name}}</a>
+                    </h4>
+                    <p>{{intro}}</p>
+                </article>
+                {{/each}}
             </div>
         </div>
 
     </div>
 </div>
-<div class="container">
+<div class="container ukti-toc">
     <div class="row">
         <div class="col-md-8">
             <h2>On this page</h2>
@@ -41,12 +71,16 @@
             </div>
         </div>
         <div class="col-md-4">
-            <h2>Resources</h2>
-            <p>Getting a visa</p>
-            <p>Setting up a bank account</p>
-            <p>Business registration</p>
-            <p>Finding premises</p>
-            <p>Creative hubs outside London</p>
+            <div class="row">
+                <div class="col-md-11 ukti-resources">
+                    <h2>Resources</h2>
+                    <p>Getting a visa</p>
+                    <p>Setting up a bank account</p>
+                    <p>Business registration</p>
+                    <p>Finding premises</p>
+                    <p>Creative hubs outside London</p>
+                </div>
+            </div>
         </div>
     </div>
 </div>
