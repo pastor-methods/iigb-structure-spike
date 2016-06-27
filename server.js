@@ -5,7 +5,7 @@ var 	express		= require('express'),
 
 //some basic redirect routes
 app.get('/', function(req, res) {
-  res.redirect('us/home/');
+  res.redirect('us/');
 });
 
 app.set('case sensitive routing', false);
