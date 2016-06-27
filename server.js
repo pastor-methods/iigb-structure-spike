@@ -8,6 +8,7 @@ app.get('/', function(req, res) {
   res.redirect('us/home/');
 });
 
+app.set('case sensitive routing', false);
 
 app.use(express.static(__dirname + '/build'));
 
