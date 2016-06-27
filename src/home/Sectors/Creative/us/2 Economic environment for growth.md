@@ -5,7 +5,7 @@ layout: content.html
 
 The economic picture for Foreign Direct Investment (FDI) is one of stability and long term growth.  The UK’s creative industries grew by 8.9% in 2014 - almost double the UK economy as a whole (source: DCMS).
 
-Britain is a gateway to the export markets of Europe and the world.  Its creative sector is particularly export-focused.
+Britain is a gateway to the export markets of Europe and the world.  Its creative sector is particularly export-focused. 
 
 The sector:
 *	exported £19.8 billion of creative services in 2014, 9% of all UK service exports (source: DCMS)
