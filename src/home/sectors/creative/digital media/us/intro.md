@@ -1,6 +1,6 @@
 ---
 title: Intro
-order: 1
+thumbnail: y
 ---
 
 Digital media intro

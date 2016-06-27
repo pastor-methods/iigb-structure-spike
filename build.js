@@ -218,7 +218,6 @@ Handlebars.registerHelper('if_ne', function (a, b, opts) {
 });
 
 metalsmith(__dirname)
-// .use(makeIndex)
     .use(layouts({
         engine: 'handlebars'
     }))
