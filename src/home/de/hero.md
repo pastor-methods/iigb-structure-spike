@@ -1,5 +1,5 @@
 ---
 title: Intro
-indexTemplate: page.html
+indexTemplate: home-de.html
 ---
-# Home page for German market
+# Homepage für deutschen Markt

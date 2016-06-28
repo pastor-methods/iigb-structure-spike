@@ -5,7 +5,7 @@ thumbnail: thumbnailPath
 heroVideo: heroVideoPath
 heroImage: heroImagePath
 fullVideo: fullVideoPath
-indexTemplate: page.html
+indexTemplate: page-us.html
 intro: The message goes here, no idea how long it will be but this example copy is 18 words.
 pageTitle: Create in Great Britain
 layout: content.html
