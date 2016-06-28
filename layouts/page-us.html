@@ -13,7 +13,13 @@
     .ukti-img-responsive {
         width: 100%;
         height: auto;
-        float: left
+        float: left;
+    }
+
+    .ukti-img-thumbnail {
+        width: auto;
+        height: 240px;
+        float: left;
     }
 
     .ukti-toc {
@@ -27,11 +33,25 @@
         margin-top: 20px;
         margin-bottom: 20px;
     }
+
+    .ukti-imageholder{
+        position: relative;
+    }
+
+    .ukti-caption{
+        position: absolute;
+        bottom: 80px;
+        left: 40px;
+        right: 40px;
+        background: rgba(255,255,255,0.95);
+        color: #000;
+        padding: 10px 20px;
+    }
 </style>
 <!--<div class="jumbotron">-->
-<div class="container">
-    <img src="../assets/img/creative.jpg" alt="" class="ukti-img-responsive margin-bottom--1">
-    <div style="background-color: #fff; position: absolute; top: 30%; left: 12%; padding: 20px">
+<div class="container ukti-imageholder">
+    <img src="http://ukti-iigb-alpha-staging.herokuapp.com/assets/img/creative.jpg" alt="" class="ukti-img-responsive margin-bottom--1">
+    <div class="ukti-caption">
         <h1>{{pageTitle}}</h1>
         <p>{{intro}}</p>
         <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
@@ -46,9 +66,9 @@
             <div class="row">
                 {{#each subLevel}}
                 <article class="col-md-4">
-                    <img src="../assets/img/{{this.thumbnail}}" class="ukti-img-responsive">
+                    <img src="http://ukti-iigb-alpha-staging.herokuapp.com/assets/img/{{this.thumbnail}}" class="ukti-img-thumbnail">
                     <h4 class="js-equal-height">
-                        <a class="" href="">{{this.name}}</a>
+                        <a class="text-sentence" href="">{{this.name}}</a>
                     </h4>
                     <p>{{intro}}</p>
                 </article>
@@ -65,7 +85,7 @@
             <div class="row">
                 <ol class="ukti-toc">
                     {{#each toc}}
-                    <li>{{this}}</li>
+                    <li><a href="#{{slug this}}">{{this}}</a></li>
                     {{/each}}
                 </ol>
             </div>

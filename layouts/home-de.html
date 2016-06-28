@@ -1,0 +1,71 @@
+{{> header}}
+{{> header-nav}}
+
+<style>
+    .navbar {
+        border: 0 solid #F2F2F2;
+    }
+
+    #nav.affix {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index:10;
+    }
+
+    #nav.affix-top {
+        position: static;
+    }
+
+</style>
+
+<div class="jumbotron">
+    <div class="container">
+        <h1>Investieren Sie in Großbritannien</h1>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Mehr erfahren »</a></p>
+    </div>
+</div>
+
+<nav id="nav" class="">
+    <div class="navbar navbar-default navbar-static">
+        <div class="container" style="background-color: #F2F2F2;">
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    {{#each subLevel}}
+                    <li><a href="#{{slug this.name}}" class="">{{this.name}}</a></li>
+                    {{/each}}
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </div>
+    <!-- /.navbar -->
+</nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            {{{contents}}}
+        </div>
+    </div>
+</div>
+
+
+<script>
+    $(document).ready(function() {
+        $('#nav').affix({
+            offset: {
+                top: $('.jumbotron').outerHeight(true) + $('#nav-default').outerHeight(true)
+            }
+        });
+        $('#nav').on('affix.bs.affix', function () {
+            var navHeight = $('.navbar').outerHeight(true);
+            $('#nav + .container').css('margin-top', navHeight);
+        });
+        $('#nav').on('affix-top.bs.affix', function () {
+            $('#nav + .container').css('margin-top', 0);
+        });
+    });
+</script>
+
+{{> footer}}
