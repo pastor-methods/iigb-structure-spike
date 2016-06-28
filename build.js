@@ -234,7 +234,7 @@ metalsmith(__dirname)
     .use(makeLangFolder)
     .use(sass({
         file: "scss/main.scss",
-        outputDir: '/assets/css',
+        outputDir: './assets/css',
         outputStyle: "compressed"
     }))
     .destination('./build')
