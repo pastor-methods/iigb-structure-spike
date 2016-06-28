@@ -223,10 +223,10 @@ Handlebars.registerHelper('if_ne', function (a, b, opts) {
 });
 
 metalsmith(__dirname)
+    .use(markdown())
     .use(layouts({
         engine: 'handlebars'
     }))
-    .use(markdown())
     .use(makeIndex)
     .use(layouts({
         engine: 'handlebars'
