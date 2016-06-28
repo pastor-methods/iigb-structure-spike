@@ -1,5 +1,8 @@
-.text-sentence:first-letter {
-  text-transform: uppercase;
+.text-sentence {
+  display: inline-block;
+  &:first-letter {
+    text-transform: uppercase;
+  }
 }
 
 .text-capitalise {
