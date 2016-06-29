@@ -52,6 +52,7 @@ var makeIndex = function (files, metalsmith, done) {
         var folderName;
         var toIndex = '';
         var templateIndexName = '';
+        var imagePath = '';
         var thumbnailPath = '';
         var heroVideoPath = '';
         var heroImagePath = '';
@@ -71,6 +72,10 @@ var makeIndex = function (files, metalsmith, done) {
                 //add a layout to the index file
                 if (fileWithLang.indexTemplate) {
                     templateIndexName = fileWithLang.indexTemplate;
+                }
+                //add an image path to the index file
+                if (fileWithLang.image) {
+                    imagePath = fileWithLang.image;
                 }
                 //add a thumbnail path to the index file
                 if (fileWithLang.thumbnail) {
@@ -102,6 +107,7 @@ var makeIndex = function (files, metalsmith, done) {
         }
         files[folderPath + '/index.html'] = {
             layout: templateIndexName,
+            image: imagePath,
             thumbnail: thumbnailPath,
             heroVideo: heroVideoPath,
             heroImage: heroImagePath,
@@ -143,12 +149,13 @@ var makeIndex = function (files, metalsmith, done) {
             //divide files by lang
             if (file.match(langArray[l])) {
                 var fileLength = path.dirname(file).split('/').length;
+                var levelMatch = path.dirname(file).replace(langArray[l],"");
                 var subLevel = [];
                 for (var obj in levels) {
                     var levelsPath = levels[obj].path;
                     if (levelsPath.match(langArray[l])) {
                         var levelLength = levelsPath.split('/').length;
-                        if (fileLength + 1 === levelLength) {
+                        if (fileLength + 1 === levelLength && levelsPath.match(levelMatch)) {
                             subLevel.push(levels[obj].data);
                         }
                     }
