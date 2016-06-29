@@ -5,7 +5,7 @@ thumbnail: thumbnailPath
 heroVideo: heroVideoPath
 heroImage: heroImagePath
 fullVideo: fullVideoPath
-indexTemplate: page-us.html
+indexTemplate: sector-page-us.html
 intro: The message goes here, no idea how long it will be but this example copy is 18 words.
 pageTitle: Financial technology in Great Britain
 layout: content.html

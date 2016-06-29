@@ -50,38 +50,20 @@
 </style>
 <!--<div class="jumbotron">-->
 <div class="container ukti-imageholder">
-    <img src="http://ukti-iigb-alpha-staging.herokuapp.com/assets/img/creative.jpg" alt="" class="ukti-img-responsive margin-bottom--1">
+    <img src="http://ukti-iigb-alpha-staging.herokuapp.com/assets/img/{{image}}" alt="" class="ukti-img-responsive margin-bottom--1">
     <div class="ukti-caption">
         <h1>{{pageTitle}}</h1>
         <p>{{intro}}</p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">了解更多 »</a></p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
     </div>
-    <p>视频：{{fullVideo}}</p>
+    <p>video: {{fullVideo}}</p>
 </div>
 <!--</div>-->
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <h2>探索你 {{folder}} 子行业</h2>
-            <div class="row">
-                {{#each subLevel}}
-                <article class="col-md-4">
-                    <img src="http://ukti-iigb-alpha-staging.herokuapp.com/assets/img/{{this.thumbnail}}" class="ukti-img-thumbnail">
-                    <h4 class="js-equal-height">
-                        <a class="text-sentence" href="">{{this.name}}</a>
-                    </h4>
-                    <p>{{intro}}</p>
-                </article>
-                {{/each}}
-            </div>
-        </div>
 
-    </div>
-</div>
 <div class="container ukti-toc">
     <div class="row">
         <div class="col-md-8">
-            <h2>在这个页面</h2>
+            <h2>On this page</h2>
             <div class="row">
                 <ol class="ukti-toc">
                     {{#each toc}}
@@ -93,12 +75,12 @@
         <div class="col-md-4">
             <div class="row">
                 <div class="col-md-11 ukti-resources">
-                    <h2>资源</h2>
-                    <p>获得签证</p>
-                    <p>建立一个银行账户</p>
-                    <p>商业注册</p>
-                    <p>查找房产</p>
-                    <p>伦敦以外创意中心</p>
+                    <h2>Resources</h2>
+                    <p>Getting a visa</p>
+                    <p>Setting up a bank account</p>
+                    <p>Business registration</p>
+                    <p>Finding premises</p>
+                    <p>Creative hubs outside London</p>
                 </div>
             </div>
         </div>
