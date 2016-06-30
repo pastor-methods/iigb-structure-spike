@@ -1,8 +1,17 @@
-$col: 2px;
-$baseline: 8px;
-
+//utilities
+@import "utilities/golbal-vars";
 @import "utilities/margins";
 @import "utilities/padding";
 @import "utilities/text-transform";
 
-@import "components/table-of-contents";
+
+//atoms
+@import "atoms/headings";
+@import "atoms/paragraphs";
+
+
+//molecules
+
+
+
+//organisms
