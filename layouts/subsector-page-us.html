@@ -1,14 +1,13 @@
 {{> header}}
-{{> header-nav}}
 <style>
     body {
         background-color: #F3F3F3;
         font-size: 16px;
     }
 
-    .container {
-        background-color: #FFFFFF;
-    }
+    /*.container {*/
+        /*background-color: #FFFFFF;*/
+    /*}*/
 
     .ukti-img-responsive {
         width: 100%;
@@ -34,31 +33,39 @@
         margin-bottom: 20px;
     }
 
-    .ukti-imageholder{
+    .ukti-imageholder {
         position: relative;
     }
 
-    .ukti-caption{
-        position: absolute;
-        bottom: 80px;
-        left: 40px;
-        right: 40px;
-        background: rgba(255,255,255,0.95);
+    .ukti-caption {
+        /*position: absolute;*/
+        /*bottom: 80px;*/
+        /*left: 40px;*/
+        /*right: 40px;*/
+        background: rgba(255, 255, 255, 0.95);
         color: #000;
         padding: 10px 20px;
     }
+    .jumbotron {
+        background-image: url("http://ukti-iigb-alpha-staging.herokuapp.com/assets/img/{{image}}");
+        background-size: cover;
+    }
 </style>
-<!--<div class="jumbotron">-->
-<div class="container ukti-imageholder">
-    <img src="http://ukti-iigb-alpha-staging.herokuapp.com/assets/img/{{image}}" alt="" class="ukti-img-responsive margin-bottom--1">
-    <div class="ukti-caption">
-        <h1>{{pageTitle}}</h1>
-        <p>{{intro}}</p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
+<div class="jumbotron ukti-imageholder">
+    <div class="container ">
+        <!--<img src="http://ukti-iigb-alpha-staging.herokuapp.com/assets/img/{{image}}" alt=""-->
+             <!--class="ukti-img-responsive margin-bottom&#45;&#45;1">-->
+        {{> header-nav}}
+        <div style="background-color: rgba(255,255,255,0);height: 200px;">
+            <!-- -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"-->
+        </div>
+        <div class="ukti-caption">
+            <h1>{{pageTitle}}</h1>
+            <p>{{intro}}</p>
+            <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
+        </div>
     </div>
-    <p>video: {{fullVideo}}</p>
 </div>
-<!--</div>-->
 <div class="container ukti-toc">
     <div class="row">
         <div class="col-md-8">
