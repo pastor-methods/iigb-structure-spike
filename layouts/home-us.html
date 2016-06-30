@@ -33,45 +33,7 @@
     </div>
 </div>
 
-<nav id="nav" class="">
-    <div class="navbar navbar-default navbar-static">
-        <div class="container" style="background-color: #F2F2F2;">
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    {{#each subLevel}}
-                    {{#if_ne this.name 'search'}}
-                    <li><a href="#{{slug this.name}}" class="">{{this.name}}</a></li>
-                    {{/if_ne}}
-                    {{/each}}
-                </ul>
-            </div>
-            <!--/.nav-collapse -->
-        </div>
-    </div>
-    <!-- /.navbar -->
-</nav>
+
 
 {{{contents}}}
-
-<script>
-    $(document).ready(function () {
-        $('#nav').affix({
-            offset: {
-                top: $('.jumbotron').outerHeight(true) + $('#nav-default').outerHeight(true)
-            }
-        });
-        $('#nav').on('affix.bs.affix', function () {
-            var navHeight = $('.navbar').outerHeight(true);
-            $('#nav + .container').css('margin-top', navHeight);
-        });
-        $('#nav').on('affix-top.bs.affix', function () {
-            $('#nav + .container').css('margin-top', 0);
-        });
-
-
-    });
-
-
-</script>
-
 {{> footer}}
