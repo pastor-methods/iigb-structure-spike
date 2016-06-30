@@ -2,27 +2,34 @@
 {{> header-nav}}
 
 <style>
-    .navbar {
-        border: 0 solid #F2F2F2;
-    }
+    
 
-    #nav.affix {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 10;
-    }
 
-    #nav.affix-top {
-        position: static;
-    }
 
 </style>
 
 <div class="jumbotron">
     <div class="container">
         <h1>Invest in Great Britain</h1>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
+        <p>The message goes here, no idea how long it will be but this example copy is 18 words. <br> <a href="#" class=" bg-video-inactive bg-video-play" data-toggle="modal" data-target="#heroVideo">Watch video</a></p>
+
+        <div class="modal fade" id="heroVideo" role="dialog">
+            <div class="modal-dialog video-wrapper">
+            
+                <!-- Modal content-->
+                <!-- <div class=""> -->
+                    <!-- <div class="modal-body"> -->
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/yoHrRcKIBKw" frameborder="0" allowfullscreen></iframe>
+                    <!-- </div> -->
+                <!-- </div> -->
+              
+            </div>
+        </div>
+
+        <video autoplay loop poster="../assets/img/northern-powerhouse.jpg" id="bgVid">
+            <source src="../assets/vid/northern-powerhouse.mp4" type="video/mp4">
+        </video>
+
     </div>
 </div>
 
@@ -60,7 +67,11 @@
         $('#nav').on('affix-top.bs.affix', function () {
             $('#nav + .container').css('margin-top', 0);
         });
+
+
     });
+
+
 </script>
 
 {{> footer}}

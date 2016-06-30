@@ -12,6 +12,23 @@
 </head>
 <style type="text/css">
 
+	.jumbotron {
+        position: relative;
+        overflow: hidden;
+        background: transparent;
+        height: 700px;
+        padding-top: 200px;
+        background: #1E1348;
+    }
+
+    .bg--transparent {
+        background: transparent;
+    }
+
+	.ukti-outer-wrap {
+		display: none;
+	}
+
 	.navbar-brand {
 		height: auto;
 	}
@@ -22,11 +39,98 @@
 	}
 
 	.navbar-default {
-		background: #fff;
+		background: transparent;
 	}
 
 	.navbar {
 		margin: 0;
+        border: 0 solid #F2F2F2;
+        position: absolute;
+        z-index: 10;
+        width: 100%;
+        top: 80px;
+    }
+
+    #nav.affix {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 10;
+    }
+
+    #nav.affix-top {
+        position: static;
+    }
+
+	.modal-open .modal {
+		background: #000;
 	}
+
+	.ukti-loading {
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		/*background: #fff url('../assets/img/loading.gif') center no-repeat;*/
+	}
+
+	.ukti-navbar {
+		background: #fff;
+		position: relative;
+    }
+
+    .ukti-navbar:before {
+    	content: '';
+    	background: #fff;
+    	width: 100%;
+    	height: 80px;
+    	margin-left: 50%;
+    	position: absolute;
+    }
+
+	
+
+	.video-wrapper {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        padding-top: 25px;
+        height: 0;
+        width:80%;
+    }
+
+    .video-wrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 80% !important;
+    }
+
+    video#bgVid, img#bgImg { 
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -100;
+        -ms-transform: translateX(-50%) translateY(-50%);
+        -moz-transform: translateX(-50%) translateY(-50%);
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+        background-size: cover; 
+    }
+
+
 </style>
 <body>
+<div class="ukti-loading"></div>
+<noscript>
+<style type="text/css">
+	.ukti-loading {display: none;}
+	.ukti-outer-wrap {display: block;}
+</style>
+</noscript>
+<div class="ukti-outer-wrap">

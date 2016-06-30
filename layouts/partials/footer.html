@@ -1,2 +1,29 @@
+</div>
+<script>
+    $(document).ready(function () {
+
+        enhance();
+        setTimeout(removeloading, 1500);
+
+    });
+
+    function removeloading(){
+    	$('.ukti-outer-wrap').show();
+    	$('.ukti-loading').fadeOut(300);
+    }
+
+    function enhance(){
+    	enhance_videobg();
+    }
+
+
+    function enhance_videobg(){
+        //
+        if($('#bgVid').length > 0 || $('#bgImg').length > 0) {
+            $('.jumbotron').addClass('bg--transparent');
+        }
+    }
+
+</script>
 </body>
 </html>
