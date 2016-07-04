@@ -6,7 +6,7 @@ heroVideo: heroVideoPath
 heroImage: heroImagePath
 fullVideo: fullVideoPath
 indexTemplate: subsector-page-us.html
-intro: The message goes here, no idea how long it will be but this example copy is 18 words.
+intro: The message goes here, no idea how long it will be but this example copy is 36 words. The message goes here, no idea how long it will be but this example copy is 36 words.
 pageTitle: Financial technology in Great Britain
 layout: content.html
 ---

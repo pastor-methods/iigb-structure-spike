@@ -1,5 +1,15 @@
 //_main-nav-list.scss
 
 .main-nav-list {
-	//
+  > li {
+    padding: 12px 40px;
+    border-right: 1px solid #999;
+    height: 80px;
+    &:first-of-type {
+      border-left: 1px solid #999;
+    }
+    &.active {
+      background-color: #E7E7E7;
+    }
+  }
 }
