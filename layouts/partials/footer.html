@@ -23,23 +23,27 @@
     $(document).ready(function () {
 
         enhance();
-        setTimeout(removeloading, 1500);
+        setTimeout(showcontent, 1000);
+        setTimeout(removeloading, 2000);
 
     });
 
-    function removeloading() {
-        $('.ukti-outer-wrap').show();
+    function showcontent(){
+    	$('.ukti-outer-wrap').show();
+    }
+
+    function removeloading(){
         $('.ukti-loading').fadeOut(300);
     }
 
-    function enhance() {
-        enhance_videobg();
+    function enhance(){
+    	enhance_videobg();
     }
 
 
-    function enhance_videobg() {
+    function enhance_videobg(){
         //
-        if ($('#bgVid').length > 0 || $('#bgImg').length > 0) {
+        if($('#bgVid').length > 0 || $('#bgImg').length > 0) {
             $('.jumbotron').addClass('bg--transparent');
         }
     }

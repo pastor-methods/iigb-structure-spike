@@ -4,6 +4,7 @@
 @import "utilities/margins";
 @import "utilities/padding";
 @import "utilities/text-transform";
+@import "utilities/base-type";
 
 
 //atoms
@@ -12,6 +13,7 @@
 
 
 //molecules
+@import "molecules/jumbotron";
 @import "molecules/main-logo";
 @import "molecules/main-nav";
 @import "molecules/main-nav-list";

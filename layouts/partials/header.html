@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<title>UKTI - {{title}}</title>
 	<!--<base href="http://ukti-iigb-alpha-staging.herokuapp.com/">-->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
 	<link href="http://ukti-iigb-alpha-staging.herokuapp.com/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
 	<link href="http://ukti-iigb-alpha-staging.herokuapp.com/assets/css/main.css" rel="stylesheet" type="text/css"/>
 	<!--for testing locally-->
@@ -20,7 +21,7 @@
         overflow: hidden;
         background: transparent;
         height: 700px;
-        padding-top: 200px;
+        padding-top: 140px;
         background: #1E1348;
     }
 
@@ -37,7 +38,7 @@
 	}
 	
 	.navbar-brand img {
-		height: 50px;
+		height: 40px;
 		width: auto;
 	}
 
@@ -72,10 +73,12 @@
 
 	.ukti-loading {
 		position: fixed;
+        z-index: 100;
 		top: 0;
 		bottom: 0;
 		left: 0;
 		right: 0;
+        background: #fff;
 		/*background: #fff url('../assets/img/loading.gif') center no-repeat;*/
 	}
 
