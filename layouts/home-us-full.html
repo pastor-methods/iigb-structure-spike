@@ -1,0 +1,39 @@
+{{> header}}
+
+
+<div class="jumbotron">
+    <div class="container">
+        <h1><img src="../assets/img/iigb-logo-big-white.png" alt="Invest in Great Britain" class="img-responsive"></h1>
+        <p class="text-center"><span class="ukti-sub-message">The home of innovation and originality. </span><br> <a href="#" class=" bg-video-inactive bg-video-play" data-toggle="modal" data-target="#heroVideo">Watch video <span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span></a></p>
+        <form class="navbar-form navbar-right ukti-main-search" role="search">
+            <div class="form-group">
+                <input type="text" class="ukti-main-search__input-field" placeholder="Search">
+            </div>
+            <button type="submit" class="ukti-main-search__submit"><span><img
+                    src="http://ukti-iigb-alpha-staging.herokuapp.com/assets/img/search.png" alt=""></span></button>
+        </form>
+
+        <div class="modal fade" id="heroVideo" role="dialog">
+            <div class="modal-dialog video-wrapper">
+            
+                <!-- Modal content-->
+                <!-- <div class=""> -->
+                    <!-- <div class="modal-body"> -->
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/yoHrRcKIBKw" frameborder="0" allowfullscreen></iframe>
+                    <!-- </div> -->
+                <!-- </div> -->
+              
+            </div>
+        </div>
+
+        <video autoplay loop poster="../assets/img/northern-powerhouse.jpg" id="bgVid">
+            <source src="../assets/vid/northern-powerhouse.mp4" type="video/mp4">
+        </video>
+
+    </div>
+</div>
+
+
+
+{{{contents}}}
+{{> footer}}
