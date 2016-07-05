@@ -1,27 +1,27 @@
 //main-nav
 
 .ukti-main-nav {
-  position: absolute;
-  top: 80px;
-  left: -20px;
-  width: 100%;
-  border: 0 solid #F2F2F2;
+  // position: absolute;
+  // top: 80px;
+  // left: -20px;
+  // width: 100%;
+  // border: 0 solid #F2F2F2;
   background: #fff;
-  margin: 0;
-  z-index: 10;
+  // margin: 0;
+  // z-index: 10;
 
   // Prevent floats from breaking the navbar
   @include clearfix;
 
   @media (min-width: $grid-float-breakpoint) {
-    left: 20px;
+    // left: 20px;
     border-radius: 0;
   }
 
   @media (max-width: $grid-float-breakpoint) {
     position: relative;
     top: -80px;
-    left: 20px;
+    // left: 20px;
     border-radius: 0;
   }
 }
