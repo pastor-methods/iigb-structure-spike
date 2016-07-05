@@ -3,13 +3,18 @@
     $(document).ready(function () {
 
         enhance();
-        setTimeout(removeloading, 1500);
+        setTimeout(showcontent, 1000);
+        setTimeout(removeloading, 2000);
 
     });
 
+    function showcontent(){
+    	$('.ukti-outer-wrap').show();    
+    }
+
     function removeloading(){
-    	$('.ukti-outer-wrap').show();
-    	$('.ukti-loading').fadeOut(300);
+        $('.ukti-loading').fadeOut(300);
+        // $('.ukti-loading').animate({ opacity: 0 }, 'slow');
     }
 
     function enhance(){
