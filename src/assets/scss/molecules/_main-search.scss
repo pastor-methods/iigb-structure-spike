@@ -3,7 +3,9 @@
 .ukti-main-search {
   @media (max-width: $screen-xs-max) {
     > div {
-      display: inline-block;
+      width: 90%;
+      float: left;
+      margin-left: 15px;
     }
   }
 
@@ -41,7 +43,7 @@
     }
 
     @media (max-width: $screen-xs-max) {
-      width: 405px !important;
+      width: 100% !important;
     }
 
     @media (max-width: $screen-sm-max) {
@@ -56,6 +58,11 @@
       color: #FFFFFF;
       background-color: #FFFFFF;
       border-color: #FFFFFF;
+    }
+
+    @media (max-width: $screen-xs-max) {
+      float: right;
+      margin-top: 10px;
     }
 
     @media (max-width: $screen-sm-max) {

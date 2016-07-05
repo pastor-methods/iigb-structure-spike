@@ -34,32 +34,28 @@
         margin-bottom: 20px;
     }
 
-    .ukti-imageholder{
+    .ukti-imageholder {
         position: relative;
         background-color: transparent;
     }
 
-    .ukti-caption{
+    .ukti-caption {
         position: absolute;
         bottom: 80px;
         left: 40px;
         right: 40px;
-        background: rgb(255,255,255);
+        background: rgb(255, 255, 255);
         color: #000;
         padding: 10px 20px;
     }
 </style>
-<!--<div class="jumbotron">-->
-<div class="container ukti-imageholder">
-    <img src="http://ukti-iigb-alpha-staging.herokuapp.com/assets/img/{{image}}" alt="" class="ukti-img-responsive margin-bottom--1">
-    <div class="ukti-caption">
+<div class="jumbotron">
+    <div class="container" style="background-color: transparent">
         <h1>{{pageTitle}}</h1>
-        <p>{{intro}}</p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
+        <p class="text-center">{{intro}} <a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
     </div>
-    <p>video: {{fullVideo}}</p>
 </div>
-<!--</div>-->
+
 <div class="container">
     <div class="row">
         <div class="col-md-12">
@@ -67,7 +63,8 @@
             <div class="row">
                 {{#each subLevel}}
                 <article class="col-md-4">
-                    <img src="http://ukti-iigb-alpha-staging.herokuapp.com/assets/img/{{this.thumbnail}}" class="ukti-img-thumbnail">
+                    <img src="http://ukti-iigb-alpha-staging.herokuapp.com/assets/img/{{this.thumbnail}}"
+                         class="ukti-img-thumbnail">
                     <h4>
                         <a class="text-sentence" href="">{{this.name}}</a>
                     </h4>
