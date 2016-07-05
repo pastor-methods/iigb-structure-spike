@@ -1,0 +1,27 @@
+// footer.scss
+
+.ukti-footer {
+  margin-top: 50px;
+  height: 200px;
+  background-color: #F3F3F3 !important;
+
+  &--list {
+    margin-top: 70px;
+    > li {
+      display: inline-block;
+      height: 25px;
+      margin-top: 10px;
+      padding: 1px 15px;
+      border-right: 1px solid #999;
+      &:last-of-type {
+        border-right: 0 solid #999;
+      }
+    }
+  }
+
+  &--logo {
+    > img {
+      margin-top: 50px;
+    }
+  }
+}

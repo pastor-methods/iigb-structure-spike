@@ -1,3 +1,23 @@
+<nav class="container ukti-footer">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-1">
+            <ul class="ukti-footer--list">
+                <li><a href="#">Why the UK?</a></li>
+                <li><a href="#">Sectors</a></li>
+                <li><a href="#">Help and advice</a></li>
+                <li><a href="#">Privacy and cookies</a></li>
+                <li><a href="#">Terms and conditions</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+        </div>
+        <div class="col-md-2 col-md-offset-1 ukti-footer--logo">
+            <img class="img-responsive" src="http://ukti-iigb-alpha-staging.herokuapp.com/assets/img/HM Gov logo black.png" alt="">
+            <img class="img-responsive" src="http://ukti-iigb-alpha-staging.herokuapp.com/assets/img/iigb-logo.png" alt="">
+        </div>
+    </div>
+</nav>
+
+
 </div>
 <script>
     $(document).ready(function () {
@@ -7,19 +27,19 @@
 
     });
 
-    function removeloading(){
-    	$('.ukti-outer-wrap').show();
-    	$('.ukti-loading').fadeOut(300);
+    function removeloading() {
+        $('.ukti-outer-wrap').show();
+        $('.ukti-loading').fadeOut(300);
     }
 
-    function enhance(){
-    	enhance_videobg();
+    function enhance() {
+        enhance_videobg();
     }
 
 
-    function enhance_videobg(){
+    function enhance_videobg() {
         //
-        if($('#bgVid').length > 0 || $('#bgImg').length > 0) {
+        if ($('#bgVid').length > 0 || $('#bgImg').length > 0) {
             $('.jumbotron').addClass('bg--transparent');
         }
     }
