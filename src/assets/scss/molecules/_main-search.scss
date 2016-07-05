@@ -1,13 +1,10 @@
 //_main-search.scss
 
 .ukti-main-search {
-  position: absolute;
-  top: 80px;
-  left: 20px;
-  width: 130%;
-  background-color: #FFFFFF;
-  color: #000;
-  padding: 0px 20px;
+  @media (max-width: $screen-sm-max) {
+    padding-left: 4px;
+    padding-right: 0;
+  }
 
   &__label {
     //
@@ -18,7 +15,7 @@
     width: 100%;
     height: 34px;
     margin-top: 13px;
-    padding: 6px 12px;
+    padding: 0px 8px;
     font-size: 14px;
     font-style: italic;
     line-height: 1.42857143;
@@ -36,6 +33,10 @@
       -webkit-box-shadow: none;
       box-shadow: none;
     }
+
+    @media (max-width: $screen-sm-max) {
+      width: 120px;
+    }
   }
 
   &__submit {
@@ -45,6 +46,10 @@
       color: #FFFFFF;
       background-color: #FFFFFF;
       border-color: #FFFFFF;
+    }
+
+    @media (max-width: $screen-sm-max) {
+      padding: 2px 0;
     }
   }
 }

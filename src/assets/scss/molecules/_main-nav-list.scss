@@ -1,8 +1,9 @@
 //_main-nav-list.scss
 
-.main-nav-list {
+.ukti-main-nav-list {
   > li {
-    padding: 12px 40px;
+    display: inline-block;
+    padding: 12px 25px;
     border-right: 1px solid #999;
     height: 80px;
     &:first-of-type {
@@ -10,6 +11,12 @@
     }
     &.active {
       background-color: #E7E7E7;
+    }
+  }
+
+  @media (max-width: $screen-sm-max) {
+    > li {
+      padding: 12px 0;
     }
   }
 }
