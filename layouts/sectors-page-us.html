@@ -1,0 +1,36 @@
+{{> header}}
+{{> header-nav}}
+<div class="jumbotron">
+    <div class="container" style="background-color: transparent">
+        <h1>{{pageTitle}}</h1>
+        <p class="text-center">{{intro}} <a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
+    </div>
+</div>
+{{> breadcrumb}}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>List of sectors:</h2>
+            <div class="row">
+                {{#each subLevel}}
+                <article class="col-md-4">
+                    <img src="http://ukti-iigb-alpha-staging.herokuapp.com/assets/img/{{this.thumbnail}}"
+                         class="ukti-img-thumbnail">
+                    <h4>
+                        <a class="text-sentence" href="">{{this.name}}</a>
+                    </h4>
+                    <p>{{intro}}</p>
+                </article>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            {{{contents}}}
+        </div>
+    </div>
+</div>
+{{> footer}}
