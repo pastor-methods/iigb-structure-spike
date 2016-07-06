@@ -185,7 +185,7 @@ var makeIndex = function (files, metalsmith, done) {
 Handlebars.registerPartial('header', fs.readFileSync(__dirname + '/layouts/partials/header.html').toString());
 Handlebars.registerPartial('header-nav', fs.readFileSync(__dirname + '/layouts/partials/header-nav.html').toString());
 Handlebars.registerPartial('footer', fs.readFileSync(__dirname + '/layouts/partials/footer.html').toString());
-Handlebars.registerPartial('listpagebreadcrumb', fs.readFileSync(__dirname + '/layouts/partials/listpagebreadcrumb.html').toString());
+Handlebars.registerPartial('breadcrumb', fs.readFileSync(__dirname + '/layouts/partials/breadcrumb.html').toString());
 
 // helper to slugify strings
 Handlebars.registerHelper('slug', function (content) {

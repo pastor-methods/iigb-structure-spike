@@ -6,9 +6,17 @@
             </li>
             {{#if location}}
             {{#each location}}
+            {{#unless @last}}
             <li>
                 <a class="text-sentence" href="{{this.link}}">{{this.name}}</a>
             </li>
+            {{/unless}}
+            <!--last one is not hyperlinked-->
+            {{#if @last}}
+            <li>
+                <p class="text-sentence">{{this.name}}</p>
+            </li>
+            {{/if}}
             {{/each}}
             {{/if}}
         </ol>
