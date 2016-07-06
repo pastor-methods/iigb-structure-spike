@@ -50,6 +50,7 @@ var makeIndex = function (files, metalsmith, done) {
     for (var i = 0; i < folders.length; i++) {
         var folderPath = folders[i];
         var folderName;
+        var location;
         var toIndex = '';
         var templateIndexName = '';
         var imagePath = '';
@@ -68,6 +69,19 @@ var makeIndex = function (files, metalsmith, done) {
                     var ee = folderPath.split("/");
                     var ii = ee.slice(1, -1);
                     return ii[ii.length - 1] || '';
+                })();
+                //add the location for breadcrumb
+                location = (function () {
+                    var ee = folderPath.split("/");
+                    var lang = ee.pop();
+                    var ff = ee.slice(1);
+                    var buffer = [];
+                    var link = '/' + lang;
+                    for (var i = 0; i < ff.length; i++) {
+                        link += '/' + ff[i];
+                        buffer.push({name: ff[i], link: link});
+                    }
+                    return buffer;
                 })();
                 //add a layout to the index file
                 if (fileWithLang.indexTemplate) {
@@ -115,6 +129,7 @@ var makeIndex = function (files, metalsmith, done) {
             pageTitle: pageTitle,
             intro: intro,
             folder: folderName,
+            location: location,
             contents: new Buffer(toIndex),
             toc: toToc
         };
@@ -142,7 +157,7 @@ var makeIndex = function (files, metalsmith, done) {
             }
         }
     }
-
+    //add children data into parent
     for (var file in files) {
         var langArray = ['/cn', '/de', '/us'];
         for (var l = 0; l < langArray.length; l++) {
@@ -167,7 +182,6 @@ var makeIndex = function (files, metalsmith, done) {
     done();
 };
 
-
 Handlebars.registerPartial('header', fs.readFileSync(__dirname + '/layouts/partials/header.html').toString());
 Handlebars.registerPartial('header-nav', fs.readFileSync(__dirname + '/layouts/partials/header-nav.html').toString());
 Handlebars.registerPartial('footer', fs.readFileSync(__dirname + '/layouts/partials/footer.html').toString());
@@ -188,7 +202,6 @@ Handlebars.registerHelper('lower', function (content) {
         return content.toString().toLowerCase();
     }
 });
-
 
 // helper to update date, format: 10 Mar 2014
 Handlebars.registerHelper('date', function () {
