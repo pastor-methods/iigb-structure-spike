@@ -1,8 +1,16 @@
-<ol class="breadcrumb__list">
-	<li class="breadcrumb__item">
-		<a class="breadcrumb__link" href="/">Home</a>
-	</li>
-	<li class="breadcrumb__item">
-		{{{ title }}}
-	</li>
-</ol>
+<div class="container">
+    <div class="row">
+        <ol class="breadcrumb">
+            <li>
+                <a href="/">Home</a>
+            </li>
+            {{#if location}}
+            {{#each location}}
+            <li>
+                <a class="text-sentence" href="{{this.link}}">{{this.name}}</a>
+            </li>
+            {{/each}}
+            {{/if}}
+        </ol>
+    </div>
+</div>
