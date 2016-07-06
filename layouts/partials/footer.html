@@ -21,15 +21,14 @@
 </div>
 <script>
     $(document).ready(function () {
-
         enhance();
         setTimeout(showcontent, 1000);
         setTimeout(removeloading, 2000);
-
     });
 
     function showcontent(){
     	$('.ukti-outer-wrap').show();
+        calculateSidebarWidth();
     }
 
     function removeloading(){
@@ -40,14 +39,23 @@
     	enhance_videobg();
     }
 
-
     function enhance_videobg(){
-        //
         if($('#bgVid').length > 0 || $('#bgImg').length > 0) {
             $('.jumbotron').addClass('bg--transparent');
         }
     }
 
+    //calculate fixed sidebar width
+    function calculateSidebarWidth () {
+        if ($('#sidebar-width')) {
+            var menuWidth = $('#sidebar-width').width();
+            $('#sidebar').css({width: menuWidth});
+        }
+    }
+
+    $(window).on('resize', function () {
+        calculateSidebarWidth ();
+    });
 </script>
 </body>
 </html>

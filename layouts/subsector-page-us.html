@@ -29,8 +29,9 @@
     .ukti-resources {
         background-color: #F2F2F2;
         border: 3px solid #797979;
+        padding: 16px 30px;
         border-radius: 10px;
-        margin-top: 20px;
+        margin-top: 10px;
         margin-bottom: 20px;
     }
 
@@ -47,9 +48,21 @@
         color: #FFFFFF;
         padding: 10px 20px;
     }
+
     .jumbotron {
         background-image: url("http://ukti-iigb-alpha-staging.herokuapp.com/assets/img/{{image}}");
         background-size: cover;
+    }
+
+    .affix {
+        position: fixed;
+        top: 0;
+    }
+    .affix-top {
+        position: static;
+    }
+    .affix-bottom {
+        position: absolute;
     }
 </style>
 <div class="jumbotron ukti-imageholder">
@@ -77,13 +90,27 @@
         </div>
         <div class="col-md-4">
             <div class="row">
-                <div class="col-md-11 ukti-resources">
-                    <h2>Resources</h2>
-                    <p>Getting a visa</p>
-                    <p>Setting up a bank account</p>
-                    <p>Business registration</p>
-                    <p>Finding premises</p>
-                    <p>Creative hubs outside London</p>
+                <div class="col-md-11">
+                    <nav id="sidebar-width" class="bs-docs-sidebar hidden-xs hidden-sm ukti-resources" data-spy="affix" data-offset-top="750" data-offset-bottom="300">
+                        <ul id="sidebar" class="nav bs-docs-sidenav">
+                            <li><h2>Resources <span class="glyphicon glyphicon-search" aria-hidden="true"></span></h2></li>
+                            <li>Getting a visa</li>
+                            <li>Setting up a bank account</li>
+                            <li>Business registration</li>
+                            <li>Finding premises</li>
+                            <li>Creative hubs outside London</li>
+                        </ul>
+                    </nav>
+                    <nav class="hidden-md hidden-lg ukti-resources">
+                        <ul class="nav">
+                            <li><h2>Resources</h2></li>
+                            <li>Getting a visa</li>
+                            <li>Setting up a bank account</li>
+                            <li>Business registration</li>
+                            <li>Finding premises</li>
+                            <li>Creative hubs outside London</li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </div>
