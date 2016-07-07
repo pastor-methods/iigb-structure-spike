@@ -30,9 +30,9 @@
 
 		&::before {
 			position: absolute;
-			top: -9px;
+			top: 11px;
 			left: 10px;
-			font-size: 60px;
+			font-size: 70px;
 			content: counter(ukti-why-uk-list-counter);
 			counter-increment: ukti-why-uk-list-counter;
 			width: 50px;
