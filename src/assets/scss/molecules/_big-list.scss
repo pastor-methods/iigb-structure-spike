@@ -1,7 +1,7 @@
-//simple-guide-list.scss
+//big-list.scss
 
-.ukti-simple-guide-list {
-	counter-reset: ukti-why-uk-list-counter;
+.ukti-big-list {
+	counter-reset: ukti-big-list-counter;
 	list-style: none;
     padding: 0;
     // margin: 0 -15px;
@@ -33,18 +33,29 @@
 			top: 11px;
 			left: 10px;
 			font-size: 70px;
-			content: counter(ukti-why-uk-list-counter);
-			counter-increment: ukti-why-uk-list-counter;
+			font-weight: 100;
+			content: counter(ukti-big-list-counter);
+			counter-increment: ukti-big-list-counter;
 			width: 50px;
 			display: inline-block;
 
 			@media (max-width: $screen-xs-max) {
 				top: -6px;
 			}
+
+			// &--red-list-style {
+			// 	color: #E41F13;
+			// }
 		}
 
 		&:nth-of-type(2n+1) {
 			clear: left;
+		}
+
+		&--red-list-style {
+			&::before {
+				color: #E41F13;
+			}
 		}
 	}
 }
