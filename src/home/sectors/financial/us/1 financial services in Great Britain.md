@@ -1,13 +1,13 @@
 ---
 title: Financial services in Great Britain
 image: finance.jpg
-thumbnail: thumbnailPath
+thumbnail: finance.jpg
 heroVideo: heroVideoPath
 heroImage: heroImagePath
 fullVideo: fullVideoPath
 indexTemplate: sector-page-us.html
 intro: The message goes here, no idea how long it will be but this example copy is 18 words.
-pageTitle: Financial technology in Great Britain
+pageTitle: Financial services in Great Britain
 layout: content.html
 ---
 

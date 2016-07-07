@@ -7,7 +7,7 @@ heroImage: heroImagePath
 fullVideo: fullVideoPath
 indexTemplate: subsector-page-us.html
 intro: The message goes here, no idea how long it will be but this example copy is 18 words.
-pageTitle: Asset management
+pageTitle: Digital media
 layout: content.html
 ---
 

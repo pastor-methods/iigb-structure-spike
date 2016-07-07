@@ -1,7 +1,7 @@
 ---
 title: The creative sector in Great Britain
 image: creative.jpg
-thumbnail: thumbnailPath
+thumbnail: creative.jpg
 heroVideo: heroVideoPath
 heroImage: heroImagePath
 fullVideo: fullVideoPath
