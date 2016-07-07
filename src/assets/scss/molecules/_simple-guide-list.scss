@@ -16,18 +16,22 @@
 	&__item {
 		position: relative;
 		width: 50%;
-		padding: 15px 15px 30px 50px;
+		padding: 15px 100px 30px 60px;
 		float: left;
 
 		@media (max-width: $screen-xs-max) {
 			width: 100%;
 		}
+
+		@media (max-width: $screen-sm-max) {
+			padding: 15px 30px 30px 60px;
+		}
 		
 
 		&::before {
 			position: absolute;
-			top: 0;
-			left: 0;
+			top: -9px;
+			left: 10px;
 			font-size: 60px;
 			content: counter(ukti-why-uk-list-counter);
 			counter-increment: ukti-why-uk-list-counter;
