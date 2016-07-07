@@ -37,6 +37,10 @@
 			counter-increment: ukti-why-uk-list-counter;
 			width: 50px;
 			display: inline-block;
+
+			@media (max-width: $screen-xs-max) {
+				top: -6px;
+			}
 		}
 
 		&:nth-of-type(2n+1) {
