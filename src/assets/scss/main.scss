@@ -12,6 +12,7 @@
 @import "atoms/headings";
 @import "atoms/paragraphs";
 @import "atoms/images";
+@import "atoms/sections";
 
 
 //molecules
@@ -22,6 +23,11 @@
 @import "molecules/main-search";
 @import "molecules/table-of-contents";
 @import "molecules/footer";
+@import "molecules/key-sectors-list";
+@import "molecules/section-cta";
+@import "molecules/home-section-anchors";
+@import "molecules/why-uk-list";
+@import "molecules/simple-guide-list";
 
 
 //organisms
