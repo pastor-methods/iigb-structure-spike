@@ -16,4 +16,8 @@ h2 {
 .section-heading {
 	font-size: 70px;
 	font-weight: 100;
+
+	@media (max-width: $screen-xs-max) {
+		font-size: 40px;
+	}
 }
