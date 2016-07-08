@@ -15,26 +15,7 @@
 </head>
 <style type="text/css">
 
-	.jumbotron {
-        position: relative;
-        overflow: hidden;
-        background: transparent;
-        height: 800px;
-        padding-top: 140px;
-        background: #1E1348;
-        margin: 0;
-    }
 
-    .jumbotron a {
-        color: #fff;
-        /*text-decoration: underline;*/
-    }
-
-    .jumbotron .glyphicon-play-circle {
-        font-size: 70px;
-        top: 25px;
-        padding-left: 15px;
-    }
 
     .bg--transparent {
         background: transparent;
@@ -97,37 +78,7 @@
 
 	
 
-	.video-wrapper {
-        position: relative;
-        padding-bottom: 56.25%; /* 16:9 */
-        padding-top: 25px;
-        height: 0;
-        width:80%;
-    }
-
-    .video-wrapper iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100% !important;
-        height: 80% !important;
-    }
-
-    video#bgVid, img#bgImg { 
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        min-width: 100%;
-        min-height: 100%;
-        width: auto;
-        height: auto;
-        z-index: -100;
-        -ms-transform: translateX(-50%) translateY(-50%);
-        -moz-transform: translateX(-50%) translateY(-50%);
-        -webkit-transform: translateX(-50%) translateY(-50%);
-        transform: translateX(-50%) translateY(-50%);
-        background-size: cover; 
-    }
+	
 
 
 </style>
@@ -142,10 +93,10 @@
 <div class="ukti-outer-wrap">
 
 
-<div class="jumbotron">
+<div class="jumbotron--home">
     <div class="container">
         <h1><img src="../assets/img/iigb-logo-big-white.png" alt="Invest in Great Britain" class="img-responsive"></h1>
-        <p class="text-center"><a href="#" class=" bg-video-inactive bg-video-play" data-toggle="modal" data-target="#heroVideo">Watch video <span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span></a></p>
+        <p class="text-center"><a href="#" class="bg-video-inactive bg-video-play" data-toggle="modal" data-target="#heroVideo">Watch video <span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span></a></p>
         <nav>
             <ul class="text-center list-inline ukti-home-section-anchors">
                 <li><a href="us/#why-uk">Reasons to choose the UK</a></li>
@@ -154,28 +105,15 @@
                 <li><a href="#">Search</a></li>
             </ul>
         </nav>
-        <!-- <form class="navbar-form navbar-right ukti-main-search" role="search">
-            <div class="form-group">
-                <input type="text" class="ukti-main-search__input-field" placeholder="Search">
-            </div>
-            <button type="submit" class="ukti-main-search__submit"><span><img
-                    src="http://ukti-iigb-alpha-staging.herokuapp.com/assets/img/search.png" alt=""></span></button>
-        </form> -->
+
 
         <div class="modal fade" id="heroVideo" role="dialog">
             <div class="modal-dialog video-wrapper">
-            
                 <!-- Modal content-->
-                <!-- <div class=""> -->
-                    <!-- <div class="modal-body"> -->
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/yoHrRcKIBKw" frameborder="0" allowfullscreen></iframe>
-                    <!-- </div> -->
-                <!-- </div> -->
-              
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/yoHrRcKIBKw" frameborder="0" allowfullscreen></iframe>
             </div>
         </div>
-
-        <video autoplay loop poster="../assets/img/northern-powerhouse.jpg" id="bgVid">
+        <video autoplay loop poster="../assets/img/northern-powerhouse.jpg" class="ukti-hero-bg__video">
             <source src="../assets/vid/northern-powerhouse.mp4" type="video/mp4">
         </video>
 
@@ -192,35 +130,35 @@
                 <h2 class="text-center ukti-content-section__heading">8 <span class="text-colour--red">GREAT</span> reasons to invest in the UK</h2>
             </div>
             <ol class="ukti-big-list">
-                <li class="ukti-big-list__item ukti-big-list__item--red-list-style">
+                <li class="ukti-big-list__item--red-list-style">
                     <h3>Business is booming</h3>
                     The UK is the 5th largest economy in the world, with over 420,000 new businesses launching in 2015 alone
                 </li>
-                <li class="ukti-big-list__item ukti-big-list__item--red-list-style">
+                <li class="ukti-big-list__item--red-list-style">
                     <h3>In good company</h3>
                     Many of the biggest and most dynamic companies choose the UK. Coca-Cola, Honda and Sony all have their European headquarters here
                 </li>
-                <li class="ukti-big-list__item ukti-big-list__item--red-list-style">
+                <li class="ukti-big-list__item--red-list-style">
                     <h3>A global financial hub</h3>
                     London was rated as the world’s leading financial centre, with the London Stock Exchange hosting 3,100 companies from over 70 countries
                 </li>
-                <li class="ukti-big-list__item ukti-big-list__item--red-list-style">
+                <li class="ukti-big-list__item--red-list-style">
                     <h3>A gateway to the world</h3>
                     Positioned between East and West, the UK’s location and time zone makes it easy to do business across American, European and Asian markets
                 </li>
-                <li class="ukti-big-list__item ukti-big-list__item--red-list-style">
+                <li class="ukti-big-list__item--red-list-style">
                     <h3>Pioneering innovation</h3>
                     With renowned R&D capabilities, the UK is ranked 2nd in the Global Innovation Index
                 </li>
-                <li class="ukti-big-list__item ukti-big-list__item--red-list-style">
+                <li class="ukti-big-list__item--red-list-style">
                     <h3>Educational excellence</h3>
                     Home to 4 out of the global top 8 universities, the UK is bursting with world-class talent and ideas
                 </li>
-                <li class="ukti-big-list__item ukti-big-list__item--red-list-style">
+                <li class="ukti-big-list__item--red-list-style">
                     <h3>A pro-business tax system</h3>
                     The UK is renowned for its low-burden, competitive tax system - including the lowest corporation tax rates in the G7 and the joint lowest in the G20
                 </li>
-                <li class="ukti-big-list__item ukti-big-list__item--red-list-style">
+                <li class="ukti-big-list__item--red-list-style">
                     <h3>Skills for the 21st century </h3>
                     The UK ranks second only to the USA among the powerhouse economies for growing, retaining and attracting talent
                 </li>
@@ -233,7 +171,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h2 class="text-center">Key market sectors</h2>
+                <h2 class="text-center ukti-content-section__heading">Key market sectors</h2>
                 <ul class="ukti-key-sectors-list">
                     <li class="ukti-key-sectors-list__item">
                         <a href="us/sectors/automotive">
@@ -277,42 +215,42 @@
                 </p>
             </div>
             <ol class="ukti-big-list">
-                <li class="ukti-big-list__item">
+                <li class="ukti-big-list__item--home-guide">
                 	<h3><a href="#">Establish a UK address</a></h3>
                 	You’ll need this for opening a bank account and for setting up your business. <br>
                     <!-- <a href="#" class="ukti-content-section__read-more-link">Read more about point 1</a> -->
                 </li>
-                <li class="ukti-big-list__item">
+                <li class="ukti-big-list__item--home-guide">
                 	<h3><a href="#">Apply for a visa</a></h3>
                 	The UK offers a wide range of individual and business visas so you can find the ones that work for you. The application process can take up to three months, so plan early. <br>
                     <!-- <a href="#" class="ukti-content-section__read-more-link">Read more about point 2</a> -->
                 </li>
-                <li class="ukti-big-list__item">
+                <li class="ukti-big-list__item--home-guide">
                 	<h3><a href="#">Open a UK bank account</a></h3>
                 	Setting up a UK business bank account will make it easy for your company to operate in the UK. Just bear in mind that the process can take up to three months and you may need to travel. <br>
                     <!-- <a href="#" class="ukti-content-section__read-more-link">Read more about point 3</a> -->
                 </li>
-                <li class="ukti-big-list__item">
+                <li class="ukti-big-list__item--home-guide">
                 	<h3><a href="#">Register your company</a></h3>
                 	It’s quick and easy to register a business in the UK. Companies House can handle the process with just one form. <br>
                     <!-- <a href="#" class="ukti-content-section__read-more-link">Read more about point 4</a> -->
                 </li>
-                <li class="ukti-big-list__item">
+                <li class="ukti-big-list__item--home-guide">
                 	<h3><a href="#">Work out your profit margins against UK tax</a></h3>
                 	The UK has one of the most competitive tax systems in the world - check out how the rates and regulations can work for you. <br>
                     <!-- <a href="#" class="ukti-content-section__read-more-link">Read more about point 5</a> -->
                 </li>
-                <li class="ukti-big-list__item">
+                <li class="ukti-big-list__item--home-guide">
                 	<h3><a href="#">Understand UK employment law</a></h3>
                 	The UK has a world-class pool of talent and business-friendly employment laws. You can also bring employees from abroad through a flexible visa system. <br>
                     <!-- <a href="#" class="ukti-content-section__read-more-link">Read more about point 6</a> -->
                 </li>
-                <li class="ukti-big-list__item">
+                <li class="ukti-big-list__item--home-guide">
                 	<h3><a href="#">Familiarise yourself with the legal framework</a></h3>
-                	With strong IP laws and fair procurement procedures, the UK legal system is a globally renowned institution.  <br>
+                	With strong intellectual property laws and fair procurement procedures, the UK legal system is a globally renowned institution.  <br>
                     <!-- <a href="#" class="ukti-content-section__read-more-link">Read more about point 7</a> -->
                 </li>
-                <li class="ukti-big-list__item">
+                <li class="ukti-big-list__item--home-guide">
                 	<h3><a href="#">Speak to the UKTI Investment Services Team</a></h3>
                 	If you’ve read our guides and feel you need help to take the next step, contact your local Investment Services Team.
                     <!-- <a href="#" class="ukti-content-section__read-more-link">Read more about point 8</a> -->
