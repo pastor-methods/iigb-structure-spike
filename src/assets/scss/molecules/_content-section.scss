@@ -1,0 +1,33 @@
+//content-section.scss
+
+.ukti-content-section {
+
+	&__heading {
+		font-size: 70px;
+		font-weight: 100;
+		text-align: center;
+
+		@media (max-width: $screen-xs-max) {
+			font-size: 40px;
+			// text-align: left;
+		}
+	}
+
+	&__lead {
+		font-size: 30px;
+		font-weight: 100;
+		width: 90%;
+		margin: 0 auto 60px auto;
+		text-align: center;
+
+		@media (max-width: $screen-xs-max) {
+			font-size: 24px;
+			// text-align: left;
+		}
+	}
+
+	&__read-more-link {
+		margin-top: 15px;
+		display: inline-block;
+	}
+}
