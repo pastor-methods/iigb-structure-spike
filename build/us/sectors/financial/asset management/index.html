@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>UKTI - </title>
+    <base href="/">
+    <!--<base href="/ukti-alpha/build/">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/css/main.css" rel="stylesheet" type="text/css"/>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/equalHeight.js"></script>
+</head>
+<style type="text/css">
+
+	.jumbotron {
+        position: relative;
+        overflow: hidden;
+        background: transparent;
+        height: 800px;
+        padding-top: 140px;
+        background: #1E1348;
+        margin: 0;
+    }
+
+    .jumbotron a {
+        color: #fff;
+        /*text-decoration: underline;*/
+    }
+
+    .jumbotron .glyphicon-play-circle {
+        font-size: 70px;
+        top: 25px;
+        padding-left: 15px;
+    }
+
+    .bg--transparent {
+        background: transparent;
+    }
+
+	.ukti-outer-wrap {
+		display: none;
+	}
+
+	.navbar-brand {
+		height: auto;
+	}
+	
+	.navbar-brand img {
+		height: 40px;
+		width: auto;
+	}
+
+	.navbar-default {
+		background: transparent;
+	}
+
+	.navbar {
+		margin: 0;
+        border: 0 solid #F2F2F2;
+        position: absolute;
+        z-index: 10;
+        width: 100%;
+        top: 80px;
+        /*left: -20px;*/
+    }
+
+    #nav.affix {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 10;
+    }
+
+    #nav.affix-top {
+        position: static;
+    }
+
+	.modal-open .modal {
+		background: #000;
+	}
+
+	.ukti-loading {
+		position: fixed;
+        z-index: 100;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+        background: #fff;
+		/*background: #fff url('../assets/img/loading.gif') center no-repeat;*/
+	}
+
+
+
+	
+
+	.video-wrapper {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        padding-top: 25px;
+        height: 0;
+        width:80%;
+    }
+
+    .video-wrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 80% !important;
+    }
+
+    video#bgVid, img#bgImg { 
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -100;
+        -ms-transform: translateX(-50%) translateY(-50%);
+        -moz-transform: translateX(-50%) translateY(-50%);
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+        background-size: cover; 
+    }
+
+
+</style>
+<body>
+<div class="ukti-loading"></div>
+<noscript>
+<style type="text/css">
+	.ukti-loading {display: none;}
+	.ukti-outer-wrap {display: block;}
+</style>
+</noscript>
+<div class="ukti-outer-wrap">
+<nav id="nav-default" class="navbar navbar-default">
+      <div class="container ukti-main-nav"><!-- Brand and toggle get grouped for better mobile display -->
+        <!-- <div class="row"> -->
+          <!-- <div class="col-md-3"> -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+                  <a class="navbar-brand" href="/">
+                      <img alt="Brand" src="http://ukti-iigb-alpha-staging.herokuapp.com/assets/img/iigb-logo.png">
+                  </a>
+            </div>
+          <!-- </div> -->
+          <div class="collapse navbar-collapse" id="navbar-collapse-1">
+            <!-- <div class="col-md-9"> -->
+                <ul class="nav navbar-nav ukti-main-nav-list">
+                    <li class="active"><a href="#">Market sectors<span class="sr-only">(current)</span></a></li>
+                    <li class=""><a href="#">Investment guide</a></li>
+                </ul>
+                <form class="navbar-form navbar-right ukti-main-search" role="search">
+                    <div class="form-group">
+                        <input type="text" class="ukti-main-search__input-field" placeholder="Search">
+                    </div>
+                    <!--<button type="submit" class="ukti-main-search__submit"><span><img-->
+                            <!--src="http://ukti-iigb-alpha-staging.herokuapp.com/assets/img/search.png" alt=""></span></button>-->
+                    <button type="submit" class="ukti-main-search__submit"><span class="glyphicon glyphicon-search ukti-main-search__glyph" aria-hidden="true"></span></button>
+                </form>
+            <!-- </div> -->
+          </div>
+
+        <!-- </div> -->
+      </div>
+      <!-- /.navbar-collapse -->
+</nav>
+
+<style>
+    body {
+        background-color: #F3F3F3;
+        font-size: 16px;
+    }
+
+    .container {
+        background-color: #FFFFFF;
+    }
+
+    .ukti-toc {
+        background-color: #E3E3E3;
+    }
+
+    .ukti-resources {
+        background-color: #F2F2F2;
+        border: 3px solid #797979;
+        padding: 16px 30px;
+        border-radius: 10px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .ukti-imageholder {
+        position: relative;
+    }
+
+    .ukti-caption {
+        /*position: absolute;*/
+        /*bottom: 80px;*/
+        /*left: 40px;*/
+        /*right: 40px;*/
+        /*background-color: #FFFFFF;*/
+        color: #FFFFFF;
+        padding: 10px 20px;
+    }
+
+    .jumbotron {
+        background-image: url("http://ukti-iigb-alpha-staging.herokuapp.com/assets/img/assetManag.png");
+        background-size: cover;
+    }
+
+    .affix {
+        position: fixed;
+        top: 0;
+    }
+    .affix-top {
+        position: static;
+    }
+    .affix-bottom {
+        position: absolute;
+    }
+</style>
+<div class="jumbotron ukti-imageholder">
+    <div class="container" style="background: rgba(255,255,255,0)">
+        <div style="background-color: rgba(255,255,255,0);height: 200px;">
+        </div>
+        <div class="ukti-caption">
+            <h1>Asset management</h1>
+            <p>The message goes here, no idea how long it will be but this example copy is 18 words.</p>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <ol class="breadcrumb">
+            <li>
+                <a href="/">Home</a>
+            </li>
+            <li>
+                <a class="text-sentence" href="/us/sectors">sectors</a>
+            </li>
+            <!--last one is not hyperlinked-->
+            <li>
+                <a class="text-sentence" href="/us/sectors/financial">financial</a>
+            </li>
+            <!--last one is not hyperlinked-->
+            <!--last one is not hyperlinked-->
+            <li>
+                <p class="text-sentence">asset management</p>
+            </li>
+        </ol>
+    </div>
+</div>
+<div class="container ukti-toc">
+    <div class="row">
+        <div class="col-md-8">
+            <h2>On this page</h2>
+            <div class="row">
+                <ol class="ukti-toc">
+                    <li><a href="#asset-management-in-great-britain">Asset management in Great Britain</a></li>
+                    <li><a href="#a-growing-open-market">A growing, open market</a></li>
+                    <li><a href="#a-wide-range-of-fund-types-and-clients">A wide range of fund types and clients</a></li>
+                    <li><a href="#a-large-talent-pool">A large talent pool</a></li>
+                    <li><a href="#attractive-business-environment-with-regional-strengths">Attractive business environment with regional strengths</a></li>
+                    <li><a href="#regulatory-and-government-support">Regulatory and government support</a></li>
+                    <li><a href="#next-steps-and-contacts">Next steps and contacts</a></li>
+                </ol>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="row">
+                <div class="col-md-11">
+                    <nav id="sidebar-width" class="bs-docs-sidebar hidden-xs hidden-sm ukti-resources" data-spy="affix" data-offset-top="750" data-offset-bottom="300">
+                        <ul id="sidebar" class="nav bs-docs-sidenav">
+                            <li><h2>Resources</h2></li>
+                            <li>Getting a visa</li>
+                            <li>Setting up a bank account</li>
+                            <li>Business registration</li>
+                            <li>Finding premises</li>
+                            <li>Creative hubs outside London</li>
+                        </ul>
+                    </nav>
+                    <nav class="hidden-md hidden-lg ukti-resources">
+                        <ul class="nav">
+                            <li><h2>Resources</h2></li>
+                            <li>Getting a visa</li>
+                            <li>Setting up a bank account</li>
+                            <li>Business registration</li>
+                            <li>Finding premises</li>
+                            <li>Creative hubs outside London</li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <section id="asset-management-in-great-britain">
+<header>
+    <h2>Asset management in Great Britain</h2>
+</header>
+
+<p>The UK is one of the largest asset management markets in the world. It is Europe&#39;s leading centre for fund management, and already attracts significant overseas funds.</p>
+<p>It is one of the sector’s strongest global prospects for set up or expansion.</p>
+
+
+</section><section id="a-growing-open-market">
+<header>
+    <h2>A growing, open market</h2>
+</header>
+
+<p>Total assets under management in the UK increased to a record £6.8 trillion at the end of 2014, a sixth successive year of growth. More than a third , £2.5 trillion, came from overseas clients, making the UK the leading global centre on this measure. [source: CityUK]</p>
+<p>As one of the most open markets in the world for fund management, the UK dominates the industry in Europe.</p>
+<p>Funds managed in the UK</p>
+<ul>
+<li>accounted for 8.4% of total global assets managed by end 2013</li>
+<li>accounted for around 1% of UK GDP in 2014</li>
+<li>are bigger than the combined total of the three next largest European countries</li>
+</ul>
+<p>Around 40% of large and medium sized fund management firms are owned by overseas investors. 57% of assets managed in the UK are managed by asset managers with overseas parent organisations</p>
+<p>The UK is an important location for fund domicile. Around 12% of European assets under management were domiciled in the UK at the end of 2014. The largest asset holders are:</p>
+<ul>
+<li>Luxembourg (27%)</li>
+<li>Ireland (15%)</li>
+<li>France (14%)</li>
+<li>Germany (14%)</li>
+</ul>
+<p>[source: City UK]</p>
+<p>Funds that are domiciled in the UK can take advantage of around 120 double taxation agreements, more than in any other country.</p>
+<p>As the leading global centre for cross-border financial services, companies based in the UK are well placed to capture a growing share of business from developing economies, with high potential for growth. </p>
+
+
+</section><section id="a-wide-range-of-fund-types-and-clients">
+<header>
+    <h2>A wide range of fund types and clients</h2>
+</header>
+
+<p>UK fund management organisations manage many different types of funds, including life insurance, pension schemes, unit trusts and investment trusts. Funds can be managed for:</p>
+<ul>
+<li>institutional clients – these account for two thirds of funds under management, with pension funds the largest client type</li>
+<li>retail clients –  total funds managed were £1063 billion by end 2014, an increase of 32% in 2 years </li>
+<li>private clients – total funds managed were £705 billion by end 2014
+Alternative funds total around 10% of UK funds under management. London is a global centre for:</li>
+<li>hedge funds, with an 18% share of the market in 2014 </li>
+<li>private equity and property funds</li>
+<li>sovereign wealth funds (SWF) , attracting one sixth of all SWF investment since 2005</li>
+</ul>
+
+
+</section><section id="a-large-talent-pool">
+<header>
+    <h2>A large talent pool</h2>
+</header>
+
+<p>The asset management sector in the UK directly employs over 57,000 people. The UK&#39;s highly developed financial services support infrastructure allows companies to hire those staff efficiently, and cost effectively.</p>
+
+
+</section><section id="attractive-business-environment-with-regional-strengths">
+<header>
+    <h2>Attractive business environment with regional strengths</h2>
+</header>
+
+<p>London has been voted the most attractive global location for relocating or expanding asset management operations – ahead of Hong Kong, Singapore and New York. [Source: Banker magazine]</p>
+<p>While London is central to the UK’s strong international position, other British cities, such as Edinburgh, Glasgow, Aberdeen, Manchester, Liverpool, Cardiff and Birmingham, are also important centres for fund management.</p>
+
+
+</section><section id="regulatory-and-government-support">
+<header>
+    <h2>Regulatory and government support</h2>
+</header>
+
+<p>The UK government has demonstrated a strong commitment to the sector - its ambition is for the UK to lead the world in investment management. </p>
+<p>The government&#39;s UK Investment Management Strategy (2013) focuses on:</p>
+<ul>
+<li>improving the UK&#39;s taxation regime</li>
+<li>improving the regulatory environment </li>
+<li>representing the UK globally through effective marketing</li>
+</ul>
+<p>Since the strategy launch, fund authorisation times have been reduced by around 50% and the tax environment is more favourable for fund management and as a funds domicile.</p>
+
+
+</section><section id="next-steps-and-contacts">
+<header>
+    <h2>Next steps and contacts</h2>
+</header>
+
+
+
+</section>
+        </div>
+    </div>
+</div>
+<nav class="container ukti-footer">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-1">
+            <ul class="ukti-footer--list">
+                <li><a href="#">Why the UK?</a></li>
+                <li><a href="#">Sectors</a></li>
+                <li><a href="#">Help and advice</a></li>
+                <li><a href="#">Privacy and cookies</a></li>
+                <li><a href="#">Terms and conditions</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+        </div>
+        <div class="col-md-2 col-md-offset-1 col-xs-4 col-xs-offset-4 ukti-footer--logo">
+            <img class="img-responsive" src="http://ukti-iigb-alpha-staging.herokuapp.com/assets/img/HM Gov logo black.png" alt="">
+            <img class="img-responsive" src="http://ukti-iigb-alpha-staging.herokuapp.com/assets/img/iigb-logo.png" alt="">
+        </div>
+    </div>
+</nav>
+
+
+</div>
+<script>
+    $(document).ready(function () {
+        enhance();
+        setTimeout(showcontent, 500);
+        setTimeout(removeloading, 1000);
+    });
+
+    function showcontent(){
+    	$('.ukti-outer-wrap').show();
+        calculateSidebarWidth();
+    }
+
+    function removeloading(){
+        $('.ukti-loading').fadeOut(300);
+    }
+
+    function enhance(){
+    	enhance_videobg();
+    }
+
+    function enhance_videobg(){
+        if($('#bgVid').length > 0 || $('#bgImg').length > 0) {
+            $('.jumbotron').addClass('bg--transparent');
+        }
+    }
+
+    //calculate fixed sidebar width
+    function calculateSidebarWidth () {
+        if ($('#sidebar-width')) {
+            var menuWidth = $('#sidebar-width').width();
+            $('#sidebar').css({width: menuWidth});
+        }
+    }
+
+    $(window).on('resize', function () {
+        calculateSidebarWidth ();
+    });
+</script>
+</body>
+</html>

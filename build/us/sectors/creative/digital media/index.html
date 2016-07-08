@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>UKTI - </title>
+    <base href="/">
+    <!--<base href="/ukti-alpha/build/">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/css/main.css" rel="stylesheet" type="text/css"/>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/equalHeight.js"></script>
+</head>
+<style type="text/css">
+
+	.jumbotron {
+        position: relative;
+        overflow: hidden;
+        background: transparent;
+        height: 800px;
+        padding-top: 140px;
+        background: #1E1348;
+        margin: 0;
+    }
+
+    .jumbotron a {
+        color: #fff;
+        /*text-decoration: underline;*/
+    }
+
+    .jumbotron .glyphicon-play-circle {
+        font-size: 70px;
+        top: 25px;
+        padding-left: 15px;
+    }
+
+    .bg--transparent {
+        background: transparent;
+    }
+
+	.ukti-outer-wrap {
+		display: none;
+	}
+
+	.navbar-brand {
+		height: auto;
+	}
+	
+	.navbar-brand img {
+		height: 40px;
+		width: auto;
+	}
+
+	.navbar-default {
+		background: transparent;
+	}
+
+	.navbar {
+		margin: 0;
+        border: 0 solid #F2F2F2;
+        position: absolute;
+        z-index: 10;
+        width: 100%;
+        top: 80px;
+        /*left: -20px;*/
+    }
+
+    #nav.affix {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 10;
+    }
+
+    #nav.affix-top {
+        position: static;
+    }
+
+	.modal-open .modal {
+		background: #000;
+	}
+
+	.ukti-loading {
+		position: fixed;
+        z-index: 100;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+        background: #fff;
+		/*background: #fff url('../assets/img/loading.gif') center no-repeat;*/
+	}
+
+
+
+	
+
+	.video-wrapper {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        padding-top: 25px;
+        height: 0;
+        width:80%;
+    }
+
+    .video-wrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 80% !important;
+    }
+
+    video#bgVid, img#bgImg { 
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -100;
+        -ms-transform: translateX(-50%) translateY(-50%);
+        -moz-transform: translateX(-50%) translateY(-50%);
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+        background-size: cover; 
+    }
+
+
+</style>
+<body>
+<div class="ukti-loading"></div>
+<noscript>
+<style type="text/css">
+	.ukti-loading {display: none;}
+	.ukti-outer-wrap {display: block;}
+</style>
+</noscript>
+<div class="ukti-outer-wrap">
+<nav id="nav-default" class="navbar navbar-default">
+      <div class="container ukti-main-nav"><!-- Brand and toggle get grouped for better mobile display -->
+        <!-- <div class="row"> -->
+          <!-- <div class="col-md-3"> -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+                  <a class="navbar-brand" href="/">
+                      <img alt="Brand" src="http://ukti-iigb-alpha-staging.herokuapp.com/assets/img/iigb-logo.png">
+                  </a>
+            </div>
+          <!-- </div> -->
+          <div class="collapse navbar-collapse" id="navbar-collapse-1">
+            <!-- <div class="col-md-9"> -->
+                <ul class="nav navbar-nav ukti-main-nav-list">
+                    <li class="active"><a href="#">Market sectors<span class="sr-only">(current)</span></a></li>
+                    <li class=""><a href="#">Investment guide</a></li>
+                </ul>
+                <form class="navbar-form navbar-right ukti-main-search" role="search">
+                    <div class="form-group">
+                        <input type="text" class="ukti-main-search__input-field" placeholder="Search">
+                    </div>
+                    <!--<button type="submit" class="ukti-main-search__submit"><span><img-->
+                            <!--src="http://ukti-iigb-alpha-staging.herokuapp.com/assets/img/search.png" alt=""></span></button>-->
+                    <button type="submit" class="ukti-main-search__submit"><span class="glyphicon glyphicon-search ukti-main-search__glyph" aria-hidden="true"></span></button>
+                </form>
+            <!-- </div> -->
+          </div>
+
+        <!-- </div> -->
+      </div>
+      <!-- /.navbar-collapse -->
+</nav>
+
+<style>
+    body {
+        background-color: #F3F3F3;
+        font-size: 16px;
+    }
+
+    .container {
+        background-color: #FFFFFF;
+    }
+
+    .ukti-toc {
+        background-color: #E3E3E3;
+    }
+
+    .ukti-resources {
+        background-color: #F2F2F2;
+        border: 3px solid #797979;
+        padding: 16px 30px;
+        border-radius: 10px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .ukti-imageholder {
+        position: relative;
+    }
+
+    .ukti-caption {
+        /*position: absolute;*/
+        /*bottom: 80px;*/
+        /*left: 40px;*/
+        /*right: 40px;*/
+        /*background-color: #FFFFFF;*/
+        color: #FFFFFF;
+        padding: 10px 20px;
+    }
+
+    .jumbotron {
+        background-image: url("http://ukti-iigb-alpha-staging.herokuapp.com/assets/img/digi-med.jpg");
+        background-size: cover;
+    }
+
+    .affix {
+        position: fixed;
+        top: 0;
+    }
+    .affix-top {
+        position: static;
+    }
+    .affix-bottom {
+        position: absolute;
+    }
+</style>
+<div class="jumbotron ukti-imageholder">
+    <div class="container" style="background: rgba(255,255,255,0)">
+        <div style="background-color: rgba(255,255,255,0);height: 200px;">
+        </div>
+        <div class="ukti-caption">
+            <h1>Digital media</h1>
+            <p>The message goes here, no idea how long it will be but this example copy is 18 words.</p>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <ol class="breadcrumb">
+            <li>
+                <a href="/">Home</a>
+            </li>
+            <li>
+                <a class="text-sentence" href="/us/sectors">sectors</a>
+            </li>
+            <!--last one is not hyperlinked-->
+            <li>
+                <a class="text-sentence" href="/us/sectors/creative">creative</a>
+            </li>
+            <!--last one is not hyperlinked-->
+            <!--last one is not hyperlinked-->
+            <li>
+                <p class="text-sentence">digital media</p>
+            </li>
+        </ol>
+    </div>
+</div>
+<div class="container ukti-toc">
+    <div class="row">
+        <div class="col-md-8">
+            <h2>On this page</h2>
+            <div class="row">
+                <ol class="ukti-toc">
+                    <li><a href="#digital-media-sector-in-great-britain">Digital media sector in Great Britain</a></li>
+                    <li><a href="#an-environment-for-growth">An environment for growth</a></li>
+                    <li><a href="#strong-areas-of-opportunity">Strong areas of opportunity</a></li>
+                    <li><a href="#a-skilled-and-creative-talent-pool">A skilled and creative talent pool</a></li>
+                    <li><a href="#londons-global-status-and-regional-growth">London’s global status and regional growth</a></li>
+                    <li><a href="#support-for-investment">Support for investment</a></li>
+                    <li><a href="#next-steps-and-contacts">Next steps and contacts</a></li>
+                </ol>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="row">
+                <div class="col-md-11">
+                    <nav id="sidebar-width" class="bs-docs-sidebar hidden-xs hidden-sm ukti-resources" data-spy="affix" data-offset-top="750" data-offset-bottom="300">
+                        <ul id="sidebar" class="nav bs-docs-sidenav">
+                            <li><h2>Resources</h2></li>
+                            <li>Getting a visa</li>
+                            <li>Setting up a bank account</li>
+                            <li>Business registration</li>
+                            <li>Finding premises</li>
+                            <li>Creative hubs outside London</li>
+                        </ul>
+                    </nav>
+                    <nav class="hidden-md hidden-lg ukti-resources">
+                        <ul class="nav">
+                            <li><h2>Resources</h2></li>
+                            <li>Getting a visa</li>
+                            <li>Setting up a bank account</li>
+                            <li>Business registration</li>
+                            <li>Finding premises</li>
+                            <li>Creative hubs outside London</li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <section id="digital-media-sector-in-great-britain">
+<header>
+    <h2>Digital media sector in Great Britain</h2>
+</header>
+
+<p>The UK is a global leader for digital media inward investment. British consumers have a huge appetite for new digital services, devices and creative offerings.</p>
+<p>Tech has transformed the creative scene, and the booming digital economy allows businesses to set up easily and expand globally, from London and other UK digital centres.</p>
+
+
+</section><section id="an-environment-for-growth">
+<header>
+    <h2>An environment for growth</h2>
+</header>
+
+<p>The UK has easy access to Europe and the rest of the world. It has a large research community and an ecosystem of partners, academic institutions and skilled workers. These networks mean smaller companies can easily work with each other, and with major firms. The sector:</p>
+<ul>
+<li><p>saw Gross Value Added (GVA) of all digital tech in the UK grow by 27% between 2010 and 2014, with GVA for 2014 reaching £87 billion</p>
+</li>
+<li><p>accounted for 46% of all exports from the UK creative industries in 2012</p>
+</li>
+<li><p>operates in an advanced consumer market – the British are the world’s biggest online spenders</p>
+</li>
+</ul>
+<p>95 percent of UK homes and businesses will have access to superfast broadband by 2017. Current coverage is already higher than France, Germany, Italy and Spain. A 2015 World Economic Forum report cites the UK as one of the best environments in the world for ICT development.</p>
+
+
+</section><section id="strong-areas-of-opportunity">
+<header>
+    <h2>Strong areas of opportunity</h2>
+</header>
+
+<p>The UK is Europe’s largest mobile content market, with over £1 billion spent on mobile applications, content and services each year, and the highest mobile advertising spend per head. Mobile in the UK has been boosted by:</p>
+<ul>
+<li><p>an increase in smartphones and choice of mobile contracts</p>
+</li>
+<li><p>a strong games and advertising industry</p>
+</li>
+<li><p>an enhanced mobile network infrastructure</p>
+</li>
+</ul>
+<p>Other growth opportunities include:</p>
+<ul>
+<li><p>social media – Britons are amongst the biggest users of social networks in Europe</p>
+</li>
+<li><p>digital radio and TV – the UK has one of the world’s largest digital radio networks, and 97% of UK homes have digital TV</p>
+</li>
+<li><p>innovative tech in production and art – for example sensors and motion capture in film</p>
+</li>
+<li><p>digital music – accounting for 54% of all music consumption in 2015</p>
+</li>
+</ul>
+<p>The UK’s strengths have ensured investment by some of the world’s biggest digital players – Google, Facebook and Amazon have all opened research and development (R&amp;D) hubs in the UK.</p>
+
+
+</section><section id="a-skilled-and-creative-talent-pool">
+<header>
+    <h2>A skilled and creative talent pool</h2>
+</header>
+
+<p>The UK has a highly educated, skilled and growing digital workforce. UK universities are ranked second in the world for quality of industry collaboration and have:</p>
+<ul>
+<li><p>around 120,000 students studying digital media related disciplines</p>
+</li>
+<li><p>a strong focus on skills which support interactive media, mobile and games development</p>
+</li>
+<li><p>a deep talent pool, from software engineers and developers to animators and games designers</p>
+</li>
+</ul>
+<p>IT, software and computer services accounted for 791,000 jobs in the UK in 2012, or roughly 31% of creative economy employment. [update ?] Employment in creative tech is thriving, with jobs growing at just under 20% in 2014</p>
+
+
+</section><section id="londons-global-status-and-regional-growth">
+<header>
+    <h2>London’s global status and regional growth</h2>
+</header>
+
+<p>London has been rated top for technology readiness in a study of 30 of the world&#39;s most dynamic cities, and the best city in Europe for digital entrepreneurs</p>
+<p>Tech City, in its East End, has grown to become a global centre for creative digital companies. Start-ups like adtech pioneers Unruly have scaled up globally from the capital.</p>
+<p>The North of England also has several centre of digital media excellence - Liverpool, Manchester, Sheffield/Rotherham, Leeds, Hull, Sunderland and the Newcastle and Durham areas - which together generated £9.9 billion GVA to the UK economy in 2014. The potential for growth is great, with a further £6 billion estimated by 2020.</p>
+<p>There are other clusters of digital talent across the UK, most notably in Brighton, Newcastle and Cambridge.</p>
+
+
+</section><section id="support-for-investment">
+<header>
+    <h2>Support for investment</h2>
+</header>
+
+<p>The UK Government is fully committed to support the UK’s status as a leading digital nation. Measures to complement its low level of corporation tax, dropping to 18% by 2020, include:</p>
+<ul>
+<li><p>investment of more than £200 million in a network of Technology and Innovation Centres supporting the commercialisation of new technologies by business</p>
+</li>
+<li><p>tax incentives to encourage innovation, such as the Seed Enterprise Investment Scheme, R&amp;D tax credits and the Patent Box Scheme, which lowers corporation tax on patented invention profits still further</p>
+</li>
+</ul>
+<p>The UK offers a number of world-class digital start-up programmes and opportunities for angel investment.</p>
+
+
+</section><section id="next-steps-and-contacts">
+<header>
+    <h2>Next steps and contacts</h2>
+</header>
+
+<p>UK Trade &amp; Investment (UKTI) can help grow your digital media business in the UK and access the financial and practical support available to you. Contact your local UKTI office</p>
+<p>Case studies</p>
+<p><a href="https://www.youtube.com/watch?v=tl8BHd1hhjc">https://www.youtube.com/watch?v=tl8BHd1hhjc</a></p>
+<p>Intent media - <a href="https://www.gov.uk/government/case-studies/ukti-helps-intent-media-open-new-headquarters-in-london">https://www.gov.uk/government/case-studies/ukti-helps-intent-media-open-new-headquarters-in-london</a></p>
+<p>Gettaxi app - <a href="https://www.gov.uk/government/case-studies/gettaxi-expands-its-uk-business-with-help-from-ukti">https://www.gov.uk/government/case-studies/gettaxi-expands-its-uk-business-with-help-from-ukti</a></p>
+
+
+</section>
+        </div>
+    </div>
+</div>
+<nav class="container ukti-footer">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-1">
+            <ul class="ukti-footer--list">
+                <li><a href="#">Why the UK?</a></li>
+                <li><a href="#">Sectors</a></li>
+                <li><a href="#">Help and advice</a></li>
+                <li><a href="#">Privacy and cookies</a></li>
+                <li><a href="#">Terms and conditions</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+        </div>
+        <div class="col-md-2 col-md-offset-1 col-xs-4 col-xs-offset-4 ukti-footer--logo">
+            <img class="img-responsive" src="http://ukti-iigb-alpha-staging.herokuapp.com/assets/img/HM Gov logo black.png" alt="">
+            <img class="img-responsive" src="http://ukti-iigb-alpha-staging.herokuapp.com/assets/img/iigb-logo.png" alt="">
+        </div>
+    </div>
+</nav>
+
+
+</div>
+<script>
+    $(document).ready(function () {
+        enhance();
+        setTimeout(showcontent, 500);
+        setTimeout(removeloading, 1000);
+    });
+
+    function showcontent(){
+    	$('.ukti-outer-wrap').show();
+        calculateSidebarWidth();
+    }
+
+    function removeloading(){
+        $('.ukti-loading').fadeOut(300);
+    }
+
+    function enhance(){
+    	enhance_videobg();
+    }
+
+    function enhance_videobg(){
+        if($('#bgVid').length > 0 || $('#bgImg').length > 0) {
+            $('.jumbotron').addClass('bg--transparent');
+        }
+    }
+
+    //calculate fixed sidebar width
+    function calculateSidebarWidth () {
+        if ($('#sidebar-width')) {
+            var menuWidth = $('#sidebar-width').width();
+            $('#sidebar').css({width: menuWidth});
+        }
+    }
+
+    $(window).on('resize', function () {
+        calculateSidebarWidth ();
+    });
+</script>
+</body>
+</html>

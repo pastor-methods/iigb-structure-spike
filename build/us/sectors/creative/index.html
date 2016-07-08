@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>UKTI - </title>
+    <base href="/">
+    <!--<base href="/ukti-alpha/build/">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/css/main.css" rel="stylesheet" type="text/css"/>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/equalHeight.js"></script>
+</head>
+<style type="text/css">
+
+	.jumbotron {
+        position: relative;
+        overflow: hidden;
+        background: transparent;
+        height: 800px;
+        padding-top: 140px;
+        background: #1E1348;
+        margin: 0;
+    }
+
+    .jumbotron a {
+        color: #fff;
+        /*text-decoration: underline;*/
+    }
+
+    .jumbotron .glyphicon-play-circle {
+        font-size: 70px;
+        top: 25px;
+        padding-left: 15px;
+    }
+
+    .bg--transparent {
+        background: transparent;
+    }
+
+	.ukti-outer-wrap {
+		display: none;
+	}
+
+	.navbar-brand {
+		height: auto;
+	}
+	
+	.navbar-brand img {
+		height: 40px;
+		width: auto;
+	}
+
+	.navbar-default {
+		background: transparent;
+	}
+
+	.navbar {
+		margin: 0;
+        border: 0 solid #F2F2F2;
+        position: absolute;
+        z-index: 10;
+        width: 100%;
+        top: 80px;
+        /*left: -20px;*/
+    }
+
+    #nav.affix {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 10;
+    }
+
+    #nav.affix-top {
+        position: static;
+    }
+
+	.modal-open .modal {
+		background: #000;
+	}
+
+	.ukti-loading {
+		position: fixed;
+        z-index: 100;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+        background: #fff;
+		/*background: #fff url('../assets/img/loading.gif') center no-repeat;*/
+	}
+
+
+
+	
+
+	.video-wrapper {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        padding-top: 25px;
+        height: 0;
+        width:80%;
+    }
+
+    .video-wrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 80% !important;
+    }
+
+    video#bgVid, img#bgImg { 
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -100;
+        -ms-transform: translateX(-50%) translateY(-50%);
+        -moz-transform: translateX(-50%) translateY(-50%);
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+        background-size: cover; 
+    }
+
+
+</style>
+<body>
+<div class="ukti-loading"></div>
+<noscript>
+<style type="text/css">
+	.ukti-loading {display: none;}
+	.ukti-outer-wrap {display: block;}
+</style>
+</noscript>
+<div class="ukti-outer-wrap">
+<nav id="nav-default" class="navbar navbar-default">
+      <div class="container ukti-main-nav"><!-- Brand and toggle get grouped for better mobile display -->
+        <!-- <div class="row"> -->
+          <!-- <div class="col-md-3"> -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+                  <a class="navbar-brand" href="/">
+                      <img alt="Brand" src="http://ukti-iigb-alpha-staging.herokuapp.com/assets/img/iigb-logo.png">
+                  </a>
+            </div>
+          <!-- </div> -->
+          <div class="collapse navbar-collapse" id="navbar-collapse-1">
+            <!-- <div class="col-md-9"> -->
+                <ul class="nav navbar-nav ukti-main-nav-list">
+                    <li class="active"><a href="#">Market sectors<span class="sr-only">(current)</span></a></li>
+                    <li class=""><a href="#">Investment guide</a></li>
+                </ul>
+                <form class="navbar-form navbar-right ukti-main-search" role="search">
+                    <div class="form-group">
+                        <input type="text" class="ukti-main-search__input-field" placeholder="Search">
+                    </div>
+                    <!--<button type="submit" class="ukti-main-search__submit"><span><img-->
+                            <!--src="http://ukti-iigb-alpha-staging.herokuapp.com/assets/img/search.png" alt=""></span></button>-->
+                    <button type="submit" class="ukti-main-search__submit"><span class="glyphicon glyphicon-search ukti-main-search__glyph" aria-hidden="true"></span></button>
+                </form>
+            <!-- </div> -->
+          </div>
+
+        <!-- </div> -->
+      </div>
+      <!-- /.navbar-collapse -->
+</nav>
+
+<style>
+    body {
+        background-color: #F3F3F3;
+        font-size: 16px;
+    }
+
+    .container {
+        background-color: #FFFFFF;
+    }
+
+    .ukti-toc {
+        background-color: #E3E3E3;
+    }
+
+    .ukti-resources {
+        background-color: #F2F2F2;
+        border: 3px solid #797979;
+        border-radius: 10px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .ukti-imageholder {
+        position: relative;
+        background-color: transparent;
+    }
+
+    .ukti-caption {
+        position: absolute;
+        bottom: 80px;
+        left: 40px;
+        right: 40px;
+        background: rgb(255, 255, 255);
+        color: #000;
+        padding: 10px 20px;
+    }
+</style>
+<div class="jumbotron">
+    <div class="container" style="background-color: transparent">
+        <h1>Create in Great Britain</h1>
+        <p class="text-center">The message goes here, no idea how long it will be but this example copy is 18 words.</p>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <ol class="breadcrumb">
+            <li>
+                <a href="/">Home</a>
+            </li>
+            <li>
+                <a class="text-sentence" href="/us/sectors">sectors</a>
+            </li>
+            <!--last one is not hyperlinked-->
+            <!--last one is not hyperlinked-->
+            <li>
+                <p class="text-sentence">creative</p>
+            </li>
+        </ol>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Explore your creative sub sector</h2>
+            <div class="row">
+                <article class="col-md-4">
+                    <img src="http://ukti-iigb-alpha-staging.herokuapp.com/assets/img/digi-med.jpg"
+                         class="ukti-img-thumbnail">
+                    <h4>
+                        <a class="text-sentence" href="">digital media</a>
+                    </h4>
+                    <p>The message goes here, no idea how long it will be but this example copy is 18 words.</p>
+                </article>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container ukti-toc">
+    <div class="row">
+        <div class="col-md-8">
+            <h2>On this page</h2>
+            <div class="row">
+                <ol class="ukti-toc">
+                    <li><a href="#the-creative-sector-in-great-britain">The creative sector in Great Britain</a></li>
+                    <li><a href="#economic-environment-for-growth">Economic environment for growth</a></li>
+                    <li><a href="#the-labour-market-and-creative-talent">The labour market and creative talent</a></li>
+                    <li><a href="#advanced-infrastructure-and-regional-strength">Advanced infrastructure and regional strength</a></li>
+                    <li><a href="#regulatory-and-financial-support-for-creative-companies">Regulatory and financial support for creative companies</a></li>
+                    <li><a href="#next-steps-and-contacts">Next steps and contacts</a></li>
+                </ol>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="row">
+                <div class="col-md-11 ukti-resources">
+                    <h2>Resources</h2>
+                    <p>Getting a visa</p>
+                    <p>Setting up a bank account</p>
+                    <p>Business registration</p>
+                    <p>Finding premises</p>
+                    <p>Creative hubs outside London</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <section id="the-creative-sector-in-great-britain">
+<header>
+    <h2>The creative sector in Great Britain</h2>
+</header>
+
+<p>The UK’s creative talent pool is deep and wide. It’s recognised as a world class prospect for inward investment in:</p>
+<ul>
+<li>film – its skills and infrastructure mean big budget movies like Star Wars can be made here </li>
+<li>music – talent and technology make it the world’s second biggest exporter (source: UK Music).</li>
+<li>TV – the UK’s technicians, actors, location and production facilities make it a global leader</li>
+<li>digital media and computer games – it has the largest games development sector in Europe (source TIGA)</li>
+</ul>
+<p>Tax relief is driving growth in an already thriving sector. Well established creative networks mean that start-ups can access major players, and other creative partners.</p>
+<p>There are strong reasons to set up or expand your creative business in the UK.    </p>
+
+
+</section><section id="economic-environment-for-growth">
+<header>
+    <h2>Economic environment for growth</h2>
+</header>
+
+<p>The economic picture for Foreign Direct Investment (FDI) is one of stability and long term growth.  The UK’s creative industries grew by 8.9% in 2014 - almost double the UK economy as a whole (source: DCMS).</p>
+<p>Britain is a gateway to the export markets of Europe and the world.  Its creative sector is particularly export-focused. </p>
+<p>The sector:</p>
+<ul>
+<li>exported £19.8 billion of creative services in 2014, 9% of all UK service exports (source: DCMS)</li>
+<li>attracts significant creative investment, making a major contribution to the UK’s position as the largest recipient of foreign direct investment (FDI) in Europe.</li>
+<li>attracted 486 inward investment projects in 2014-5, in combination with the Information, Communication and Technology (ICT) sector </li>
+</ul>
+
+
+</section><section id="the-labour-market-and-creative-talent">
+<header>
+    <h2>The labour market and creative talent</h2>
+</header>
+
+<p>The UK has a stable multi-cultural population with a diverse range of creative skills, and the lowest labour costs in Western Europe.</p>
+<p>The sector:</p>
+<ul>
+<li>employs 1.9 million people (up 19.5% since 2011)</li>
+<li>accounted for 6% of all jobs in the UK in 2015</li>
+<li>is made up of highly skilled and educated workers from the UK’s world renowned educational system</li>
+<li>around 60% of creative jobs are held by graduates, higher than the UK average</li>
+<li>has close contacts with the UK’s network of over 100 art schools</li>
+</ul>
+<p>Over three-quarters of the UK games workforce holds an undergraduate degree, and there is a higher proportion of postgraduate degrees than in any other games sector in the world (source TBC)</p>
+
+
+</section><section id="advanced-infrastructure-and-regional-strength">
+<header>
+    <h2>Advanced infrastructure and regional strength</h2>
+</header>
+
+<p>The UK is one of the easiest places in the world to develop the infrastructure and communications that ambitious creative companies need for growth.  It has:</p>
+<ul>
+<li>one of the world’s highest levels of broadband penetration</li>
+<li>world leading access to digital television and radio</li>
+<li>the biggest  ecommerce market in Europe </li>
+<li>a huge appetite for new digital services, with high levels of take-up of new networks and devices</li>
+</ul>
+<p>Almost all the major global technology businesses have operations here.</p>
+<p>London is the hub of the UK’s creative economy, ranked 2nd only to New York in EY’s global talent index for 2015. But it’s not just about the capital.</p>
+<p>Outside of London, the games development sector is thriving in Brighton, Cambridge, Dundee, Liverpool, Newcastle, the Midlands and Yorkshire. </p>
+<p>Other creative and technology clusters across the UK include Manchester’s Media City and Leamington Spa in Warwickshire.</p>
+
+
+</section><section id="regulatory-and-financial-support-for-creative-companies">
+<header>
+    <h2>Regulatory and financial support for creative companies</h2>
+</header>
+
+<p>Creative businesses in the UK are supported by an intellectual property regime and strong regulatory framework which protect and encourage creativity.</p>
+<p>The UK’s Corporation tax is lowest in the G20 at 20%, and will reduce to 17% by 2020.</p>
+<p>Tax relief is helping to drive increased investment and growth, and is available for :</p>
+<ul>
+<li>Animation</li>
+<li>Film</li>
+<li>High-end TV</li>
+<li>Children’s TV</li>
+<li>Video games</li>
+<li>Theatre</li>
+<li>Orchestras</li>
+</ul>
+<p><a href="https://www.gov.uk/guidance/corporation-tax-creative-industry-tax-reliefs">Find out more about UK tax relief for the creative industries</a></p>
+
+
+</section><section id="next-steps-and-contacts">
+<header>
+    <h2>Next steps and contacts</h2>
+</header>
+
+<p><a href="">Link to Digital Media subsector</a></p>
+<p><a href="">Link to section on how  to set up a business in the UK – to be written</a></p>
+<p>UK Trade &amp; Investment (UKTI) can help grow your creative business in the UK.  Contact your local UKTI office <a href="">link to form for November go-live</a></p>
+<p><a href="">Link  other sources of info such as creative industries site (to be decided)</a></p>
+<p>Case studies (to be confirmed)</p>
+<ul>
+<li><a href="https://www.gov.uk/government/case-studies/cloud-imperium-games-invests-15-million-in-its-uk-studio">Cloud Imperium Games invests £15 million in its UK studio</a></li>
+<li><a href="https://www.gov.uk/government/case-studies/ukti-helps-intent-media-open-new-headquarters-in-london">UKTI helps Intent Media open new headquarters in London</a></li>
+<li><a href="https://www.youtube.com/watch?v=tl8BHd1hhjc">Australian creative networking platform, the Dots, launches in the UK</a> </li>
+</ul>
+
+
+</section>
+        </div>
+    </div>
+</div>
+<nav class="container ukti-footer">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-1">
+            <ul class="ukti-footer--list">
+                <li><a href="#">Why the UK?</a></li>
+                <li><a href="#">Sectors</a></li>
+                <li><a href="#">Help and advice</a></li>
+                <li><a href="#">Privacy and cookies</a></li>
+                <li><a href="#">Terms and conditions</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+        </div>
+        <div class="col-md-2 col-md-offset-1 col-xs-4 col-xs-offset-4 ukti-footer--logo">
+            <img class="img-responsive" src="http://ukti-iigb-alpha-staging.herokuapp.com/assets/img/HM Gov logo black.png" alt="">
+            <img class="img-responsive" src="http://ukti-iigb-alpha-staging.herokuapp.com/assets/img/iigb-logo.png" alt="">
+        </div>
+    </div>
+</nav>
+
+
+</div>
+<script>
+    $(document).ready(function () {
+        enhance();
+        setTimeout(showcontent, 500);
+        setTimeout(removeloading, 1000);
+    });
+
+    function showcontent(){
+    	$('.ukti-outer-wrap').show();
+        calculateSidebarWidth();
+    }
+
+    function removeloading(){
+        $('.ukti-loading').fadeOut(300);
+    }
+
+    function enhance(){
+    	enhance_videobg();
+    }
+
+    function enhance_videobg(){
+        if($('#bgVid').length > 0 || $('#bgImg').length > 0) {
+            $('.jumbotron').addClass('bg--transparent');
+        }
+    }
+
+    //calculate fixed sidebar width
+    function calculateSidebarWidth () {
+        if ($('#sidebar-width')) {
+            var menuWidth = $('#sidebar-width').width();
+            $('#sidebar').css({width: menuWidth});
+        }
+    }
+
+    $(window).on('resize', function () {
+        calculateSidebarWidth ();
+    });
+</script>
+</body>
+</html>
