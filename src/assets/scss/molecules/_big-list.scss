@@ -7,10 +7,12 @@
     // margin: 0 -15px;
     width: 100%;
     overflow: hidden;
+    border-right: 4px solid #ddd;
 
     @media (max-width: $screen-xs-max) {
 		margin: 0;
 		padding: 15px;
+		border-right: 0px;
 	}
 
 	&__item {
