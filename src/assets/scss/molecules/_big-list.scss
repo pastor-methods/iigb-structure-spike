@@ -72,7 +72,7 @@
 
 		&--red-list-style {
 			@extend .ukti-big-list__item;
-			
+
 			&::before {
 				color: #E41F13;
 			}
@@ -84,6 +84,11 @@
 			@media (max-width: $screen-sm-max) {
 				padding: 15px 30px 30px 60px;
 				min-height: 260px;
+			}
+
+			@media (max-width: $screen-xs-max) {
+				width: 100%;
+				min-height: auto;
 			}
 		}
 	}
