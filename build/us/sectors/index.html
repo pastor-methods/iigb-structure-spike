@@ -158,18 +158,18 @@
             <h2>List of sectors:</h2>
             <div class="row">
                 <article class="col-md-4">
-                    <img src="http://ukti-iigb-alpha-staging.herokuapp.com/assets/img/creative.jpg"
-                         class="ukti-img-thumbnail">
-                    <h4>
-                        <a class="text-sentence" href="">creative</a>
-                    </h4>
-                    <p>The message goes here, no idea how long it will be but this example copy is 18 words.</p>
-                </article>
-                <article class="col-md-4">
                     <img src="http://ukti-iigb-alpha-staging.herokuapp.com/assets/img/finance.jpg"
                          class="ukti-img-thumbnail">
                     <h4>
                         <a class="text-sentence" href="">financial</a>
+                    </h4>
+                    <p>The message goes here, no idea how long it will be but this example copy is 18 words.</p>
+                </article>
+                <article class="col-md-4">
+                    <img src="http://ukti-iigb-alpha-staging.herokuapp.com/assets/img/creative.jpg"
+                         class="ukti-img-thumbnail">
+                    <h4>
+                        <a class="text-sentence" href="">creative</a>
                     </h4>
                     <p>The message goes here, no idea how long it will be but this example copy is 18 words.</p>
                 </article>
@@ -258,15 +258,16 @@
 
     //calculate fixed sidebar width
     function calculateSidebarWidth () {
-        // if ($('#sidebar-width')) {
-        //     var menuWidth = $('#sidebar-width').width();
-        //     $('#sidebar').css({width: menuWidth});
-        // }
+         if ($('#sidebar-width')) {
+             var menuWidth = $('#sidebar-width').width();
+//             $('#sidebar').css({width: menuWidth});
+             $('.ukti-quick-guide-side').css({width: menuWidth});
+         }
 
-        if ($('.ukti-quick-guide-side')) {
-            var menuWidth = $('.ukti-quick-guide-side').width();
-            $('.ukti-quick-guide-side').css({width: menuWidth});
-        }
+//        if ($('.ukti-quick-guide-side')) {
+//            var menuWidth = $('.ukti-quick-guide-side').width();
+//            $('.ukti-quick-guide-side').css({width: menuWidth});
+//        }
 
     }
 
