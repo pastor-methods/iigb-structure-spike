@@ -7,7 +7,7 @@ var metalsmith = require('metalsmith'),
     Handlebars = require('handlebars'),
     fs = require('fs'),
     path = require('path'),
-    _ = require('lodash');
+    _ = require('underscore');
 
 var languages = '\/us\/|\/de\/|\/cn\/';
 
@@ -60,6 +60,7 @@ var makeIndex = function (files, metalsmith, done) {
         var fullVideoPath = '';
         var pageTitle = '';
         var intro = '';
+        var orderLevel = '';
         var toToc = [];
         for (var j = 0; j < filesWithLang.length; j++) {
             var fileWithLang = filesWithLang[j];
@@ -115,6 +116,10 @@ var makeIndex = function (files, metalsmith, done) {
                 if (fileWithLang.intro) {
                     intro = fileWithLang.intro;
                 }
+                //add an order to the levels
+                if (fileWithLang.orderLevel) {
+                    orderLevel = fileWithLang.orderLevel;
+                }
                 toIndex += fileWithLang.contents.toString();
                 toToc.push(fileWithLang.title);
             }
@@ -141,6 +146,19 @@ var makeIndex = function (files, metalsmith, done) {
                     var ii = ee.slice(1, -1);
                     return ii[ii.length - 1] || '';
                 })(),
+                location: (function () {
+                var ee = folderPath.split("/");
+                var lang = ee.pop();
+                var ff = ee.slice(1);
+                // var buffer = [];
+                var link = '/' + lang;
+                for (var i = 0; i < ff.length; i++) {
+                    link += '/' + ff[i];
+                    // buffer.push({name: ff[i], link: link});
+                }
+                return link;
+            })(),
+                orderLevel: orderLevel,
                 thumbnail: thumbnailPath,
                 heroVideo: heroVideoPath,
                 heroImage: heroImagePath,
@@ -175,7 +193,8 @@ var makeIndex = function (files, metalsmith, done) {
                         }
                     }
                 }
-                files[file].subLevel = subLevel;
+                var orderedSubLevel = _.sortBy(subLevel, 'orderLevel');
+                files[file].subLevel = orderedSubLevel;
             }
         }
     }
