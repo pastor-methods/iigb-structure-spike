@@ -36,25 +36,7 @@
         <p class="text-center">{{intro}}</p>
     </div>
 </div>
-<!-- <div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <h2>Explore your {{folder}} sub sector</h2>
-            <div class="row">
-                {{#each subLevel}}
-                <article class="col-md-4">
-                    <img src="http://ukti-iigb-alpha-staging.herokuapp.com/assets/img/{{this.thumbnail}}"
-                         class="ukti-img-thumbnail">
-                    <h4>
-                        <a class="text-sentence" href="">{{this.name}}</a>
-                    </h4>
-                    <p>{{intro}}</p>
-                </article>
-                {{/each}}
-            </div>
-        </div>
-    </div>
-</div> -->
+
 <section class="ukti-toc">
     {{> breadcrumb}}
     <div class="container">
@@ -91,11 +73,59 @@
         </div>
     </div>
 </section>
-<div class="container ukti-main-content">
-    <div class="row">
-        <div class="col-md-7 col-sm-10">
-            {{{contents}}}
+<div class="ukti-main-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7 col-sm-10">
+                {{{contents}}}
+            </div>
         </div>
     </div>
+    <!-- <div class="ukti-sector-subsectors">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>{{folder}} sub sectors:</h2>
+                    <div class="row">
+                        {{#each subLevel}}
+                        <article class="col-md-4">
+                            <img src="http://ukti-iigb-alpha-staging.herokuapp.com/assets/img/{{this.thumbnail}}"
+                                 class="ukti-img-thumbnail">
+                            <h4>
+                                <a class="text-sentence" href="">{{this.name}}</a>
+                            </h4>
+                            <p>{{intro}}</p>
+                        </article>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <div class="ukti-sector-subsectors">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="text-sentence">{{folder}} sub sectors:</h2>
+                    <ul class="ukti-key-sectors-list">
+                        {{#each subLevel}}
+                        <li class="ukti-key-sectors-list__item">
+                            <div class="ukti-key-sectors-list__link-wrap">
+                                <a href="#">
+                                    <img src="http://ukti-iigb-alpha-staging.herokuapp.com/assets/img/{{this.thumbnail}}" class="ukti-key-sectors-list__image">
+                                    <span class="ukti-key-sectors-list__text text-sentence">{{this.name}}</span>
+                                </a>
+                            </div>
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+                    
+
 </div>
 {{> footer}}
