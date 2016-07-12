@@ -2,18 +2,23 @@
 
 .ukti-home-section-anchors {
 	margin-top: 140px;
-    font-size: 21px;
-    font-weight: 100;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 24px;
-    font-size: 18px;
+	font-size: 21px;
+	font-weight: 100;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 24px;
+	font-size: 18px;
 
-    a {
-    	border-bottom: 1px solid #999;
-    	padding: 0 10px 1px 10px;
-    }
+	a {
+		border-bottom: 1px solid #999;
+		padding: 0 0 1px 0;
+		margin: 0 10px;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
 }
 
 
