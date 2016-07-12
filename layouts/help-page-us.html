@@ -1,0 +1,33 @@
+{{> header}}
+{{> header-nav}}
+<div class="jumbotron">
+    <div class="container" style="background-color: transparent">
+        <h1>{{pageTitle}}</h1>
+        <p class="text-center">{{intro}}</p>
+    </div>
+</div>
+{{> breadcrumb}}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <ol class="ukti-big-list">
+                    {{#each subLevel}}
+                    <li class="ukti-big-list__item--home-guide">
+                        <h3><a class="text-sentence" href="{{this.location}}">{{this.name}}</a></h3>
+                        {{intro}} <br>
+                    </li>
+                    {{/each}}
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+<!--<div class="container">-->
+    <!--<div class="row">-->
+        <!--<div class="col-md-8">-->
+            <!--{{{contents}}}-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+{{> footer}}
