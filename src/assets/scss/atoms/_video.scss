@@ -22,7 +22,7 @@ video {
 }
 
 //hide video play button on iOS
-// *::-webkit-media-controls-start-playback-button {
-// 	display: none!important;
-// 	-webkit-appearance: none;
-// }
+*::-webkit-media-controls-start-playback-button {
+	display: none!important;
+	-webkit-appearance: none;
+}
