@@ -6,10 +6,10 @@
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		// min-width: 100%;
-		// min-height: 100%;
-		width: auto;
-		height: 130%;
+		min-width: 100%;
+		min-height: 100%;
+		// width: auto;
+		// height: 130%;
 		z-index: -100;
 		-ms-transform: translateX(-50%) translateY(-50%);
 		-moz-transform: translateX(-50%) translateY(-50%);

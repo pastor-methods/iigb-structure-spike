@@ -1,6 +1,8 @@
 //container.scss
 
 .container {
+	// background: transparent;
+	
 	@media (max-width: $screen-sm-max) {
 		padding: 0 30px;
 	}

@@ -37,6 +37,7 @@
 
     function enhance(){
     	enhance_videobg();
+        // zoomImageHoverLink();
     }
 
     function enhance_videobg(){
@@ -47,11 +48,26 @@
 
     //calculate fixed sidebar width
     function calculateSidebarWidth () {
-        if ($('#sidebar-width')) {
-            var menuWidth = $('#sidebar-width').width();
-            $('#sidebar').css({width: menuWidth});
+        // if ($('#sidebar-width')) {
+        //     var menuWidth = $('#sidebar-width').width();
+        //     $('#sidebar').css({width: menuWidth});
+        // }
+
+        if ($('.ukti-quick-guide-side')) {
+            var menuWidth = $('.ukti-quick-guide-side').width();
+            $('.ukti-quick-guide-side').css({width: menuWidth});
         }
+
     }
+
+    // function zoomImageHoverLink() {
+    //     if ($('.ukti-sectors-list__item')) {
+    //         var itemHeight = $('.ukti-sectors-list__item').height();
+    //         var itemWidth = $('.ukti-sectors-list__item').width();
+    //         $('.ukti-sectors-list__item').css({height: itemHeight});
+    //         $('.ukti-sectors-list__item').css({width: itemWidth});
+    //     }
+    // }
 
     $(window).on('resize', function () {
         calculateSidebarWidth ();

@@ -3,15 +3,19 @@
 <head>
 	<meta charset="utf-8">
 	<title>UKTI - </title>
-    <base href="/">
+    <!-- <base href="/"> -->
     <!--<base href="/ukti-alpha/build/">-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-    <link href="assets/css/main.css" rel="stylesheet" type="text/css"/>
+    <!-- <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/css/main.css" rel="stylesheet" type="text/css"/> -->
+    <link href="http://ukti-iigb-alpha-staging.herokuapp.com/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="http://ukti-iigb-alpha-staging.herokuapp.com/assets/css/main.css" rel="stylesheet" type="text/css"/>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/equalHeight.js"></script>
+    <!-- <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/equalHeight.js"></script> -->
+    <script src="http://ukti-iigb-alpha-staging.herokuapp.com/assets/js/bootstrap.min.js"></script>
+    <script src="http://ukti-iigb-alpha-staging.herokuapp.com/assets/js/equalHeight.js"></script>
 </head>
 <style type="text/css">
 
@@ -195,25 +199,23 @@
     </div>
 </div>
 <div class="container">
-    <div class="row">
-        <ol class="breadcrumb">
-            <li>
-                <a href="/">Home</a>
-            </li>
-            <li>
-                <a class="text-sentence" href="/us/sectors">sectors</a>
-            </li>
-            <!--last one is not hyperlinked-->
-            <li>
-                <a class="text-sentence" href="/us/sectors/financial">financial</a>
-            </li>
-            <!--last one is not hyperlinked-->
-            <!--last one is not hyperlinked-->
-            <li>
-                <p class="text-sentence">financial technology</p>
-            </li>
-        </ol>
-    </div>
+    <ol class="breadcrumb">
+        <li>
+            <a href="/">Home</a>
+        </li>
+        <li>
+            <a href="/us/sectors">sectors</a>
+        </li>
+        <!--last one is not hyperlinked-->
+        <li>
+            <a href="/us/sectors/financial">financial</a>
+        </li>
+        <!--last one is not hyperlinked-->
+        <!--last one is not hyperlinked-->
+        <li>
+            financial technology
+        </li>
+    </ol>
 </div>
 <div class="container ukti-toc">
     <div class="row">
@@ -378,6 +380,7 @@
 
     function enhance(){
     	enhance_videobg();
+        // zoomImageHoverLink();
     }
 
     function enhance_videobg(){
@@ -388,11 +391,26 @@
 
     //calculate fixed sidebar width
     function calculateSidebarWidth () {
-        if ($('#sidebar-width')) {
-            var menuWidth = $('#sidebar-width').width();
-            $('#sidebar').css({width: menuWidth});
+        // if ($('#sidebar-width')) {
+        //     var menuWidth = $('#sidebar-width').width();
+        //     $('#sidebar').css({width: menuWidth});
+        // }
+
+        if ($('.ukti-quick-guide-side')) {
+            var menuWidth = $('.ukti-quick-guide-side').width();
+            $('.ukti-quick-guide-side').css({width: menuWidth});
         }
+
     }
+
+    // function zoomImageHoverLink() {
+    //     if ($('.ukti-sectors-list__item')) {
+    //         var itemHeight = $('.ukti-sectors-list__item').height();
+    //         var itemWidth = $('.ukti-sectors-list__item').width();
+    //         $('.ukti-sectors-list__item').css({height: itemHeight});
+    //         $('.ukti-sectors-list__item').css({width: itemWidth});
+    //     }
+    // }
 
     $(window).on('resize', function () {
         calculateSidebarWidth ();

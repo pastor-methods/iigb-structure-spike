@@ -1,0 +1,55 @@
+//toc.scss
+
+.ukti-toc {
+	counter-reset: ukti-toc-counter;
+	background: #363636;
+	color: #fff;
+
+
+	&__heading {
+		margin-bottom: 16px;
+	}
+
+	&__list {
+		-webkit-column-count: 2;
+		-moz-column-count: 2;
+		-ms-column-count: 2;
+		column-count: 2;
+
+		@media (max-width: $screen-xs-max) {
+			-webkit-column-count: 1;
+			-moz-column-count: 1;
+			-ms-column-count: 1;
+			column-count: 1;
+		}
+	}
+
+	&__list-item {
+		margin-bottom: 12px;
+    	display: inline-block;
+    	position: relative;
+    	padding: 0 30px 0 24px;
+
+    		&:before {
+				position: absolute;
+				top: 0px;
+				left: 2px;
+				font-size: 18px;
+				content: counter(ukti-toc-counter)".";
+				counter-increment: ukti-toc-counter;
+				width: 30px;
+				display: inline-block;
+			}
+
+		a {
+			color: #fff;
+			border-bottom: 1px solid #777;
+
+			&:hover {
+				text-decoration: none;
+				color: #639aca;
+				border-bottom: 1px solid #639aca;
+			}
+		}
+	}
+}

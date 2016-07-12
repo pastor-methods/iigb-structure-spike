@@ -3,15 +3,19 @@
 <head>
 	<meta charset="utf-8">
 	<title>UKTI - </title>
-    <base href="/">
+    <!-- <base href="/"> -->
     <!--<base href="/ukti-alpha/build/">-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-    <link href="assets/css/main.css" rel="stylesheet" type="text/css"/>
+    <!-- <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/css/main.css" rel="stylesheet" type="text/css"/> -->
+    <link href="http://ukti-iigb-alpha-staging.herokuapp.com/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="http://ukti-iigb-alpha-staging.herokuapp.com/assets/css/main.css" rel="stylesheet" type="text/css"/>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/equalHeight.js"></script>
+    <!-- <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/equalHeight.js"></script> -->
+    <script src="http://ukti-iigb-alpha-staging.herokuapp.com/assets/js/bootstrap.min.js"></script>
+    <script src="http://ukti-iigb-alpha-staging.herokuapp.com/assets/js/equalHeight.js"></script>
 </head>
 <style type="text/css">
 
@@ -132,25 +136,18 @@
 </nav>
 
 <style>
-    body {
-        background-color: #F3F3F3;
-        font-size: 16px;
-    }
 
-    .container {
-        background-color: #FFFFFF;
-    }
-
-    .ukti-toc {
-        background-color: #E3E3E3;
-    }
-
-    .ukti-resources {
+    /*.ukti-resources {
         background-color: #F2F2F2;
         border: 3px solid #797979;
         border-radius: 10px;
         margin-top: 20px;
         margin-bottom: 20px;
+    }*/
+
+    .jumbotron {
+        background-image: url("http://ukti-iigb-alpha-staging.herokuapp.com/assets/img/finance.jpg");
+        background-size: cover;
     }
 
     .ukti-imageholder {
@@ -174,36 +171,11 @@
         <p class="text-center">The message goes here, no idea how long it will be but this example copy is 18 words.</p>
     </div>
 </div>
-<div class="container">
-    <div class="row">
-        <ol class="breadcrumb">
-            <li>
-                <a href="/">Home</a>
-            </li>
-            <li>
-                <a class="text-sentence" href="/us/sectors">sectors</a>
-            </li>
-            <!--last one is not hyperlinked-->
-            <!--last one is not hyperlinked-->
-            <li>
-                <p class="text-sentence">financial</p>
-            </li>
-        </ol>
-    </div>
-</div>
-<div class="container">
+<!-- <div class="container">
     <div class="row">
         <div class="col-md-12">
             <h2>Explore your financial sub sector</h2>
             <div class="row">
-                <article class="col-md-4">
-                    <img src="http://ukti-iigb-alpha-staging.herokuapp.com/assets/img/fintech.jpg"
-                         class="ukti-img-thumbnail">
-                    <h4>
-                        <a class="text-sentence" href="">financial technology</a>
-                    </h4>
-                    <p>The message goes here, no idea how long it will be but this example copy is 36 words. The message goes here, no idea how long it will be but this example copy is 36 words.</p>
-                </article>
                 <article class="col-md-4">
                     <img src="http://ukti-iigb-alpha-staging.herokuapp.com/assets/img/assetManag.png"
                          class="ukti-img-thumbnail">
@@ -212,43 +184,75 @@
                     </h4>
                     <p>The message goes here, no idea how long it will be but this example copy is 18 words.</p>
                 </article>
+                <article class="col-md-4">
+                    <img src="http://ukti-iigb-alpha-staging.herokuapp.com/assets/img/fintech.jpg"
+                         class="ukti-img-thumbnail">
+                    <h4>
+                        <a class="text-sentence" href="">financial technology</a>
+                    </h4>
+                    <p>The message goes here, no idea how long it will be but this example copy is 36 words. The message goes here, no idea how long it will be but this example copy is 36 words.</p>
+                </article>
             </div>
         </div>
     </div>
-</div>
-<div class="container ukti-toc">
-    <div class="row">
-        <div class="col-md-8">
-            <h2>On this page</h2>
-            <div class="row">
-                <ol class="ukti-toc">
-                    <li><a href="#financial-services-in-great-britain">Financial services in Great Britain</a></li>
-                    <li><a href="#a-global-leader-in-scale-and-influence">A global leader in scale and influence</a></li>
-                    <li><a href="#unrivalled-opportunities">Unrivalled opportunities</a></li>
-                    <li><a href="#a-large-and-skilled-labour-market">A large and skilled labour market</a></li>
-                    <li><a href="#centres-of-excellence-throughout-the-uk">Centres of excellence throughout the UK</a></li>
-                    <li><a href="#strong-government-support-and-fair-regulation">Strong government support and fair regulation</a></li>
-                    <li><a href="#next-steps-and-contacts">Next steps and contacts</a></li>
-                </ol>
+</div> -->
+<section class="ukti-toc">
+    <div class="container">
+        <ol class="breadcrumb">
+            <li>
+                <a href="/">Home</a>
+            </li>
+            <li>
+                <a href="/us/sectors">sectors</a>
+            </li>
+            <!--last one is not hyperlinked-->
+            <!--last one is not hyperlinked-->
+            <li>
+                financial
+            </li>
+        </ol>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h2 class="ukti-toc__heading">On this page</h2>
+                <!-- <div class="row"> -->
+                    <ol class="ukti-toc__list">
+                        <li class="ukti-toc__list-item"><a href="#financial-services-in-great-britain">Financial services in Great Britain</a></li>
+                        <li class="ukti-toc__list-item"><a href="#a-global-leader-in-scale-and-influence">A global leader in scale and influence</a></li>
+                        <li class="ukti-toc__list-item"><a href="#unrivalled-opportunities">Unrivalled opportunities</a></li>
+                        <li class="ukti-toc__list-item"><a href="#a-large-and-skilled-labour-market">A large and skilled labour market</a></li>
+                        <li class="ukti-toc__list-item"><a href="#centres-of-excellence-throughout-the-uk">Centres of excellence throughout the UK</a></li>
+                        <li class="ukti-toc__list-item"><a href="#strong-government-support-and-fair-regulation">Strong government support and fair regulation</a></li>
+                        <li class="ukti-toc__list-item"><a href="#next-steps-and-contacts">Next steps and contacts</a></li>
+                    </ol>
+                <!-- </div> -->
             </div>
-        </div>
-        <div class="col-md-4">
-            <div class="row">
-                <div class="col-md-11 ukti-resources">
-                    <h2>Resources</h2>
-                    <p>Getting a visa</p>
-                    <p>Setting up a bank account</p>
-                    <p>Business registration</p>
-                    <p>Finding premises</p>
-                    <p>Creative hubs outside London</p>
-                </div>
+            <div class="col-md-4">
+                <!-- <div class="row"> -->
+                    <nav id="sidebar-width" class="bs-docs-sidebar hidden-xs hidden-sm ukti-resources" data-spy="affix" data-offset-top="500">
+                        <div class="col-md-11 ukti-quick-guide-side">
+                            <h2>The UK investment guide</h2>
+                            <ol>
+                                <li><a href="#">Establish a UK address</a></li>
+                                <li><a href="#">Apply for a visa</a></li>
+                                <li><a href="#">Open a UK bank account</a></li>
+                                <li><a href="#">Register your company</a></li>
+                                <li><a href="#">Work out your profit margins against UK tax</a></li>
+                                <li><a href="#">Understand UK employment law</a></li>
+                                <li><a href="#">Familiarise yourself with the legal framework</a></li>
+                                <li><a href="#">Speak to the UKTI Investment Services Team</a></li>
+                            </ol>
+                        </div>
+                    </nav>
+                <!-- </div> -->
             </div>
         </div>
     </div>
-</div>
-<div class="container">
+</section>
+<div class="container ukti-main-content">
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-7 col-sm-10">
             <section id="financial-services-in-great-britain">
 <header>
     <h2>Financial services in Great Britain</h2>
@@ -378,6 +382,7 @@
 
     function enhance(){
     	enhance_videobg();
+        // zoomImageHoverLink();
     }
 
     function enhance_videobg(){
@@ -388,11 +393,26 @@
 
     //calculate fixed sidebar width
     function calculateSidebarWidth () {
-        if ($('#sidebar-width')) {
-            var menuWidth = $('#sidebar-width').width();
-            $('#sidebar').css({width: menuWidth});
+        // if ($('#sidebar-width')) {
+        //     var menuWidth = $('#sidebar-width').width();
+        //     $('#sidebar').css({width: menuWidth});
+        // }
+
+        if ($('.ukti-quick-guide-side')) {
+            var menuWidth = $('.ukti-quick-guide-side').width();
+            $('.ukti-quick-guide-side').css({width: menuWidth});
         }
+
     }
+
+    // function zoomImageHoverLink() {
+    //     if ($('.ukti-sectors-list__item')) {
+    //         var itemHeight = $('.ukti-sectors-list__item').height();
+    //         var itemWidth = $('.ukti-sectors-list__item').width();
+    //         $('.ukti-sectors-list__item').css({height: itemHeight});
+    //         $('.ukti-sectors-list__item').css({width: itemWidth});
+    //     }
+    // }
 
     $(window).on('resize', function () {
         calculateSidebarWidth ();

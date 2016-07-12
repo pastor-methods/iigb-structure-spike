@@ -12,6 +12,7 @@
 		float: left;
 		position: relative;
 		margin-bottom: 30px;
+		overflow: hidden;
 
 		@media (max-width: $screen-sm-max) {
 			width: 50%;
@@ -19,6 +20,29 @@
 
 		@media (max-width: $screen-xs-max) {
 			width: 50%;
+		}
+
+		a {
+			color: #fff;
+			font-size: 30px;
+			display: block;
+			overflow: hidden;
+			position: relative;
+			transition: all .2s ease-in-out;
+
+			&:hover {
+				transform: scale(1.05);
+
+				&::before {
+					content: '';
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					left: 0;
+					right: 0;
+					background: rgba(0,0,0,0.5);
+				}
+			}
 		}
 	}
 
@@ -33,5 +57,9 @@
 		padding: 15px;
     	left: 15px;
     	top: 0px
+	}
+
+	&__link-wrap {
+		overflow: hidden;
 	}
 }
