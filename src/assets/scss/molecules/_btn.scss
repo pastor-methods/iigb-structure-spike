@@ -4,11 +4,13 @@
 	background: #00549f;
 	border-radius: 100px;
 	font-size: 20px;
+	font-weight: 100;
 	line-height: 40px;
 	padding: 8px 32px 12px 32px;
 	color: #fff;
 
 	&:hover {
 		background: #0c3f6d;
+		color: #fff;
 	}
 }
