@@ -1,113 +1,59 @@
 {{> header}}
 {{> header-nav}}
 <style>
-    body {
-        background-color: #F3F3F3;
-        font-size: 16px;
-    }
-
-    .container {
-        background-color: #FFFFFF;
-    }
-
-    .ukti-toc {
-        background-color: #E3E3E3;
-    }
-
-    .ukti-resources {
-        background-color: #F2F2F2;
-        border: 3px solid #797979;
-        padding: 16px 30px;
-        border-radius: 10px;
-        margin-top: 10px;
-        margin-bottom: 20px;
-    }
-
-    .ukti-imageholder {
-        position: relative;
-    }
-
-    .ukti-caption {
-        /*position: absolute;*/
-        /*bottom: 80px;*/
-        /*left: 40px;*/
-        /*right: 40px;*/
-        /*background-color: #FFFFFF;*/
-        color: #FFFFFF;
-        padding: 10px 20px;
-    }
-
     .jumbotron {
         background-image: url("http://ukti-iigb-alpha-staging.herokuapp.com/assets/img/{{image}}");
         background-size: cover;
     }
-
-    .affix {
-        position: fixed;
-        top: 0;
-    }
-    .affix-top {
-        position: static;
-    }
-    .affix-bottom {
-        position: absolute;
-    }
 </style>
-<div class="jumbotron ukti-imageholder">
-    <div class="container" style="background: rgba(255,255,255,0)">
-        <div style="background-color: rgba(255,255,255,0);height: 200px;">
-        </div>
-        <div class="ukti-caption">
-            <h1>{{pageTitle}}</h1>
-            <p>{{intro}}</p>
-        </div>
+<div class="jumbotron">
+    <div class="container" style="background-color: transparent">
+        <h1>{{pageTitle}}</h1>
+        <p class="text-center">{{intro}}</p>
     </div>
 </div>
-{{> breadcrumb}}
-<div class="container ukti-toc">
-    <div class="row">
-        <div class="col-md-8">
-            <h2>On this page</h2>
-            <div class="row">
-                <ol class="ukti-toc">
+
+<section class="ukti-toc">
+    {{> breadcrumb}}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h2 class="ukti-toc__heading">On this page</h2>
+                <ol class="ukti-toc__list">
                     {{#each toc}}
-                    <li><a href="#{{slug this}}">{{this}}</a></li>
+                    <li class="ukti-toc__list-item"><a href="#{{slug this}}">{{this}}</a></li>
                     {{/each}}
+                    <li class="ukti-toc__list-item"><a href="#sub-sectors"><span class="text-sentence">{{folder}} sub sectors</span></a>
+                    </li>
                 </ol>
             </div>
-        </div>
-        <div class="col-md-4">
-            <div class="row">
-                <div class="col-md-11">
-                    <nav id="sidebar-width" class="bs-docs-sidebar hidden-xs hidden-sm ukti-resources" data-spy="affix" data-offset-top="750" data-offset-bottom="300">
-                        <ul id="sidebar" class="nav bs-docs-sidenav">
-                            <li><h2>Resources</h2></li>
-                            <li>Getting a visa</li>
-                            <li>Setting up a bank account</li>
-                            <li>Business registration</li>
-                            <li>Finding premises</li>
-                            <li>Creative hubs outside London</li>
-                        </ul>
-                    </nav>
-                    <nav class="hidden-md hidden-lg ukti-resources">
-                        <ul class="nav">
-                            <li><h2>Resources</h2></li>
-                            <li>Getting a visa</li>
-                            <li>Setting up a bank account</li>
-                            <li>Business registration</li>
-                            <li>Finding premises</li>
-                            <li>Creative hubs outside London</li>
-                        </ul>
-                    </nav>
-                </div>
+            <div class="col-md-4">
+                <nav id="sidebar-width" class="bs-docs-sidebar hidden-xs hidden-sm ukti-resources" data-spy="affix"
+                     data-offset-top="500">
+                    <div class="col-md-11 ukti-quick-guide-side">
+                        <h2>The UK investment guide</h2>
+                        <ol>
+                            <li><a href="#">Establish a UK address</a></li>
+                            <li><a href="#">Apply for a visa</a></li>
+                            <li><a href="#">Open a UK bank account</a></li>
+                            <li><a href="#">Register your company</a></li>
+                            <li><a href="#">Work out your profit margins against UK tax</a></li>
+                            <li><a href="#">Understand UK employment law</a></li>
+                            <li><a href="#">Familiarise yourself with the legal framework</a></li>
+                            <li><a href="#">Speak to the UKTI Investment Services Team</a></li>
+                        </ol>
+                    </div>
+                </nav>
             </div>
         </div>
     </div>
-</div>
-<div class="container">
-    <div class="row">
-        <div class="col-md-8">
-            {{{contents}}}
+</section>
+<div class="ukti-main-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7 col-sm-10">
+                {{{contents}}}
+            </div>
         </div>
     </div>
 </div>

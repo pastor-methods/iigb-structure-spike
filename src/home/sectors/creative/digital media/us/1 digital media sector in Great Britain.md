@@ -1,9 +1,9 @@
 ---
 title: Digital media sector in Great Britain
-image: digi-med.jpg
-thumbnail: digi-med.jpg
+image: creative-sector-hero.jpg
+thumbnail: creative-sector-thumb.jpg
 heroVideo: heroVideoPath
-heroImage: heroImagePath
+heroImage: creative-sector-hero.jpg
 fullVideo: fullVideoPath
 indexTemplate: subsector-page-us.html
 intro: The message goes here, no idea how long it will be but this example copy is 18 words.
