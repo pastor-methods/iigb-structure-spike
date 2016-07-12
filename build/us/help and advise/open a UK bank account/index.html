@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>UKTI - </title>
+    <!-- <base href="/"> -->
+    <!--<base href="/ukti-alpha/build/">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+    <!-- <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/css/main.css" rel="stylesheet" type="text/css"/> -->
+    <link href="http://ukti-iigb-alpha-staging.herokuapp.com/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="http://ukti-iigb-alpha-staging.herokuapp.com/assets/css/main.css" rel="stylesheet" type="text/css"/>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <!-- <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/equalHeight.js"></script> -->
+    <script src="http://ukti-iigb-alpha-staging.herokuapp.com/assets/js/bootstrap.min.js"></script>
+    <script src="http://ukti-iigb-alpha-staging.herokuapp.com/assets/js/equalHeight.js"></script>
+</head>
+<style type="text/css">
+
+
+
+    .bg--transparent {
+        background: transparent;
+    }
+
+	.ukti-outer-wrap {
+		display: none;
+	}
+
+	.navbar-brand {
+		height: auto;
+	}
+	
+	.navbar-brand img {
+		height: 40px;
+		width: auto;
+	}
+
+	.navbar-default {
+		background: transparent;
+	}
+
+	.navbar {
+		margin: 0;
+        border: 0 solid #F2F2F2;
+        position: absolute;
+        z-index: 10;
+        width: 100%;
+        top: 80px;
+        /*left: -20px;*/
+    }
+
+    #nav.affix {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 10;
+    }
+
+    #nav.affix-top {
+        position: static;
+    }
+
+	.modal-open .modal {
+		background: #000;
+	}
+
+	.ukti-loading {
+		position: fixed;
+        z-index: 100;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+        background: #fff;
+		/*background: #fff url('../assets/img/loading.gif') center no-repeat;*/
+	}
+
+
+
+	
+
+	
+
+
+</style>
+<body>
+<div class="ukti-loading"></div>
+<noscript>
+<style type="text/css">
+	.ukti-loading {display: none;}
+	.ukti-outer-wrap {display: block;}
+</style>
+</noscript>
+<div class="ukti-outer-wrap">
+<nav id="nav-default" class="navbar navbar-default">
+      <div class="container ukti-main-nav"><!-- Brand and toggle get grouped for better mobile display -->
+        <!-- <div class="row"> -->
+          <!-- <div class="col-md-3"> -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+                  <a class="navbar-brand" href="/">
+                      <img alt="Brand" src="http://ukti-iigb-alpha-staging.herokuapp.com/assets/img/iigb-logo.png">
+                  </a>
+            </div>
+          <!-- </div> -->
+          <div class="collapse navbar-collapse" id="navbar-collapse-1">
+            <!-- <div class="col-md-9"> -->
+                <ul class="nav navbar-nav ukti-main-nav-list">
+                    <li class="active"><a href="#">Market sectors<span class="sr-only">(current)</span></a></li>
+                    <li class=""><a href="#">Investment guide</a></li>
+                </ul>
+                <form class="navbar-form navbar-right ukti-main-search" role="search">
+                    <div class="form-group">
+                        <input type="text" class="ukti-main-search__input-field" placeholder="Search">
+                    </div>
+                    <!--<button type="submit" class="ukti-main-search__submit"><span><img-->
+                            <!--src="http://ukti-iigb-alpha-staging.herokuapp.com/assets/img/search.png" alt=""></span></button>-->
+                    <button type="submit" class="ukti-main-search__submit"><span class="glyphicon glyphicon-search ukti-main-search__glyph" aria-hidden="true"></span></button>
+                </form>
+            <!-- </div> -->
+          </div>
+
+        <!-- </div> -->
+      </div>
+      <!-- /.navbar-collapse -->
+</nav>
+
+<style>
+    body {
+        background-color: #F3F3F3;
+        font-size: 16px;
+    }
+
+    .container {
+        background-color: #FFFFFF;
+    }
+
+    .ukti-toc {
+        background-color: #E3E3E3;
+    }
+
+    .ukti-resources {
+        background-color: #F2F2F2;
+        border: 3px solid #797979;
+        padding: 16px 30px;
+        border-radius: 10px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .ukti-imageholder {
+        position: relative;
+    }
+
+    .ukti-caption {
+        /*position: absolute;*/
+        /*bottom: 80px;*/
+        /*left: 40px;*/
+        /*right: 40px;*/
+        /*background-color: #FFFFFF;*/
+        color: #FFFFFF;
+        padding: 10px 20px;
+    }
+
+    .jumbotron {
+        background-image: url("http://ukti-iigb-alpha-staging.herokuapp.com/assets/img/");
+        background-size: cover;
+    }
+
+    .affix {
+        position: fixed;
+        top: 0;
+    }
+    .affix-top {
+        position: static;
+    }
+    .affix-bottom {
+        position: absolute;
+    }
+</style>
+<div class="jumbotron ukti-imageholder">
+    <div class="container" style="background: rgba(255,255,255,0)">
+        <div style="background-color: rgba(255,255,255,0);height: 200px;">
+        </div>
+        <div class="ukti-caption">
+            <h1>The process</h1>
+            <p>Setting up a UK business bank account will make it easy for your company to operate in the UK. Just bear in mind that the process can take up to three months and you may need to travel.</p>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <ol class="breadcrumb">
+        <li>
+            <a href="/">Home</a>
+        </li>
+        <li>
+            <a href="/us/help and advise">help and advise</a>
+        </li>
+        <!--last one is not hyperlinked-->
+        <!--last one is not hyperlinked-->
+        <li>
+            open a UK bank account
+        </li>
+    </ol>
+</div>
+<div class="container ukti-toc">
+    <div class="row">
+        <div class="col-md-8">
+            <h2>On this page</h2>
+            <div class="row">
+                <ol class="ukti-toc">
+                    <li><a href="#open-a-uk-bank-account">Open a UK bank account</a></li>
+                    <li><a href="#what-youll-need-to-do">What you’ll need to do</a></li>
+                    <li><a href="#timings">Timings</a></li>
+                </ol>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="row">
+                <div class="col-md-11">
+                    <nav id="sidebar-width" class="bs-docs-sidebar hidden-xs hidden-sm ukti-resources" data-spy="affix" data-offset-top="750" data-offset-bottom="300">
+                        <ul id="sidebar" class="nav bs-docs-sidenav">
+                            <li><h2>Resources</h2></li>
+                            <li>Getting a visa</li>
+                            <li>Setting up a bank account</li>
+                            <li>Business registration</li>
+                            <li>Finding premises</li>
+                            <li>Creative hubs outside London</li>
+                        </ul>
+                    </nav>
+                    <nav class="hidden-md hidden-lg ukti-resources">
+                        <ul class="nav">
+                            <li><h2>Resources</h2></li>
+                            <li>Getting a visa</li>
+                            <li>Setting up a bank account</li>
+                            <li>Business registration</li>
+                            <li>Finding premises</li>
+                            <li>Creative hubs outside London</li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <section id="open-a-uk-bank-account">
+<header>
+    <h2>Open a UK bank account</h2>
+</header>
+
+<p>The process for opening a business account depends on the individual bank or building society you are dealing with. In most cases, a UK address and contact is required.</p>
+
+
+</section><section id="what-youll-need-to-do">
+<header>
+    <h2>What you’ll need to do</h2>
+</header>
+
+<p>When engaging with a UK bank, you should contact the central London banking channel, rather than a local branch. From there, most forms and negotiations can be handled online and over the phone, but you may have to travel to the UK in order to sign a bank mandate and to provide your photographic ID and proof of address.</p>
+
+
+</section><section id="timings">
+<header>
+    <h2>Timings</h2>
+</header>
+
+<p>It can take up to three months for documents to be approved and for meetings to be arranged, so you should factor this timescale into your business plan ahead of time.</p>
+<p><a href="https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/524056/Investor_Support_Directory_of_UK_Advisory_Network_May_2016.pdf">Find out more about opening a UK bank account by speaking to your local UKAN advisor.</a></p>
+<p>Checklist</p>
+<p>Make sure you have:</p>
+<ul>
+<li>confirmed your UK address</li>
+<li>engaged with the central London channel of your chosen bank</li>
+<li>completed your banking paperwork</li>
+<li>signed a bank mandate and provided your photographic ID</li>
+</ul>
+
+
+</section>
+        </div>
+    </div>
+</div>
+<nav class="container ukti-footer">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-1">
+            <ul class="ukti-footer--list">
+                <li><a href="#">Why the UK?</a></li>
+                <li><a href="#">Sectors</a></li>
+                <li><a href="#">Help and advice</a></li>
+                <li><a href="#">Privacy and cookies</a></li>
+                <li><a href="#">Terms and conditions</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+        </div>
+        <div class="col-md-2 col-md-offset-1 col-xs-4 col-xs-offset-4 ukti-footer--logo">
+            <img class="img-responsive" src="http://ukti-iigb-alpha-staging.herokuapp.com/assets/img/HM Gov logo black.png" alt="">
+            <img class="img-responsive" src="http://ukti-iigb-alpha-staging.herokuapp.com/assets/img/iigb-logo.png" alt="">
+        </div>
+    </div>
+</nav>
+
+
+</div>
+<script>
+    $(document).ready(function () {
+        enhance();
+        setTimeout(showcontent, 500);
+        setTimeout(removeloading, 1000);
+    });
+
+    function showcontent(){
+    	$('.ukti-outer-wrap').show();
+        calculateSidebarWidth();
+    }
+
+    function removeloading(){
+        $('.ukti-loading').fadeOut(300);
+    }
+
+    function enhance(){
+    	enhance_videobg();
+        // zoomImageHoverLink();
+    }
+
+    function enhance_videobg(){
+        if($('#bgVid').length > 0 || $('#bgImg').length > 0) {
+            $('.jumbotron').addClass('bg--transparent');
+        }
+    }
+
+    //calculate fixed sidebar width
+    function calculateSidebarWidth () {
+         if ($('#sidebar-width')) {
+             var menuWidth = $('#sidebar-width').width();
+             $('.ukti-quick-guide-side').css({width: menuWidth});
+         }
+    }
+
+    // function zoomImageHoverLink() {
+    //     if ($('.ukti-sectors-list__item')) {
+    //         var itemHeight = $('.ukti-sectors-list__item').height();
+    //         var itemWidth = $('.ukti-sectors-list__item').width();
+    //         $('.ukti-sectors-list__item').css({height: itemHeight});
+    //         $('.ukti-sectors-list__item').css({width: itemWidth});
+    //     }
+    // }
+
+    $(window).on('resize', function () {
+        calculateSidebarWidth ();
+    });
+</script>
+</body>
+</html>
