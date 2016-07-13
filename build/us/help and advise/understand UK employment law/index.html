@@ -3,19 +3,29 @@
 <head>
 	<meta charset="utf-8">
 	<title>UKTI - </title>
-    <!-- <base href="/"> -->
-    <!--<base href="/ukti-alpha/build/">-->
+    <!-- local -->
+    <!-- <base href="/ukti-alpha/build/">
+    <base href="/">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
-    <!-- <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-    <link href="assets/css/main.css" rel="stylesheet" type="text/css"/> -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/css/main.css" rel="stylesheet" type="text/css"/>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/equalHeight.js"></script> 
+    -->
+
+
+    <!-- deploy -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
     <link href="http://ukti-iigb-alpha-staging.herokuapp.com/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     <link href="http://ukti-iigb-alpha-staging.herokuapp.com/assets/css/main.css" rel="stylesheet" type="text/css"/>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <!-- <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/equalHeight.js"></script> -->
     <script src="http://ukti-iigb-alpha-staging.herokuapp.com/assets/js/bootstrap.min.js"></script>
-    <script src="http://ukti-iigb-alpha-staging.herokuapp.com/assets/js/equalHeight.js"></script>
+    <script src="http://ukti-iigb-alpha-staging.herokuapp.com/assets/js/equalHeight.js"></script> 
+    <!-- -->
+
 </head>
 <style type="text/css">
 
@@ -96,174 +106,108 @@
 </noscript>
 <div class="ukti-outer-wrap">
 <nav id="nav-default" class="navbar navbar-default">
-      <div class="container ukti-main-nav"><!-- Brand and toggle get grouped for better mobile display -->
-        <!-- <div class="row"> -->
-          <!-- <div class="col-md-3"> -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                        data-target="#navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                
-                  <a class="navbar-brand" href="/">
-                      <img alt="Brand" src="http://ukti-iigb-alpha-staging.herokuapp.com/assets/img/iigb-logo.png">
-                  </a>
-            </div>
-          <!-- </div> -->
-          <div class="collapse navbar-collapse" id="navbar-collapse-1">
-            <!-- <div class="col-md-9"> -->
-                <ul class="nav navbar-nav ukti-main-nav-list">
-                    <li class="active"><a href="#">Market sectors<span class="sr-only">(current)</span></a></li>
-                    <li class=""><a href="#">Investment guide</a></li>
-                </ul>
-                <form class="navbar-form navbar-right ukti-main-search" role="search">
-                    <div class="form-group">
-                        <input type="text" class="ukti-main-search__input-field" placeholder="Search">
-                    </div>
-                    <!--<button type="submit" class="ukti-main-search__submit"><span><img-->
-                            <!--src="http://ukti-iigb-alpha-staging.herokuapp.com/assets/img/search.png" alt=""></span></button>-->
-                    <button type="submit" class="ukti-main-search__submit"><span class="glyphicon glyphicon-search ukti-main-search__glyph" aria-hidden="true"></span></button>
-                </form>
-            <!-- </div> -->
-          </div>
+    <div class="container ukti-main-nav"><!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
 
-        <!-- </div> -->
-      </div>
-      <!-- /.navbar-collapse -->
+            <a class="navbar-brand" href="/">
+                <img alt="Brand" src="http://ukti-iigb-alpha-staging.herokuapp.com/assets/img/iigb-logo.png">
+            </a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse-1">
+            <ul class="nav navbar-nav ukti-main-nav-list">
+                <li class="active"><a href="/us/sectors/">Market sectors<span class="sr-only">(current)</span></a></li>
+                <li class=""><a href="/us/help%20and%20advise/">Investment guide</a></li>
+            </ul>
+            <form class="navbar-form navbar-right ukti-main-search" role="search">
+                <div class="form-group">
+                    <input type="text" class="ukti-main-search__input-field" placeholder="Search">
+                </div>
+                <button type="submit" class="ukti-main-search__submit"><span
+                        class="glyphicon glyphicon-search ukti-main-search__glyph" aria-hidden="true"></span></button>
+            </form>
+        </div>
+    </div>
 </nav>
 
 <style>
-    body {
-        background-color: #F3F3F3;
-        font-size: 16px;
-    }
-
-    .container {
-        background-color: #FFFFFF;
-    }
-
-    .ukti-toc {
-        background-color: #E3E3E3;
-    }
-
-    .ukti-resources {
-        background-color: #F2F2F2;
-        border: 3px solid #797979;
-        padding: 16px 30px;
-        border-radius: 10px;
-        margin-top: 10px;
-        margin-bottom: 20px;
-    }
-
-    .ukti-imageholder {
-        position: relative;
-    }
-
-    .ukti-caption {
-        /*position: absolute;*/
-        /*bottom: 80px;*/
-        /*left: 40px;*/
-        /*right: 40px;*/
-        /*background-color: #FFFFFF;*/
-        color: #FFFFFF;
-        padding: 10px 20px;
-    }
-
     .jumbotron {
         background-image: url("http://ukti-iigb-alpha-staging.herokuapp.com/assets/img/");
         background-size: cover;
     }
-
-    .affix {
-        position: fixed;
-        top: 0;
-    }
-    .affix-top {
-        position: static;
-    }
-    .affix-bottom {
-        position: absolute;
-    }
 </style>
-<div class="jumbotron ukti-imageholder">
-    <div class="container" style="background: rgba(255,255,255,0)">
-        <div style="background-color: rgba(255,255,255,0);height: 200px;">
-        </div>
-        <div class="ukti-caption">
-            <h1>Understand UK employment law</h1>
-            <p>The UK has a world-class pool of talent and business-friendly employment laws. You can also bring employees from abroad through a flexible visa system.</p>
-        </div>
+<div class="jumbotron">
+    <div class="container" style="background-color: transparent">
+        <h1>Understand UK employment law</h1>
+        <p class="text-center">The UK has a world-class pool of talent and business-friendly employment laws. You can also bring employees from abroad through a flexible visa system.</p>
     </div>
 </div>
-<div class="container">
-    <ol class="breadcrumb">
-        <li>
-            <a href="/">Home</a>
-        </li>
-        <li>
-            <a href="/us/help and advise">help and advise</a>
-        </li>
-        <!--last one is not hyperlinked-->
-        <!--last one is not hyperlinked-->
-        <li>
-            understand UK employment law
-        </li>
-    </ol>
-</div>
-<div class="container ukti-toc">
-    <div class="row">
-        <div class="col-md-8">
-            <h2>On this page</h2>
-            <div class="row">
-                <ol class="ukti-toc">
-                    <li><a href="#access-to-talent">Access to talent</a></li>
-                    <li><a href="#flexible-employment-laws">Flexible employment laws</a></li>
-                    <li><a href="#flexible-employment-costs">Flexible employment costs</a></li>
+
+<section class="ukti-toc">
+    <div class="container">
+        <ol class="breadcrumb">
+            <li>
+                <a href="/">Home</a>
+            </li>
+            <li>
+                <a href="/us/help and advise">help and advise</a>
+            </li>
+            <!--last one is not hyperlinked-->
+            <!--last one is not hyperlinked-->
+            <li>
+                understand UK employment law
+            </li>
+        </ol>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h2 class="ukti-toc__heading">On this page</h2>
+                <ol class="ukti-toc__list">
+                    <li class="ukti-toc__list-item"><a href="#access-to-talent">Access to talent</a></li>
+                    <li class="ukti-toc__list-item"><a href="#flexible-employment-laws">Flexible employment laws</a></li>
+                    <li class="ukti-toc__list-item"><a href="#flexible-employment-costs">Flexible employment costs</a></li>
+                    </li>
                 </ol>
             </div>
-        </div>
-        <div class="col-md-4">
-            <div class="row">
-                <div class="col-md-11">
-                    <nav id="sidebar-width" class="bs-docs-sidebar hidden-xs hidden-sm ukti-resources" data-spy="affix" data-offset-top="750" data-offset-bottom="300">
-                        <ul id="sidebar" class="nav bs-docs-sidenav">
-                            <li><h2>Resources</h2></li>
-                            <li>Getting a visa</li>
-                            <li>Setting up a bank account</li>
-                            <li>Business registration</li>
-                            <li>Finding premises</li>
-                            <li>Creative hubs outside London</li>
-                        </ul>
-                    </nav>
-                    <nav class="hidden-md hidden-lg ukti-resources">
-                        <ul class="nav">
-                            <li><h2>Resources</h2></li>
-                            <li>Getting a visa</li>
-                            <li>Setting up a bank account</li>
-                            <li>Business registration</li>
-                            <li>Finding premises</li>
-                            <li>Creative hubs outside London</li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </div>
+            <div class="col-md-4">
+                <nav id="sidebar-width" class="bs-docs-sidebar hidden-xs hidden-sm ukti-resources" data-spy="affix"
+                     data-offset-top="500">
+                    <div class="col-md-11 ukti-quick-guide-side">
+                        <h2>The UK investment guide</h2>
+                        <ol>
+                            <li><a href="#">Establish a UK address</a></li>
+                            <li><a href="#">Apply for a visa</a></li>
+                            <li><a href="#">Open a UK bank account</a></li>
+                            <li><a href="#">Register your company</a></li>
+                            <li><a href="#">Work out your profit margins against UK tax</a></li>
+                            <li><a href="#">Understand UK employment law</a></li>
+                            <li><a href="#">Familiarise yourself with the legal framework</a></li>
+                            <li><a href="#">Speak to the UKTI Investment Services Team</a></li>
+                        </ol>
+                    </div>
+                </nav>
+            </div>        </div>
     </div>
-</div>
-<div class="container">
-    <div class="row">
-        <div class="col-md-8">
-            <section id="access-to-talent">
+</section>
+<div class="ukti-main-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7 col-sm-10">
+                <section id="access-to-talent">
 <header>
     <h2>Access to talent</h2>
 </header>
 
 <p><strong>Skills for the 21st century:</strong> The UK is second only to the USA among the powerhouse economies for growing, retaining and attracting talent. It is home to four of the top eight universities in the world and has the highest number of leading MBA institutions in Europe. </p>
 <p><strong>Apprenticeships:</strong> The UK is committed to <a href="https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/482754/BIS-15-604-english-apprenticeships-our-2020-vision.pdf">creating 3 million apprenticeships by 2020</a>, enabling businesses to grow their own talent with motivated and skilled workers.</p>
-<p><strong>Overseas talent:</strong> The UK’s flexible visa system is devised to welcome new businesses, investors, entrepreneurs, skilled workers and academics. <a href="#Hyperlink to visa section">Click here to find out what visas will suit your business needs</a>.</p>
+<p><strong>Overseas talent:</strong> The UK’s flexible visa system is devised to welcome new businesses, investors, entrepreneurs, skilled workers and academics. <a href="/us/help%20and%20advise/apply%20for%20a%20visa/">Click here to find out what visas will suit your business needs</a>.</p>
 
 
 </section><section id="flexible-employment-laws">
@@ -293,6 +237,7 @@
 
 
 </section>
+            </div>
         </div>
     </div>
 </div>
