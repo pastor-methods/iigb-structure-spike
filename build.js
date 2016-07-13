@@ -146,16 +146,11 @@ var makeIndex = function (files, metalsmith, done) {
                     var ii = ee.slice(1, -1);
                     return ii[ii.length - 1] || '';
                 })(),
-                location: (function () {
+                uri: (function () {
                 var ee = folderPath.split("/");
                 var lang = ee.pop();
                 var ff = ee.slice(1);
-                // var buffer = [];
-                var link = '/' + lang;
-                for (var i = 0; i < ff.length; i++) {
-                    link += '/' + ff[i];
-                    // buffer.push({name: ff[i], link: link});
-                }
+                var link = lang + '/' + ff.join('/');
                 return link;
             })(),
                 orderLevel: orderLevel,
@@ -194,6 +189,7 @@ var makeIndex = function (files, metalsmith, done) {
                     }
                 }
                 var orderedSubLevel = _.sortBy(subLevel, 'orderLevel');
+                console.log(orderedSubLevel)
                 files[file].subLevel = orderedSubLevel;
             }
         }
@@ -205,6 +201,7 @@ Handlebars.registerPartial('header', fs.readFileSync(__dirname + '/layouts/parti
 Handlebars.registerPartial('header-nav', fs.readFileSync(__dirname + '/layouts/partials/header-nav.html').toString());
 Handlebars.registerPartial('footer', fs.readFileSync(__dirname + '/layouts/partials/footer.html').toString());
 Handlebars.registerPartial('breadcrumb', fs.readFileSync(__dirname + '/layouts/partials/breadcrumb.html').toString());
+Handlebars.registerPartial('sidebar', fs.readFileSync(__dirname + '/layouts/partials/sidebar.html').toString());
 
 // helper to slugify strings
 Handlebars.registerHelper('slug', function (content) {
