@@ -1,22 +1,16 @@
 ---
-title: The creative sector in Great Britain
-image: creative.jpg
-thumbnail: creative.jpg
-heroVideo: heroVideoPath
-heroImage: heroImagePath
-fullVideo: fullVideoPath
+title: The test sector in Great Britain
+image: tech-sector-hero.jpg
+thumbnail: tech-sector-thumb.jpg
+heroVideo: 
+heroImage: tech-sector-hero.jpg
+fullVideo: 
 indexTemplate: sector-page-us.html
-intro: The message goes here, no idea how long it will be but this example copy is 18 words.
-pageTitle: Create in Great Britain
+intro: This is a test message in a test page.
+pageTitle: Test in Great Britain
 layout: content.html
 ---
  
-The UK’s creative talent pool is deep and wide. It’s recognised as a world class prospect for inward investment in:
-*	film – its skills and infrastructure mean big budget movies like Star Wars can be made here 
-*	music – talent and technology make it the world’s second biggest exporter (source: UK Music).
-*	TV – the UK’s technicians, actors, location and production facilities make it a global leader
-*	digital media and computer games – it has the largest games development sector in Europe (source TIGA)
+Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
 
-Tax relief is driving growth in an already thriving sector. Well established creative networks mean that start-ups can access major players, and other creative partners.
-
-There are strong reasons to set up or expand your creative business in the UK.    
+Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.   

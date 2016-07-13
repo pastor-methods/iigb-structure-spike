@@ -1,18 +1,10 @@
 ---
-title: Advanced infrastructure and regional strength
+title: Multimedia based expertise 
 layout: content.html
 ---
 
-The UK is one of the easiest places in the world to develop the infrastructure and communications that ambitious creative companies need for growth.  It has:
-*	one of the world’s highest levels of broadband penetration
-*	world leading access to digital television and radio
-*	the biggest  ecommerce market in Europe 
-*	a huge appetite for new digital services, with high levels of take-up of new networks and devices
+Proactively envisioned multimedia based expertise and cross-media growth strategies. Seamlessly visualize quality intellectual capital without superior collaboration and idea-sharing. Holistically pontificate installed base portals after maintainable products.
 
-Almost all the major global technology businesses have operations here.
+Phosfluorescently engage worldwide methodologies with web-enabled technology. Interactively coordinate proactive e-commerce via process-centric "outside the box" thinking. Completely pursue scalable customer service through sustainable potentialities.
 
-London is the hub of the UK’s creative economy, ranked 2nd only to New York in EY’s global talent index for 2015. But it’s not just about the capital.
-
-Outside of London, the games development sector is thriving in Brighton, Cambridge, Dundee, Liverpool, Newcastle, the Midlands and Yorkshire. 
-
-Other creative and technology clusters across the UK include Manchester’s Media City and Leamington Spa in Warwickshire.
+Collaboratively administrate turnkey channels whereas virtual e-tailers. Objectively seize scalable metrics whereas proactive e-services.
