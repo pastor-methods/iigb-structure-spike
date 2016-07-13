@@ -7,7 +7,8 @@ Creative businesses in the UK are supported by an intellectual property regime a
 
 The UK’s Corporation tax is lowest in the G20 at 20%, and will reduce to 17% by 2020.
 
-Tax relief is helping to drive increased investment and growth, and is available for :
+Tax relief is helping to drive increased investment and growth, and is available for:
+
 *	Animation
 *	Film
 *	High-end TV

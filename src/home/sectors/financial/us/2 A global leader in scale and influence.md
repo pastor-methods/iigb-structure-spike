@@ -6,6 +6,7 @@ layout: content.html
 The UK financial services sector accounts for 9.4% of UK GDP. At £140bn, this is much larger than both Germany (£80bn) and France (£50bn).
 
 The UK:
+
 -	is the largest centre for cross-border banking
 -	is the fourth largest banking centre globally
 -	accounts for 41% of global foreign exchange

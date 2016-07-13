@@ -4,9 +4,10 @@ layout: content.html
 ---
 
 The UK is one of the easiest places in the world to develop the infrastructure and communications that ambitious creative companies need for growth.  It has:
+
 *	one of the world’s highest levels of broadband penetration
 *	world leading access to digital television and radio
-*	the biggest  ecommerce market in Europe 
+*	the biggest ecommerce market in Europe 
 *	a huge appetite for new digital services, with high levels of take-up of new networks and devices
 
 Almost all the major global technology businesses have operations here.

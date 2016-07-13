@@ -6,7 +6,7 @@ heroVideo: heroVideoPath
 heroImage: heroImagePath
 fullVideo: fullVideoPath
 indexTemplate: subsector-page-us.html
-intro: The message goes here, no idea how long it will be but this example copy is 36 words. The message goes here, no idea how long it will be but this example copy is 36 words.
+intro: The UK and Ireland is the world’s fastest growing region for financial technology (fintech) inward investment. Many of the biggest players in fintech have chosen to set up or expand their global operations in Britain.
 pageTitle: Financial technology in Great Britain
 layout: content.html
 ---
