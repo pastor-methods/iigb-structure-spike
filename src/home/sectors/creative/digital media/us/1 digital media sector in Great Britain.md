@@ -6,7 +6,7 @@ heroVideo: heroVideoPath
 heroImage: digital-media-hero.jpg
 fullVideo: fullVideoPath
 indexTemplate: subsector-page-us.html
-intro: The message goes here, no idea how long it will be but this example copy is 18 words.
+intro: With a highly educated workforce and full Government backing, the UK is ideally placed for digital media investment.
 pageTitle: Digital media
 layout: content.html
 ---
