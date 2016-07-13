@@ -3,7 +3,7 @@
 <div class="jumbotron">
     <div class="container" style="background-color: transparent">
         <h1>{{pageTitle}}</h1>
-        <p class="text-center">{{intro}} <a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
+        <p class="text-center">{{intro}}</p>
     </div>
 </div>
 {{> breadcrumb}}
@@ -11,7 +11,6 @@
     <div class="container" id="sectors">
         <div class="row">
             <div class="col-md-12">
-                <h2 class="text-center ukti-content-section__heading">List of sectors</h2>
                 <ul class="ukti-key-sectors-list">
                     {{#each subLevel}}
                     <li class="ukti-key-sectors-list__item">
@@ -20,6 +19,9 @@
                                 <img src="/assets/img/{{this.thumbnail}}" class="ukti-key-sectors-list__image">
                                 <span class="ukti-key-sectors-list__text text-sentence">{{this.name}}</span>
                             </a>
+                        </div>
+                        <div class="ukti-key-sectors-list__link-wrap">
+                            <p>{{this.intro}}</p>
                         </div>
                     </li>
                     {{/each}}
