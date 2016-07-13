@@ -1,9 +1,9 @@
 ---
 title: Financial services in Great Britain
-image: finance.jpg
-thumbnail: finance.jpg
+image: finance-sector-hero.jpg
+thumbnail: finance-sector-thumb.jpg
 heroVideo: heroVideoPath
-heroImage: heroImagePath
+heroImage: finance-sector-hero.jpg
 fullVideo: fullVideoPath
 indexTemplate: sector-page-us.html
 intro: The message goes here, no idea how long it will be but this example copy is 18 words.

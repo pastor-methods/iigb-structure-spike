@@ -1,9 +1,9 @@
 ---
 title: The creative sector in Great Britain
 image: creative-bg.jpg
-thumbnail: creative.jpg
+thumbnail: creative-sector-thumb.jpg
 heroVideo: heroVideoPath
-heroImage: heroImagePath
+heroImage: creative-sector-hero.jpg
 fullVideo: fullVideoPath
 indexTemplate: sector-page-us.html
 intro: The message goes here, no idea how long it will be but this example copy is 18 words.
