@@ -7,9 +7,7 @@ layout: content.html
 order: 4
 ---
 
-Incorporating a company can be done in a number of ways (including setting up a UK
-
-establishment), however the most common way is setting up a limited company. To set up a limited company, you will require: 
+Incorporating a company can be done in a number of ways (including setting up a UK establishment), however the most common way is setting up a limited company. To set up a limited company, you will require: 
 
 - a name for the company
 - an address. This must be in the country that the company is registered in
