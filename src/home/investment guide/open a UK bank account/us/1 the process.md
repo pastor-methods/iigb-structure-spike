@@ -1,8 +1,8 @@
 ---
-title: Open a UK bank account
+title: The process
 indexTemplate: subsector-page-us.html
 intro: Setting up a UK business bank account will make it easy for your company to operate in the UK. Just bear in mind that the process can take up to three months and you may need to travel.
-pageTitle: The process
+pageTitle: Open a UK bank account
 layout: content.html
 orderLevel: 3
 ---
