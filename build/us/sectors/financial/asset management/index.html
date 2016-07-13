@@ -142,7 +142,7 @@
         background-size: cover;
     }
 </style>
-<div class="jumbotron">
+<div id="top" class="jumbotron">
     <div class="container" style="background-color: transparent">
         <h1>Asset management</h1>
         <p class="text-center">The UK is one of the largest asset management markets in the world. It is Europe&#x27;s leading centre for fund management, and already attracts significant overseas funds.</p>
@@ -209,19 +209,20 @@
         <div class="row">
             <div class="col-md-7 col-sm-10">
                 <section id="asset-management-in-great-britain">
-<header>
-    <h2>Asset management in Great Britain</h2>
-</header>
+    <header>
+        <h2>Asset management in Great Britain</h2>
+    </header>
 
-<p>It is one of the sector’s strongest global prospects for set up or expansion.</p>
+    <p>It is one of the sector’s strongest global prospects for set up or expansion.</p>
 
 
+    <a href="#top">Back to top <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></a>
 </section><section id="a-growing-open-market">
-<header>
-    <h2>A growing, open market</h2>
-</header>
+    <header>
+        <h2>A growing, open market</h2>
+    </header>
 
-<p>Total assets under management in the UK increased to a record £6.8 trillion at the end of 2014, a sixth successive year of growth. More than a third , £2.5 trillion, came from overseas clients, making the UK the leading global centre on this measure. [source: CityUK]</p>
+    <p>Total assets under management in the UK increased to a record £6.8 trillion at the end of 2014, a sixth successive year of growth. More than a third , £2.5 trillion, came from overseas clients, making the UK the leading global centre on this measure. [source: CityUK]</p>
 <p>As one of the most open markets in the world for fund management, the UK dominates the industry in Europe.</p>
 <p>Funds managed in the UK</p>
 <ul>
@@ -242,12 +243,13 @@
 <p>As the leading global centre for cross-border financial services, companies based in the UK are well placed to capture a growing share of business from developing economies, with high potential for growth. </p>
 
 
+    <a href="#top">Back to top <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></a>
 </section><section id="a-wide-range-of-fund-types-and-clients">
-<header>
-    <h2>A wide range of fund types and clients</h2>
-</header>
+    <header>
+        <h2>A wide range of fund types and clients</h2>
+    </header>
 
-<p>UK fund management organisations manage many different types of funds, including life insurance, pension schemes, unit trusts and investment trusts. Funds can be managed for:</p>
+    <p>UK fund management organisations manage many different types of funds, including life insurance, pension schemes, unit trusts and investment trusts. Funds can be managed for:</p>
 <ul>
 <li>institutional clients – these account for two thirds of funds under management, with pension funds the largest client type</li>
 <li>retail clients –  total funds managed were £1063 billion by end 2014, an increase of 32% in 2 years </li>
@@ -261,29 +263,32 @@
 </ul>
 
 
+    <a href="#top">Back to top <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></a>
 </section><section id="a-large-talent-pool">
-<header>
-    <h2>A large talent pool</h2>
-</header>
+    <header>
+        <h2>A large talent pool</h2>
+    </header>
 
-<p>The asset management sector in the UK directly employs over 57,000 people. The UK&#39;s highly developed financial services support infrastructure allows companies to hire those staff efficiently, and cost effectively.</p>
+    <p>The asset management sector in the UK directly employs over 57,000 people. The UK&#39;s highly developed financial services support infrastructure allows companies to hire those staff efficiently, and cost effectively.</p>
 
 
+    <a href="#top">Back to top <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></a>
 </section><section id="attractive-business-environment-with-regional-strengths">
-<header>
-    <h2>Attractive business environment with regional strengths</h2>
-</header>
+    <header>
+        <h2>Attractive business environment with regional strengths</h2>
+    </header>
 
-<p>London has been voted the most attractive global location for relocating or expanding asset management operations – ahead of Hong Kong, Singapore and New York. [Source: Banker magazine]</p>
+    <p>London has been voted the most attractive global location for relocating or expanding asset management operations – ahead of Hong Kong, Singapore and New York. [Source: Banker magazine]</p>
 <p>While London is central to the UK’s strong international position, other British cities, such as Edinburgh, Glasgow, Aberdeen, Manchester, Liverpool, Cardiff and Birmingham, are also important centres for fund management.</p>
 
 
+    <a href="#top">Back to top <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></a>
 </section><section id="regulatory-and-government-support">
-<header>
-    <h2>Regulatory and government support</h2>
-</header>
+    <header>
+        <h2>Regulatory and government support</h2>
+    </header>
 
-<p>The UK government has demonstrated a strong commitment to the sector - its ambition is for the UK to lead the world in investment management. </p>
+    <p>The UK government has demonstrated a strong commitment to the sector - its ambition is for the UK to lead the world in investment management. </p>
 <p>The government&#39;s UK Investment Management Strategy (2013) focuses on:</p>
 <ul>
 <li>improving the UK&#39;s taxation regime</li>
@@ -293,13 +298,15 @@
 <p>Since the strategy launch, fund authorisation times have been reduced by around 50% and the tax environment is more favourable for fund management and as a funds domicile.</p>
 
 
+    <a href="#top">Back to top <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></a>
 </section><section id="next-steps-and-contacts">
-<header>
-    <h2>Next steps and contacts</h2>
-</header>
+    <header>
+        <h2>Next steps and contacts</h2>
+    </header>
 
+    
 
-
+    <a href="#top">Back to top <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></a>
 </section>
             </div>
         </div>
@@ -336,6 +343,7 @@
     function showcontent(){
     	$('.ukti-outer-wrap').show();
         calculateSidebarWidth();
+        smoothScroll();
     }
 
     function removeloading(){
@@ -359,6 +367,22 @@
              var menuWidth = $('#sidebar-width').width();
              $('.ukti-quick-guide-side').css({width: menuWidth});
          }
+    }
+
+    function smoothScroll() {
+        //smoothscrolling and positioning
+        $('a[href^="#"]').on('click', function (e) {
+            // prevent default anchor click behavior
+            e.preventDefault();
+            // store hash
+            var hash = this.hash;
+            // animate
+            $('html, body').stop().animate({
+                scrollTop: $(hash).offset().top
+            }, 600, 'swing', function () {
+                window.location.hash = hash;
+            });
+        });
     }
 
     // function zoomImageHoverLink() {

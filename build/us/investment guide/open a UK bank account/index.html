@@ -142,7 +142,7 @@
         background-size: cover;
     }
 </style>
-<div class="jumbotron">
+<div id="top" class="jumbotron">
     <div class="container" style="background-color: transparent">
         <h1>Open a UK bank account</h1>
         <p class="text-center">Setting up a UK business bank account will make it easy for your company to operate in the UK. Just bear in mind that the process can take up to three months and you may need to travel.</p>
@@ -201,27 +201,29 @@
         <div class="row">
             <div class="col-md-7 col-sm-10">
                 <section id="the-process">
-<header>
-    <h2>The process</h2>
-</header>
+    <header>
+        <h2>The process</h2>
+    </header>
 
-<p>The process for opening a business account depends on the individual bank or building society you are dealing with. In most cases, a UK address and contact is required.</p>
+    <p>The process for opening a business account depends on the individual bank or building society you are dealing with. In most cases, a UK address and contact is required.</p>
 
 
+    <a href="#top">Back to top <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></a>
 </section><section id="what-youll-need-to-do">
-<header>
-    <h2>What you’ll need to do</h2>
-</header>
+    <header>
+        <h2>What you’ll need to do</h2>
+    </header>
 
-<p>When engaging with a UK bank, you should contact the central London banking channel, rather than a local branch. From there, most forms and negotiations can be handled online and over the phone, but you may have to travel to the UK in order to sign a bank mandate and to provide your photographic ID and proof of address.</p>
+    <p>When engaging with a UK bank, you should contact the central London banking channel, rather than a local branch. From there, most forms and negotiations can be handled online and over the phone, but you may have to travel to the UK in order to sign a bank mandate and to provide your photographic ID and proof of address.</p>
 
 
+    <a href="#top">Back to top <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></a>
 </section><section id="timings">
-<header>
-    <h2>Timings</h2>
-</header>
+    <header>
+        <h2>Timings</h2>
+    </header>
 
-<p>It can take up to three months for documents to be approved and for meetings to be arranged, so you should factor this timescale into your business plan ahead of time.</p>
+    <p>It can take up to three months for documents to be approved and for meetings to be arranged, so you should factor this timescale into your business plan ahead of time.</p>
 <p><a href="https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/524056/Investor_Support_Directory_of_UK_Advisory_Network_May_2016.pdf">Find out more about opening a UK bank account by speaking to your local UKAN advisor.</a></p>
 <p>Checklist</p>
 <p>Make sure you have:</p>
@@ -233,6 +235,7 @@
 </ul>
 
 
+    <a href="#top">Back to top <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></a>
 </section>
             </div>
         </div>
@@ -269,6 +272,7 @@
     function showcontent(){
     	$('.ukti-outer-wrap').show();
         calculateSidebarWidth();
+        smoothScroll();
     }
 
     function removeloading(){
@@ -292,6 +296,22 @@
              var menuWidth = $('#sidebar-width').width();
              $('.ukti-quick-guide-side').css({width: menuWidth});
          }
+    }
+
+    function smoothScroll() {
+        //smoothscrolling and positioning
+        $('a[href^="#"]').on('click', function (e) {
+            // prevent default anchor click behavior
+            e.preventDefault();
+            // store hash
+            var hash = this.hash;
+            // animate
+            $('html, body').stop().animate({
+                scrollTop: $(hash).offset().top
+            }, 600, 'swing', function () {
+                window.location.hash = hash;
+            });
+        });
     }
 
     // function zoomImageHoverLink() {

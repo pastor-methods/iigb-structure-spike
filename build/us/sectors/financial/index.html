@@ -142,7 +142,7 @@
         background-size: cover;
     }
 </style>
-<div class="jumbotron">
+<div id="top" class="jumbotron">
     <div class="container" style="background-color: transparent">
         <h1>Financial services in Great Britain</h1>
         <p class="text-center">The UK offers unrivalled support for the global expansion of your business. It is the most internationally-focused financial marketplace in the world. No other centre for inward investment can offer such a concentration of capital, capability and stability.</p>
@@ -205,11 +205,11 @@
         <div class="row">
             <div class="col-md-7 col-sm-10">
                 <section id="a-global-leader-in-scale-and-influence">
-<header>
-    <h2>A global leader in scale and influence</h2>
-</header>
+    <header>
+        <h2>A global leader in scale and influence</h2>
+    </header>
 
-<p>The UK financial services sector accounts for 9.4% of UK GDP. At £140bn, this is much larger than both Germany (£80bn) and France (£50bn).</p>
+    <p>The UK financial services sector accounts for 9.4% of UK GDP. At £140bn, this is much larger than both Germany (£80bn) and France (£50bn).</p>
 <p>The UK:</p>
 <ul>
 <li>is the largest centre for cross-border banking</li>
@@ -222,12 +222,13 @@
 <p>Listing on the London Stock Exchange allows your company to tap into one of the largest and most international exchanges - only New York&#39;s exchanges have more foreign listings.</p>
 
 
+    <a href="#top">Back to top <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></a>
 </section><section id="unrivalled-opportunities">
-<header>
-    <h2>Unrivalled opportunities</h2>
-</header>
+    <header>
+        <h2>Unrivalled opportunities</h2>
+    </header>
 
-<p>The UK&#39;s international influence creates opportunities that others cannot match. Its Islamic finance sector:</p>
+    <p>The UK&#39;s international influence creates opportunities that others cannot match. Its Islamic finance sector:</p>
 <ul>
 <li>was the first country outside the Islamic world to issue an Islamic bond </li>
 <li>has more than 20 banks offering Islamic financial services, nearly double the number in the US </li>
@@ -242,45 +243,50 @@
 </ul>
 
 
+    <a href="#top">Back to top <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></a>
 </section><section id="a-large-and-skilled-labour-market">
-<header>
-    <h2>A large and skilled labour market</h2>
-</header>
+    <header>
+        <h2>A large and skilled labour market</h2>
+    </header>
 
-<p>Approximately 1.1 million people work in the financial services sector in the UK.</p>
+    <p>Approximately 1.1 million people work in the financial services sector in the UK.</p>
 <p>British higher education is world class and supplies the sector with a large pool of highly qualified financial talent. Its design and technology graduates mean there&#39;s a willingness to incorporate innovative technologies to improve consumer experience.</p>
 
 
+    <a href="#top">Back to top <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></a>
 </section><section id="centres-of-excellence-throughout-the-uk">
-<header>
-    <h2>Centres of excellence throughout the UK</h2>
-</header>
+    <header>
+        <h2>Centres of excellence throughout the UK</h2>
+    </header>
 
-<p>London is the world&#39;s leading financial centre. It stands top of the Global Financial Centre Index - ahead of New York, Hong Kong and Singapore.</p>
+    <p>London is the world&#39;s leading financial centre. It stands top of the Global Financial Centre Index - ahead of New York, Hong Kong and Singapore.</p>
 <p>The offering from the rest of the UK is just as strong. Two thirds of those employed in financial services sector work outside of London. Many businesses choose to locate in the regional clusters of the Midlands, Yorkshire, the North West, South Coast, South West of England, Northern Ireland, Scotland and South Wales.</p>
 <p><a href="https://www.gov.uk/government/publications/financial-centres-of-excellence-in-the-uk">Read an overview of the UK&#39;s financial centres of excellence</a></p>
 
 
+    <a href="#top">Back to top <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></a>
 </section><section id="strong-government-support-and-fair-regulation">
-<header>
-    <h2>Strong government support and fair regulation</h2>
-</header>
+    <header>
+        <h2>Strong government support and fair regulation</h2>
+    </header>
 
-<p>The UK&#39;s regulatory system is effective, fair and flexible. The globally respected Financial Conduct Authority (FCA), supports the industry and ensures transparency.</p>
+    <p>The UK&#39;s regulatory system is effective, fair and flexible. The globally respected Financial Conduct Authority (FCA), supports the industry and ensures transparency.</p>
 <p>A survey of finance professionals found our regulatory environment to be the most open to foreign business of all the world’s major financial centres.</p>
 <p>The UK government is fully committed to the success and expansion of financial services in the UK. The UK’s Corporation tax is lowest in the G20 at 20%, and will reduce to 18% by 2020.</p>
 <p>A wide range of grant funding and other support is available to help you establish your business in the UK and expand into overseas markets.</p>
 
 
+    <a href="#top">Back to top <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></a>
 </section><section id="next-steps-and-contacts">
-<header>
-    <h2>Next steps and contacts</h2>
-</header>
+    <header>
+        <h2>Next steps and contacts</h2>
+    </header>
 
-<p><a href="https://www.gov.uk/government/publications/guide-to-establishing-a-financial-services-institution-in-the-uk">Link to Setting up a financial services institution in the UK</a></p>
+    <p><a href="https://www.gov.uk/government/publications/guide-to-establishing-a-financial-services-institution-in-the-uk">Link to Setting up a financial services institution in the UK</a></p>
 <p>UK Trade &amp; Investment (UKTI) can help grow your financial services business in the UK access the financial and practical support available to you.  </p>
 
 
+    <a href="#top">Back to top <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></a>
 </section>
             </div>
         </div>
@@ -346,6 +352,7 @@
     function showcontent(){
     	$('.ukti-outer-wrap').show();
         calculateSidebarWidth();
+        smoothScroll();
     }
 
     function removeloading(){
@@ -369,6 +376,22 @@
              var menuWidth = $('#sidebar-width').width();
              $('.ukti-quick-guide-side').css({width: menuWidth});
          }
+    }
+
+    function smoothScroll() {
+        //smoothscrolling and positioning
+        $('a[href^="#"]').on('click', function (e) {
+            // prevent default anchor click behavior
+            e.preventDefault();
+            // store hash
+            var hash = this.hash;
+            // animate
+            $('html, body').stop().animate({
+                scrollTop: $(hash).offset().top
+            }, 600, 'swing', function () {
+                window.location.hash = hash;
+            });
+        });
     }
 
     // function zoomImageHoverLink() {

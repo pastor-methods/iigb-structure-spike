@@ -142,7 +142,7 @@
         background-size: cover;
     }
 </style>
-<div class="jumbotron">
+<div id="top" class="jumbotron">
     <div class="container" style="background-color: transparent">
         <h1>Establish a UK address</h1>
         <p class="text-center">You’ll need this for opening a bank account and for setting up your business.</p>
@@ -199,13 +199,14 @@
         <div class="row">
             <div class="col-md-7 col-sm-10">
                 <section id="some-title">
-<header>
-    <h2>Some title</h2>
-</header>
+    <header>
+        <h2>Some title</h2>
+    </header>
 
-<p>Some content</p>
+    <p>Some content</p>
 
 
+    <a href="#top">Back to top <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></a>
 </section>
             </div>
         </div>
@@ -242,6 +243,7 @@
     function showcontent(){
     	$('.ukti-outer-wrap').show();
         calculateSidebarWidth();
+        smoothScroll();
     }
 
     function removeloading(){
@@ -265,6 +267,22 @@
              var menuWidth = $('#sidebar-width').width();
              $('.ukti-quick-guide-side').css({width: menuWidth});
          }
+    }
+
+    function smoothScroll() {
+        //smoothscrolling and positioning
+        $('a[href^="#"]').on('click', function (e) {
+            // prevent default anchor click behavior
+            e.preventDefault();
+            // store hash
+            var hash = this.hash;
+            // animate
+            $('html, body').stop().animate({
+                scrollTop: $(hash).offset().top
+            }, 600, 'swing', function () {
+                window.location.hash = hash;
+            });
+        });
     }
 
     // function zoomImageHoverLink() {

@@ -142,7 +142,7 @@
         background-size: cover;
     }
 </style>
-<div class="jumbotron">
+<div id="top" class="jumbotron">
     <div class="container" style="background-color: transparent">
         <h1>Work out your profit margins against UK tax</h1>
         <p class="text-center">The UK has one of the most competitive tax systems in the world - check out how the rates and regulations can work for you.</p>
@@ -202,11 +202,11 @@
         <div class="row">
             <div class="col-md-7 col-sm-10">
                 <section id="key-business-taxes">
-<header>
-    <h2>Key business taxes</h2>
-</header>
+    <header>
+        <h2>Key business taxes</h2>
+    </header>
 
-<p>In order to keep driving business forward, <a href="https://www.gov.uk/government/publications/why-overseas-companies-should-set-up-in-the-uk/why-overseas-companies-should-set-up-in-the-uk#tax-in-the-uk">the UK has a transparent and principled tax system</a>. Taxes for businesses include:</p>
+    <p>In order to keep driving business forward, <a href="https://www.gov.uk/government/publications/why-overseas-companies-should-set-up-in-the-uk/why-overseas-companies-should-set-up-in-the-uk#tax-in-the-uk">the UK has a transparent and principled tax system</a>. Taxes for businesses include:</p>
 <p><em>Corporation tax</em></p>
 <p>The current rate is 20%, with plans to reduce this to 15% by 2020. That’s the lowest in the G7 and joint lowest in the G20.</p>
 <p><em>National insurance</em></p>
@@ -215,24 +215,26 @@
 <p>Employees are automatically enrolled into <a href="https://www.gov.uk/workplace-pensions/about-workplace-pensions">Workplace Pensions</a>. You can choose to set up your own pension scheme or you can enrol your employees into an established scheme, like the <a href="http://www.nestpensions.org.uk/schemeweb/NestWeb/public/employers/contents/what-employers-need-to-do.html">National Employments Savings Trust (NEST) which will handle the process automatically</a>. </p>
 
 
+    <a href="#top">Back to top <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></a>
 </section><section id="additional-tax-for-businesses-to-consider">
-<header>
-    <h2>Additional tax for businesses to consider</h2>
-</header>
+    <header>
+        <h2>Additional tax for businesses to consider</h2>
+    </header>
 
-<p>For businesses that buy and sell goods and services, there are two main taxes to be aware of. </p>
+    <p>For businesses that buy and sell goods and services, there are two main taxes to be aware of. </p>
 <p><em>Value Added Tax</em></p>
 <p>VAT applies to all goods and services across all EU countries at a rate of 20%.</p>
 <p><em>Import and export tax</em></p>
 <p>The UK is still a member of the EU, so continues to operate under the Free Trade Agreements in place – that means there are no duties to pay. <a href="https://www.gov.uk/topic/business-tax/import-export">Duties and regulations vary amongst non‐EU countries, you can find out more about them from HMRC</a>.</p>
 
 
+    <a href="#top">Back to top <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></a>
 </section><section id="personal-taxes">
-<header>
-    <h2>Personal taxes</h2>
-</header>
+    <header>
+        <h2>Personal taxes</h2>
+    </header>
 
-<p>Personal tax is very competitive in the UK and is proportional depending on earnings. The ‘all‐in’ scheme breaks down as follows:</p>
+    <p>Personal tax is very competitive in the UK and is proportional depending on earnings. The ‘all‐in’ scheme breaks down as follows:</p>
 <ul>
 <li>20% basic rate on earnings of £10,600‐£42,385</li>
 <li>40% higher rate on earnings of £42,386‐£150,000</li>
@@ -240,12 +242,13 @@
 </ul>
 
 
+    <a href="#top">Back to top <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></a>
 </section><section id="tax-incentives-for-business">
-<header>
-    <h2>Tax incentives for business</h2>
-</header>
+    <header>
+        <h2>Tax incentives for business</h2>
+    </header>
 
-<p>Because the UK is committed to helping businesses succeed, there are numerous tax relief schemes and incentives for owners and investors alike. </p>
+    <p>Because the UK is committed to helping businesses succeed, there are numerous tax relief schemes and incentives for owners and investors alike. </p>
 <p><em>Tax relief for investing in SMEs</em></p>
 <p>The UK offers an attractive venture capital scheme to help SMEs expand. The <a href="https://www.gov.uk/government/publications/the-enterprise-investment-scheme-introduction">Enterprise Investment Scheme (EIS)</a> and the <a href="https://www.gov.uk/government/collections/venture-capital-trusts-statistics">Venture Capital Trust (VCT)</a> are two schemes that have been extended to offer tax relief for individuals interested in investing in small businesses.</p>
 <p><em>Tax incentives for innovation</em></p>
@@ -260,6 +263,7 @@
 </ul>
 
 
+    <a href="#top">Back to top <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></a>
 </section>
             </div>
         </div>
@@ -296,6 +300,7 @@
     function showcontent(){
     	$('.ukti-outer-wrap').show();
         calculateSidebarWidth();
+        smoothScroll();
     }
 
     function removeloading(){
@@ -319,6 +324,22 @@
              var menuWidth = $('#sidebar-width').width();
              $('.ukti-quick-guide-side').css({width: menuWidth});
          }
+    }
+
+    function smoothScroll() {
+        //smoothscrolling and positioning
+        $('a[href^="#"]').on('click', function (e) {
+            // prevent default anchor click behavior
+            e.preventDefault();
+            // store hash
+            var hash = this.hash;
+            // animate
+            $('html, body').stop().animate({
+                scrollTop: $(hash).offset().top
+            }, 600, 'swing', function () {
+                window.location.hash = hash;
+            });
+        });
     }
 
     // function zoomImageHoverLink() {

@@ -195,12 +195,13 @@
     <!--<div class="row">-->
         <!--<div class="col-md-8">-->
             <!--<section id="the-uk-investment-guide">
-<header>
-    <h2>The UK investment guide</h2>
-</header>
+    <header>
+        <h2>The UK investment guide</h2>
+    </header>
 
+    
 
-
+    <a href="#top">Back to top <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></a>
 </section>-->
         <!--</div>-->
     <!--</div>-->
@@ -236,6 +237,7 @@
     function showcontent(){
     	$('.ukti-outer-wrap').show();
         calculateSidebarWidth();
+        smoothScroll();
     }
 
     function removeloading(){
@@ -259,6 +261,22 @@
              var menuWidth = $('#sidebar-width').width();
              $('.ukti-quick-guide-side').css({width: menuWidth});
          }
+    }
+
+    function smoothScroll() {
+        //smoothscrolling and positioning
+        $('a[href^="#"]').on('click', function (e) {
+            // prevent default anchor click behavior
+            e.preventDefault();
+            // store hash
+            var hash = this.hash;
+            // animate
+            $('html, body').stop().animate({
+                scrollTop: $(hash).offset().top
+            }, 600, 'swing', function () {
+                window.location.hash = hash;
+            });
+        });
     }
 
     // function zoomImageHoverLink() {
