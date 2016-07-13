@@ -4,7 +4,7 @@ indexTemplate: subsector-page-us.html
 intro: The UK has a world-class pool of talent and business-friendly employment laws. You can also bring employees from abroad through a flexible visa system.
 pageTitle: Understand UK employment law
 layout: content.html
-order: 6
+orderLevel: 6
 ---
 
 **Skills for the 21st century:** The UK is second only to the USA among the powerhouse economies for growing, retaining and attracting talent. It is home to four of the top eight universities in the world and has the highest number of leading MBA institutions in Europe. 

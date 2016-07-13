@@ -189,7 +189,6 @@ var makeIndex = function (files, metalsmith, done) {
                     }
                 }
                 var orderedSubLevel = _.sortBy(subLevel, 'orderLevel');
-                console.log(orderedSubLevel)
                 files[file].subLevel = orderedSubLevel;
             }
         }

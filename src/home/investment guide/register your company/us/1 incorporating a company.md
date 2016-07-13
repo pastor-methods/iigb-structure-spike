@@ -4,7 +4,7 @@ indexTemplate: subsector-page-us.html
 intro: It’s quick and easy to register a business in the UK. Companies House can handle the process with just one form. 
 pageTitle: Register your company
 layout: content.html
-order: 4
+orderLevel: 4
 ---
 
 Incorporating a company can be done in a number of ways (including setting up a UK establishment), however the most common way is setting up a limited company. To set up a limited company, you will require: 
