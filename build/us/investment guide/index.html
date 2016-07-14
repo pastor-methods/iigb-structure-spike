@@ -4,8 +4,8 @@
 	<meta charset="utf-8">
 	<title>UKTI - </title>
     <!-- local -->
-	<!--<base href="/ukti-alpha/build/">-->
-    <base href="/">
+	<base href="/ukti-alpha/build/">
+    <!--<base href="/">-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
@@ -120,8 +120,8 @@
         </div>
         <div class="collapse navbar-collapse" id="navbar-collapse-1">
             <ul class="nav navbar-nav ukti-main-nav-list">
-                <li class="active"><a href="/us/sectors/">Market sectors<span class="sr-only">(current)</span></a></li>
-                <li class=""><a href="/us/investment%20guide/">Investment guide</a></li>
+                <li class=""><a href="/ukti-alpha/build/us/sectors/">Market sectors<span class="sr-only">(current)</span></a></li>
+                <li class=""><a href="/ukti-alpha/build/us/investment%20guide/">Investment guide</a></li>
             </ul>
             <form class="navbar-form navbar-right ukti-main-search" role="search">
                 <div class="form-group">
@@ -134,23 +134,41 @@
     </div>
 </nav>
 
-<div class="jumbotron">
+<script>
+    $(document).ready(function () {
+        var url = window.location.pathname;
+        console.log(url)
+        // Will only work if string in href matches with location
+        $('ul.nav a[href="' + url + '"]').parent().addClass('active');
+
+//        $('.nav li a').click(function(e) {
+//            $('.nav li').removeClass('active');
+//            var $parent = $(this).parent();
+//            if (!$parent.hasClass('active')) {
+//                $parent.addClass('active');
+//            }
+//        });
+    });
+</script><div class="jumbotron">
     <div class="container" style="background-color: transparent">
         <h1>The UK investment guide</h1>
         <p class="text-center">You’re thinking about bringing your business to the UK. Here’s our quick guide to the important steps you need to get set up</p>
     </div>
 </div>
-<div class="container">
-    <ol class="breadcrumb">
-        <li>
-            <a href="/">Home</a>
-        </li>
-        <!--last one is not hyperlinked-->
-        <li>
-            <span class="text-sentence">investment guide</span>
-        </li>
-    </ol>
-</div>
+<section class="ukti-toc">
+    <div class="container">
+        <ol class="breadcrumb">
+            <li>
+                <a href="/">Home</a>
+            </li>
+            <!--last one is not hyperlinked-->
+            <li>
+                <span class="text-sentence">investment guide</span>
+            </li>
+        </ol>
+    </div>
+</section>
+<br>
 <div class="container">
     <div class="row">
         <div class="col-md-12">

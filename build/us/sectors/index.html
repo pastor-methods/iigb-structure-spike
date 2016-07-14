@@ -4,8 +4,8 @@
 	<meta charset="utf-8">
 	<title>UKTI - </title>
     <!-- local -->
-	<!--<base href="/ukti-alpha/build/">-->
-    <base href="/">
+	<base href="/ukti-alpha/build/">
+    <!--<base href="/">-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
@@ -120,8 +120,8 @@
         </div>
         <div class="collapse navbar-collapse" id="navbar-collapse-1">
             <ul class="nav navbar-nav ukti-main-nav-list">
-                <li class="active"><a href="/us/sectors/">Market sectors<span class="sr-only">(current)</span></a></li>
-                <li class=""><a href="/us/investment%20guide/">Investment guide</a></li>
+                <li class=""><a href="/ukti-alpha/build/us/sectors/">Market sectors<span class="sr-only">(current)</span></a></li>
+                <li class=""><a href="/ukti-alpha/build/us/investment%20guide/">Investment guide</a></li>
             </ul>
             <form class="navbar-form navbar-right ukti-main-search" role="search">
                 <div class="form-group">
@@ -134,23 +134,40 @@
     </div>
 </nav>
 
-<div class="jumbotron">
+<script>
+    $(document).ready(function () {
+        var url = window.location.pathname;
+        console.log(url)
+        // Will only work if string in href matches with location
+        $('ul.nav a[href="' + url + '"]').parent().addClass('active');
+
+//        $('.nav li a').click(function(e) {
+//            $('.nav li').removeClass('active');
+//            var $parent = $(this).parent();
+//            if (!$parent.hasClass('active')) {
+//                $parent.addClass('active');
+//            }
+//        });
+    });
+</script><div class="jumbotron">
     <div class="container" style="background-color: transparent">
         <h1>List of sectors</h1>
         <p class="text-center"></p>
     </div>
 </div>
-<div class="container">
-    <ol class="breadcrumb">
-        <li>
-            <a href="/">Home</a>
-        </li>
-        <!--last one is not hyperlinked-->
-        <li>
-            <span class="text-sentence">sectors</span>
-        </li>
-    </ol>
-</div>
+<section class="ukti-toc">
+    <div class="container">
+        <ol class="breadcrumb">
+            <li>
+                <a href="/">Home</a>
+            </li>
+            <!--last one is not hyperlinked-->
+            <li>
+                <span class="text-sentence">sectors</span>
+            </li>
+        </ol>
+    </div>
+</section>
 <section class="ukti-content-section">
     <div class="container" id="sectors">
         <div class="row">
@@ -180,17 +197,6 @@
                     </li>
                     <li class="ukti-key-sectors-list__item">
                         <div class="ukti-key-sectors-list__link-wrap">
-                            <a href="/us/sectors/financial">
-                                <img src="/assets/img/finance-sector-thumb.jpg" class="ukti-key-sectors-list__image">
-                                <span class="ukti-key-sectors-list__text text-sentence">financial</span>
-                            </a>
-                        </div>
-                        <div class="ukti-key-sectors-list__link-wrap">
-                            <p>The UK offers unrivalled support for the global expansion of your business. It is the most internationally-focused financial marketplace in the world. No other centre for inward investment can offer such a concentration of capital, capability and stability.</p>
-                        </div>
-                    </li>
-                    <li class="ukti-key-sectors-list__item">
-                        <div class="ukti-key-sectors-list__link-wrap">
                             <a href="/us/sectors/creative">
                                 <img src="/assets/img/creative-sector-thumb.jpg" class="ukti-key-sectors-list__image">
                                 <span class="ukti-key-sectors-list__text text-sentence">creative</span>
@@ -200,15 +206,26 @@
                             <p>From producing big budget movies to developing world-class computer games, creativity is thriving in the UK.</p>
                         </div>
                     </li>
+                    <li class="ukti-key-sectors-list__item">
+                        <div class="ukti-key-sectors-list__link-wrap">
+                            <a href="/us/sectors/financial">
+                                <img src="/assets/img/finance-sector-thumb.jpg" class="ukti-key-sectors-list__image">
+                                <span class="ukti-key-sectors-list__text text-sentence">financial</span>
+                            </a>
+                        </div>
+                        <div class="ukti-key-sectors-list__link-wrap">
+                            <p>The UK offers unrivalled support for the global expansion of your business. It is the most internationally-focused financial marketplace in the world. No other centre for inward investment can offer such a concentration of capital, capability and stability.</p>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>
     </div>
 </section>
 <!--<div class="container">-->
-    <!--<div class="row">-->
-        <!--<div class="col-md-8">-->
-            <!--<section id="intro">
+<!--<div class="row">-->
+<!--<div class="col-md-8">-->
+<!--<section id="intro">
     <header>
         <h2>Intro</h2>
     </header>
@@ -217,8 +234,8 @@
 
     <a href="#top">Back to top <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></a>
 </section>-->
-        <!--</div>-->
-    <!--</div>-->
+<!--</div>-->
+<!--</div>-->
 <!--</div>-->
 <nav class="container ukti-footer">
     <div class="row">
