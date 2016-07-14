@@ -120,8 +120,8 @@
         </div>
         <div class="collapse navbar-collapse" id="navbar-collapse-1">
             <ul class="nav navbar-nav ukti-main-nav-list">
-                <li><a href="/ukti-alpha/build/us/sectors/">Market sectors<span class="sr-only">(current)</span></a></li>
-                <li><a href="/ukti-alpha/build/us/investment%20guide/">Investment guide</a></li>
+                <li><a href="/us/sectors/">Market sectors<span class="sr-only">(current)</span></a></li>
+                <li><a href="/us/investment%20guide/">Investment guide</a></li>
             </ul>
             <form class="navbar-form navbar-right ukti-main-search" role="search">
                 <div class="form-group">
@@ -176,9 +176,9 @@
                 <ol class="ukti-toc__list">
                     <li class="ukti-toc__list-item"><a href="#a-global-leader-in-scale-and-influence">A global leader in scale and influence</a></li>
                     <li class="ukti-toc__list-item"><a href="#unrivalled-opportunities">Unrivalled opportunities</a></li>
-                    <li class="ukti-toc__list-item"><a href="#a-large-and-skilled-labour-market">A large and skilled labour market</a></li>
                     <li class="ukti-toc__list-item"><a href="#centres-of-excellence-throughout-the-uk">Centres of excellence throughout the UK</a></li>
                     <li class="ukti-toc__list-item"><a href="#strong-government-support-and-fair-regulation">Strong government support and fair regulation</a></li>
+                    <li class="ukti-toc__list-item"><a href="#a-large-and-skilled-labour-market">A large and skilled labour market</a></li>
                     <li class="ukti-toc__list-item"><a href="#next-steps-and-contacts">Next steps and contacts</a></li>
                     <li class="ukti-toc__list-item"><a href="#sub-sectors"><span class="text-sentence">financial sub sectors</span></a>
                     </li>
@@ -248,16 +248,6 @@
 
 
     <a href="#top">Back to top <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></a>
-</section><section id="a-large-and-skilled-labour-market">
-    <header>
-        <h2>A large and skilled labour market</h2>
-    </header>
-
-    <p>Approximately 1.1 million people work in the financial services sector in the UK.</p>
-<p>British higher education is world class and supplies the sector with a large pool of highly qualified financial talent. Its design and technology graduates mean there&#39;s a willingness to incorporate innovative technologies to improve consumer experience.</p>
-
-
-    <a href="#top">Back to top <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></a>
 </section><section id="centres-of-excellence-throughout-the-uk">
     <header>
         <h2>Centres of excellence throughout the UK</h2>
@@ -278,6 +268,16 @@
 <p>A survey of finance professionals found our regulatory environment to be the most open to foreign business of all the world’s major financial centres.</p>
 <p>The UK government is fully committed to the success and expansion of financial services in the UK. The UK’s Corporation tax is lowest in the G20 at 20%, and will reduce to 18% by 2020.</p>
 <p>A wide range of grant funding and other support is available to help you establish your business in the UK and expand into overseas markets.</p>
+
+
+    <a href="#top">Back to top <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></a>
+</section><section id="a-large-and-skilled-labour-market">
+    <header>
+        <h2>A large and skilled labour market</h2>
+    </header>
+
+    <p>Approximately 1.1 million people work in the financial services sector in the UK.</p>
+<p>British higher education is world class and supplies the sector with a large pool of highly qualified financial talent. Its design and technology graduates mean there&#39;s a willingness to incorporate innovative technologies to improve consumer experience.</p>
 
 
     <a href="#top">Back to top <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></a>
@@ -357,6 +357,7 @@
     	$('.ukti-outer-wrap').show();
         calculateSidebarWidth();
         smoothScroll();
+        addActive();
     }
 
     function removeloading(){
@@ -396,6 +397,19 @@
                 window.location.hash = hash;
             });
         });
+    }
+
+    function addActive () {
+        var url = window.location.pathname;
+        var child = '';
+        if (url.match('\/sectors\/')) {
+            child = '/us/sectors/';
+        } else if (url.match('\/investment%20guide\/')) {
+            child = '/us/investment%20guide/';
+        }
+        if ($('ul.nav a')) {
+            $('ul.nav a[href="' + child + '"]').parent().addClass('active');
+        }
     }
 
     // function zoomImageHoverLink() {

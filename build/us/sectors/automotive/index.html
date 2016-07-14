@@ -120,8 +120,8 @@
         </div>
         <div class="collapse navbar-collapse" id="navbar-collapse-1">
             <ul class="nav navbar-nav ukti-main-nav-list">
-                <li><a href="/ukti-alpha/build/us/sectors/">Market sectors<span class="sr-only">(current)</span></a></li>
-                <li><a href="/ukti-alpha/build/us/investment%20guide/">Investment guide</a></li>
+                <li><a href="/us/sectors/">Market sectors<span class="sr-only">(current)</span></a></li>
+                <li><a href="/us/investment%20guide/">Investment guide</a></li>
             </ul>
             <form class="navbar-form navbar-right ukti-main-search" role="search">
                 <div class="form-group">
@@ -174,8 +174,8 @@
             <div class="col-md-8">
                 <h2 class="ukti-toc__heading">On this page</h2>
                 <ol class="ukti-toc__list">
-                    <li class="ukti-toc__list-item"><a href="#the-automotive-sector-in-great-britain">The automotive sector in Great Britain</a></li>
                     <li class="ukti-toc__list-item"><a href="#a-resurgent-industry">A resurgent industry</a></li>
+                    <li class="ukti-toc__list-item"><a href="#the-automotive-sector-in-great-britain">The automotive sector in Great Britain</a></li>
                     <li class="ukti-toc__list-item"><a href="#a-hub-for-global-excellence">A hub for global excellence</a></li>
                     <li class="ukti-toc__list-item"><a href="#a-home-for-fresh-thinking">A home for fresh thinking</a></li>
                     <li class="ukti-toc__list-item"><a href="#an-effective-business-environment">An effective business environment</a></li>
@@ -208,15 +208,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-7 col-sm-10">
-                <section id="the-automotive-sector-in-great-britain">
-    <header>
-        <h2>The automotive sector in Great Britain</h2>
-    </header>
-
-    
-
-    <a href="#top">Back to top <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></a>
-</section><section id="a-resurgent-industry">
+                <section id="a-resurgent-industry">
     <header>
         <h2>A resurgent industry</h2>
     </header>
@@ -225,6 +217,14 @@
 <p>This is in part due to a rising demand for UK vehicles around the world – 77% of UK-built cars are exported to more than 100 countries – as well as competitive manufacturing costs, strong technological capability and the highest productivity in Europe.</p>
 <p>To help overseas businesses take further advantage of this thriving industry, the Automotive Investment Organisation has been set up. Led by industry leaders and part of UK Trade and Investment, the organisation provides investors with knowledge and advice on topics ranging from financial support to identifying locations for manufacturing facilities. </p>
 
+
+    <a href="#top">Back to top <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></a>
+</section><section id="the-automotive-sector-in-great-britain">
+    <header>
+        <h2>The automotive sector in Great Britain</h2>
+    </header>
+
+    
 
     <a href="#top">Back to top <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></a>
 </section><section id="a-hub-for-global-excellence">
@@ -349,6 +349,7 @@ world-renowned R&amp;D centres.</li>
     	$('.ukti-outer-wrap').show();
         calculateSidebarWidth();
         smoothScroll();
+        addActive();
     }
 
     function removeloading(){
@@ -388,6 +389,19 @@ world-renowned R&amp;D centres.</li>
                 window.location.hash = hash;
             });
         });
+    }
+
+    function addActive () {
+        var url = window.location.pathname;
+        var child = '';
+        if (url.match('\/sectors\/')) {
+            child = '/us/sectors/';
+        } else if (url.match('\/investment%20guide\/')) {
+            child = '/us/investment%20guide/';
+        }
+        if ($('ul.nav a')) {
+            $('ul.nav a[href="' + child + '"]').parent().addClass('active');
+        }
     }
 
     // function zoomImageHoverLink() {

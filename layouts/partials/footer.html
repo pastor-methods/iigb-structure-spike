@@ -30,6 +30,7 @@
     	$('.ukti-outer-wrap').show();
         calculateSidebarWidth();
         smoothScroll();
+        addActive();
     }
 
     function removeloading(){
@@ -69,6 +70,19 @@
                 window.location.hash = hash;
             });
         });
+    }
+
+    function addActive () {
+        var url = window.location.pathname;
+        var child = '';
+        if (url.match('\/sectors\/')) {
+            child = '/us/sectors/';
+        } else if (url.match('\/investment%20guide\/')) {
+            child = '/us/investment%20guide/';
+        }
+        if ($('ul.nav a')) {
+            $('ul.nav a[href="' + child + '"]').parent().addClass('active');
+        }
     }
 
     // function zoomImageHoverLink() {

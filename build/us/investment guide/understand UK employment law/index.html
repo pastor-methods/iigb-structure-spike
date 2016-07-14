@@ -120,8 +120,8 @@
         </div>
         <div class="collapse navbar-collapse" id="navbar-collapse-1">
             <ul class="nav navbar-nav ukti-main-nav-list">
-                <li><a href="/ukti-alpha/build/us/sectors/">Market sectors<span class="sr-only">(current)</span></a></li>
-                <li><a href="/ukti-alpha/build/us/investment%20guide/">Investment guide</a></li>
+                <li><a href="/us/sectors/">Market sectors<span class="sr-only">(current)</span></a></li>
+                <li><a href="/us/investment%20guide/">Investment guide</a></li>
             </ul>
             <form class="navbar-form navbar-right ukti-main-search" role="search">
                 <div class="form-group">
@@ -280,6 +280,7 @@
     	$('.ukti-outer-wrap').show();
         calculateSidebarWidth();
         smoothScroll();
+        addActive();
     }
 
     function removeloading(){
@@ -319,6 +320,19 @@
                 window.location.hash = hash;
             });
         });
+    }
+
+    function addActive () {
+        var url = window.location.pathname;
+        var child = '';
+        if (url.match('\/sectors\/')) {
+            child = '/us/sectors/';
+        } else if (url.match('\/investment%20guide\/')) {
+            child = '/us/investment%20guide/';
+        }
+        if ($('ul.nav a')) {
+            $('ul.nav a[href="' + child + '"]').parent().addClass('active');
+        }
     }
 
     // function zoomImageHoverLink() {
