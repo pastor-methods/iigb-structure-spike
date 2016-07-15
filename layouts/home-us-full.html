@@ -18,13 +18,46 @@
 
 
         <div class="modal fade" id="heroVideo" role="dialog">
-            <div class="modal-dialog video-wrapper">
-                <!-- Modal content-->
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/yoHrRcKIBKw" frameborder="0" allowfullscreen></iframe>
-            </div>
+            <!--<div class="modal-dialog video-wrapper">-->
+                <!--&lt;!&ndash; Modal content&ndash;&gt;-->
+                <!--<iframe width="560" height="315" src="https://www.youtube.com/embed/yoHrRcKIBKw" frameborder="0" allowfullscreen></iframe>-->
+            <!--</div>-->
+
+            <!--[if lte IE 8]>
+            <object width="560" height="315">
+                <param name="movie" value="https://www.youtube.com/embed/yoHrRcKIBKw"</param>
+
+                <param name="allowFullScreen" value="true"></param>
+                <param name="allowScriptAccess" value="always"></param>
+                <embed src="https://youtube.googleapis.com/v/vidid?rel=0&vq=large&fs=1"
+
+                       type="application/x-shockwave-flash"
+                       allowfullscreen="true"
+                       allowscriptaccess="always"
+                       width="288" height="162">
+                </embed>
+            </object>
+            <![endif]-->
+
+            <![if !lte IE 8]>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/yoHrRcKIBKw" frameborder="0" allowfullscreen></iframe>
+            <![endif]>
+
         </div>
-        <video autoplay loop poster="../assets/img/northern-powerhouse.jpg" class="ukti-hero__video-bg">
-            <source src="../assets/vid/northern-powerhouse.mp4" type="video/mp4">
+
+        <video width="560" height="315" controls="" autoplay="">
+            <!-- MP4 must be first for iPad! -->
+            <source src="../assets/vid/northern-powerhouse.mp4" type="video/mp4"><!-- WebKit video    -->
+            <!--<source src="../assets/vid/northern-powerhouse.webm" type="video/webm">&lt;!&ndash; WebM/VP8/Vorbis &ndash;&gt;-->
+            <!--<source src="../assets/vid/northern-powerhouse.ogv" type="video/ogg">&lt;!&ndash; Firefox / Opera &ndash;&gt;-->
+            <!-- fallback to Flash: -->
+            <object width="560" height="315" type="application/x-shockwave-flash" data="player.swf">
+                <!-- Firefox uses the `data` attribute above, IE/Safari uses the param below -->
+                <param name="movie" value="player.swf">
+                <param name="flashvars" value="autostart=true&amp;controlbar=over&amp;image=../assets/img/northern-powerhouse.jpg&amp;file=../assets/vid/northern-powerhouse.mp4">
+                <!-- fallback image -->
+                <img src="../assets/img/northern-powerhouse.jpg" width="560" height="315" alt="" title="No video playback capabilities, please download the video below">
+            </object>
         </video>
 
     </div>
