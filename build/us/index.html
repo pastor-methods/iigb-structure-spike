@@ -109,8 +109,11 @@
 <div class="jumbotron--home">
     <div class="container">
         <div class="ukti-hero__content">
-            <h1><img src="../assets/img/iigb-logo-big-white.png" alt="Invest in Great Britain" class="img-responsive"></h1>
-            <p class="text-center"><a href="#" class="bg-video-inactive bg-video-play" data-toggle="modal" data-target="#heroVideo">Watch video <span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span></a></p>
+            <h1><img src="../assets/img/iigb-logo-big-white.png" alt="Invest in Great Britain" class="img-responsive">
+            </h1>
+            <p class="text-center"><a href="#" class="bg-video-inactive bg-video-play" data-toggle="modal"
+                                      data-target="#heroVideo">Watch video <span class="glyphicon glyphicon-play-circle"
+                                                                                 aria-hidden="true"></span></a></p>
         </div>
         <nav>
             <ul class="text-center list-inline ukti-home-section-anchors">
@@ -123,33 +126,31 @@
 
 
         <div class="modal fade" id="heroVideo" role="dialog">
-            <!--<div class="modal-dialog video-wrapper">-->
-                <!--&lt;!&ndash; Modal content&ndash;&gt;-->
-                <!--<iframe width="560" height="315" src="https://www.youtube.com/embed/yoHrRcKIBKw" frameborder="0" allowfullscreen></iframe>-->
-            <!--</div>-->
+            <div class="modal-dialog video-wrapper">
+                <!--[if lte IE 8]>
+                <object width="560" height="315">
+                    <param name="movie" value="https://www.youtube.com/embed/yoHrRcKIBKw"
+                    </param>
+                    <param name="allowFullScreen" value="true"></param>
+                    <param name="allowScriptAccess" value="always"></param>
+                    <embed src="https://youtube.googleapis.com/v/vidid?rel=0&vq=large&fs=1"
+                           type="application/x-shockwave-flash"
+                           allowfullscreen="true"
+                           allowscriptaccess="always"
+                           width="560" height="315">
+                    </embed>
+                </object>
+                <![endif]-->
 
-            <!--[if lte IE 8]>
-            <object width="560" height="315">
-                <param name="movie" value="https://www.youtube.com/embed/yoHrRcKIBKw"</param>
-                <param name="allowFullScreen" value="true"></param>
-                <param name="allowScriptAccess" value="always"></param>
-                <embed src="https://youtube.googleapis.com/v/vidid?rel=0&vq=large&fs=1"
-                       type="application/x-shockwave-flash"
-                       allowfullscreen="true"
-                       allowscriptaccess="always"
-                       width="560" height="315">
-                </embed>
-            </object>
-            <![endif]-->
-
-            <![if !lte IE 8]>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/yoHrRcKIBKw" frameborder="0" allowfullscreen></iframe>
-            <![endif]>
+                <![if !lte IE 8]>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/yoHrRcKIBKw" frameborder="0"
+                        allowfullscreen></iframe>
+                <![endif]>
+            </div>
 
         </div>
 
-        <video width="560" height="315" controls="" autoplay="">
-            <!-- MP4 must be first for iPad! -->
+        <video autoplay loop poster="../assets/img/northern-powerhouse.jpg" class="ukti-hero__video-bg">
             <source src="../assets/vid/northern-powerhouse.mp4" type="video/mp4"><!-- WebKit video    -->
             <!--<source src="../assets/vid/northern-powerhouse.webm" type="video/webm">&lt;!&ndash; WebM/VP8/Vorbis &ndash;&gt;-->
             <!--<source src="../assets/vid/northern-powerhouse.ogv" type="video/ogg">&lt;!&ndash; Firefox / Opera &ndash;&gt;-->
@@ -157,15 +158,15 @@
             <object width="560" height="315" type="application/x-shockwave-flash" data="player.swf">
                 <!-- Firefox uses the `data` attribute above, IE/Safari uses the param below -->
                 <param name="movie" value="player.swf">
-                <param name="flashvars" value="autostart=true&amp;controlbar=over&amp;image=../assets/img/northern-powerhouse.jpg&amp;file=../assets/vid/northern-powerhouse.mp4">
+                <param name="flashvars"
+                       value="autostart=true&amp;controlbar=over&amp;image=../assets/img/northern-powerhouse.jpg&amp;file=../assets/vid/northern-powerhouse.mp4">
                 <!-- fallback image -->
-                <img src="../assets/img/northern-powerhouse.jpg" width="560" height="315" alt="" title="No video playback capabilities, please download the video below">
+                <img src="../assets/img/northern-powerhouse.jpg" width="560" height="315" alt=""
+                     title="No video playback capabilities, please download the video below">
             </object>
         </video>
-
     </div>
 </div>
-
 
 
 
