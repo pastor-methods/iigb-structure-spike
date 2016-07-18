@@ -17,7 +17,7 @@
                 <ol class="ukti-big-list">
                     {{#each subLevel}}
                     <li class="ukti-big-list__item--home-guide">
-                        <h3><a class="text-sentence" href="{{this.uri}}">{{this.name}}</a></h3>
+                        <h3><a class="text-sentence" href="/{{this.uri}}">{{this.name}}</a></h3>
                         {{intro}} <br>
                     </li>
                     {{/each}}
@@ -26,11 +26,5 @@
         </div>
     </div>
 </div>
-<!--<div class="container">-->
-    <!--<div class="row">-->
-        <!--<div class="col-md-8">-->
-            <!--{{{contents}}}-->
-        <!--</div>-->
-    <!--</div>-->
-<!--</div>-->
+
 {{> footer}}
