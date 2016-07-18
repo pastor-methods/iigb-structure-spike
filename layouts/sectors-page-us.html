@@ -17,7 +17,12 @@
                     {{#each subLevel}}
                     <li class="ukti-key-sectors-list__item">
                         <div class="ukti-key-sectors-list__link-wrap">
+                            <!--[if !IE]>
                             <a href="/{{this.uri}}">
+                            <![endif]-->
+                            <!--[if lte IE 8]>
+                            <a href="/{{this.name}}">
+                            <![endif]-->
                                 <img src="/assets/img/{{this.thumbnail}}" class="ukti-key-sectors-list__image">
                                 <span class="ukti-key-sectors-list__text text-sentence">{{this.name}}</span>
                             </a>
