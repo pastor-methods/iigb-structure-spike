@@ -6,39 +6,44 @@
         <div class="ukti-hero__content">
             <h1><img src="../assets/img/iigb-logo-big-white.png" alt="Invest in Great Britain" class="img-responsive">
             </h1>
+            <![if !lte IE 8]>
             <p class="text-center"><a href="#" class="bg-video-inactive bg-video-play" data-toggle="modal"
                                       data-target="#heroVideo">Watch video <span class="glyphicon glyphicon-play-circle"
                                                                                  aria-hidden="true"></span></a></p>
+            <![endif]>
+            <![if lte IE 8]>
+            <p class="text-center"><a href="https://www.youtube.com/yoHrRcKIBKw"
+                                      class="bg-video-inactive bg-video-play">Watch video <span
+                    class="glyphicon glyphicon-play-circle"></span></a></p>
+            <![endif]>
         </div>
-        <nav>
-            <ul class="text-center list-inline ukti-home-section-anchors">
-                <li><a href="#why-uk">Reasons to choose the UK</a></li>
-                <li><a href="#sectors">Key market sectors</a></li>
-                <li><a href="#guide">Simple investment guide</a></li>
-                <li><a href="#">Search</a></li>
-            </ul>
-        </nav>
-
-
-        <div class="modal fade" id="heroVideo" role="dialog">
-            <div class="modal-dialog video-wrapper">
-                <![if !lte IE 8]>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/yoHrRcKIBKw" frameborder="0"
-                        allowfullscreen></iframe>
-                <![endif]>
-            </div>
-
-        </div>
-
-        <video autoplay loop poster="../assets/img/northern-powerhouse.jpg" class="ukti-hero__video-bg">
-            <source src="../assets/vid/northern-powerhouse.mp4" type="video/mp4">
-        </video>
-        <![if lte IE 8]>
-        <img class="ukti-hero__image-bg" src="../assets/img/northern-powerhouse.jpg" alt=""
-             title="No video playback capabilities, please follow the link to video below">
-        <p><a href="https://www.youtube.com/yoHrRcKIBKw"></a>Go to video</p>
-        <![endif]>
     </div>
+    <nav>
+        <ul class="text-center list-inline ukti-home-section-anchors">
+            <li><a href="#why-uk">Reasons to choose the UK</a></li>
+            <li><a href="#sectors">Key market sectors</a></li>
+            <li><a href="#guide">Simple investment guide</a></li>
+            <li><a href="#">Search</a></li>
+        </ul>
+    </nav>
+
+    <div class="modal fade" id="heroVideo" role="dialog">
+        <div class="modal-dialog video-wrapper">
+            <![if !lte IE 8]>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/yoHrRcKIBKw" frameborder="0"
+                    allowfullscreen></iframe>
+            <![endif]>
+        </div>
+    </div>
+
+    <video autoplay loop poster="../assets/img/northern-powerhouse.jpg" class="ukti-hero__video-bg">
+        <source src="../assets/vid/northern-powerhouse.mp4" type="video/mp4">
+    </video>
+    <![if lte IE 8]>
+    <img class="ukti-hero__image-bg" src="../assets/img/northern-powerhouse.jpg" alt=""
+         title="No video playback capabilities, please follow the link to video below">
+    <p><a href="https://www.youtube.com/yoHrRcKIBKw"></a>Go to video</p>
+    <![endif]>
 </div>
 
 
