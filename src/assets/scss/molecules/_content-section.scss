@@ -1,6 +1,7 @@
 //content-section.scss
 
 .ukti-content-section {
+	counter-reset: ukti-big-list-counter;
 	padding: 80px 0 120px 0;
 	border-bottom: 1px solid #ddd;
 
