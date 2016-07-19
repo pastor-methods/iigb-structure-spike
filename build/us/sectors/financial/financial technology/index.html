@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>UKTI - </title>
+    <!-- local -->
+	<!--<base href="/ukti-alpha/build/">-->
+    <!--<base href="/">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="/assets/css/main.css" rel="stylesheet" type="text/css"/>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/equalHeight.js"></script>
+
+    <!--[if lt IE 9]>
+    <link href="/assets/css/main-ie8.css" rel="stylesheet" type="text/css"/>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script>
+        document.createElement('header');
+        document.createElement('nav');
+        document.createElement('section');
+        document.createElement('article');
+        document.createElement('aside');
+        document.createElement('footer');
+    </script>
+    <![endif]-->
+
+    <!--[if (gte IE 6)&(lte IE 8)]>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/css3pie/2.0beta1/PIE_IE678.js"></script>
+    <![endif]-->
+
+</head>
+<style type="text/css">
+    .bg--transparent {
+        background: transparent;
+    }
+
+	.ukti-outer-wrap {
+		display: none;
+	}
+
+	.navbar-brand {
+		height: auto;
+	}
+	
+	.navbar-brand img {
+		height: 40px;
+		width: auto;
+	}
+
+	.navbar-default {
+		background: transparent;
+	}
+
+	.navbar {
+		margin: 0;
+        border: 0 solid #F2F2F2;
+        position: absolute;
+        z-index: 10;
+        width: 100%;
+        top: 80px;
+        /*left: -20px;*/
+    }
+
+    #nav.affix {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 10;
+    }
+
+    #nav.affix-top {
+        position: static;
+    }
+
+	.modal-open .modal {
+		background: #000;
+	}
+
+	.ukti-loading {
+		position: fixed;
+        z-index: 100;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+        background: #fff;
+		/*background: #fff url('../assets/img/loading.gif') center no-repeat;*/
+	}
+</style>
+<body>
+<div class="ukti-loading"></div>
+<noscript>
+<style type="text/css">
+	.ukti-loading {display: none;}
+	.ukti-outer-wrap {display: block;}
+</style>
+</noscript>
+<div class="ukti-outer-wrap">
+<nav id="nav-default" class="navbar navbar-default">
+    <div class="container ukti-main-nav"><!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a class="navbar-brand" href="/">
+                <img alt="Brand" src="http://ukti-iigb-alpha-staging.herokuapp.com/assets/img/iigb-logo.png">
+            </a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse-1">
+            <ul class="nav navbar-nav ukti-main-nav-list">
+                <li><a href="/us/sectors/">Market sectors<span class="sr-only">(current)</span></a></li>
+                <li><a href="/us/investment%20guide/">Investment guide</a></li>
+            </ul>
+            <form class="navbar-form navbar-right ukti-main-search" role="search">
+                <div class="form-group">
+                    <input type="text" class="ukti-main-search__input-field" placeholder="Search">
+                </div>
+                <button type="submit" class="ukti-main-search__submit"><span
+                        class="glyphicon glyphicon-search ukti-main-search__glyph" aria-hidden="true"></span></button>
+            </form>
+        </div>
+    </div>
+</nav><style>
+    .jumbotron {
+        background-image: url("/assets/img/fintech.jpg");
+        background-size: cover;
+    }
+</style>
+<div id="top" class="jumbotron">
+    <div class="container" style="background-color: transparent">
+        <h1>Financial technology in Great Britain</h1>
+        <p class="text-center">The UK and Ireland is the world’s fastest growing region for financial technology (fintech) inward investment. Many of the biggest players in fintech have chosen to set up or expand their global operations in Britain.</p>
+    </div>
+</div>
+
+<section class="ukti-toc">
+    <div class="container">
+        <ol class="breadcrumb">
+            <li>
+                <a href="/">Home</a>
+            </li>
+            <li>
+                <a class="text-sentence" href="/us/sectors">sectors</a>
+            </li>
+            <!--last one is not hyperlinked-->
+            <li>
+                <a class="text-sentence" href="/us/sectors/financial">financial</a>
+            </li>
+            <!--last one is not hyperlinked-->
+            <!--last one is not hyperlinked-->
+            <li>
+                <span class="text-sentence">financial technology</span>
+            </li>
+        </ol>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h2 class="ukti-toc__heading">On this page</h2>
+                <ol class="ukti-toc__list">
+                    <li class="ukti-toc__list-item"><a href="#financial-technology-in-great-britain">Financial technology in Great Britain</a></li>
+                    <li class="ukti-toc__list-item"><a href="#world-beating-growth-and-opportunity">World-beating growth and opportunity</a></li>
+                    <li class="ukti-toc__list-item"><a href="#large-talent-pool">Large talent pool</a></li>
+                    <li class="ukti-toc__list-item"><a href="#a-receptive-consumer-market">A receptive consumer market</a></li>
+                    <li class="ukti-toc__list-item"><a href="#strong-regulatory-and-tax-support">Strong regulatory and tax support</a></li>
+                    <li class="ukti-toc__list-item"><a href="#next-steps-and-contacts">Next steps and contacts</a></li>
+                    </li>
+                </ol>
+            </div>
+            <div class="col-md-4">
+                <nav id="sidebar-width" class="bs-docs-sidebar hidden-xs hidden-sm ukti-resources" data-spy="affix"
+                     data-offset-top="500">
+                    <div class="col-md-11 ukti-quick-guide-side">
+                        <h2>The UK investment guide</h2>
+                        <ol>
+                            <li><a href="/us/investment%20guide/establish%20a%20UK%20address">Establish a UK address</a></li>
+                            <li><a href="/us/investment%20guide/apply%20for%20a%20visa">Apply for a visa</a></li>
+                            <li><a href="/us/investment%20guide/open%20a%20UK%20bank%20account">Open a UK bank account</a></li>
+                            <li><a href="/us/investment%20guide/register%20your%20company">Register your company</a></li>
+                            <li><a href="/us/investment%20guide/work%20out%20your%20profit%20margins%20against%20UK%20tax">Work out your profit margins against UK tax</a></li>
+                            <li><a href="/us/investment%20guide/understand%20UK%20employment%20law">Understand UK employment law</a></li>
+                            <li><a href="/us/investment%20guide/familiarise%20yourself%20with%20the%20legal%20framework">Familiarise yourself with the legal framework</a></li>
+                            <li><a href="#">Speak to the UKTI Investment Services Team</a></li>
+                        </ol>
+                    </div>
+                </nav>
+            </div>        </div>
+    </div>
+</section>
+<div class="ukti-main-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7 col-sm-10">
+                <section id="financial-technology-in-great-britain">
+    <header>
+        <h2>Financial technology in Great Britain</h2>
+    </header>
+
+    <p>The UK offers unrivalled support for the global expansion of your business. It is the most internationally-focused financial marketplace in the world. </p>
+<p>No other centre for inward investment can offer such a concentration of capital, capability and stability.</p>
+
+
+    <a href="#top">Back to top <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></a>
+</section><section id="world-beating-growth-and-opportunity">
+    <header>
+        <h2>World-beating growth and opportunity</h2>
+    </header>
+
+    <p>Fintech investment deal volumes in the UK have been growing at an average 74 percent a year since 2008, compared with 27 percent globally and 13 percent in Silicon Valley.</p>
+<p>Four especially strong sub sectors are:</p>
+<ul>
+<li>payments -  currently transforming and attracting a wide range of innovators</li>
+<li>platforms - particularly peer-to-peer lending, trading, personal wealth management and aggregators</li>
+<li>software - for example risk management, payments, asset management, capital markets, insurance and accounting</li>
+<li>data Analytics - for example credit reference, capital markets and insurance</li>
+</ul>
+<p>Annual revenue generated across the 4 areas is around £20 billion.</p>
+<p>There is ample room in the market for established providers and disruptive technologies, and many different sources of finance are available. The sector is well served by angel and private equity investors, accelerator and incubator schemes.</p>
+<p>Innovations are supported by its excellent IT and transport infrastructure, and one of the highest levels of internet and mobile penetration globally.</p>
+
+
+    <a href="#top">Back to top <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></a>
+</section><section id="large-talent-pool">
+    <header>
+        <h2>Large talent pool</h2>
+    </header>
+
+    <p>British higher education is world class and supplies the fintech sector with finance, engineering and design talent. London alone employs 44,000 people in fintech, more than any other city globally. [source: Bloomberg]</p>
+<p>In the digital tech hub of Tech City, London-based businesses have an outstanding source of technology skills. And there are other clusters of digital excellence throughout the UK.</p>
+
+
+    <a href="#top">Back to top <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></a>
+</section><section id="a-receptive-consumer-market">
+    <header>
+        <h2>A receptive consumer market</h2>
+    </header>
+
+    <p>UK consumers are sophisticated early adopters, and are open to new, innovative models of service delivery. Willingness to switch providers has greatly increased, backed by UK government measures to make the switching process easier.</p>
+<p>Examples of this receptivity include:</p>
+<ul>
+<li>financial aggregators - around a third of the UK population now use them to choose their car insurance</li>
+<li>e-commerce - consumers spend much more on e-commerce than their equivalents in Germany, France and the USA</li>
+<li>peer-to-peer lending - the UK has been one of the fastest adopters, with the market growing at 250% annually between 2012 and 2014</li>
+</ul>
+
+
+    <a href="#top">Back to top <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></a>
+</section><section id="strong-regulatory-and-tax-support">
+    <header>
+        <h2>Strong regulatory and tax support</h2>
+    </header>
+
+    <p>The UK regulator, the Financial Conduct Authority (FCA), supports the industry, ensuring transparency within the market.  While it helps to maintain market stability, the FCA supports disruptive technologies, and has stated it is sympathetic to companies developing new business models outside of current regulation.</p>
+<p>A number of tax incentives are also provided by the UK Government to encourage innovation. They include:</p>
+<ul>
+<li>the Enterprise Investment Scheme (EIS)</li>
+<li>the Seed Enterprise Investment Scheme (SEIS)</li>
+<li>Entrepreneurs’ Relief (ER)</li>
+<li>R&amp;D tax credits</li>
+<li>the Patent Box scheme - companies pay a lower rate of Corporation Tax on profits earned from their patented innovations</li>
+</ul>
+
+
+    <a href="#top">Back to top <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></a>
+</section><section id="next-steps-and-contacts">
+    <header>
+        <h2>Next steps and contacts</h2>
+    </header>
+
+    <p><a href="https://www.gov.uk/government/publications/guide-to-establishing-a-financial-services-institution-in-the-uk">Setting up a financial services institution in the UK</a></p>
+
+
+    <a href="#top">Back to top <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></a>
+</section>
+            </div>
+        </div>
+    </div>
+</div>
+<nav class="container ukti-footer">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-1">
+            <ul class="ukti-footer--list">
+                <li><a href="#">Why the UK?</a></li>
+                <li><a href="#">Sectors</a></li>
+                <li><a href="#">Help and advice</a></li>
+                <li><a href="#">Privacy and cookies</a></li>
+                <li><a href="#">Terms and conditions</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+        </div>
+        <div class="col-md-2 col-md-offset-1 col-xs-4 col-xs-offset-4 ukti-footer--logo">
+            <img class="img-responsive" src="http://ukti-iigb-alpha-staging.herokuapp.com/assets/img/HM Gov logo black.png" alt="">
+            <img class="img-responsive" src="http://ukti-iigb-alpha-staging.herokuapp.com/assets/img/iigb-logo.png" alt="">
+        </div>
+    </div>
+</nav>
+
+
+</div>
+<script>
+    $(document).ready(function () {
+        enhance();
+        setTimeout(showcontent, 500);
+        setTimeout(removeloading, 1000);
+    });
+
+    function showcontent(){
+    	$('.ukti-outer-wrap').show();
+        calculateSidebarWidth();
+        smoothScroll();
+        addActive();
+    }
+
+    function removeloading(){
+        $('.ukti-loading').fadeOut(300);
+    }
+
+    function enhance(){
+    	enhance_videobg();
+        // zoomImageHoverLink();
+    }
+
+    function enhance_videobg(){
+        if($('#bgVid').length > 0 || $('#bgImg').length > 0) {
+            $('.jumbotron').addClass('bg--transparent');
+        }
+    }
+
+    //calculate fixed sidebar width
+    function calculateSidebarWidth () {
+         if ($('#sidebar-width')) {
+             var menuWidth = $('#sidebar-width').width();
+             $('.ukti-quick-guide-side').css({width: menuWidth});
+         }
+    }
+
+    function smoothScroll() {
+        //smoothscrolling and positioning
+        $('a[href^="#"]').on('click', function (e) {
+            // prevent default anchor click behavior
+            e.preventDefault();
+            // store hash
+            var hash = this.hash;
+            // animate
+            $('html, body').stop().animate({
+                scrollTop: $(hash).offset().top
+            }, 600, 'swing', function () {
+                window.location.hash = hash;
+            });
+        });
+    }
+
+    function addActive () {
+        var url = window.location.pathname;
+        var child = '';
+        if (url.match('\/sectors\/')) {
+            child = '/us/sectors/';
+        } else if (url.match('\/investment%20guide\/')) {
+            child = '/us/investment%20guide/';
+        }
+        if ($('ul.nav a')) {
+            $('ul.nav a[href="' + child + '"]').parent().addClass('active');
+        }
+    }
+
+    // function zoomImageHoverLink() {
+    //     if ($('.ukti-sectors-list__item')) {
+    //         var itemHeight = $('.ukti-sectors-list__item').height();
+    //         var itemWidth = $('.ukti-sectors-list__item').width();
+    //         $('.ukti-sectors-list__item').css({height: itemHeight});
+    //         $('.ukti-sectors-list__item').css({width: itemWidth});
+    //     }
+    // }
+
+    $(window).on('resize', function () {
+        calculateSidebarWidth ();
+    });
+</script>
+</body>
+</html>
