@@ -9,19 +9,21 @@
   }
 
   &__list {
-    //
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    -ms-column-count: 1;
+    column-count: 1;
   }
 
   &__list-item {
     margin-bottom: 12px;
     display: inline-block;
-    position: relative;
+    position: static;
     padding: 0 30px 0 24px;
-    list-style: decimal;
 
     &:before {
       content: "";
-      display: none;
+      display: list-item;
     }
 
     a {
