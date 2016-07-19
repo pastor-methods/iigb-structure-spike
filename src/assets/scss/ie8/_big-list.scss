@@ -11,16 +11,6 @@
   -ms-column-count: 1;
   column-count: 1;
 
-  @media (max-width: $screen-xs-max) {
-    margin: 0;
-    padding: 15px;
-    border-right: 0px;
-    -webkit-column-count: 1;
-    -moz-column-count: 1;
-    -ms-column-count: 1;
-    column-count: 1;
-  }
-
   &__item {
     position: static;
     width: 50%;
@@ -29,28 +19,9 @@
     padding: 15px 100px 30px 60px;
     display: list-item;
 
-    @media (max-width: $screen-sm-max) {
-      padding: 15px 30px 30px 60px;
-      min-height: 210px;
-    }
-
-    @media (max-width: $screen-sm-max) {
-      padding: 15px 30px 30px 60px;
-      min-height: 250px;
-    }
-
-    @media (max-width: $screen-xs-max) {
-      width: 100%;
-      min-height: auto;
-    }
-
     &:before {
       content: "";
       display: none;
-
-      @media (max-width: $screen-xs-max) {
-        top: -6px;
-      }
     }
 
     &:nth-of-type(2n+1) {
@@ -67,21 +38,6 @@
 
     &--home-guide {
       @extend .ukti-big-list__item;
-
-      @media (max-width: $screen-md-max) {
-        padding: 15px 30px 30px 60px;
-        min-height: 230px;
-      }
-
-      @media (max-width: $screen-sm-max) {
-        padding: 15px 30px 30px 60px;
-        min-height: 310px;
-      }
-
-      @media (max-width: $screen-xs-max) {
-        width: 100%;
-        min-height: auto;
-      }
     }
   }
 }
