@@ -1,0 +1,20 @@
+//toc.scss
+
+.ukti-toc {
+  &__list {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    -ms-column-count: 1;
+    column-count: 1;
+  }
+
+  &__list-item {
+    padding: 0 30px 0 8px;
+    width: 50%;
+    float: left;
+
+    &:nth-of-type(2n+1) {
+      clear: left;
+    }
+  }
+}

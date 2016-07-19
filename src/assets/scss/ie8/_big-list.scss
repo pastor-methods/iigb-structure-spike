@@ -3,7 +3,7 @@
 .ukti-big-list {
   counter-reset: ukti-big-list-counter;
   list-style: decimal;
-  padding: 30px;
+  padding-left: 30px;
   overflow: hidden;
   border-right: 4px solid #ddd;
   -webkit-column-count: 1;
@@ -16,7 +16,7 @@
     width: 50%;
     float: left;
     min-height: 190px;
-    padding: 15px 100px 30px 60px;
+    padding: 15px 100px 30px 20px;
     display: list-item;
 
     &:before {

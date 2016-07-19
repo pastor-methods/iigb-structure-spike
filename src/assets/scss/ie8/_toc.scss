@@ -22,10 +22,16 @@
     display: list-item;
     position: static;
     padding: 0 30px 0 8px;
+    width: 50%;
+    float: left;
 
     &:before {
       content: "";
       display: none;
+    }
+
+    &:nth-of-type(2n+1) {
+      clear: left;
     }
 
     a {

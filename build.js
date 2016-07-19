@@ -271,8 +271,14 @@ metalsmith(__dirname)
         file: "scss/main.scss",
         outputDir: './assets/css',
         outputStyle: "compressed"
-    })).use(sass({
+    }))
+    .use(sass({
         file: "scss/main-ie8.scss",
+        outputDir: './assets/css',
+        outputStyle: "compressed"
+    }))
+    .use(sass({
+        file: "scss/main-ie9.scss",
         outputDir: './assets/css',
         outputStyle: "compressed"
     }))

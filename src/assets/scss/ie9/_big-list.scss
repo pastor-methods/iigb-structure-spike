@@ -1,0 +1,20 @@
+//big-list.scss
+.ukti-big-list {
+  -webkit-column-count: 1;
+  -moz-column-count: 1;
+  -ms-column-count: 1;
+  column-count: 1;
+
+  &__item {
+    width: 50%;
+    float: left;
+
+    &:nth-of-type(2n+1) {
+       clear: left;
+    }
+
+    &--home-guide {
+      @extend .ukti-big-list__item;
+    }
+  }
+}
