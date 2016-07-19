@@ -11,16 +11,16 @@
                                       data-target="#heroVideo">Watch video <span class="glyphicon glyphicon-play-circle"
                                                                                  aria-hidden="true"></span></a></p>
             <!--<![endif]-->
-            <!--[if gte IE 9]>
+            <!--[if lte IE 9]>
             <p class="text-center"><a href="#" class="bg-video-inactive bg-video-play" data-toggle="modal"
                                       data-target="#heroVideo">Watch video <span class="glyphicon glyphicon-play-circle"
                                                                                  aria-hidden="true"></span></a></p>
             <![endif]-->
             <!--[if lte IE 8]>
-            <p class="text-center ukti-ie-alt"><a href="https://www.youtube.com/yoHrRcKIBKw"
-                                                  class="bg-video-inactive bg-video-play">Watch video <span
-                    class="glyphicon glyphicon-play-circle"></span></a></p>
             <![endif]-->
+            <!--<p class="text-center ukti-ie-alt"><a href="https://www.youtube.com/yoHrRcKIBKw"-->
+                                                  <!--class="bg-video-inactive bg-video-play">Watch video <span-->
+                    <!--class="glyphicon glyphicon-play-circle"></span></a></p>-->
         </div>
     </div>
     <nav>
@@ -35,8 +35,11 @@
     <div class="modal fade" id="heroVideo" role="dialog">
         <div class="modal-dialog video-wrapper">
             <!--[if !lte IE 8]>
-            <!--<iframe width="560" height="315" src="https://www.youtube.com/embed/yoHrRcKIBKw" frameborder="0"-->
-                    <!--allowfullscreen></iframe>-->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/yoHrRcKIBKw" frameborder="0"
+                    allowfullscreen></iframe>
+            <![endif]-->
+
+            <!--[if lte IE 8]>
             <iframe width="100%" height="350" title="YouTube video player" id="yt0" role="presentation" src="https://www.youtube.com/embed/kUlL1AU_CO0?controls=0&showinfo=0&origin=https%3A%2F%2Fwww.gov.uk&rel=0&enablejsapi=1&widgetid=1" frameBorder="0" allowfullscreen="1"/>
             <![endif]-->
         </div>
