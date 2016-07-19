@@ -1,0 +1,20 @@
+//_quick-guide-side.scss
+
+.ukti-quick-guide-side {
+	ol {
+		list-style: decimal;
+		padding-left: 30px;
+
+		li {
+			margin-bottom: 12px;
+			display: list-item;
+			position: static;
+			padding: 0 30px 0 8px;
+
+			&:before {
+				content: "";
+				display: none;
+			}
+		}
+	}
+}
