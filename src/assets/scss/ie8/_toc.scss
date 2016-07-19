@@ -1,0 +1,28 @@
+//toc.scss
+
+.ukti-toc {
+  background: #363636;
+  color: #fff;
+
+  &__heading {
+    margin-bottom: 16px;
+  }
+
+  &__list {
+    //
+  }
+
+  &__list-item {
+    //
+    a {
+      color: #fff;
+      border-bottom: 1px solid #777;
+
+      &:hover {
+        text-decoration: none;
+        color: #639aca;
+        border-bottom: 1px solid #639aca;
+      }
+    }
+  }
+}
