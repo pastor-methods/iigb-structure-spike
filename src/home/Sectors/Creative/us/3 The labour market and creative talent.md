@@ -6,6 +6,7 @@ layout: content.html
 The UK has a stable multi-cultural population with a diverse range of creative skills, and the lowest labour costs in Western Europe.
 
 The sector:
+
 *	employs 1.9 million people (up 19.5% since 2011)
 *	accounted for 6% of all jobs in the UK in 2015
 *	is made up of highly skilled and educated workers from the UK’s world renowned educational system
