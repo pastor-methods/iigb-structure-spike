@@ -4,7 +4,6 @@
 	counter-reset: ukti-big-list-counter;
 	list-style: none;
 	padding: 0;
-	// margin: 0 -15px;
 	width: 100%;
 	overflow: hidden;
 	border-right: 4px solid #ddd;
@@ -25,10 +24,8 @@
 
 	&__item {
 		position: relative;
-		// width: 50%;
 		min-height: 190px;
 		padding: 15px 100px 30px 60px;
-		// float: left;
 		display: inline-block;
 
 		@media (max-width: $screen-sm-max) {
@@ -46,12 +43,6 @@
 			min-height: auto;
 		}
 
-		// @media (max-width: $screen-md-max) {
-		// 	padding: 15px 30px 30px 60px;
-		// 	min-height: 180px;
-		// }
-		
-
 		&:before {
 			position: absolute;
 			top: 11px;
@@ -66,14 +57,10 @@
 			@media (max-width: $screen-xs-max) {
 				top: -6px;
 			}
-
-			// &--red-list-style {
-			// 	color: #E41F13;
-			// }
 		}
 
 		&:nth-of-type(2n+1) {
-			// clear: left;
+			//
 		}
 
 		&--red-list-style {
