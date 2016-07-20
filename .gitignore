@@ -3,6 +3,7 @@
 *.idea
 
 node_modules/
+build/
 npm-debug.log.*
 
 # Heroku
