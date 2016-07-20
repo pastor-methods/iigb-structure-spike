@@ -17,6 +17,6 @@
   },
   "scripts": {
     "start": "node server.js",
-    "postinstall": "build"
+    "postinstall": "node build.js"
   }
 }
