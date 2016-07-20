@@ -7,13 +7,12 @@
         {{#each location}}
         {{#unless @last}}
         <li>
-            <a class="text-sentence" href="{{this.link}}">{{this.name}}</a>
+            <a href="{{this.link}}">{{unslug this.name}}</a>
         </li>
         {{/unless}}
-        <!--last one is not hyperlinked-->
         {{#if @last}}
         <li>
-            <span class="text-sentence">{{this.name}}</span>
+            {{unslug this.name}}
         </li>
         {{/if}}
         {{/each}}
