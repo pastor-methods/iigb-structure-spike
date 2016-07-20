@@ -13,6 +13,14 @@
        clear: left;
     }
 
+    &--red-list-style {
+      @extend .ukti-big-list__item;
+
+      &::before {
+        color: #E41F13;
+      }
+    }
+
     &--home-guide {
       @extend .ukti-big-list__item;
     }
