@@ -3,7 +3,7 @@ title: Next steps and contacts
 layout: content.html
 ---
 
-[Setting up a business in the UK](/us/help%20and%20advise/)
+[Setting up a business in the UK](/us/help-and-advise/)
 
 UK Trade & Investment (UKTI) can help grow your creative business in the UK. Contact your local UKTI office [link to form for November go-live]()
  

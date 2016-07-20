@@ -209,6 +209,12 @@ Handlebars.registerHelper('slug', function (content) {
     return removeChars;
 });
 
+// helper to un-slugify strings and sentence case
+Handlebars.registerHelper('unslug', function (content) {
+    var unslug = content.split('-').join(' ');
+    return unslug.charAt(0).toUpperCase()+unslug.substr(1);
+});
+
 // helper to lower case
 Handlebars.registerHelper('lower', function (content) {
     if (content && typeof content === 'string') {
