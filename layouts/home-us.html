@@ -1,33 +1,27 @@
 {{> header}}
 {{> header-nav}}
 
-
 <div class="jumbotron">
     <div class="container">
-        <h1><span class="ukti-sub-message">The home of innovation and originality. </span><br> <a href="#" class=" bg-video-inactive bg-video-play" data-toggle="modal" data-target="#heroVideo"></h1>
-        <p class="text-center">Watch video <span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span></a></p>
-
+        <h1><span class="ukti-sub-message">The home of innovation and originality. </span><br> <a href="#"
+                                                                                                  class=" bg-video-inactive bg-video-play"
+                                                                                                  data-toggle="modal"
+                                                                                                  data-target="#heroVideo">
+        </h1>
+        <p class="text-center">Watch video <span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span></a>
+        </p>
         <div class="modal fade" id="heroVideo" role="dialog">
             <div class="modal-dialog video-wrapper">
-            
                 <!-- Modal content-->
-                <!-- <div class=""> -->
-                    <!-- <div class="modal-body"> -->
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/yoHrRcKIBKw" frameborder="0" allowfullscreen></iframe>
-                    <!-- </div> -->
-                <!-- </div> -->
-              
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/yoHrRcKIBKw" frameborder="0"
+                        allowfullscreen></iframe>
             </div>
         </div>
-
         <video autoplay loop poster="../assets/img/northern-powerhouse.jpg" id="bgVid">
             <source src="../assets/vid/northern-powerhouse.mp4" type="video/mp4">
         </video>
-
     </div>
 </div>
-
-
 
 {{{contents}}}
 {{> footer}}

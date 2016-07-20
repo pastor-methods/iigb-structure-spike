@@ -1,100 +1,63 @@
 {{> header}}
 {{> header-nav}}
 <style>
-    body {
-        background-color: #F3F3F3;
-        font-size: 16px;
-    }
-
-    .container {
-        background-color: #FFFFFF;
-    }
-
-    .ukti-toc {
-        background-color: #E3E3E3;
-    }
-
-    .ukti-resources {
-        background-color: #F2F2F2;
-        border: 3px solid #797979;
-        border-radius: 10px;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-
-    .ukti-imageholder{
-        position: relative;
-    }
-
-    .ukti-caption{
-        position: absolute;
-        bottom: 80px;
-        left: 40px;
-        right: 40px;
-        background: rgba(255,255,255,0.95);
-        color: #000;
-        padding: 10px 20px;
+    .jumbotron {
+        background-image: url("/assets/img/{{image}}");
+        background-size: cover;
     }
 </style>
-<!--<div class="jumbotron">-->
-<div class="container ukti-imageholder">
-    <img src="http://ukti-iigb-alpha-staging.herokuapp.com/assets/img/creative.jpg" alt="" class="ukti-img-responsive margin-bottom--1">
-    <div class="ukti-caption">
+<div id="top" class="jumbotron">
+    <div class="container" style="background-color: transparent">
         <h1>{{pageTitle}}</h1>
-        <p>{{intro}}</p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Mehr erfahren »</a></p>
-    </div>
-    <p>Video: {{fullVideo}}</p>
-</div>
-<!--</div>-->
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <h2>Entdecken Sie Ihre {{folder}} Sub-Sektor</h2>
-            <div class="row">
-                {{#each subLevel}}
-                <article class="col-md-4">
-                    <img src="http://ukti-iigb-alpha-staging.herokuapp.com/assets/img/{{this.thumbnail}}" class="ukti-img-thumbnail">
-                    <h4 class="js-equal-height">
-                        <a class="text-sentence" href="">{{this.name}}</a>
-                    </h4>
-                    <p>{{intro}}</p>
-                </article>
-                {{/each}}
-            </div>
-        </div>
+        <p class="text-center">{{intro}}</p>
     </div>
 </div>
-<div class="container ukti-toc">
-    <div class="row">
-        <div class="col-md-8">
-            <h2>Auf dieser Seite</h2>
-            <div class="row">
-                <ol class="ukti-toc">
+
+<section class="ukti-toc">
+    {{> breadcrumb}}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h2 class="ukti-toc__heading">On this page</h2>
+                <ol class="ukti-toc__list">
                     {{#each toc}}
-                    <li><a href="#{{slug this}}">{{this}}</a></li>
+                    <li class="ukti-toc__list-item"><a href="#{{slug this}}">{{this}}</a></li>
                     {{/each}}
+                    <li class="ukti-toc__list-item"><a href="#sub-sectors"><span class="text-sentence">{{folder}} sub sectors</span></a>
+                    </li>
                 </ol>
             </div>
+            {{> sidebar}}
         </div>
-        <div class="col-md-4">
-            <div class="row">
-                <div class="col-md-11 ukti-resources">
-                    <h2>Ressourcen</h2>
-                    <p>Ein Visum beantragen</p>
-                    <p>Einrichten eines Bankkontos</p>
-                    <p>Geschäftsanmeldung</p>
-                    <p>Die Suche nach Räumlichkeiten</p>
-                    <p>Creative-Hubs außerhalb von London</p>
-                </div>
+    </div>
+</section>
+<div class="ukti-main-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7 col-sm-10">
+                {{{contents}}}
             </div>
         </div>
     </div>
-</div>
-<div class="container">
-    <div class="row">
-        <div class="col-md-8">
-            {{{contents}}}
+    <div class="ukti-sector-subsectors">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 id="sub-sectors" class="text-sentence">{{folder}} sub sectors:</h2>
+                    <ul class="ukti-key-sectors-list">
+                        {{#each subLevel}}
+                        <li class="ukti-key-sectors-list__item">
+                            <div class="ukti-key-sectors-list__link-wrap">
+                                <a href="/{{this.uri}}">
+                                    <img src="/assets/img/{{this.thumbnail}}" class="ukti-key-sectors-list__image">
+                                    <span class="ukti-key-sectors-list__text text-sentence">{{this.name}}</span>
+                                </a>
+                            </div>
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 </div>
