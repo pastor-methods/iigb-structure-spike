@@ -17,7 +17,7 @@
                 <ol class="ukti-big-list">
                     {{#each subLevel}}
                     <li class="ukti-big-list__item--home-guide">
-                        <h3><a class="text-sentence" href="/{{this.uri}}">{{this.name}}</a></h3>
+                        <h3><a href="/{{this.uri}}">{{unslug this.name}}</a></h3>
                         {{intro}} <br>
                     </li>
                     {{/each}}
