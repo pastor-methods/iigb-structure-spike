@@ -1,0 +1,21 @@
+<div class="container">
+    <ol class="breadcrumb">
+        <li>
+            <a href="/">Home</a>
+        </li>
+        {{#if location}}
+        {{#each location}}
+        {{#unless @last}}
+        <li>
+            <a href="{{this.link}}">{{unslug this.name}}</a>
+        </li>
+        {{/unless}}
+        {{#if @last}}
+        <li>
+            {{unslug this.name}}
+        </li>
+        {{/if}}
+        {{/each}}
+        {{/if}}
+    </ol>
+</div>
