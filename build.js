@@ -196,6 +196,8 @@ var makeIndex = function (files, metalsmith, done) {
     done();
 };
 
+Handlebars.registerPartial('scripts', fs.readFileSync(__dirname + '/layouts/partials/scripts.html').toString());
+
 Handlebars.registerPartial('header', fs.readFileSync(__dirname + '/layouts/partials/us/header.html').toString());
 Handlebars.registerPartial('header-nav', fs.readFileSync(__dirname + '/layouts/partials/us/header-nav.html').toString());
 Handlebars.registerPartial('footer', fs.readFileSync(__dirname + '/layouts/partials/us/footer.html').toString());
