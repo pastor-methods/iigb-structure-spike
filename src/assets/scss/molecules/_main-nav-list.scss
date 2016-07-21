@@ -17,6 +17,8 @@
   }
 
   @media (max-width: $screen-xs-max) {
+    border-left: 0;
+
     > li > a {
       // padding: 10px 12px !important;
       display: block;
