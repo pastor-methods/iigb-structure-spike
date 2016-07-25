@@ -1,6 +1,6 @@
 ---
 title: Some title
-indexTemplate: subsector-page-us.html
+indexTemplate: subsector-page-de.html
 intro: You’ll need this for opening a bank account and for setting up your business.
 pageTitle: Establish a UK address
 layout: content.html

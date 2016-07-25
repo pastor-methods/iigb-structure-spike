@@ -1,6 +1,6 @@
 ---
 title: Die wichtigsten Steuern für Unternehmen
-indexTemplate: subsector-page-us.html
+indexTemplate: subsector-page-de.html
 intro: The UK has one of the most competitive tax systems in the world - check out how the rates and regulations can work for you.
 pageTitle: Steuern Und Anreize
 layout: content.html

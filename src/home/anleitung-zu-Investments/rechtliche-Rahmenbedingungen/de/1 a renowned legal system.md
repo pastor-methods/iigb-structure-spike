@@ -1,6 +1,6 @@
 ---
 title: Ein anerkanntes Rechtssystem
-indexTemplate: subsector-page-us.html
+indexTemplate: subsector-page-de.html
 intro: With strong intellectual property laws and fair procurement procedures, the UK legal system is a globally renowned institution.
 pageTitle: Familiarise yourself with the legal framework
 layout: content.html

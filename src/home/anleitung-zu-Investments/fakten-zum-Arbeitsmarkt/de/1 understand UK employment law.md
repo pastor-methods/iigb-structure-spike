@@ -1,6 +1,6 @@
 ---
 title: Zugriff auf Fachkräfte
-indexTemplate: subsector-page-us.html
+indexTemplate: subsector-page-de.html
 intro: The UK has a world-class pool of talent and business-friendly employment laws. You can also bring employees from abroad through a flexible visa system.
 pageTitle: Understand UK employment law
 layout: content.html

@@ -1,6 +1,6 @@
 ---
 title: Eine Kapitalgesellschaft gründen
-indexTemplate: subsector-page-us.html
+indexTemplate: subsector-page-de.html
 intro: Eine Unternehmensgründung im Vereinigten Königreich geht schnell und einfach. Mit der Gründung einer Kapitalgesellschaft machen Sie Ihr Unternehmen zu einer eigenen juristischen Person. 
 pageTitle: Ein Unternehmen Gründen
 layout: content.html

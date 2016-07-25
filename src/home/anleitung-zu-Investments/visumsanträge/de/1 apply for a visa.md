@@ -1,6 +1,6 @@
 ---
 title: Visumsanträge
-indexTemplate: subsector-page-us.html
+indexTemplate: subsector-page-de.html
 intro: The UK offers a wide range of individual and business visas so you can find the ones that work for you. The application process can take up to three months, so plan early. 
 pageTitle: The visa system explained
 layout: content.html
