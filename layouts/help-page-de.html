@@ -1,0 +1,34 @@
+{{> header}}
+{{> header-nav}}
+<div class="jumbotron">
+    <div class="container" style="background-color: transparent">
+        <div class="row">
+            <div class="col-sm-offset-2 col-sm-8">
+                <h1>{{pageTitle}}</h1>
+                <p class="text-center">{{intro}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="ukti-toc">
+    {{> breadcrumb-de}}
+</section>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <ol class="ukti-big-list">
+                    {{#each subLevel}}
+                    <li class="ukti-big-list__item--home-guide">
+                        <h3><a href="/{{this.uri}}">{{unslug this.name}}</a></h3>
+                        {{intro}} <br>
+                    </li>
+                    {{/each}}
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{> footer}}
