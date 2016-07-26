@@ -196,21 +196,19 @@ var makeIndex = function (files, metalsmith, done) {
     done();
 };
 
+Handlebars.registerPartial('header', fs.readFileSync(__dirname + '/layouts/partials/header.html').toString());
 Handlebars.registerPartial('scripts', fs.readFileSync(__dirname + '/layouts/partials/scripts.html').toString());
 
-Handlebars.registerPartial('header', fs.readFileSync(__dirname + '/layouts/partials/us/header.html').toString());
 Handlebars.registerPartial('header-nav', fs.readFileSync(__dirname + '/layouts/partials/us/header-nav.html').toString());
 Handlebars.registerPartial('footer', fs.readFileSync(__dirname + '/layouts/partials/us/footer.html').toString());
 Handlebars.registerPartial('breadcrumb', fs.readFileSync(__dirname + '/layouts/partials/us/breadcrumb.html').toString());
 Handlebars.registerPartial('sidebar', fs.readFileSync(__dirname + '/layouts/partials/us/sidebar.html').toString());
 
-Handlebars.registerPartial('header-cn', fs.readFileSync(__dirname + '/layouts/partials/cn/header.html').toString());
 Handlebars.registerPartial('header-nav-cn', fs.readFileSync(__dirname + '/layouts/partials/cn/header-nav.html').toString());
 Handlebars.registerPartial('footer-cn', fs.readFileSync(__dirname + '/layouts/partials/cn/footer.html').toString());
 Handlebars.registerPartial('breadcrumb-cn', fs.readFileSync(__dirname + '/layouts/partials/cn/breadcrumb.html').toString());
 Handlebars.registerPartial('sidebar-cn', fs.readFileSync(__dirname + '/layouts/partials/cn/sidebar.html').toString());
 
-Handlebars.registerPartial('header-de', fs.readFileSync(__dirname + '/layouts/partials/de/header.html').toString());
 Handlebars.registerPartial('header-nav-de', fs.readFileSync(__dirname + '/layouts/partials/de/header-nav.html').toString());
 Handlebars.registerPartial('footer-de', fs.readFileSync(__dirname + '/layouts/partials/de/footer.html').toString());
 Handlebars.registerPartial('breadcrumb-de', fs.readFileSync(__dirname + '/layouts/partials/de/breadcrumb.html').toString());
