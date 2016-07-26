@@ -5,7 +5,7 @@ thumbnail: creative-sector-thumb.jpg
 heroVideo: heroVideoPath
 heroImage: creative-sector-hero.jpg
 fullVideo: fullVideoPath
-indexTemplate: sector-page-de.html
+indexTemplate: subsector-page-de.html
 intro: From producing big budget movies to developing world-class computer games, creativity is thriving in the UK.
 pageTitle: Digital Media in Great Britain
 layout: content.html
