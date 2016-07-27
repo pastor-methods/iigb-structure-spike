@@ -1,6 +1,6 @@
 ---
 title: A large and skilled labour market
-layout: content.html
+layout: content-us.html
 ---
 
 Approximately 1.1 million people work in the financial services sector in the UK.

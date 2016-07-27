@@ -1,6 +1,6 @@
 ---
 title: Strong regulatory and tax support
-layout: content.html
+layout: content-us.html
 ---
 
  

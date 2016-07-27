@@ -8,7 +8,7 @@ fullVideo: fullVideoPath
 indexTemplate: subsector-page.html
 intro: From producing big budget movies to developing world-class computer games, creativity is thriving in the UK.
 pageTitle: Digital Media in Great Britain
-layout: content.html
+layout: content-de.html
 ---
  
 Das Vereinigte Königreich ist führend bei ausländischen Investitionen in den Bereich „Digitale Medien.“. Britische Konsumenten haben ein großes Interesse an neuen digitalen Dienstleistungen, Geräten und Innovationen.

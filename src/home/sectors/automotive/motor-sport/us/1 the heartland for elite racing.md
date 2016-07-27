@@ -8,7 +8,7 @@ fullVideo:
 indexTemplate: subsector-page.html
 intro: The UK leads the world in motorsport with a turnover of £9 billion and more than 4,500 businesses operating in the sector.
 pageTitle: Motorsport in Great Britain
-layout: content.html
+layout: content-us.html
 ---
 
 The UK is the undisputed home of Formula 1. 9 out of the competition’s 11 racing teams are based here, including Mercedes AMG Petronas, whose recent F1 WO6 Hybrid car was the most dominant in the history of the sport.  

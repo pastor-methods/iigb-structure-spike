@@ -8,7 +8,7 @@ fullVideo: fullVideoPath
 indexTemplate: subsector-page.html
 intro: With a highly educated workforce and full Government backing, the UK is ideally placed for digital media investment.
 pageTitle: Digital media
-layout: content.html
+layout: content-us.html
 ---
 
 The UK is a global leader for digital media inward investment. British consumers have a huge appetite for new digital services, devices and creative offerings.

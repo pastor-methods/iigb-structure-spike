@@ -1,6 +1,6 @@
 ---
 title: Lightweighting and carbon composites
-layout: content.html
+layout: content-us.html
 ---
 
 The UK is a world leader in automotive lightweighting, and in 2015 the government provided £40 million of R&D funding to make vehicles lighter and more energy-efficient.

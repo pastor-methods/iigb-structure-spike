@@ -8,7 +8,7 @@ fullVideo: fullVideoPath
 indexTemplate: sector-page.html
 intro: From producing big budget movies to developing world-class computer games, creativity is thriving in the UK.
 pageTitle: Create in Great Britain
-layout: content.html
+layout: content-de.html
 ---
  
 Im Vereinigten Königreich gibt es einen großen und vielfältigen Talent-Pool; und ausländische Investitionen sind in den folgenden weltweit erfolgreichen Bereichen vielversprechend:

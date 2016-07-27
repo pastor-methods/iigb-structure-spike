@@ -1,6 +1,6 @@
 ---
 title: Nächste Schritte und Kontaktinformationen
-layout: content.html
+layout: content-de.html
 ---
 
 UK Trade & Investment (UKTI) kann Sie dabei unterstützen, Ihr Unternehmen im Bereich Digitale Medien im Vereinigten Königreich aufzubauen und zu vergrößern sowie Ihnen finanzielle und praktische Unterstützungsmöglichkeiten nennen.

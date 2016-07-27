@@ -8,7 +8,7 @@ fullVideo: fullVideoPath
 indexTemplate: sector-page.html
 intro: From producing big budget movies to developing world-class computer games, creativity is thriving in the UK.
 pageTitle: Create in Great Britain
-layout: content.html
+layout: content-cn.html
 ---
  
 英国具备深入而广泛的创意人才库。英国在以下各方的成就已得到广泛认可，并能充分吸引来自世界各地的投资：

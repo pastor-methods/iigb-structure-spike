@@ -1,6 +1,6 @@
 ---
 title: Innovate granular internal
-layout: content.html
+layout: content-us.html
 ---
 
 Collaboratively administrate turnkey channels whereas virtual e-tailers. Objectively seize scalable metrics whereas proactive e-services. Seamlessly empower fully researched growth strategies and interoperable internal or "organic" sources.

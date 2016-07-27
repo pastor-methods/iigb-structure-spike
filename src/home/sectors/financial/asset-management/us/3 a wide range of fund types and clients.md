@@ -1,6 +1,6 @@
 ---
 title: A wide range of fund types and clients
-layout: content.html
+layout: content-us.html
 ---
 
 UK fund management organisations manage many different types of funds, including life insurance, pension schemes, unit trusts and investment trusts. Funds can be managed for:

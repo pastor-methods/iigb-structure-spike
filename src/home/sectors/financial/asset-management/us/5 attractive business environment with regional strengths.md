@@ -1,6 +1,6 @@
 ---
 title: Attractive business environment with regional strengths
-layout: content.html
+layout: content-us.html
 ---
 
 London has been voted the most attractive global location for relocating or expanding asset management operations – ahead of Hong Kong, Singapore and New York. [Source: Banker magazine]

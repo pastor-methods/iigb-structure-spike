@@ -1,6 +1,6 @@
 ---
 title: Solutions for every sector
-layout: content.html
+layout: content-us.html
 ---
 
 Technological innovations from the UK’s motorsport industry are now being used in the wider automotive sector too. The carbon fibre composite pioneered by McLaren is today applied to many top end road cars, while London buses are being fitted with a hybrid energy-recovery system developed by Williams F1. 

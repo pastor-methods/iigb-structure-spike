@@ -1,6 +1,6 @@
 ---
 title: Nächste Schritte und Kontaktinformationen
-layout: content.html
+layout: content-de.html
 ---
 
 [Setting up a business in the UK]()

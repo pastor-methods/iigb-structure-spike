@@ -1,6 +1,6 @@
 ---
 title: World class facilities
-layout: content.html
+layout: content-us.html
 ---
 
 This appetite for innovation has already attracted 9 out of the 11 Formula 1 teams to establish a base in the UK, whilst even proud foreign manufacturers – like German juggernaut, Mercedes - recognise the UK’s expertise in automotive R&D and have opened centres here.

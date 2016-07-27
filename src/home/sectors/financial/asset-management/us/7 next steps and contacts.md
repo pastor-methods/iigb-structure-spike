@@ -1,4 +1,4 @@
 ---
 title: Next steps and contacts
-layout: content.html
+layout: content-us.html
 ---

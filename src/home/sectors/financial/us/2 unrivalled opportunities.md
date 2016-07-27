@@ -1,6 +1,6 @@
 ---
 title: Unrivalled opportunities
-layout: content.html
+layout: content-us.html
 ---
 
 The UK's international influence creates opportunities that others cannot match. Its Islamic finance sector:

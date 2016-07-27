@@ -8,7 +8,7 @@ fullVideo: fullVideoPath
 indexTemplate: sector-page.html
 intro: The UK’s automotive industry is the fastest growing in Europe thanks to an increasing demand for UK components, transformational research and development programmes and a supportive business environment.
 pageTitle: Automotive in Great Britain
-layout: content.html
+layout: content-us.html
 ---  
  
  The UK automotive industry is experiencing unprecedented growth and has emerged as a leading location for global investment. In fact, car production rose 32% between 2012 and 2015 and will exceed 2 million cars by 2020. 

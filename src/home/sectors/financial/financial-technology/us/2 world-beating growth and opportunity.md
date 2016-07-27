@@ -1,6 +1,6 @@
 ---
 title: World-beating growth and opportunity
-layout: content.html
+layout: content-us.html
 ---
 
 Fintech investment deal volumes in the UK have been growing at an average 74 percent a year since 2008, compared with 27 percent globally and 13 percent in Silicon Valley.

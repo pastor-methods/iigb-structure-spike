@@ -8,7 +8,7 @@ fullVideo: fullVideoPath
 indexTemplate: sector-page.html
 intro: From producing big budget movies to developing world-class computer games, creativity is thriving in the UK.
 pageTitle: Create in Great Britain
-layout: content.html
+layout: content-us.html
 ---
  
 The UK’s creative talent pool is deep and wide. It’s recognised as a world class prospect for inward investment in:

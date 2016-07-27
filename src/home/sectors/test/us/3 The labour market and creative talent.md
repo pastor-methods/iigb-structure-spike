@@ -1,6 +1,6 @@
 ---
 title: Efficiently unleash cross-media information without cross-media 
-layout: content.html
+layout: content-us.html
 ---
 
 Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas. Dramatically maintain clicks-and-mortar solutions without functional solutions.

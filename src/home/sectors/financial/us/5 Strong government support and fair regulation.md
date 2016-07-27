@@ -1,6 +1,6 @@
 ---
 title: Strong government support and fair regulation
-layout: content.html
+layout: content-us.html
 ---
 
 The UK's regulatory system is effective, fair and flexible. The globally respected Financial Conduct Authority (FCA), supports the industry and ensures transparency.

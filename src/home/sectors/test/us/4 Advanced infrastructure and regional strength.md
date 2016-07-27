@@ -1,6 +1,6 @@
 ---
 title: Multimedia based expertise 
-layout: content.html
+layout: content-us.html
 ---
 
 Proactively envisioned multimedia based expertise and cross-media growth strategies. Seamlessly visualize quality intellectual capital without superior collaboration and idea-sharing. Holistically pontificate installed base portals after maintainable products.
