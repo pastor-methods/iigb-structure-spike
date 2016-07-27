@@ -1,6 +1,6 @@
 ---
 title: Welches Visum benötigen Sie?
-layout: content.html
+layout: content-de.html
 ---
 
 **Visa der Kategorie Eins**

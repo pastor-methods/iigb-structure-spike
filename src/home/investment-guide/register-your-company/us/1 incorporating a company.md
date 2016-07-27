@@ -3,7 +3,7 @@ title: Incorporating a company
 indexTemplate: subsector-page.html
 intro: It’s quick and easy to register a business in the UK. Companies House can handle the process with just one form. 
 pageTitle: Register your company
-layout: content.html
+layout: content-us.html
 orderLevel: 4
 ---
 

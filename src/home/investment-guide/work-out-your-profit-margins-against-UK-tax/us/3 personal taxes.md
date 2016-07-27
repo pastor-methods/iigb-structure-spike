@@ -1,6 +1,6 @@
 ---
 title: Personal taxes
-layout: content.html
+layout: content-us.html
 ---
 
 Personal tax is very competitive in the UK and is proportional depending on earnings. The ‘all‐in’ scheme breaks down as follows:

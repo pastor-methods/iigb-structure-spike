@@ -3,7 +3,7 @@ title: Key business taxes
 indexTemplate: subsector-page.html
 intro: The UK has one of the most competitive tax systems in the world - check out how the rates and regulations can work for you.
 pageTitle: Work out your profit margins against UK tax
-layout: content.html
+layout: content-us.html
 orderLevel: 5
 ---
 

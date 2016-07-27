@@ -1,6 +1,6 @@
 ---
 title: Steuerliche Anreize für Unternehmen
-layout: content.html
+layout: content-de.html
 ---
 
 Da dem Vereinigten Königreich der Erfolg seiner Unternehmen wichtig ist, gibt es zahlreiche Steuererleichterungen und Anreize sowohl für Unternehmer als auch für Investoren.

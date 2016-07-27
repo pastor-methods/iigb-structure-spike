@@ -1,6 +1,6 @@
 ---
 title: The visa system explained
-layout: content.html
+layout: content-us.html
 ---
 
 The UK visa system is split into tiers, which are then divided into sub‐tiers. As a business launching in the UK, tiers one, two and five could be relevant to you. 

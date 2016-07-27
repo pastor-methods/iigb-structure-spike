@@ -1,6 +1,6 @@
 ---
 title: Flexible Arbeitsgesetze
-layout: content.html
+layout: content-de.html
 ---
 
 Die unkomplizierten und flexiblen Arbeitsgesetze des Vereinigten Königreichs beschützen und fördern die Interessen der Arbeitnehmer, während sie es Unternehmen gleichzeitig einfacher machen, die richtigen Personen mit den richtigen Fähigkeiten zum richtigen Zeitpunkt einzustellen.

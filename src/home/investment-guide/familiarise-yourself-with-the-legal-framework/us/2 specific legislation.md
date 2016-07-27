@@ -1,6 +1,6 @@
 ---
 title: Specific legislation
-layout: content.html
+layout: content-us.html
 ---
 
 <p>1. Procurement procedure</p>

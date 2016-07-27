@@ -3,7 +3,7 @@ title: Vorab
 indexTemplate: subsector-page.html
 intro: Mit der Eröffnung eines Firmenkontos ist es einfach, im Vereinigten Königreich Geschäfte zu machen. Beachten Sie bitte, dass dieser Prozess bis zu drei Monate in Anspruch nehmen kann und Sie eventuell reisen müssen.
 pageTitle: Ein Bankkonto im Vereinigten Königreich eröffnen
-layout: content.html
+layout: content-de.html
 orderLevel: 3
 ---
 

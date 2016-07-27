@@ -3,7 +3,7 @@ title: Eine Kapitalgesellschaft gründen
 indexTemplate: subsector-page.html
 intro: Die Registrierung Ihres Unternehmens im Vereinigten Königreich geht schnell und einfach. Das Companies House (Handelsregister) benötigt dafür nur ein Formular. 
 pageTitle: Ihr Unternehmen anmelden
-layout: content.html
+layout: content-de.html
 orderLevel: 4
 ---
 

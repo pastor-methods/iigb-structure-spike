@@ -3,7 +3,7 @@ title: Die wichtigsten Steuern für Unternehmen
 indexTemplate: subsector-page.html
 intro: Das Vereinigte Königreich hat eines der wettbewerbsfähigsten Steuersysteme der Welt. Hier sehen Sie, welche Sätze und eventuellen Vergünstigungen für Sie gelten.
 pageTitle: Wissen, was nach Abzug der Steuern von Ihrem Gewinn bleibt
-layout: content.html
+layout: content-de.html
 orderLevel: 5
 ---
 

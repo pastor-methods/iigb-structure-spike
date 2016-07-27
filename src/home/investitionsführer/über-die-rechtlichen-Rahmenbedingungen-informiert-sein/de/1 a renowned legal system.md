@@ -3,7 +3,7 @@ title: Ein anerkanntes Rechtssystem
 indexTemplate: subsector-page.html
 intro: Das Rechtssystem des Vereinigte Königreichs genießt Weltruf. Vorteilhaft für Unternehmen sind die strengen Gesetze zum Schutz geistigen Eigentums und die fairen Auftragsvergabeverfahren.
 pageTitle: Über die rechtlichen Rahmenbedingungen informiert sein
-layout: content.html
+layout: content-de.html
 orderLevel: 7
 ---
 

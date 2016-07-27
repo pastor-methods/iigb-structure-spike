@@ -3,7 +3,7 @@ title: Zugriff auf Fachkräfte
 indexTemplate: subsector-page.html
 intro: Das Vereinigte Königreich bietet viele gut ausgebildete Fachkräfte und unternehmensfreundliche Arbeitsgesetze. Durch das flexible Visumsystem können Sie auch ausländische Arbeitskräfte einstellen.
 pageTitle: Die Arbeitsgesetze des Vereinigten Königreichs kennen
-layout: content.html
+layout: content-de.html
 orderLevel: 6
 ---
 
