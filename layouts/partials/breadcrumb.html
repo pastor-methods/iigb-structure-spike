@@ -1,10 +1,12 @@
 <div class="container">
     <ol class="breadcrumb">
         <li>
-            {% if language === 'us' || 'de' %}
+            {% if language === 'us' %}
             <a href="/">Home</a>
+            {% elif language === 'de' %}
+            <a href="/de">Home</a>
             {% elif language === 'cn' %}
-            <a href="/">Home</a>
+            <a href="/cn">主页</a>
             {% endif %}
         </li>
         {% if location %}
