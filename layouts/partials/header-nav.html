@@ -19,16 +19,22 @@
                 <li><a href="/us/sectors/">Market sectors<span class="sr-only">(current)</span></a></li>
                 <li><a href="/us/investment-guide/">Investment guide</a></li>
                 {% elif language === 'de' %}
-                <li><a href="/de/sektoren/">Sektoren<span class="sr-only">(current)</span></a></li>
-                <li><a href="/de/anleitung-zu-Investments/">Anleitung zu Investments</a></li>
+                <li><a href="/de/sektoren/">Marktsektoren<span class="sr-only">(current)</span></a></li>
+                <li><a href="/de/investitionsführer/">Investitionsführer</a></li>
                 {% elif language === 'cn' %}
-                <li><a href="/us/sectors/">Market sectors<span class="sr-only">(current)</span></a></li>
-                <li><a href="/us/investment-guide/">Investment guide</a></li>
+                <li><a href="/cn/sectors/">市场部门<span class="sr-only">(current)</span></a></li>
+                <li><a href="/cn/investment-guide/">投资指南</a></li>
                 {% endif %}
             </ul>
             <form class="navbar-form navbar-right ukti-main-search" role="search">
                 <div class="form-group">
+                    {% if language === 'us' %}
                     <input type="text" class="ukti-main-search__input-field" placeholder="Search">
+                    {% elif language === 'de' %}
+                    <input type="text" class="ukti-main-search__input-field" placeholder="Suche">
+                    {% elif language === 'cn' %}
+                    <input type="text" class="ukti-main-search__input-field" placeholder="搜索">
+                    {% endif %}
                 </div>
                 <button type="submit" class="ukti-main-search__submit"><span
                         class="glyphicon glyphicon-search ukti-main-search__glyph" aria-hidden="true"></span></button>
