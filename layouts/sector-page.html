@@ -30,9 +30,15 @@
                 <h2 class="ukti-toc__heading">本页包括</h2>
                 {% endif %}
                 <ol class="ukti-toc__list">
+                    {% if language === 'cn' %}
+                    {% for elem in toc %}
+                    <li class="ukti-toc__list-item"><a href="#{{elem}}">{{elem}}</a></li>
+                    {% endfor %}
+                    {% else %}
                     {% for elem in toc %}
                     <li class="ukti-toc__list-item"><a href="#{{elem|slug}}">{{elem}}</a></li>
                     {% endfor %}
+                    {% endif %}
                     {% if language === 'us' %}
                     <li class="ukti-toc__list-item"><a href="#sub-sectors">{{folder|unslug}} sub sectors</a></li>
                     {% endif %}
@@ -40,7 +46,7 @@
                     <li class="ukti-toc__list-item"><a href="#sub-sectors">Subsectoren {{folder|unslug}}branche</a></li>
                     {% endif %}
                     {% if language === 'cn' %}
-                    <li class="ukti-toc__list-item"><a href="#sub-sectors">{{folder|unslug}} 分属部门</a></li>
+                    <li class="ukti-toc__list-item"><a href="#sub-sectors">{{folder}} 分属部门</a></li>
                     {% endif %}
                 </ol>
             </div>
