@@ -16,14 +16,34 @@
             <h1><img src="../assets/img/iigb-logo-big-white.png" alt="Invest in Great Britain" class="img-responsive">
             </h1>
             <!--[if ! IE]><!-->
+            {% if language === 'us' %}
             <p class="text-center"><a href="#" class="bg-video-inactive bg-video-play" data-toggle="modal"
                                       data-target="#heroVideo">Watch video <span class="glyphicon glyphicon-play-circle"
                                                                                  aria-hidden="true"></span></a></p>
+            {% elif language === 'de' %}
+            <p class="text-center"><a href="#" class="bg-video-inactive bg-video-play" data-toggle="modal"
+                                      data-target="#heroVideo">Hier geht's zum Video<span class="glyphicon glyphicon-play-circle"
+                                                                                          aria-hidden="true"></span></a></p>
+            {% elif language === 'cn' %}
+            <p class="text-center"><a href="#" class="bg-video-inactive bg-video-play" data-toggle="modal"
+                                      data-target="#heroVideo">观看视频<span class="glyphicon glyphicon-play-circle"
+                                                                         aria-hidden="true"></span></a></p>
+            {% endif %}
             <!--<![endif]-->
             <!--[if gte IE 9]>
+            {% if language === 'us' %}
             <p class="text-center"><a href="#" class="bg-video-inactive bg-video-play" data-toggle="modal"
                                       data-target="#heroVideo">Watch video <span class="glyphicon glyphicon-play-circle"
                                                                                  aria-hidden="true"></span></a></p>
+            {% elif language === 'de' %}
+            <p class="text-center"><a href="#" class="bg-video-inactive bg-video-play" data-toggle="modal"
+                                      data-target="#heroVideo">Hier geht's zum Video<span class="glyphicon glyphicon-play-circle"
+                                                                                          aria-hidden="true"></span></a></p>
+            {% elif language === 'cn' %}
+            <p class="text-center"><a href="#" class="bg-video-inactive bg-video-play" data-toggle="modal"
+                                      data-target="#heroVideo">观看视频<span class="glyphicon glyphicon-play-circle"
+                                                                         aria-hidden="true"></span></a></p>
+            {% endif %}
             <![endif]-->
             <!--[if lte IE 8]>
             <iframe width="560" height="315" title="YouTube video player" id="yt0" role="presentation" src="https://www.youtube.com/embed/yoHrRcKIBKw?controls=0&showinfo=0&origin=https%3A%2F%2Fwww.gov.uk&rel=0&enablejsapi=1&widgetid=1" frameBorder="0" allowfullscreen="1"></iframe>
@@ -33,10 +53,22 @@
     </div>
     <nav>
         <ul class="text-center list-inline ukti-home-section-anchors">
+            {% if language === 'us' %}
             <li><a href="#why-uk">Reasons to choose the UK</a></li>
             <li><a href="#sectors">Key market sectors</a></li>
             <li><a href="#guide">Simple investment guide</a></li>
             <li><a href="#">Search</a></li>
+            {% elif language === 'de' %}
+            <li><a href="#why-uk">Warum das Vereinigte Königreich?</a></li>
+            <li><a href="#sectors">Wichtigste Marktsektoren</a></li>
+            <li><a href="#guide">Einfacher Investitionsführer</a></li>
+            <li><a href="#">Suche</a></li>
+            {% elif language === 'cn' %}
+            <li><a href="#why-uk">选择英国的理由</a></li>
+            <li><a href="#sectors">主要市场部门</a></li>
+            <li><a href="#guide">简易投资指南</a></li>
+            <li><a href="#">搜索</a></li>
+            {% endif %}
         </ul>
     </nav>
 

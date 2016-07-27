@@ -9,5 +9,11 @@
 
     {{contents|safe}}
 
+    {% if language === 'us' %}
     <a href="#top">Back to top <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></a>
+    {% elif language === 'de' %}
+    <a href="#top">Zurück zum Anfang <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></a>
+    {% elif language === 'cn' %}
+    <a href="#top">回到顶部 <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></a>
+    {% endif %}
 </section>

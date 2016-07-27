@@ -1,5 +1,5 @@
-{{> header}}
-{{> header-nav}}
+{% include "partials/header.html" %}
+{% include "partials/header-nav.html" %}
 <div class="jumbotron">
     <div class="container" style="background-color: transparent">
         <div class="row">
@@ -11,7 +11,7 @@
     </div>
 </div>
 <section class="ukti-toc">
-    {{> breadcrumb}}
+    {% include "partials/breadcrumb.html" %}
 </section>
 <br>
 <div class="container">
@@ -19,16 +19,16 @@
         <div class="col-md-12">
             <div class="row">
                 <ol class="ukti-big-list">
-                    {{#each subLevel}}
+                    {% for elem in subLevel %}
                     <li class="ukti-big-list__item--home-guide">
-                        <h3><a href="/{{this.uri}}">{{unslug this.name}}</a></h3>
+                        <h3><a href="/{{elem.uri}}">{{elem.name|unslug}}</a></h3>
                         {{intro}} <br>
                     </li>
-                    {{/each}}
+                    {% endfor %}
                 </ol>
             </div>
         </div>
     </div>
 </div>
 
-{{> footer}}
+{% include "partials/footer.html" %}

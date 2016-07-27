@@ -1,6 +1,6 @@
-{{> header}}
-{{> header-nav}}
+{% include "partials/header.html" %}
+{% include "partials/header-nav.html" %}
 
-{{{contents}}}
+{{contents|safe}}
 
-{{> footer}}
+{% include "partials/footer.html" %}

@@ -24,12 +24,10 @@
             <div class="col-md-8">
                 {% if language === 'us' %}
                 <h2 class="ukti-toc__heading">On this page</h2>
-                {% endif %}
-                {% if language === 'de' %}
-                <h2 class="ukti-toc__heading">On this page</h2>
-                {% endif %}
-                {% if language === 'cn' %}
-                <h2 class="ukti-toc__heading">On this page</h2>
+                {% elif language === 'de' %}
+                <h2 class="ukti-toc__heading">Auf dieser Seite</h2>
+                {% elif language === 'cn' %}
+                <h2 class="ukti-toc__heading">本页包括</h2>
                 {% endif %}
                 <ol class="ukti-toc__list">
                     {% for elem in toc %}
@@ -42,7 +40,7 @@
                     <li class="ukti-toc__list-item"><a href="#sub-sectors">Subsectoren {{folder|unslug}}branche</a></li>
                     {% endif %}
                     {% if language === 'cn' %}
-                    <li class="ukti-toc__list-item"><a href="#sub-sectors">{{folder|unslug}} sub sectors</a></li>
+                    <li class="ukti-toc__list-item"><a href="#sub-sectors">{{folder|unslug}} 分属部门</a></li>
                     {% endif %}
                 </ol>
             </div>
@@ -62,7 +60,15 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
+                    {% if language === 'us' %}
                     <h2 id="sub-sectors">{{folder|unslug}} sub sectors:</h2>
+                    {% endif %}
+                    {% if language === 'de' %}
+                    <h2 id="sub-sectors">Subsectoren {{folder|unslug}}branche:</h2>
+                    {% endif %}
+                    {% if language === 'cn' %}
+                    <h2 id="sub-sectors">{{folder|unslug}} 分属部门：</h2>
+                    {% endif %}
                     <ul class="ukti-key-sectors-list">
                         {% for elem in subLevel %}
                         <li class="ukti-key-sectors-list__item">
