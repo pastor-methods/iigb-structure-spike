@@ -1,5 +1,5 @@
-{{> header}}
-{{> header-nav}}
+{% include "partials/header.html" %}
+{% include "partials/header-nav.html" %}
 <div class="jumbotron">
     <div class="container" style="background-color: transparent">
         <div class="row">
@@ -11,36 +11,29 @@
     </div>
 </div>
 <section class="ukti-toc">
-    {{> breadcrumb}}
+    {% include "partials/breadcrumb.html" %}
 </section>
 <section class="ukti-content-section">
     <div class="container" id="sectors">
         <div class="row">
             <div class="col-md-12">
                 <ul class="ukti-key-sectors-list">
-                    {{#each subLevel}}
+                    {% for elem in subLevel %}
                     <li class="ukti-key-sectors-list__item">
                         <div class="ukti-key-sectors-list__link-wrap">
-                            <a href="/{{this.uri}}">
-                                <img src="/assets/img/{{this.thumbnail}}" class="ukti-key-sectors-list__image">
-                                <span class="ukti-key-sectors-list__text text-sentence">{{this.name}}</span>
+                            <a href="/{{elem.uri}}">
+                                <img src="/assets/img/{{elem.thumbnail}}" class="ukti-key-sectors-list__image">
+                                <span class="ukti-key-sectors-list__text text-sentence">{{elem.name}}</span>
                             </a>
                         </div>
                         <div class="ukti-key-sectors-list__link-wrap">
-                            <p>{{this.intro}}</p>
+                            <p>{{elem.intro}}</p>
                         </div>
                     </li>
-                    {{/each}}
+                    {% endfor %}
                 </ul>
             </div>
         </div>
     </div>
 </section>
-<!--<div class="container">-->
-<!--<div class="row">-->
-<!--<div class="col-md-8">-->
-<!--{{{contents}}}-->
-<!--</div>-->
-<!--</div>-->
-<!--</div>-->
-{{> footer}}
+{% include "partials/footer.html" %}

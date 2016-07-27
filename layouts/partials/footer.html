@@ -2,12 +2,28 @@
     <div class="row">
         <div class="col-md-6 col-md-offset-1">
             <ul class="ukti-footer--list">
+                {% if language === 'us' %}
                 <li><a href="/">Home</a></li>
                 <li><a href="/us/sectors">Sectors</a></li>
                 <li><a href="/us/investment-guide">Investment guide</a></li>
                 <li><a href="#">Privacy and cookies</a></li>
                 <li><a href="#">Terms and conditions</a></li>
                 <li><a href="#">Contact us</a></li>
+                {% elif language === 'de' %}
+                <li><a href="/">Home</a></li>
+                <li><a href="/de/sektoren">Sektoren</a></li>
+                <li><a href="/de/anleitung-zu-Investments">Anleitung zu Investments</a></li>
+                <li><a href="#">Privacy and cookies</a></li>
+                <li><a href="#">Terms and conditions</a></li>
+                <li><a href="#">Contact us</a></li>
+                {% elif language === 'cn' %}
+                <li><a href="/">Home</a></li>
+                <li><a href="/us/sectors">Sectors</a></li>
+                <li><a href="/us/investment-guide">Investment guide</a></li>
+                <li><a href="#">Privacy and cookies</a></li>
+                <li><a href="#">Terms and conditions</a></li>
+                <li><a href="#">Contact us</a></li>
+                {% endif %}
             </ul>
         </div>
         <div class="col-md-2 col-md-offset-1 col-xs-4 col-xs-offset-4 ukti-footer--logo">
@@ -18,6 +34,6 @@
 </nav>
 
 </div>
-{{> scripts}}
+{% include "scripts.html" %}
 </body>
 </html>

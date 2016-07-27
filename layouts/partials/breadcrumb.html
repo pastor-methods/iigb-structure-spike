@@ -1,0 +1,24 @@
+<div class="container">
+    <ol class="breadcrumb">
+        <li>
+            {% if language === 'us' || 'de' %}
+            <a href="/">Home</a>
+            {% elif language === 'cn' %}
+            <a href="/">Home</a>
+            {% endif %}
+        </li>
+        {% if location %}
+        {% for elem in location %}
+        {% if !loop.last %}
+        <li>
+            <a href="{{elem.link}}">{{elem.name|unslug}}</a>
+        </li>
+        {% else %}
+        <li>
+            {{elem.name|unslug}}
+        </li>
+        {% endif %}
+        {% endfor %}
+        {% endif %}
+    </ol>
+</div>

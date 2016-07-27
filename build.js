@@ -4,7 +4,7 @@ var metalsmith = require('metalsmith'),
     markdown = require('metalsmith-markdown'),
     layouts = require('metalsmith-layouts'),
     sass = require('metalsmith-sass'),
-    Handlebars = require('handlebars'),
+    swig = require('swig'),
     fs = require('fs'),
     path = require('path'),
     _ = require('underscore');
@@ -49,6 +49,7 @@ var makeIndex = function (files, metalsmith, done) {
     //concat the files in those paths
     for (var i = 0; i < folders.length; i++) {
         var folderPath = folders[i];
+        var language;
         var folderName;
         var location;
         var toIndex = '';
@@ -83,6 +84,11 @@ var makeIndex = function (files, metalsmith, done) {
                         buffer.push({name: ff[i], link: link});
                     }
                     return buffer;
+                })();
+                //add language
+                language = (function () {
+                    var ee = folderPath.split("/");
+                    return ee.pop();
                 })();
                 //add a layout to the index file
                 if (fileWithLang.indexTemplate) {
@@ -135,6 +141,7 @@ var makeIndex = function (files, metalsmith, done) {
             intro: intro,
             folder: folderName,
             location: location,
+            language: language,
             contents: new Buffer(toIndex),
             toc: toToc
         };
@@ -196,93 +203,27 @@ var makeIndex = function (files, metalsmith, done) {
     done();
 };
 
-Handlebars.registerPartial('header', fs.readFileSync(__dirname + '/layouts/partials/header.html').toString());
-Handlebars.registerPartial('scripts', fs.readFileSync(__dirname + '/layouts/partials/scripts.html').toString());
-
-Handlebars.registerPartial('header-nav', fs.readFileSync(__dirname + '/layouts/partials/us/header-nav.html').toString());
-Handlebars.registerPartial('footer', fs.readFileSync(__dirname + '/layouts/partials/us/footer.html').toString());
-Handlebars.registerPartial('breadcrumb', fs.readFileSync(__dirname + '/layouts/partials/us/breadcrumb.html').toString());
-Handlebars.registerPartial('sidebar', fs.readFileSync(__dirname + '/layouts/partials/us/sidebar.html').toString());
-
-Handlebars.registerPartial('header-nav-cn', fs.readFileSync(__dirname + '/layouts/partials/cn/header-nav.html').toString());
-Handlebars.registerPartial('footer-cn', fs.readFileSync(__dirname + '/layouts/partials/cn/footer.html').toString());
-Handlebars.registerPartial('breadcrumb-cn', fs.readFileSync(__dirname + '/layouts/partials/cn/breadcrumb.html').toString());
-Handlebars.registerPartial('sidebar-cn', fs.readFileSync(__dirname + '/layouts/partials/cn/sidebar.html').toString());
-
-Handlebars.registerPartial('header-nav-de', fs.readFileSync(__dirname + '/layouts/partials/de/header-nav.html').toString());
-Handlebars.registerPartial('footer-de', fs.readFileSync(__dirname + '/layouts/partials/de/footer.html').toString());
-Handlebars.registerPartial('breadcrumb-de', fs.readFileSync(__dirname + '/layouts/partials/de/breadcrumb.html').toString());
-Handlebars.registerPartial('sidebar-de', fs.readFileSync(__dirname + '/layouts/partials/de/sidebar.html').toString());
-
 // helper to slugify strings
-Handlebars.registerHelper('slug', function (content) {
+swig.setFilter('slug', function (content) {
     var spacesToDashes = content.split(' ').join('-').toLowerCase();
     var removeChars = spacesToDashes.replace(/[^a-zA-Z0-9\- ]/g, "");
     return removeChars;
 });
 
 // helper to un-slugify strings and sentence case
-Handlebars.registerHelper('unslug', function (content) {
+swig.setFilter('unslug', function (content) {
     var unslug = content.split('-').join(' ');
     return unslug.charAt(0).toUpperCase()+unslug.substr(1);
-});
-
-// helper to lower case
-Handlebars.registerHelper('lower', function (content) {
-    if (content && typeof content === 'string') {
-        return content.toLowerCase();
-    } else {
-        return content.toString().toLowerCase();
-    }
-});
-
-// helper to update date, format: 10 Mar 2014
-Handlebars.registerHelper('date', function () {
-    var date = new Date();
-    var day = date.getDate();
-    var month = [];
-    month[0] = "January";
-    month[1] = "February";
-    month[2] = "March";
-    month[3] = "April";
-    month[4] = "May";
-    month[5] = "June";
-    month[6] = "July";
-    month[7] = "August";
-    month[8] = "September";
-    month[9] = "October";
-    month[10] = "November";
-    month[11] = "December";
-    var year = date.getFullYear();
-    var str = day + ' ' + month[date.getMonth()] + ' ' + year;
-    return str;
-});
-
-// if equals helper
-Handlebars.registerHelper('if_eq', function (a, b, opts) {
-    if (a == b)
-        return opts.fn(this);
-    else
-        return opts.inverse(this);
-});
-
-// if not equals helpers
-Handlebars.registerHelper('if_ne', function (a, b, opts) {
-    if (a != b) {
-        return opts.fn(this);
-    } else {
-        return opts.inverse(this);
-    }
 });
 
 metalsmith(__dirname)
     .use(markdown())
     .use(layouts({
-        engine: 'handlebars'
+        engine: 'swig'
     }))
     .use(makeIndex)
     .use(layouts({
-        engine: 'handlebars'
+        engine: 'swig'
     }))
     .use(makeLangFolder)
     .use(sass({

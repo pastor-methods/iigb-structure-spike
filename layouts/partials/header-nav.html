@@ -15,8 +15,16 @@
         </div>
         <div class="collapse navbar-collapse" id="navbar-collapse-1">
             <ul class="nav navbar-nav ukti-main-nav-list">
+                {% if language === 'us' %}
+                <li><a href="/us/sectors/">Market sectors<span class="sr-only">(current)</span></a></li>
+                <li><a href="/us/investment-guide/">Investment guide</a></li>
+                {% elif language === 'de' %}
                 <li><a href="/de/sektoren/">Sektoren<span class="sr-only">(current)</span></a></li>
                 <li><a href="/de/anleitung-zu-Investments/">Anleitung zu Investments</a></li>
+                {% elif language === 'cn' %}
+                <li><a href="/us/sectors/">Market sectors<span class="sr-only">(current)</span></a></li>
+                <li><a href="/us/investment-guide/">Investment guide</a></li>
+                {% endif %}
             </ul>
             <form class="navbar-form navbar-right ukti-main-search" role="search">
                 <div class="form-group">

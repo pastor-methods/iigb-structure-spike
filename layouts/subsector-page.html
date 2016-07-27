@@ -1,5 +1,5 @@
-{{> header}}
-{{> header-nav}}
+{% include "partials/header.html" %}
+{% include "partials/header-nav.html" %}
 <style>
     .jumbotron {
         background-image: url("/assets/img/{{image}}");
@@ -18,19 +18,25 @@
 </div>
 
 <section class="ukti-toc">
-    {{> breadcrumb}}
+    {% include "partials/breadcrumb.html" %}
     <div class="container">
         <div class="row">
             <div class="col-md-8">
+                {% if language === 'us' %}
                 <h2 class="ukti-toc__heading">On this page</h2>
+                {% elif language === 'de' %}
+                <h2 class="ukti-toc__heading">On this page</h2>
+                {% elif language === 'cn' %}
+                <h2 class="ukti-toc__heading">On this page</h2>
+                {% endif %}
                 <ol class="ukti-toc__list">
-                    {{#each toc}}
-                    <li class="ukti-toc__list-item"><a href="#{{slug this}}">{{this}}</a></li>
-                    {{/each}}
+                    {% for elem in toc %}
+                    <li class="ukti-toc__list-item"><a href="#{{elem|slug}}">{{elem}}</a></li>
+                    {% endfor %}
                     </li>
                 </ol>
             </div>
-            {{> sidebar}}
+            {% include "partials/sidebar.html" %}
         </div>
     </div>
 </section>
@@ -38,9 +44,9 @@
     <div class="container">
         <div class="row">
             <div class="col-md-7 col-sm-10">
-                {{{contents}}}
+                {{contents|safe}}
             </div>
         </div>
     </div>
 </div>
-{{> footer}}
+{% include "partials/footer.html" %}

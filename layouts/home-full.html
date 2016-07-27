@@ -1,4 +1,4 @@
-{{> header}}
+{% include "partials/header.html" %}
 
 <!--[if lte IE 8]>
 <style>
@@ -53,5 +53,5 @@
 </div>
 
 
-{{{contents}}}
-{{> footer}}
+{{contents|safe}}
+{% include "partials/footer.html" %}
