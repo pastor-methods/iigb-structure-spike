@@ -1,10 +1,9 @@
 ---
 title: Der Bereich “Digitale Medien” in Großbritannien
-image: creative-sector-hero.jpg
 thumbnail: creative-sector-thumb.jpg
-heroVideo: heroVideoPath
+heroVideo: 
 heroImage: creative-sector-hero.jpg
-fullVideo: fullVideoPath
+fullVideo: 
 indexTemplate: subsector-page.html
 intro: From producing big budget movies to developing world-class computer games, creativity is thriving in the UK.
 pageTitle: Digital Media in Great Britain

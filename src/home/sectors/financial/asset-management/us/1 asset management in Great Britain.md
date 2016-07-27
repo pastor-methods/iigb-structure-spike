@@ -1,10 +1,9 @@
 ---
 title: Asset management in Great Britain
-image: assetManag.png
-thumbnail: assetManag.png
-heroVideo: heroVideoPath
-heroImage: heroImagePath
-fullVideo: fullVideoPath
+thumbnail: asset-management-thumb.png
+heroVideo: 
+heroImage: asset-management-hero.png
+fullVideo: 
 indexTemplate: subsector-page.html
 intro: The UK is one of the largest asset management markets in the world. It is Europe's leading centre for fund management, and already attracts significant overseas funds.
 pageTitle: Asset management

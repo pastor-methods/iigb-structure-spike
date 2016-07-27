@@ -1,10 +1,9 @@
 ---
 title: Financial technology in Great Britain
-image: fintech.jpg 
-thumbnail: fintech.jpg
-heroVideo: heroVideoPath
-heroImage: heroImagePath
-fullVideo: fullVideoPath
+thumbnail: fintech-thumb.jpg
+heroVideo: 
+heroImage: fintech-hero.jpg
+fullVideo: 
 indexTemplate: subsector-page.html
 intro: The UK and Ireland is the world’s fastest growing region for financial technology (fintech) inward investment. Many of the biggest players in fintech have chosen to set up or expand their global operations in Britain.
 pageTitle: Financial technology in Great Britain

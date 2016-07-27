@@ -1,9 +1,8 @@
 ---
 title: Growing supply chain opportunity
-image: 
-thumbnail: 
+thumbnail: supply-chain-thumb.jpg
 heroVideo: 
-heroImage: 
+heroImage: supply-chain-hero.jpg
 fullVideo: 
 indexTemplate: subsector-page.html
 intro: As the demand for UK-made vehicles continues to boom, UK automotive production will exceed 2 million cars by 2020 – a huge opportunity for businesses involved in all parts of the supply chain.

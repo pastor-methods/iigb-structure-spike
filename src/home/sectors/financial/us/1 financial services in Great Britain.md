@@ -1,6 +1,5 @@
 ---
 title: A global leader in scale and influence
-image: finance-sector-hero.jpg
 thumbnail: finance-sector-thumb.jpg
 heroVideo: 
 heroImage: finance-sector-hero.jpg

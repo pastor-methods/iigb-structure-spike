@@ -1,9 +1,8 @@
 ---
 title: A legacy of forward-thinking
-image: 
-thumbnail: 
+thumbnail: research-development-thumb.jpg
 heroVideo: 
-heroImage: 
+heroImage: research-development-hero.jpg
 fullVideo: 
 indexTemplate: subsector-page.html
 intro: With world-class test centres and a reputation for groundbreaking innovation, the UK leads the way in automotive research and development.

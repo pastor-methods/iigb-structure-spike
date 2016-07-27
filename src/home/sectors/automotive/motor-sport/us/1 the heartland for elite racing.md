@@ -1,9 +1,8 @@
 ---
 title: The heartland for elite racing
-image: 
-thumbnail: 
+thumbnail: motorsport-thumb.jpg
 heroVideo: 
-heroImage: 
+heroImage: motorsport-hero.jpg
 fullVideo: 
 indexTemplate: subsector-page.html
 intro: The UK leads the world in motorsport with a turnover of £9 billion and more than 4,500 businesses operating in the sector.

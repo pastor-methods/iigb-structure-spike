@@ -1,10 +1,9 @@
 ---
 title: Digital media sector in Great Britain
-image: digital-media-hero.jpg
 thumbnail: digital-media-thumb.jpg
-heroVideo: heroVideoPath
+heroVideo: 
 heroImage: digital-media-hero.jpg
-fullVideo: fullVideoPath
+fullVideo: 
 indexTemplate: subsector-page.html
 intro: With a highly educated workforce and full Government backing, the UK is ideally placed for digital media investment.
 pageTitle: Digital media

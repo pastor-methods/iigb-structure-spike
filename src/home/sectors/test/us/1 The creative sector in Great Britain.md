@@ -1,6 +1,5 @@
 ---
 title: The test sector in Great Britain
-image: tech-sector-hero.jpg
 thumbnail: tech-sector-thumb.jpg
 heroVideo: 
 heroImage: tech-sector-hero.jpg

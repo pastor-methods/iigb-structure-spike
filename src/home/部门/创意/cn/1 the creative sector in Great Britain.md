@@ -1,10 +1,9 @@
 ---
 title: 英国的创意产业
-image: creative-sector-hero.jpg
 thumbnail: creative-sector-thumb.jpg
-heroVideo: heroVideoPath
-heroImage: creative-sector-hero.jpg
-fullVideo: fullVideoPath
+heroVideo: 
+heroImage: creative-china-hero.jpg
+fullVideo: 
 indexTemplate: sector-page.html
 intro: From producing big budget movies to developing world-class computer games, creativity is thriving in the UK.
 pageTitle: Create in Great Britain
