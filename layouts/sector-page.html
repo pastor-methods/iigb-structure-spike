@@ -43,7 +43,7 @@
                     <li class="ukti-toc__list-item"><a href="#sub-sectors">{{folder|unslug}} sub sectors</a></li>
                     {% endif %}
                     {% if language === 'de' %}
-                    <li class="ukti-toc__list-item"><a href="#sub-sectors">Subsectoren {{folder|unslug}}branche</a></li>
+                    <li class="ukti-toc__list-item"><a href="#sub-sectors">Subsektoren {{folder|unslug}}branche</a></li>
                     {% endif %}
                     {% if language === 'cn' %}
                     <li class="ukti-toc__list-item"><a href="#sub-sectors">{{folder}} 分属部门</a></li>
@@ -70,10 +70,10 @@
                     <h2 id="sub-sectors">{{folder|unslug}} sub sectors:</h2>
                     {% endif %}
                     {% if language === 'de' %}
-                    <h2 id="sub-sectors">Subsectoren {{folder|unslug}}branche:</h2>
+                    <h2 id="sub-sectors">Subsektoren {{folder|unslug}}branche:</h2>
                     {% endif %}
                     {% if language === 'cn' %}
-                    <h2 id="sub-sectors">{{folder|unslug}} 分属部门：</h2>
+                    <h2 id="sub-sectors">{{folder}} 分属部门：</h2>
                     {% endif %}
                     <ul class="ukti-key-sectors-list">
                         {% for elem in subLevel %}
