@@ -5,8 +5,8 @@ heroVideo:
 heroImage: creative-sector-hero.jpg
 fullVideo: 
 indexTemplate: subsector-page.html
-intro: From producing big budget movies to developing world-class computer games, creativity is thriving in the UK.
-pageTitle: Digital Media in Great Britain
+intro: Hoch qualifizierte Arbeitskräfte und die Unterstützung der Regierung machen das Vereinigte Königreich zur idealen Location für Investments in die digitale Medienbranche.
+pageTitle: Digitale Medien
 layout: content-de.html
 ---
  
