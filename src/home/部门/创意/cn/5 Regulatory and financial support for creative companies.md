@@ -9,12 +9,12 @@ layout: content-cn.html
 
 税收减免政策将有助于推动投资增长，该政策将覆盖以下部门：
 
-*	动画
-*	电影
-*	高端电视
-*	儿童电视
-*	电子游戏
-*	剧院
-*	乐团
+-	动画
+-	电影
+-	高端电视
+-	儿童电视
+-	电子游戏
+-	剧院
+-	乐团
 
 [有关英国创意行业税收减免的更多信息请点这里](https://www.gov.uk/guidance/corporation-tax-creative-industry-tax-reliefs)

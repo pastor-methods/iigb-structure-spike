@@ -27,13 +27,13 @@ These protections can take anywhere between 1 month and 5 years to apply for, [s
     
 In the UK, our privacy and data protection laws ensure that customer data is processed, held and disposed of fairly, legally, accurately and securely. Your business must abide by the Data Protection Act, which states that customer data must be: 
     
-* used fairly and lawfully
-* used for limited, specifically stated purposes
-* used in a way that is adequate, relevant and not excessive
-* accurate
-* kept for no longer than is absolutely necessary handled according to people’s data protection rights
-* kept safe and secure
-* not transferred outside the EEA without adequate protection
+- used fairly and lawfully
+- used for limited, specifically stated purposes
+- used in a way that is adequate, relevant and not excessive
+- accurate
+- kept for no longer than is absolutely necessary handled according to people’s data protection rights
+- kept safe and secure
+- not transferred outside the EEA without adequate protection
     
 Stronger legal protections are in place for sensitive information like ethnic background, political or religious belief, health records and criminal records.
      
