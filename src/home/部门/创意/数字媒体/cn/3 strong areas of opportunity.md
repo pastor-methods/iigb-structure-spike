@@ -1,24 +1,24 @@
 ---
-title: Strong areas of opportunity
-layout: content-us.html
+title: 强大的发展机遇
+layout: content-cn.html
 ---
 
-The UK is Europe’s largest mobile content market, with over £1 billion spent on mobile applications, content and services each year, and the highest mobile advertising spend per head. Mobile in the UK has been boosted by:
+英国是欧洲最大的移动内容市场，每年在移动应用、内容和服务上投入的资金超过10亿英镑，且人均移动广告花费为最高。英国移动市场的推动因素为：
 
-* an increase in smartphones and choice of mobile contracts
+-	智能手机及手机合约可选方案数量增加
 
-* a strong games and advertising industry
+-	发达的游戏、广告产业
 
-* an enhanced mobile network infrastructure
+-	强化的移动网络基础设施 
 
-Other growth opportunities include:
+其他增长机遇包括： 
 
-* social media – Britons are amongst the biggest users of social networks in Europe
+-	社交媒体——英国是欧洲社交网络用户最多的国家
 
-* digital radio and TV – the UK has one of the world’s largest digital radio networks, and 97% of UK homes have digital TV
+-	数字广播和电视——英国拥有世界最大的数字广播网络，97%的英国家庭拥有数字电视
 
-* innovative tech in production and art – for example sensors and motion capture in film
+-	电影制作和艺术领域的创新科技——如电影中的传感器和动作捕捉技术
 
-* digital music – accounting for 54% of all music consumption in 2015
+-	数字音乐——2015年占所有音乐消费市场的45% 
 
-The UK’s strengths have ensured investment by some of the world’s biggest digital players – Google, Facebook and Amazon have all opened research and development (R&D) hubs in the UK.
+英国的优势吸引了世界最大数字行业巨头在此投资——Google、Facebook和亚马逊都已在英国设立了研发部门。
