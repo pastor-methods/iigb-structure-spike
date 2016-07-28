@@ -5,8 +5,8 @@ heroVideo:
 heroImage: creative-sector-hero.jpg
 fullVideo: 
 indexTemplate: sector-page.html
-intro: From producing big budget movies to developing world-class computer games, creativity is thriving in the UK.
-pageTitle: Create in Great Britain
+intro: Von Big Budget Film-Produktionen bis hin zur Entwicklung erstklassiger Computerspiele: Die Kreativbranche floriert im Vereinigten Königreich.
+pageTitle: Kreativität in Großbritannien
 layout: content-de.html
 ---
  

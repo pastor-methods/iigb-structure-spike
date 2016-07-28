@@ -1,10 +1,10 @@
 ---
 title: Intro
-thumbnail: thumbnailPath
 heroVideo: heroVideoPath
 heroImage: heroImagePath
-fullVideo: fullVideoPath(9)
+fullVideo: fullVideoPath
 indexTemplate: sectors-page.html
-pageTitle: Liste der Sektoren
+pageTitle: Marktsektoren
+intro:
 layout: content-de.html
 ---
