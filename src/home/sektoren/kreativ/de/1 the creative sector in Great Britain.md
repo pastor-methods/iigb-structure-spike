@@ -5,7 +5,7 @@ heroVideo:
 heroImage: creative-sector-hero.jpg
 fullVideo: 
 indexTemplate: sector-page.html
-intro: Von Big Budget Film-Produktionen bis hin zur Entwicklung erstklassiger Computerspiele. Die Kreativbranche floriert im Vereinigten Königreich.
+intro: Von Big Budget Film-Produktionen bis hin zur Entwicklung erstklassiger Computerspiele - Die Kreativbranche floriert im Vereinigten Königreich.
 pageTitle: Kreativität in Großbritannien
 layout: content-de.html
 ---
