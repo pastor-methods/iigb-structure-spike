@@ -219,7 +219,8 @@ swig.setFilter('unslug', function (content) {
 metalsmith(__dirname)
     .use(markdown())
     .use(layouts({
-        engine: 'swig'
+        engine: 'swig',
+        directory: 'layouts/content'
     }))
     .use(makeIndex)
     .use(layouts({
