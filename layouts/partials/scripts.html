@@ -78,14 +78,14 @@
         } else if (language === 'de'){
             if (url.match('\/sektoren\/')) {
                 child = '/de/sektoren/';
-            } else if (url.match('\/investitionsführer\/')) {
-                child = '/de/investitionsführer/';
+            } else if (url.match('\/investitionsf%C3%BChrer\/')) {
+                child = '/de/investitionsf%C3%BChrer/';
             }
         } else if (language === 'cn') {
-            if (url.match('\/部门\/')) {
-                child = '/cn/部门/';
-            } else if (url.match('\/投资指南\/')) {
-                child = '/cn/投资指南/';
+            if (url.match('\/%E9%83%A8%E9%97%A8\/')) {
+                child = '/cn/%E9%83%A8%E9%97%A8/';
+            } else if (url.match('\/%E6%8A%95%E8%B5%84%E6%8C%87%E5%8D%97\/')) {
+                child = '/cn/%E6%8A%95%E8%B5%84%E6%8C%87%E5%8D%97/';
             }
         }
         if ($('ul.nav a')) {
