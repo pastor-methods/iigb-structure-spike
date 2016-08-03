@@ -216,6 +216,11 @@ swig.setFilter('unslug', function (content) {
     return unslug.charAt(0).toUpperCase()+unslug.substr(1);
 });
 
+swig.setDefaults({
+    cache: false,
+    locals: { now: function () { return new Date(); } }
+});
+
 metalsmith(__dirname)
     .use(markdown())
     .use(layouts({
