@@ -1,6 +1,6 @@
 ---
 title: 英国的创意产业
-thumbnail: creative-sector-thumb.jpg
+thumbnail: creative-china-thumb.jpg
 heroVideo: 
 heroImage: creative-china-hero.jpg
 fullVideo: 
