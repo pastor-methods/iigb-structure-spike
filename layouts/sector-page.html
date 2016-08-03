@@ -17,36 +17,36 @@
     </div>
 </div>
 
-<section class="ukti-toc">
+<section class="dfit-toc">
     {% include "partials/breadcrumb.html" %}
     <div class="container">
         <div class="row">
             <div class="col-md-8">
                 {% if language === 'us' %}
-                <h2 class="ukti-toc__heading">On this page</h2>
+                <h2 class="dfit-toc__heading">On this page</h2>
                 {% elif language === 'de' %}
-                <h2 class="ukti-toc__heading">Auf dieser Seite</h2>
+                <h2 class="dfit-toc__heading">Auf dieser Seite</h2>
                 {% elif language === 'cn' %}
-                <h2 class="ukti-toc__heading">本页包括</h2>
+                <h2 class="dfit-toc__heading">本页包括</h2>
                 {% endif %}
-                <ol class="ukti-toc__list">
+                <ol class="dfit-toc__list">
                     {% if language === 'cn' %}
                     {% for elem in toc %}
-                    <li class="ukti-toc__list-item"><a href="#{{elem}}">{{elem}}</a></li>
+                    <li class="dfit-toc__list-item"><a href="#{{elem}}">{{elem}}</a></li>
                     {% endfor %}
                     {% else %}
                     {% for elem in toc %}
-                    <li class="ukti-toc__list-item"><a href="#{{elem|slug}}">{{elem}}</a></li>
+                    <li class="dfit-toc__list-item"><a href="#{{elem|slug}}">{{elem}}</a></li>
                     {% endfor %}
                     {% endif %}
                     {% if language === 'us' %}
-                    <li class="ukti-toc__list-item"><a href="#sub-sectors">{{folder|unslug}} sub sectors</a></li>
+                    <li class="dfit-toc__list-item"><a href="#sub-sectors">{{folder|unslug}} sub sectors</a></li>
                     {% endif %}
                     {% if language === 'de' %}
-                    <li class="ukti-toc__list-item"><a href="#sub-sectors">Subsektoren {{folder|unslug}}branche</a></li>
+                    <li class="dfit-toc__list-item"><a href="#sub-sectors">Subsektoren {{folder|unslug}}branche</a></li>
                     {% endif %}
                     {% if language === 'cn' %}
-                    <li class="ukti-toc__list-item"><a href="#sub-sectors">{{folder}} 分属部门</a></li>
+                    <li class="dfit-toc__list-item"><a href="#sub-sectors">{{folder}} 分属部门</a></li>
                     {% endif %}
                 </ol>
             </div>
@@ -54,17 +54,17 @@
         </div>
     </div>
 </section>
-<div class="ukti-main-content">
+<div class="dfit-main-content">
     <div class="container">
         <div class="row">
             <div class="col-md-7 col-sm-10">
                 {{contents|safe}}
 
-                <p>Page updated on {{now()|date('jS \o\f F Y')}}</p>
+                <p class="dfit-updated">Page updated on {{now()|date('jS \o\f F Y')}}</p>
             </div>
         </div>
     </div>
-    <div class="ukti-sector-subsectors">
+    <div class="dfit-sector-subsectors">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -77,14 +77,14 @@
                     {% if language === 'cn' %}
                     <h2 id="sub-sectors">{{folder}} 分属部门：</h2>
                     {% endif %}
-                    <ul class="ukti-key-sectors-list">
+                    <ul class="dfit-key-sectors-list">
                         {% for elem in subLevel %}
-                        <li class="ukti-key-sectors-list__item">
-                            <div class="ukti-key-sectors-list__link-wrap">
+                        <li class="dfit-key-sectors-list__item">
+                            <div class="dfit-key-sectors-list__link-wrap">
                                 <a href="/{{elem.uri}}">
                                     <img src="/assets/img/{{elem.thumbnail}}"
-                                         class="ukti-key-sectors-list__image">
-                                    <span class="ukti-key-sectors-list__text">{{elem.name|unslug}}</span>
+                                         class="dfit-key-sectors-list__image">
+                                    <span class="dfit-key-sectors-list__text">{{elem.name|unslug}}</span>
                                 </a>
                             </div>
                         </li>

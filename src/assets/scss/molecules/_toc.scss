@@ -1,7 +1,7 @@
 //toc.scss
 
-.ukti-toc {
-	counter-reset: ukti-toc-counter;
+.dfit-toc {
+	counter-reset: dfit-toc-counter;
 	background: #363636;
 	color: #fff;
 
@@ -35,8 +35,8 @@
 				top: 0px;
 				left: 2px;
 				font-size: 18px;
-				content: counter(ukti-toc-counter)".";
-				counter-increment: ukti-toc-counter;
+				content: counter(dfit-toc-counter)".";
+				counter-increment: dfit-toc-counter;
 				width: 30px;
 				display: inline-block;
 			}

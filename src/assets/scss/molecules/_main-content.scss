@@ -1,6 +1,6 @@
 //_main-content.scss
 
-.ukti-main-content {
+.dfit-main-content {
 	h2 {
 		font-size: 40px;
 		font-weight: 100;
@@ -19,5 +19,10 @@
 
 	p, ol, ul {
 		margin: 40px 0;
+	}
+
+	& .dfit-updated-on {
+		font-size: 14px;
+		margin: 20px 0;
 	}
 }

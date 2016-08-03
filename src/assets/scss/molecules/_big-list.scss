@@ -1,7 +1,7 @@
 //big-list.scss
 
-.ukti-big-list {
-	counter-reset: ukti-big-list-counter;
+.dfit-big-list {
+	counter-reset: dfit-big-list-counter;
 	list-style: none;
 	padding: 0;
 	width: 100%;
@@ -49,8 +49,8 @@
 			left: 10px;
 			font-size: 70px;
 			font-weight: 100;
-			content: counter(ukti-big-list-counter);
-			counter-increment: ukti-big-list-counter;
+			content: counter(dfit-big-list-counter);
+			counter-increment: dfit-big-list-counter;
 			width: 50px;
 			display: inline-block;
 
@@ -64,7 +64,7 @@
 		}
 
 		&--red-list-style {
-			@extend .ukti-big-list__item;
+			@extend .dfit-big-list__item;
 
 			&::before {
 				color: #E41F13;
@@ -72,7 +72,7 @@
 		}
 
 		&--home-guide {
-			@extend .ukti-big-list__item;
+			@extend .dfit-big-list__item;
 
 			@media (max-width: $screen-md-max) {
 				padding: 15px 30px 30px 60px;

@@ -17,26 +17,26 @@
     </div>
 </div>
 
-<section class="ukti-toc">
+<section class="dfit-toc">
     {% include "partials/breadcrumb.html" %}
     <div class="container">
         <div class="row">
             <div class="col-md-8">
                 {% if language === 'us' %}
-                <h2 class="ukti-toc__heading">On this page</h2>
+                <h2 class="dfit-toc__heading">On this page</h2>
                 {% elif language === 'de' %}
-                <h2 class="ukti-toc__heading">Auf dieser Seite</h2>
+                <h2 class="dfit-toc__heading">Auf dieser Seite</h2>
                 {% elif language === 'cn' %}
-                <h2 class="ukti-toc__heading">本页包括</h2>
+                <h2 class="dfit-toc__heading">本页包括</h2>
                 {% endif %}
-                <ol class="ukti-toc__list">
+                <ol class="dfit-toc__list">
                     {% if language === 'cn' %}
                     {% for elem in toc %}
-                    <li class="ukti-toc__list-item"><a href="#{{elem}}">{{elem}}</a></li>
+                    <li class="dfit-toc__list-item"><a href="#{{elem}}">{{elem}}</a></li>
                     {% endfor %}
                     {% else %}
                     {% for elem in toc %}
-                    <li class="ukti-toc__list-item"><a href="#{{elem|slug}}">{{elem}}</a></li>
+                    <li class="dfit-toc__list-item"><a href="#{{elem|slug}}">{{elem}}</a></li>
                     {% endfor %}
                     {% endif %}
                     </li>
@@ -46,7 +46,7 @@
         </div>
     </div>
 </section>
-<div class="ukti-main-content">
+<div class="dfit-main-content">
     <div class="container">
         <div class="row">
             <div class="col-md-7 col-sm-10">

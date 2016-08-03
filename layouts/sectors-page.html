@@ -10,23 +10,23 @@
         </div>
     </div>
 </div>
-<section class="ukti-toc">
+<section class="dfit-toc">
     {% include "partials/breadcrumb.html" %}
 </section>
-<section class="ukti-content-section">
+<section class="dfit-content-section">
     <div class="container" id="sectors">
         <div class="row">
             <div class="col-md-12">
-                <ul class="ukti-key-sectors-list">
+                <ul class="dfit-key-sectors-list">
                     {% for elem in subLevel %}
-                    <li class="ukti-key-sectors-list__item">
-                        <div class="ukti-key-sectors-list__link-wrap">
+                    <li class="dfit-key-sectors-list__item">
+                        <div class="dfit-key-sectors-list__link-wrap">
                             <a href="/{{elem.uri}}">
-                                <img src="/assets/img/{{elem.thumbnail}}" class="ukti-key-sectors-list__image">
-                                <span class="ukti-key-sectors-list__text text-sentence">{{elem.name}}</span>
+                                <img src="/assets/img/{{elem.thumbnail}}" class="dfit-key-sectors-list__image">
+                                <span class="dfit-key-sectors-list__text text-sentence">{{elem.name}}</span>
                             </a>
                         </div>
-                        <!--<div class="ukti-key-sectors-list__link-wrap">-->
+                        <!--<div class="dfit-key-sectors-list__link-wrap">-->
                             <!--<p>{{elem.intro}}</p>-->
                         <!--</div>-->
                     </li>

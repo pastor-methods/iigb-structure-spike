@@ -1,6 +1,6 @@
 //_quick-guide-side.scss
 
-.ukti-quick-guide-side {
+.dfit-quick-guide-side {
 	position: absolute;
 	background: #1e1348;
 	padding: 0px 30px 40px 30px;
@@ -16,7 +16,7 @@
 	}
 
 	ol {
-		counter-reset: ukti-guide-side-counter;
+		counter-reset: dfit-guide-side-counter;
 		list-style: none;
 		padding: 0;
 
@@ -31,8 +31,8 @@
 					top: 0px;
 					left: 2px;
 					font-size: 18px;
-					content: counter(ukti-guide-side-counter)".";
-					counter-increment: ukti-guide-side-counter;
+					content: counter(dfit-guide-side-counter)".";
+					counter-increment: dfit-guide-side-counter;
 					width: 30px;
 					display: inline-block;
 				}

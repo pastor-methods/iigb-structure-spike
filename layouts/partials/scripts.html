@@ -20,14 +20,14 @@
     });
 
     function showcontent(){
-        $('.ukti-outer-wrap').show();
+        $('.dfit-outer-wrap').show();
         calculateSidebarWidth();
         smoothScroll();
         addActive();
     }
 
     function removeloading(){
-        $('.ukti-loading').fadeOut(300);
+        $('.dfit-loading').fadeOut(300);
     }
 
     function enhance(){
@@ -45,7 +45,7 @@
     function calculateSidebarWidth () {
         if ($('#sidebar-width')) {
             var menuWidth = $('#sidebar-width').width();
-            $('.ukti-quick-guide-side').css({width: menuWidth});
+            $('.dfit-quick-guide-side').css({width: menuWidth});
         }
     }
 
@@ -94,11 +94,11 @@
     }
 
     // function zoomImageHoverLink() {
-    //     if ($('.ukti-sectors-list__item')) {
-    //         var itemHeight = $('.ukti-sectors-list__item').height();
-    //         var itemWidth = $('.ukti-sectors-list__item').width();
-    //         $('.ukti-sectors-list__item').css({height: itemHeight});
-    //         $('.ukti-sectors-list__item').css({width: itemWidth});
+    //     if ($('.dfit-sectors-list__item')) {
+    //         var itemHeight = $('.dfit-sectors-list__item').height();
+    //         var itemWidth = $('.dfit-sectors-list__item').width();
+    //         $('.dfit-sectors-list__item').css({height: itemHeight});
+    //         $('.dfit-sectors-list__item').css({width: itemWidth});
     //     }
     // }
 

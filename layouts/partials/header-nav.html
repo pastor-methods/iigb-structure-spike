@@ -1,5 +1,5 @@
 <nav id="nav-default" class="navbar navbar-default">
-    <div class="container ukti-main-nav"><!-- Brand and toggle get grouped for better mobile display -->
+    <div class="container dfit-main-nav"><!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                     data-target="#navbar-collapse-1" aria-expanded="false">
@@ -11,20 +11,20 @@
 
             {% if language === 'us' %}
             <a class="navbar-brand" href="/">
-                <img alt="Brand" src="http://ukti-iigb-alpha-staging.herokuapp.com/assets/img/iigb-logo.png">
+                <img alt="Brand" src="http://dfit-iigb-alpha-staging.herokuapp.com/assets/img/iigb-logo.png">
             </a>
             {% elif language === 'de' %}
             <a class="navbar-brand" href="/de">
-                <img alt="Brand" src="http://ukti-iigb-alpha-staging.herokuapp.com/assets/img/iigb-logo.png">
+                <img alt="Brand" src="http://dfit-iigb-alpha-staging.herokuapp.com/assets/img/iigb-logo.png">
             </a>
             {% elif language === 'cn' %}
             <a class="navbar-brand" href="/cn">
-                <img alt="Brand" src="http://ukti-iigb-alpha-staging.herokuapp.com/assets/img/iigb-logo.png">
+                <img alt="Brand" src="http://dfit-iigb-alpha-staging.herokuapp.com/assets/img/iigb-logo.png">
             </a>
             {% endif %}
         </div>
         <div class="collapse navbar-collapse" id="navbar-collapse-1">
-            <ul class="nav navbar-nav ukti-main-nav-list">
+            <ul class="nav navbar-nav dfit-main-nav-list">
                 {% if language === 'us' %}
                 <li><a href="/us/sectors/">Market sectors<span class="sr-only">(current)</span></a></li>
                 <li><a href="/us/investment-guide/">Investment guide</a></li>
@@ -36,18 +36,18 @@
                 <li><a href="/cn/投资指南/">投资指南</a></li>
                 {% endif %}
             </ul>
-            <form class="navbar-form navbar-right ukti-main-search" role="search">
+            <form class="navbar-form navbar-right dfit-main-search" role="search">
                 <div class="form-group">
                     {% if language === 'us' %}
-                    <input type="text" class="ukti-main-search__input-field" placeholder="Search">
+                    <input type="text" class="dfit-main-search__input-field" placeholder="Search">
                     {% elif language === 'de' %}
-                    <input type="text" class="ukti-main-search__input-field" placeholder="Suche">
+                    <input type="text" class="dfit-main-search__input-field" placeholder="Suche">
                     {% elif language === 'cn' %}
-                    <input type="text" class="ukti-main-search__input-field" placeholder="搜索">
+                    <input type="text" class="dfit-main-search__input-field" placeholder="搜索">
                     {% endif %}
                 </div>
-                <button type="submit" class="ukti-main-search__submit"><span
-                        class="glyphicon glyphicon-search ukti-main-search__glyph" aria-hidden="true"></span></button>
+                <button type="submit" class="dfit-main-search__submit"><span
+                        class="glyphicon glyphicon-search dfit-main-search__glyph" aria-hidden="true"></span></button>
             </form>
         </div>
     </div>
