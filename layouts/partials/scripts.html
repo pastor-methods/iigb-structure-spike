@@ -1,3 +1,17 @@
+{% if language === 'us' %}
+<script>
+    window.language = 'us';
+</script>
+{% elif language === 'de' %}
+<script>
+    window.language = 'de';
+</script>
+{% elif language === 'cn' %}
+<script>
+    window.language = 'cn';
+</script>
+{% endif %}
+
 <script>
     $(document).ready(function () {
         enhance();
@@ -52,12 +66,27 @@
     }
 
     function addActive () {
+        var language = window.language;
         var url = window.location.pathname;
         var child = '';
-        if (url.match('\/sectors\/')) {
-            child = '/us/sectors/';
-        } else if (url.match('\/investment-guide\/')) {
-            child = '/us/investment-guide/';
+        if (language === 'us') {
+            if (url.match('\/sectors\/')) {
+                child = '/us/sectors/';
+            } else if (url.match('\/investment-guide\/')) {
+                child = '/us/investment-guide/';
+            }
+        } else if (language === 'de'){
+            if (url.match('\/sektoren\/')) {
+                child = '/de/sektoren/';
+            } else if (url.match('\/investitionsführer\/')) {
+                child = '/de/investitionsführer/';
+            }
+        } else if (language === 'cn') {
+            if (url.match('\/部门\/')) {
+                child = '/cn/部门/';
+            } else if (url.match('\/投资指南\/')) {
+                child = '/cn/投资指南/';
+            }
         }
         if ($('ul.nav a')) {
             $('ul.nav a[href="' + child + '"]').parent().addClass('active');
