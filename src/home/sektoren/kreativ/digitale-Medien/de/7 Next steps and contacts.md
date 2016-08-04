@@ -3,8 +3,8 @@ title: Nächste Schritte und Kontaktinformationen
 layout: content-de.html
 ---
 
-UK Trade & Investment (UKTI) kann Sie dabei unterstützen, Ihr Unternehmen im Bereich Digitale Medien im Vereinigten Königreich aufzubauen und zu vergrößern sowie Ihnen finanzielle und praktische Unterstützungsmöglichkeiten nennen.
-Kontaktieren Sie Ihr UKTI-Büro vor Ort. 
+Department for Investment & Trade (DFIT) kann Sie dabei unterstützen, Ihr Unternehmen im Bereich Digitale Medien im Vereinigten Königreich aufzubauen und zu vergrößern sowie Ihnen finanzielle und praktische Unterstützungsmöglichkeiten nennen.
+Kontaktieren Sie Ihr dfit-Büro vor Ort. 
 
 Fallstudien
 

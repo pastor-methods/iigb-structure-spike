@@ -5,7 +5,7 @@ layout: content-de.html
 
 [Setting up a business in the UK]()
 
-UK Trade &amp; Investment (UKTI) kann Sie dabei unterstützen, Ihr Kreativunternehmens aufzubauen und zu vergrößern. Kontaktieren Sie Ihr UKTI-Büro vor Ort [link to form for November go-live]()
+UK Trade &amp; Investment (UKTI) kann Sie dabei unterstützen, Ihr Kreativunternehmens aufzubauen und zu vergrößern. Kontaktieren Sie Ihr dfit-Büro vor Ort [link to form for November go-live]()
  
 [Link to other sources of info such as creative industries site (to be decided)]()
 

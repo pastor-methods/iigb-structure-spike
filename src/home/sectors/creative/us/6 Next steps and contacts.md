@@ -5,7 +5,7 @@ layout: content-us.html
 
 [Setting up a business in the UK](/us/help-and-advise/)
 
-UK Trade & Investment (UKTI) can help grow your creative business in the UK. Contact your local UKTI office [link to form for November go-live]()
+Department for Investment & Trade (DFIT) can help grow your creative business in the UK. Contact your local UKTI office [link to form for November go-live]()
  
 [Link to other sources of info such as creative industries site (to be decided)]()
 

@@ -5,7 +5,7 @@ layout: content-cn.html
 
 [Setting up a business in the UK]()
 
-英国贸易投资署（UKTI）能够帮助您在英国实现创意业务的增长。请联系当地的英国贸易投资署办公室 
+英国贸易投资署（DFIT）能够帮助您在英国实现创意业务的增长。请联系当地的英国贸易投资署办公室 
 
 案例研究
 
