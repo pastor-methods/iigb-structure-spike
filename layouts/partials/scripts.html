@@ -46,6 +46,13 @@
         if ($('#sidebar-width')) {
             var menuWidth = $('#sidebar-width').width();
             $('.dfit-quick-guide-side').css({width: menuWidth});
+
+            $('#sidebar-width').affix({
+                offset: {
+                    top: 500,
+                    bottom: 850
+                }
+            })
         }
     }
 

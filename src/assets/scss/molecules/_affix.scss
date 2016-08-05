@@ -1,15 +1,13 @@
 //_affix.scss
 
 .affix {
-	top: 60px;
+  top: 60px;
 
-	.dfit-quick-guide-side {
-		position: static;
-	}
+  .dfit-quick-guide-side {
+    position: static;
+  }
 }
 
-#sidebar-width {
-	.affix-bottom {
-		position: absolute;
-	}
+.affix-bottom {
+  position: absolute;
 }
