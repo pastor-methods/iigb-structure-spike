@@ -21,13 +21,13 @@
 
     function showcontent(){
         $('.dfit-outer-wrap').show();
-        calculateSidebarWidth();
         smoothScroll();
         addActive();
     }
 
     function removeloading(){
         $('.dfit-loading').fadeOut(300);
+        calculateSidebarWidth();
     }
 
     function enhance(){
@@ -50,8 +50,8 @@
             $('#sidebar-width').affix({
                 offset: {
                     top: 500,
-                    bottom: $('.dfit-updated').offset().top
 //                    bottom: 850
+                    bottom: $('.dfit-updated').offset().top
                 }
             })
         }
