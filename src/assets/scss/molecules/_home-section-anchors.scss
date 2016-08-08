@@ -1,27 +1,32 @@
 //home-section-anchors.scss
 
-.dfit-home-section-anchors {
-	margin-top: 140px;
-	font-size: 21px;
-	font-weight: 100;
-	position: absolute;
-	z-index: 100;
-	left: 0;
-	right: 0;
-	bottom: 24px;
-	font-size: 18px;
+@mixin a {
+  border-bottom: 1px solid #999;
+  padding: 0 0 1px 0;
+  margin: 0 10px;
 
-	a {
-		border-bottom: 1px solid #999;
-		padding: 0 0 1px 0;
-		margin: 0 10px;
-
-		&:hover {
-			text-decoration: none;
-			color: #639aca;
-			border-bottom: 1px solid #639aca;
-		}
-	}
+  &:hover {
+    text-decoration: none;
+    color: #639aca;
+    border-bottom: 1px solid #639aca;
+  }
 }
 
+.dfit-home-section-anchors {
+  margin-top: 140px;
+  font-size: 21px;
+  font-weight: 100;
+  position: absolute;
+  z-index: 100;
+  left: 0;
+  right: 0;
+  bottom: 24px;
+  font-size: 18px;
 
+  @include a;
+
+}
+
+.dfit-video-anchor {
+  @include a;
+}
