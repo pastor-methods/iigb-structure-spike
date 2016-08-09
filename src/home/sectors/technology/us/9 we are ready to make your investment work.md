@@ -1,8 +1,6 @@
 ---
-title: Wir freuen uns Ihre Investitionen zum Laufen zu bringen
-layout: content-de.html
+title: We’re ready to make your investment work
+layout: content-us.html
 ---
 
-Kontaktieren Sie unser Investment Services Team, um über Ihre Pläne zu sprechen. 
-Auch Investitionsexperten in Britischen Botschaften, Hochkommissariaten oder Gewerbeämtern können Sie mit dem Investment Services Team zusammenbringen.
-
+You can contact our Investment Services Team to discuss your plans by ….  Alternatively, investment staff at a British Embassy, High Commission or trade office can put you in touch with the Investment Services Team.

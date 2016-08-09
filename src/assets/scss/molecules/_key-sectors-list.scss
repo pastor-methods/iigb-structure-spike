@@ -7,7 +7,7 @@
 	overflow: hidden;
 
 	&__item {
-		padding: 0 15px;
+		padding: 15px;
 		width: 25%;
 		float: left;
 		position: relative;
@@ -24,7 +24,7 @@
 
 		a {
 			color: #fff;
-			font-size: 30px;
+			font-size: 22px;
 			display: block;
 			overflow: hidden;
 			position: relative;
@@ -58,7 +58,7 @@
 	&__text {
 		width: 90%;
 		position: absolute;
-		padding: 15px;
+		padding: 15px 5px;
     	left: 15px;
     	top: 0px
 	}
