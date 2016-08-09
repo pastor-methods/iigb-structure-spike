@@ -45,11 +45,12 @@
     function calculateSidebarWidth () {
         if ($('#sidebar-width')) {
             var menuWidth = $('#sidebar-width').width();
-            {% if language === 'de' %}
+            if (language === 'de'){
                 $('.dfit-quick-guide-side-de').css({width: menuWidth});
-            {% else %}
+            }
+            else {
                 $('.dfit-quick-guide-side').css({width: menuWidth});
-            {% endif %}
+            }
 
             $('#sidebar-width').affix({
                 offset: {
