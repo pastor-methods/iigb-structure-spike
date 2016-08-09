@@ -52,6 +52,8 @@
 	}
 
 	&-de {
+		@extend .dfit-quick-guide-side;
+
 		padding: 0px 4px 20px 16px;
 	}
 }
