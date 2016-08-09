@@ -1,7 +1,7 @@
 //_quick-guide-side.scss
 
 .dfit-quick-guide-side {
-	//position: absolute; //leaving this absosute creates bug in affix
+	//position: absolute; //leaving this absolute creates bug in affix
 	background: #1e1348;
 	padding: 0px 30px 40px 30px;
 
@@ -54,6 +54,6 @@
 	&-de {
 		@extend .dfit-quick-guide-side;
 
-		padding: 0px 4px 20px 16px;
+		font-size: 17px;
 	}
 }
