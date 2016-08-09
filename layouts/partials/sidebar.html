@@ -1,6 +1,10 @@
 <div class="col-md-4">
     <nav id="sidebar-width" class="bs-docs-sidebar hidden-xs hidden-sm dfit-resources">
+        {% if language === 'de' %}
+        <div class="col-md-11 dfit-quick-guide-side-de">
+        {% else %}
         <div class="col-md-11 dfit-quick-guide-side">
+        {% endif %}
             {% if language === 'us' %}
             <h2>The UK investment guide</h2>
             <ol>
