@@ -1,5 +1,5 @@
 //big-list.scss
-.dfit-big-list {
+.dit-big-list {
   -webkit-column-count: 1;
   -moz-column-count: 1;
   -ms-column-count: 1;
@@ -14,7 +14,7 @@
     }
 
     &--red-list-style {
-      @extend .dfit-big-list__item;
+      @extend .dit-big-list__item;
 
       &::before {
         color: #E41F13;
@@ -22,7 +22,7 @@
     }
 
     &--home-guide {
-      @extend .dfit-big-list__item;
+      @extend .dit-big-list__item;
     }
   }
 }

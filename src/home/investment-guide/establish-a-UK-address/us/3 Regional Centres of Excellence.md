@@ -11,7 +11,7 @@ A number of Government-backed initiatives could help you find the perfect locati
 
 **Enterprise Zones:** Enterprise Zones offer a wide range of support to help businesses establish and expand in the UK. There are now over 50 existing or planned zones in England and Wales, with a further 16 Enterprise Areas in Scotland. Businesses in these locations can benefit from **simplified planning application processes,various financial advantages and a business-ready infrastructure.** 
 
-Find out more about locating potential Clusters and Enterprise Zones that may work for you by contacting your [local UKTI advisor](https://www.contactus.ukti.gov.uk/enquiry/topic)
+Find out more about locating potential Clusters and Enterprise Zones that may work for you by contacting your [local DIT advisor](https://www.contactus.ukti.gov.uk/enquiry/topic)
 
 Checklist
 

@@ -21,11 +21,11 @@
     });
 
     function showcontent() {
-        $('.dfit-outer-wrap').show();
+        $('.dit-outer-wrap').show();
     }
 
     function removeloading() {
-        $('.dfit-loading').fadeOut(300);
+        $('.dit-loading').fadeOut(300);
     }
 
     function enhance() {
@@ -51,12 +51,12 @@
     function calculateSidebarWidth() {
         if ($('#sidebar-width').width() > 1) {
             var menuWidth = $('#sidebar-width').width();
-            var bottomLimit = $('body').height() - $('.dfit-updated').offset().top;
+            var bottomLimit = $('body').height() - $('.dit-updated').offset().top;
             if (language === 'de') {
-                $('.dfit-quick-guide-side-de').css({width: menuWidth});
+                $('.dit-quick-guide-side-de').css({width: menuWidth});
             }
             else {
-                $('.dfit-quick-guide-side').css({width: menuWidth});
+                $('.dit-quick-guide-side').css({width: menuWidth});
             }
 
             $('#sidebar-width').affix({
@@ -132,11 +132,11 @@
     }
 
     // function zoomImageHoverLink() {
-    //     if ($('.dfit-sectors-list__item')) {
-    //         var itemHeight = $('.dfit-sectors-list__item').height();
-    //         var itemWidth = $('.dfit-sectors-list__item').width();
-    //         $('.dfit-sectors-list__item').css({height: itemHeight});
-    //         $('.dfit-sectors-list__item').css({width: itemWidth});
+    //     if ($('.dit-sectors-list__item')) {
+    //         var itemHeight = $('.dit-sectors-list__item').height();
+    //         var itemWidth = $('.dit-sectors-list__item').width();
+    //         $('.dit-sectors-list__item').css({height: itemHeight});
+    //         $('.dit-sectors-list__item').css({width: itemWidth});
     //     }
     // }
 

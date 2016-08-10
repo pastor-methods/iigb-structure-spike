@@ -1,7 +1,7 @@
 //big-list.scss
 
-.dfit-big-list {
-	counter-reset: dfit-big-list-counter;
+.dit-big-list {
+	counter-reset: dit-big-list-counter;
 	list-style: none;
 	padding: 0;
 	width: 100%;
@@ -48,8 +48,8 @@
 			left: 10px;
 			font-size: 70px;
 			font-weight: 100;
-			content: counter(dfit-big-list-counter);
-			counter-increment: dfit-big-list-counter;
+			content: counter(dit-big-list-counter);
+			counter-increment: dit-big-list-counter;
 			width: 50px;
 			display: inline-block;
 
@@ -63,7 +63,7 @@
 		}
 
 		&--red-list-style {
-			@extend .dfit-big-list__item;
+			@extend .dit-big-list__item;
 
 			&::before {
 				color: #E41F13;
@@ -71,7 +71,7 @@
 		}
 
 		&--home-guide {
-			@extend .dfit-big-list__item;
+			@extend .dit-big-list__item;
 
 			@media (max-width: $screen-md-max) {
 				padding: 15px 30px 30px 60px;

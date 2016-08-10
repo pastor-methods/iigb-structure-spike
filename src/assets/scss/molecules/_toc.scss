@@ -1,7 +1,7 @@
 //toc.scss
 
-.dfit-toc {
-	counter-reset: dfit-toc-counter;
+.dit-toc {
+	counter-reset: dit-toc-counter;
 	background: #363636;
 	color: #fff;
 
@@ -35,8 +35,8 @@
 				top: 0px;
 				left: 2px;
 				font-size: 18px;
-				content: counter(dfit-toc-counter)".";
-				counter-increment: dfit-toc-counter;
+				content: counter(dit-toc-counter)".";
+				counter-increment: dit-toc-counter;
 				width: 30px;
 				display: inline-block;
 			}

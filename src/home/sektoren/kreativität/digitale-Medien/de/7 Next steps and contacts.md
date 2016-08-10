@@ -3,8 +3,8 @@ title: Nächste Schritte und Kontaktinformationen
 layout: content-de.html
 ---
 
-Department for Investment & Trade (DFIT) kann Sie dabei unterstützen, Ihr Unternehmen im Bereich Digitale Medien im Vereinigten Königreich aufzubauen und zu vergrößern sowie Ihnen finanzielle und praktische Unterstützungsmöglichkeiten nennen.
-Kontaktieren Sie Ihr dfit-Büro vor Ort. 
+Department for International Trade (DIT) kann Sie dabei unterstützen, Ihr Unternehmen im Bereich Digitale Medien im Vereinigten Königreich aufzubauen und zu vergrößern sowie Ihnen finanzielle und praktische Unterstützungsmöglichkeiten nennen.
+Kontaktieren Sie Ihr dit-Büro vor Ort. 
 
 Fallstudien
 

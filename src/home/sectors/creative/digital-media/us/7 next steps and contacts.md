@@ -3,7 +3,7 @@ title: Next steps and contacts
 layout: content-us.html
 ---
 
-Department for Investment & Trade (DFIT) can help grow your digital media business in the UK and access the financial and practical support available to you. Contact your local UKTI office
+Department for International Trade (DIT) can help grow your digital media business in the UK and access the financial and practical support available to you. Contact your local DIT office
 
 Case studies
 

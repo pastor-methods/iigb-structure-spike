@@ -10,7 +10,7 @@
         </div>
     </div>
 </div>
-<section class="dfit-toc">
+<section class="dit-toc">
     {% include "partials/breadcrumb.html" %}
 </section>
 <br>
@@ -18,9 +18,9 @@
     <div class="row">
         <div class="col-md-12">
             <div class="row">
-                <ol class="dfit-big-list">
+                <ol class="dit-big-list">
                     {% for elem in subLevel %}
-                    <li class="dfit-big-list__item--home-guide">
+                    <li class="dit-big-list__item--home-guide">
                         <h3><a href="/{{elem.uri}}">{{elem.name|unslug}}</a></h3>
                         {{intro}} <br>
                     </li>

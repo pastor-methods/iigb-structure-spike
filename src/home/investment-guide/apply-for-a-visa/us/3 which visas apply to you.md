@@ -43,7 +43,7 @@ In order to employ someone from outside the European Economic Area and Switzerla
 
 [**Sole representative visa**](https://www.gov.uk/representative-overseas-business)
 
-This scheme allows established senior employees of an overseas business to form a wholly owned subsidiary or register a branch of the company in the UK. Applicants can apply for a three‐year visa, extendable by a further two years, and must be responsible for running the new UK office. For more information on your visa eligibility, speak to your [local UKTI advisor](https://www.contactus.ukti.gov.uk/enquiry/topic)
+This scheme allows established senior employees of an overseas business to form a wholly owned subsidiary or register a branch of the company in the UK. Applicants can apply for a three‐year visa, extendable by a further two years, and must be responsible for running the new UK office. For more information on your visa eligibility, speak to your [local DIT advisor](https://www.contactus.ukti.gov.uk/enquiry/topic)
 
 Checklist
 

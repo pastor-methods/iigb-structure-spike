@@ -11,7 +11,7 @@ Bei der Suche nach einem geeigneten Standort für Ihr Unternehmen könnten Wirts
 
 **Enterprise Zones:** Diese „Unternehmenszonen“ bieten Ihnen viel Unterstützung bei Aufbau und Erweiterung Ihres Unternehmens im Vereinigten Königreich. Mittlerweile gibt es 50 bereits existierende bzw. in Planung befindliche Zonen in England und Wales sowie 16 weitere in Schottland. Unternehmen in diesen Zonen profitieren von **vereinfachten Planungsverfahren, diversen finanziellen Vorteilen und einer auf Unternehmen ausgelegten Infrastruktur.**
 
-Erfahren Sie mehr über potentielle Cluster und Enterprise Zones, die für Sie in Frage kommen könnten, [bei Ihrem DFIT-Berater vor Ort](https://www.contactus.ukti.gov.uk/enquiry/topic).
+Erfahren Sie mehr über potentielle Cluster und Enterprise Zones, die für Sie in Frage kommen könnten, [bei Ihrem DIT-Berater vor Ort](https://www.contactus.ukti.gov.uk/enquiry/topic).
 
 Checkliste
 

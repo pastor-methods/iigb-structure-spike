@@ -1,6 +1,6 @@
 //_quick-guide-side.scss
 
-.dfit-quick-guide-side {
+.dit-quick-guide-side {
 	//position: absolute; //leaving this absolute creates bug in affix
 	background: #1e1348;
 	padding: 0px 30px 40px 30px;
@@ -16,7 +16,7 @@
 	}
 
 	ol {
-		counter-reset: dfit-guide-side-counter;
+		counter-reset: dit-guide-side-counter;
 		list-style: none;
 		padding: 0;
 
@@ -31,8 +31,8 @@
 					top: 0px;
 					left: 2px;
 					font-size: 18px;
-					content: counter(dfit-guide-side-counter)".";
-					counter-increment: dfit-guide-side-counter;
+					content: counter(dit-guide-side-counter)".";
+					counter-increment: dit-guide-side-counter;
 					width: 30px;
 					display: inline-block;
 				}
@@ -52,7 +52,7 @@
 	}
 
 	&-de {
-		@extend .dfit-quick-guide-side;
+		@extend .dit-quick-guide-side;
 
 		font-size: 17px;
         padding: 0px 0px 30px 22px;
