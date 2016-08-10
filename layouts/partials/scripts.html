@@ -17,35 +17,42 @@
         enhance();
         setTimeout(showcontent, 500);
         setTimeout(removeloading, 1000);
+        setTimeout(onLoaded, 1005);
     });
 
-    function showcontent(){
+    function showcontent() {
         $('.dfit-outer-wrap').show();
-        calculateSidebarWidth();
-        smoothScroll();
-        addActive();
     }
 
-    function removeloading(){
+    function removeloading() {
         $('.dfit-loading').fadeOut(300);
     }
 
-    function enhance(){
+    function enhance() {
         enhance_videobg();
         // zoomImageHoverLink();
     }
 
-    function enhance_videobg(){
-        if($('#bgVid').length > 0 || $('#bgImg').length > 0) {
+    function enhance_videobg() {
+        if ($('#bgVid').length > 0 || $('#bgImg').length > 0) {
             $('.jumbotron').addClass('bg--transparent');
         }
     }
 
+    function onLoaded() {
+        calculateSidebarWidth();
+        smoothScroll();
+        addActive();
+        equalheight('.why-uk-section');
+        equalheight('.investment-guide-section');
+    }
+
     //calculate fixed sidebar width
-    function calculateSidebarWidth () {
-        if ($('#sidebar-width')) {
+    function calculateSidebarWidth() {
+        if ($('#sidebar-width').height() > 1) {
             var menuWidth = $('#sidebar-width').width();
-            if (language === 'de'){
+            var bottomLimit = $('body').height() - $('.dfit-updated').offset().top;
+            if (language === 'de') {
                 $('.dfit-quick-guide-side-de').css({width: menuWidth});
             }
             else {
@@ -55,8 +62,8 @@
             $('#sidebar-width').affix({
                 offset: {
                     top: 500,
-                    bottom: 850
-//                    bottom: $('.dfit-updated').offset().top
+//                    bottom: 850
+                    bottom: bottomLimit
                 }
             })
         }
@@ -78,7 +85,7 @@
         });
     }
 
-    function addActive () {
+    function addActive() {
         var language = window.language;
         var url = window.location.pathname;
         var child = '';
@@ -88,7 +95,7 @@
             } else if (url.match('\/investment-guide\/')) {
                 child = '/us/investment-guide/';
             }
-        } else if (language === 'de'){
+        } else if (language === 'de') {
             if (url.match('\/sektoren\/')) {
                 child = '/de/sektoren/';
             } else if (url.match('\/investitionsf.{1,6}hrer\/')) {
@@ -106,6 +113,24 @@
         }
     }
 
+    function equalheight(container) {
+        var currentTallest = 0,
+                rowDivs = new Array(),
+                $el,
+                containerChildren = $(container).children();
+
+        $(containerChildren).each(function () {
+            $el = $(this);
+            $($el).height('auto');
+            rowDivs.push($el);
+            currentTallest = (currentTallest < $el.height()) ? ($el.height()) : (currentTallest);
+        });
+
+        for (currentDiv = 0; currentDiv < rowDivs.length; currentDiv++) {
+            rowDivs[currentDiv].height(currentTallest);
+        }
+    }
+
     // function zoomImageHoverLink() {
     //     if ($('.dfit-sectors-list__item')) {
     //         var itemHeight = $('.dfit-sectors-list__item').height();
@@ -116,6 +141,8 @@
     // }
 
     $(window).on('resize', function () {
-        calculateSidebarWidth ();
+        calculateSidebarWidth();
+        equalheight('.why-uk-section');
+        equalheight('.investment-guide-section');
     });
 </script>

@@ -1,14 +1,15 @@
 // Set elements to the same height (uses height of tallest element)
-// taken from https://codepen.io/micahgodbolt/pen/FgqLc
+// idea taken from https://codepen.io/micahgodbolt/pen/FgqLc
 equalheight = function (container) {
 
     var currentTallest = 0,
         currentRowStart = 0,
         rowDivs = new Array(),
         $el,
-        topPosition = 0;
-    $(container).each(function () {
+        topPosition = 0,
+        containerChildren = $(container).children();
 
+    $(containerChildren).each(function () {
         $el = $(this);
         $($el).height('auto');
         topPosition = $el.position().top;
@@ -30,11 +31,3 @@ equalheight = function (container) {
         }
     });
 };
-
-$(window).load(function () {
-    equalheight('.js-equal-height');
-});
-
-$(window).resize(function () {
-    equalheight('.js-equal-height');
-});
