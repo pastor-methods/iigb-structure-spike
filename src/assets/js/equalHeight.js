@@ -4,7 +4,7 @@ equalheight = function (container) {
 
     var currentTallest = 0,
         currentRowStart = 0,
-        rowDivs = new Array(),
+        rowDivs = [],
         $el,
         topPosition = 0,
         containerChildren = $(container).children();
