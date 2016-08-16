@@ -5,12 +5,16 @@ layout: content-us.html
 
 Creative businesses in the UK are supported by an intellectual property regime and strong regulatory framework which protect and encourage creativity.
 
-The UK’s Corporation tax is lowest in the G20 at 20%, and will reduce to 18% by 2020.
+The UK’s Corporation tax is lowest in the G20 at 20%, and will reduce to 17% by 2020.
 
-Tax relief measures allow productions to access a rebate of up to 25% of qualifying expenditure for:
+Tax relief is helping to drive increased investment and growth, and is available for:
 
-- film
-- animation
-- high-end and children’s television
-- video games development
-- theatre tax
+-	Animation
+-	Film
+-	High-end TV
+-	Children’s TV
+-	Video games
+-	Theatre
+-	Orchestras
+
+[Find out more about UK tax relief for the creative industries](https://www.gov.uk/guidance/corporation-tax-creative-industry-tax-reliefs)
