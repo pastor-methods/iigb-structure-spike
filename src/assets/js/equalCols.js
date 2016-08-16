@@ -1,24 +1,22 @@
-function chunk(arr, size){
-    var chunkedArr = [];
-    var chunkSize = (function () {
-        var leftOver = arr.length%size;
-        if (!leftOver) {
-            return arr.length/size;
-        } else {
-            return parseInt(arr.length/size) + 1;
-        }
-    })();
-    var noOfChunks = size;
-//       console.log(noOfChunks);
-    var args = [];
-    var addendum = [];
-    for(var i=0; i<noOfChunks; i++){
-        chunkedArr.push(arr.slice(i*chunkSize, (i+1)*chunkSize));
+function chunk(arr, size) {
+    var chunkedArr = [],
+        noOfChunks = size,
+        args = [],
+        addendum = [],
+        chunkSize = (function () {
+            var leftOver = arr.length % size;
+            if (!leftOver) {
+                return arr.length / size;
+            } else {
+                return parseInt(arr.length / size) + 1;
+            }
+        })();
+
+    for (var i = 0; i < noOfChunks; i++) {
+        chunkedArr.push(arr.slice(i * chunkSize, (i + 1) * chunkSize));
     }
 
-    // console.log(chunkedArr)
-//     console.log(chunkSize)
-    for(var j=0; j<chunkedArr.length; j++){
+    for (var j = 0; j < chunkedArr.length; j++) {
         if (chunkedArr[j].length === chunkSize) {
             args.push(chunkedArr[j]);
         } else {
@@ -26,33 +24,49 @@ function chunk(arr, size){
         }
     }
 
-    var partialRes = zip.apply(this,args);
+    var partialRes = zip(args);
 
     if (addendum.length === 0) {
         return partialRes;
     } else {
-        for (var k=0; k<addendum[0].length; k++) {
+        for (var k = 0; k < addendum[0].length; k++) {
             partialRes[k].push(addendum[0][k]);
         }
         return partialRes;
     }
 }
 
-function zip() {
-    var args = [].slice.call(arguments);
-    var shortest = args.length === 0 ? [] : args.reduce(function (a, b) {
-        return a.length < b.length ? a : b
-    });
-
-    return shortest.map(function (_, i) {
-        return args.map(function (array) {
-            return array[i];
-        })
-    });
+function zip(arrays) {
+    temp = [];
+    for (var i=0; i<arrays[0].length; i++) {
+        partial = [];
+        for (var j=0; j<arrays.length; j++) {
+            partial.push(arrays[j][i])
+        }
+        temp.push(partial)
+    }
+    return temp
 }
 
-    a = [0,1,2,3,4,5,6,7,8,9,10];
+function equalCols(container) {
+    var currentTallest,
+        rows = [],
+        $el,
+        containerChildren = $(container).children(),
+        colNumber = $(container).css('column-count');
 
-    b = chunk(a,3);
-    console.log(b)
+    rows = chunk(containerChildren, colNumber);
 
+    $(rows).each(function (index) {
+        currentTallest = 0;
+        $(rows[index]).each(function () {
+            $el = $(this);
+            $($el).height('auto');
+            currentTallest = (currentTallest < $el.height()) ? ($el.height()) : (currentTallest);
+        });
+        $(rows[index]).each(function () {
+            $el = $(this);
+            $($el).height(currentTallest);
+        });
+    });
+}

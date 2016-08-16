@@ -31,3 +31,21 @@ equalheight = function (container) {
         }
     });
 };
+
+//    function equalheight(container) {
+//        var currentTallest = 0,
+//                rowDivs = [],
+//                $el,
+//                containerChildren = $(container).children();
+//
+//        $(containerChildren).each(function () {
+//            $el = $(this);
+//            $($el).height('auto');
+//            rowDivs.push($el);
+//            currentTallest = (currentTallest < $el.height()) ? ($el.height()) : (currentTallest);
+//        });
+//
+//        for (currentDiv = 0; currentDiv < rowDivs.length; currentDiv++) {
+//            rowDivs[currentDiv].height(currentTallest);
+//        }
+//    }
