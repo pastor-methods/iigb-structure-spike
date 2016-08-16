@@ -11,7 +11,7 @@ layout: content-de.html
 orderLevel: 4
 ---
 
-Unser Technologie-Sektor ist einer der größten in Westeuropa und ist im letzten Jahrzehnt schneller als die meisten anderen Sektoren gewachsen. Er spielt eine entscheidende Rolle für alle Industrien, einschließlich den Automobil-, Finanzdienstleistungs-, Einzelhandels- und Logistikbranchen und bietet Fachkompetenz, erstklassige Verkehrsanbindungen und eine Umgebung, die Kreativität, Innovation und Design fördert. Außerdem wird er ausgiebig staatlich gefördert.
+Unsere Technologie-Sektor ist einer der größten in Westeuropa und ist im letzten Jahrzehnt schneller als die meisten anderen Sektoren gewachsen. Er spielt eine entscheidende Rolle für alle Industrien, einschließlich den Automobil-, Finanzdienstleistungs-, Einzelhandels- und Logistikbranchen und bietet Fachkompetenz, erstklassige Verkehrsanbindungen und eine Umgebung, die Kreativität, Innovation und Design fördert. Außerdem wird er ausgiebig staatlich gefördert.
 
 Das Vereinigte Königreich weist eine lange Geschichte in der Innovation von Elektro- und Informationstechnologie auf. Im Lande ansässige Unternehmen arbeiten an der Entwicklung modernster Prozessoren, Mixed-Signal-Geräte, Sensoren und Beleuchtungstechnologien. Der britische Markt für Unterhaltungselektronik ist einer der am stärksten entwickelten und dynamischsten der Welt.
 
