@@ -4,7 +4,7 @@ thumbnail: tech-sector-thumb.jpg
 heroVideo: 
 heroImage: tech-sector-hero.jpg
 fullVideo: 
-indexTemplate: sector-page.html
+indexTemplate: subsector-page.html
 intro: With robust open data sets, a highly skilled workforce and solid infrastructure, the UK is well placed to thrive in the continuing data revolution.
 pageTitle: Invest in big data analytics
 layout: content-us.html
