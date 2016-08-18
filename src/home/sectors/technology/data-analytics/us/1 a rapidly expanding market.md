@@ -1,8 +1,8 @@
 ---
 title: A rapidly expanding market
-thumbnail: tech-sector-thumb.jpg
+thumbnail: big-data-thumb.jpg
 heroVideo: 
-heroImage: tech-sector-hero.jpg
+heroImage: big-data-hero.jpg
 fullVideo: 
 indexTemplate: subsector-page.html
 intro: With robust open data sets, a highly skilled workforce and solid infrastructure, the UK is well placed to thrive in the continuing data revolution.
