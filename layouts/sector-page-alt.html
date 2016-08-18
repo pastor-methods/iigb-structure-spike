@@ -1,0 +1,99 @@
+{% include "partials/header.html" %}
+{% include "partials/header-nav-alt.html" %}
+<style>
+    .jumbotron {
+        background-image: url("/assets/img/{{heroImage}}");
+        background-size: cover;
+    }
+</style>
+<div id="top" class="jumbotron">
+    <div class="container" style="background-color: transparent">
+        <img class="dit-sector-hmg_logo" src="../../../assets/img/hmg-logo.png" alt="HMG Logo">
+        <div class="row">
+            <div class="col-sm-offset-2 col-sm-8">
+                <h1>{{pageTitle}}</h1>
+                <p class="text-center">{{intro}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="dit-toc">
+    {% include "partials/breadcrumb.html" %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                {% if language === 'us' %}
+                <h2 class="dit-toc__heading">On this page</h2>
+                {% elif language === 'de' %}
+                <h2 class="dit-toc__heading">Auf dieser Seite</h2>
+                {% elif language === 'cn' %}
+                <h2 class="dit-toc__heading">本页包括</h2>
+                {% endif %}
+                <ol class="dit-toc__list">
+                    {% if language === 'cn' %}
+                    {% for elem in toc %}
+                    <li class="dit-toc__list-item"><a href="#{{elem}}">{{elem}}</a></li>
+                    {% endfor %}
+                    {% else %}
+                    {% for elem in toc %}
+                    <li class="dit-toc__list-item"><a href="#{{elem|slug}}">{{elem}}</a></li>
+                    {% endfor %}
+                    {% endif %}
+                    {% if language === 'us' %}
+                    <li class="dit-toc__list-item"><a href="#sub-sectors">{{folder|unslug}} sub sectors</a></li>
+                    {% endif %}
+                    {% if language === 'de' %}
+                    <li class="dit-toc__list-item"><a href="#sub-sectors">Subsektoren {{folder|unslug}}branche</a></li>
+                    {% endif %}
+                    {% if language === 'cn' %}
+                    <li class="dit-toc__list-item"><a href="#sub-sectors">{{folder}} 分属部门</a></li>
+                    {% endif %}
+                </ol>
+            </div>
+            {% include "partials/sidebar.html" %}
+        </div>
+    </div>
+</section>
+<div class="dit-main-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7 col-sm-10">
+                {{contents|safe}}
+
+                <p class="dit-updated">Page updated {{now()|date('jS \o\f F Y')}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="dit-sector-subsectors">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    {% if language === 'us' %}
+                    <h2 id="sub-sectors">{{folder|unslug}} sub sectors:</h2>
+                    {% endif %}
+                    {% if language === 'de' %}
+                    <h2 id="sub-sectors">Subsektoren {{folder|unslug}}branche:</h2>
+                    {% endif %}
+                    {% if language === 'cn' %}
+                    <h2 id="sub-sectors">{{folder}} 分属部门：</h2>
+                    {% endif %}
+                    <ul class="dit-key-sectors-list">
+                        {% for elem in subLevel %}
+                        <li class="dit-key-sectors-list__item">
+                            <div class="dit-key-sectors-list__link-wrap">
+                                <a href="/{{elem.uri}}">
+                                    <img src="/assets/img/{{elem.thumbnail}}"
+                                         class="dit-key-sectors-list__image">
+                                    <span class="dit-key-sectors-list__text">{{elem.name|unslug}}</span>
+                                </a>
+                            </div>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% include "partials/footer.html" %}

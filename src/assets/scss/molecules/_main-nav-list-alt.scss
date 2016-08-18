@@ -1,13 +1,14 @@
 //_main-nav-list.scss
 
-.dit-main-nav-list {
+.dit-main-nav-list-alt {
   border-left: 1px solid #9B9B9B;
 
   > li > a {
     border-right: 1px solid #9B9B9B;
     display: inline-block;
+    font-size: 16px;
     height: 70px;
-    padding: 24px 35px 0 35px;
+    padding: 24px 32px 0;
     // &:first-of-type {
     //   border-left: 1px solid #999;
     // }
@@ -33,6 +34,7 @@
 
   @media (max-width: $screen-sm-max) {
     > li > a {
+      font-size: 14px;
       padding: 24px 10px;
     }
   }

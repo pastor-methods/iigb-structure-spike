@@ -4,7 +4,7 @@ thumbnail: tech-sector-thumb.jpg
 heroVideo: 
 heroImage: tech-sector-hero.jpg
 fullVideo: 
-indexTemplate: sector-page.html
+indexTemplate: sector-page-alt.html
 intro: This is a test message in a test page.
 pageTitle: Test in Great Britain
 layout: content-us.html

@@ -1,0 +1,57 @@
+<nav id="nav-default" class="navbar navbar-default">
+    <div class="container dit-main-nav"><!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            {% if language === 'us' %}
+            <a class="navbar-brand" href="/">
+                <img alt="Brand" src="/assets/img/iigb-logo.png">
+            </a>
+            {% elif language === 'de' %}
+            <a class="navbar-brand" href="/de">
+                <img alt="Brand" src="/assets/img/iigb-logo.png">
+            </a>
+            {% elif language === 'cn' %}
+            <a class="navbar-brand" href="/cn">
+                <img alt="Brand" src="/assets/img/iigb-logo.png">
+            </a>
+            {% endif %}
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse-1">
+            <ul class="nav navbar-nav dit-main-nav-list-alt">
+                {% if language === 'us' %}
+                <li><a href="/us/">Home<span class="sr-only">(current)</span></a></li>
+                <li><a href="/us/sectors/">Market sectors<span class="sr-only">(current)</span></a></li>
+                <li><a href="/us/investment-guide/">Investment guide</a></li>
+                {% elif language === 'de' %}
+                <li><a href="/de/">Home<span class="sr-only">(current)</span></a></li>
+                <li><a href="/de/sektoren/">Marktsektoren<span class="sr-only">(current)</span></a></li>
+                <li><a href="/de/investitionsführer/">Investitionsführer</a></li>
+                {% elif language === 'cn' %}
+                <li><a href="/cn/">主页<span class="sr-only">(current)</span></a></li>
+                <li><a href="/cn/部门/">市场部门<span class="sr-only">(current)</span></a></li>
+                <li><a href="/cn/投资指南/">投资指南</a></li>
+                {% endif %}
+            </ul>
+            <form class="navbar-form navbar-right dit-main-search" role="search">
+                <div class="form-group">
+                    {% if language === 'us' %}
+                    <input type="text" class="dit-main-search__input-field" placeholder="Search">
+                    {% elif language === 'de' %}
+                    <input type="text" class="dit-main-search__input-field" placeholder="Suche">
+                    {% elif language === 'cn' %}
+                    <input type="text" class="dit-main-search__input-field" placeholder="搜索">
+                    {% endif %}
+                </div>
+                <button type="submit" class="dit-main-search__submit"><span
+                        class="glyphicon glyphicon-search dit-main-search__glyph" aria-hidden="true"></span></button>
+            </form>
+        </div>
+    </div>
+</nav>
