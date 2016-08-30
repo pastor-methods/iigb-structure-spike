@@ -1,0 +1,11 @@
+branch-defaults:
+ default:
+   environment: django-env
+   group_suffix: null
+global:
+ application_name: ukti-djangocms
+ default_ec2_keyname: null
+ default_platform: python3.4
+ default_region: eu-west-1
+ profile: null
+ sc: null

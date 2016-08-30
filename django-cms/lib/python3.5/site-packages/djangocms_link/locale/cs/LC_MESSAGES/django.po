@@ -1,0 +1,111 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Jiří Vírava <appukonrad@gmail.com>, 2013
+# Jiří Vírava <appukonrad@gmail.com>, 2015
+# Joe Darkless <darkless69@gmail.com>, 2015
+# Martin Quarda <martin@quarda.cz>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: django CMS\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-07-05 21:32-0400\n"
+"PO-Revision-Date: 2016-06-30 12:59+0000\n"
+"Last-Translator: Martin Koistinen <mkoistinen@gmail.com>\n"
+"Language-Team: Czech (http://www.transifex.com/divio/django-cms/language/cs/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: cs\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Poedit-Country: SWITZERLAND\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: cms_plugins.py:18
+msgid "Link"
+msgstr "Odkaz"
+
+#: forms.py:17 forms.py:20
+msgid "Page"
+msgstr "Stránka"
+
+#: forms.py:61
+msgid "At least one link is required."
+msgstr "Je vyžadován alespoň jeden odkaz."
+
+#: models.py:23
+msgid "same window"
+msgstr "stejném okně"
+
+#: models.py:24
+msgid "new window"
+msgstr "novém okně"
+
+#: models.py:25
+msgid "parent window"
+msgstr "nadřazeném okně"
+
+#: models.py:26
+msgid "topmost frame"
+msgstr "nejvyšší rám"
+
+#: models.py:42
+msgid "name"
+msgstr "jméno"
+
+#: models.py:44
+msgid "link"
+msgstr "odkaz"
+
+#: models.py:48
+msgid "page"
+msgstr "stránka"
+
+#: models.py:51
+msgid "A link to a page has priority over a text link."
+msgstr "Odkaz na stránku má vyšší prioritu oproti textovému odkazu."
+
+#: models.py:54
+msgid "anchor"
+msgstr "kotva"
+
+#: models.py:55
+msgid ""
+"This applies only to page and text links. Do <em>not</em> include a "
+"preceding \"#\" symbol."
+msgstr "Toto se vztahuje pouze na tuto stránku a textové odkazy.<em>Ne</em>přikládejte předcházející symbol \"#\"."
+
+#: models.py:59
+msgid "email address"
+msgstr "mailto"
+
+#: models.py:60
+#| msgid "An email adress has priority over a text link."
+msgid "An email address has priority over a text link."
+msgstr "E-mailová adresa má vyšší prioritu oproti textovému odkazu."
+
+#: models.py:61
+msgid "Phone"
+msgstr "Telefon"
+
+#: models.py:62
+msgid "A phone number has priority over a mailto link."
+msgstr "Telefonní číslo je upřednostňováno před mailto odkazem."
+
+#: models.py:63
+msgid "target"
+msgstr "cíl"
+
+#: models.py:73
+msgid "link tag attributes"
+msgstr ""
+
+#: models.py:74
+msgid "Optional. Link HTML tag attributes"
+msgstr ""
+
+#~ msgid "mailto"
+#~ msgstr "email address"

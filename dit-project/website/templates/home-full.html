@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% load cms_tags %}
+
+{% block title %}{% page_attribute "page_title" %}{% endblock title %}
+
+<!--[if lte IE 8]>
+<style>
+    .jumbotron--home {
+        background-image: url("/static/img/northern-powerhouse.jpg");
+        background-size: cover;
+        margin-top: -9%;
+    }
+</style>
+<![endif]-->
+{% block content %}
+<div class="jumbotron--home">
+    <div class="container">
+        <div class="dit-hero__content">
+            <h1>
+                <img class="dit-home-hmg_logo" src="/static/img/hmg-logo.png" alt="HMG Logo">
+                <img src="/static/img/iigb-logo-big-white.png" alt="Invest in Great Britain" class="img-responsive">
+            </h1>
+            <!--[if ! IE]><!-->
+            <p class="text-center">
+                <a href="#" class="bg-video-inactive bg-video-play dit-text-decoration-none" data-toggle="modal"
+                   data-target="#heroVideo">
+                    <span class="dit-video-anchor">Watch video</span>
+                    <span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>
+                </a>
+            </p>
+            <!--<![endif]-->
+            <!--[if gte IE 9]>
+            <p class="text-center"><a href="#" class="bg-video-inactive bg-video-play" data-toggle="modal"
+                                      data-target="#heroVideo">Watch video <span class="glyphicon glyphicon-play-circle"
+                                                                                 aria-hidden="true"></span></a></p>
+            <![endif]-->
+            <!--[if lte IE 8]>
+            <iframe width="560" height="315" title="YouTube video player" id="yt0" role="presentation"
+                    src="https://www.youtube.com/embed/yoHrRcKIBKw?controls=0&showinfo=0&origin=https%3A%2F%2Fwww.gov.uk&rel=0&enablejsapi=1&widgetid=1"
+                    frameBorder="0" allowfullscreen="1"></iframe>
+            <![endif]-->
+
+        </div>
+    </div>
+    <nav>
+        <ul class="text-center list-inline dit-home-section-anchors">
+            <li><a href="#why-uk">Reasons to choose the UK</a></li>
+            <li><a href="#sectors">Key market sectors</a></li>
+            <li><a href="#guide">Simple investment guide</a></li>
+            <li><a href="/us/search">Search</a></li>
+        </ul>
+    </nav>
+
+    <div class="modal fade" id="heroVideo" role="dialog">
+        <div class="modal-dialog video-wrapper">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/yoHrRcKIBKw" frameborder="0"
+                    allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <video autoplay loop poster="/static/img/northern-powerhouse.jpg" class="dit-hero__video-bg">
+        <source src="/static/vid/northern-powerhouse.mp4" type="video/mp4">
+    </video>
+</div>
+{% endblock content %}

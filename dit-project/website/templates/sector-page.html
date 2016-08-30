@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% load cms_tags %}
+
+{% block title %}{% page_attribute "page_title" %}{% endblock title %}
+
+{% block content %}
+
+{% placeholder "cover_image" %}
+<style>
+    .jumbotron {
+    /*background-image: url("/static/img/test-hero.jpg ");*/
+    /*background-size: cover;*/
+    {% if cover %}
+    background-image: url('{{ cover.url|urlencode }}') cover;
+    {% endif %}
+    }
+</style>
+<div id="top" class="jumbotron">
+    <div class="container dit-main-nav" style="background-color: transparent">
+        <img class="dit-sector-hmg_logo" src='/static/img/hmg-logo.png' alt="HMG Logo">
+        <div class="row">
+            <div class="col-sm-offset-2 col-sm-8">
+                <h1>{% placeholder "title" %}</h1>
+                <p class="text-center">{% placeholder "intro" %}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="dit-toc">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h2 class="dit-toc__heading">On this page</h2>
+
+                <ol class="dit-toc__list">
+                    <li class="dit-toc__list-item"><a href="#">toc element</a></li>
+                    <li class="dit-toc__list-item"><a href="#sub-sectors">(last element) sub sectors</a></li>
+                </ol>
+            </div>
+
+        </div>
+    </div>
+</section>
+<div class="dit-main-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7 col-sm-10">
+                {% placeholder "content" %}
+
+                <p class="dit-updated">Page updated (when?)</p>
+            </div>
+        </div>
+    </div>
+    <div class="dit-sector-subsectors">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 id="sub-sectors">sub sectors:</h2>
+
+                    <ul class="dit-key-sectors-list">
+
+                        <li class="dit-key-sectors-list__item">
+                            <div class="dit-key-sectors-list__link-wrap">
+                                <a href="/{{elem.uri}}">
+                                    <img src="/assets/img/{{elem.thumbnail}}"
+                                         class="dit-key-sectors-list__image">
+                                    <span class="dit-key-sectors-list__text">subsector (it will be a list)</span>
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

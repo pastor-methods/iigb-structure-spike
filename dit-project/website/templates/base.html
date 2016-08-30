@@ -1,0 +1,62 @@
+{% load cms_tags staticfiles sekizai_tags menu_tags %}
+<!DOCTYPE html>
+<html lang="{{LANGUAGE_CODE}}">
+    <head>
+        <meta charset="utf-8">
+        <title>{% block title %}DIT home page{% endblock title %}</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1", maximum-scale=1, user-scalable=0">
+
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css">
+        <link href='{% static "css/main.css" %}' rel="stylesheet" type="text/css"/>
+        <script src='{% static "js/jquery.min.js" %}'></script>
+        <script src='{% static "js/bootstrap.min.js" %}'></script>
+
+        <!--[if IE 9]>
+        <link href='{% static "css/main-ie9.css" %}' rel="stylesheet" type="text/css"/>
+        <![endif]-->
+
+        <!--[if lt IE 9]>
+        <link href= "css/main-ie8.css" rel="stylesheet" type="text/css"/>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/css3pie/2.0beta1/PIE_IE678.js"></script>
+        <script>
+            document.createElement('header');
+            document.createElement('nav');
+            document.createElement('section');
+            document.createElement('article');
+            document.createElement('aside');
+            document.createElement('footer');
+        </script>
+        <![endif]-->
+
+        {% render_block "css" %}
+    </head>
+    <body>
+        {% cms_toolbar %}
+        <div class="container">
+            {% block content %}{% endblock content %}
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        {% render_block "js" %}
+    </body>
+    <footer>
+        <nav class="container dit-footer">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-1">
+                    <ul class="dit-footer--list">
+                        {% static_placeholder 'footer' %}
+                    </ul>
+                </div>
+                <div class="col-md-2 col-md-offset-1 col-xs-4 col-xs-offset-4 dit-footer--logo">
+                    <img class="img-responsive" src="/static/img/HM Gov logo black.png" alt="">
+                    <img class="img-responsive" src="/static/img/iigb-logo.png" alt="">
+                </div>
+            </div>
+        </nav>
+    </footer>
+</html>
