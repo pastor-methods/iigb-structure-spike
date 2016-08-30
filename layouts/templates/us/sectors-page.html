@@ -1,0 +1,40 @@
+{% include "partials/header.html" %}
+{% include "partials/header-nav.html" %}
+<div class="jumbotron">
+    <div class="container" style="background-color: transparent">
+        <img class="dit-sector-hmg_logo" src="../../assets/img/hmg-logo.png" alt="HMG Logo">
+        <div class="row">
+            <div class="col-sm-offset-2 col-sm-8">
+                <h1>{{pageTitle}}</h1>
+                <p class="text-center">{{intro}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="dit-toc">
+    {% include "partials/breadcrumb.html" %}
+</section>
+<section class="dit-content-section">
+    <div class="container" id="sectors">
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="dit-key-sectors-list">
+                    {% for elem in subLevel %}
+                    <li class="dit-key-sectors-list__item">
+                        <div class="dit-key-sectors-list__link-wrap">
+                            <a href="/{{elem.uri}}">
+                                <img src="/assets/img/{{elem.thumbnail}}" class="dit-key-sectors-list__image">
+                                <span class="dit-key-sectors-list__text text-sentence">{{elem.name}}</span>
+                            </a>
+                        </div>
+                        <!--<div class="dit-key-sectors-list__link-wrap">-->
+                            <!--<p>{{elem.intro}}</p>-->
+                        <!--</div>-->
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+{% include "partials/footer.html" %}

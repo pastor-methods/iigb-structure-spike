@@ -1,0 +1,20 @@
+
+<section class="dit-content-section">
+    <div class="container" id="guide">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <h2 class="text-center dit-content-section__heading">{{sections.investment_intro.title}}</h2>
+                <p class="dit-content-section__lead">
+                  {{sections.investment_intro.intro}}
+                </p>
+            </div>
+            <ol class="dit-big-list investment-guide-section">
+                {% for step in sections.investment_steps %}
+                <li class="dit-big-list__item--home-guide">
+                    <h3><a href="/us/investment-guide/{{step.title}}">{{step.title}}</a></h3>
+                    {{step.intro}}
+                </li>
+                {% endfor %}
+            </ol>
+        </div>
+</section>

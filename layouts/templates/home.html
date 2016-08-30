@@ -1,0 +1,40 @@
+{% extends "../index.html" %}
+
+{% block content %}
+<div class="jumbotron--home">
+    <div class="container">
+        <div class="dit-hero__content">
+            <h1>
+                <img class="dit-home-hmg_logo" src="../assets/img/hmg-logo.png" alt="HMG Logo">
+                <img src="/assets/img/iigb-logo-big-white.png" alt="Invest in Great Britain" class="img-responsive">
+            </h1>
+            {% block video %}
+            {% endblock %}
+        </div>
+    </div>
+    <nav>
+        <ul class="text-center list-inline dit-home-section-anchors">
+            {% block menu_items %}
+            {% endblock %}
+        </ul>
+    </nav>
+
+    <div class="modal fade" id="heroVideo" role="dialog">
+        <div class="modal-dialog video-wrapper">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/yoHrRcKIBKw" frameborder="0"
+                    allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <video autoplay loop poster="/assets/img/northern-powerhouse.jpg" class="dit-hero__video-bg">
+        <source src="/assets/vid/northern-powerhouse.mp4" type="video/mp4">
+    </video>
+</div>
+
+{{sections.reasons_to_choose.contents|safe}}
+
+{{sections.key_factors.contents|safe}}
+
+{% include "../partials/bullet-list.html" %}
+
+{% endblock %}

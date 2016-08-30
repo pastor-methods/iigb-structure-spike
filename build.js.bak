@@ -1,0 +1,260 @@
+"use strict";
+
+var metalsmith = require('metalsmith'),
+  markdown = require('metalsmith-markdown'),
+  layouts = require('metalsmith-layouts'),
+  sass = require('metalsmith-sass'),
+  swig = require('swig'),
+  fs = require('fs'),
+  path = require('path'),
+  _ = require('underscore');
+
+var languages = '\/us\/|\/de\/|\/cn\/';
+
+var makeLangFolder = function(files, metalsmith, done) {
+  for (var file in files) {
+    if (file.match(languages)) {
+      var fileUrlTmp = file.split('/');
+      //removes the folder 'home'
+      if (fileUrlTmp[0] === 'home') {
+        fileUrlTmp.shift();
+      }
+      var startLang = fileUrlTmp.splice(-2, 1);
+      var fileUrl = fileUrlTmp.unshift(startLang);
+      fileUrl = fileUrlTmp.join('/');
+      var data = files[file];
+      delete files[file];
+      files[fileUrl] = data;
+    }
+  }
+  done();
+};
+
+var makeIndex = function(files, metalsmith, done) {
+  var folders = [];
+  var filesWithLang = [];
+  var levels = {};
+  for (var file in files) {
+    if (file.match(languages)) {
+      var folder = path.dirname(file);
+      files[file].pathLang = folder;
+      filesWithLang.push(files[file]);
+      folders.push(folder);
+    }
+  }
+
+  //find unique folder paths
+  folders = _.uniq(folders);
+
+  //concat the files in those paths
+  for (var i = 0; i < folders.length; i++) {
+    var folderPath = folders[i];
+    var language;
+    var folderName;
+    var location;
+    var toIndex = '';
+    var templateIndexName = '';
+    var imagePath = '';
+    var thumbnailPath = '';
+    var heroVideoPath = '';
+    var heroImagePath = '';
+    var fullVideoPath = '';
+    var pageTitle = '';
+    var intro = '';
+    var orderLevel = '';
+    var toToc = [];
+    for (var j = 0; j < filesWithLang.length; j++) {
+      var fileWithLang = filesWithLang[j];
+      if (fileWithLang.pathLang === folderPath) {
+        //add the folder name where index is
+        folderName = (function() {
+          var ee = folderPath.split("/");
+          var ii = ee.slice(1, -1);
+          return ii[ii.length - 1] || '';
+        })();
+        //add the location for breadcrumb
+        location = (function() {
+          var ee = folderPath.split("/");
+          var lang = ee.pop();
+          var ff = ee.slice(1);
+          var buffer = [];
+          var link = '/' + lang;
+          for (var i = 0; i < ff.length; i++) {
+            link += '/' + ff[i];
+            buffer.push({
+              name: ff[i],
+              link: link
+            });
+          }
+          return buffer;
+        })();
+        //add language
+        language = (function() {
+          var ee = folderPath.split("/");
+          return ee.pop();
+        })();
+        //add a layout to the index file
+        if (fileWithLang.indexTemplate) {
+          templateIndexName = fileWithLang.indexTemplate;
+        }
+        //add an image path to the index file
+        if (fileWithLang.image) {
+          imagePath = fileWithLang.image;
+        }
+        //add a thumbnail path to the index file
+        if (fileWithLang.thumbnail) {
+          thumbnailPath = fileWithLang.thumbnail;
+        }
+        //add a hero video path to the index file
+        if (fileWithLang.heroVideo) {
+          heroVideoPath = fileWithLang.heroVideo;
+        }
+        //add a hero image path to the index file
+        if (fileWithLang.heroImage) {
+          heroImagePath = fileWithLang.heroImage;
+        }
+        //add a full video path to the index file
+        if (fileWithLang.fullVideo) {
+          fullVideoPath = fileWithLang.fullVideo;
+        }
+        //add a title to the index file
+        if (fileWithLang.pageTitle) {
+          pageTitle = fileWithLang.pageTitle;
+        }
+        //add an intro text to the index file
+        if (fileWithLang.intro) {
+          intro = fileWithLang.intro;
+        }
+        //add an order to the levels
+        if (fileWithLang.orderLevel) {
+          orderLevel = fileWithLang.orderLevel;
+        }
+        toIndex += fileWithLang.contents.toString();
+        toToc.push(fileWithLang.title);
+      }
+    }
+    files[folderPath + '/index.html'] = {
+      layout: templateIndexName,
+      image: imagePath,
+      thumbnail: thumbnailPath,
+      heroVideo: heroVideoPath,
+      heroImage: heroImagePath,
+      fullVideo: fullVideoPath,
+      pageTitle: pageTitle,
+      intro: intro,
+      folder: folderName,
+      location: location,
+      language: language,
+      contents: new Buffer(toIndex),
+      toc: toToc
+    };
+    levels[i] = {
+      path: folderPath,
+      data: {
+        name: (function() {
+          var ee = folderPath.split("/");
+          var ii = ee.slice(1, -1);
+          return ii[ii.length - 1] || '';
+        })(),
+        uri: (function() {
+          var ee = folderPath.split("/");
+          var lang = ee.pop();
+          var ff = ee.slice(1);
+          var link = lang + '/' + ff.join('/');
+          return link;
+        })(),
+        orderLevel: orderLevel,
+        thumbnail: thumbnailPath,
+        heroVideo: heroVideoPath,
+        heroImage: heroImagePath,
+        fullVideo: fullVideoPath,
+        intro: intro
+      }
+    };
+  }
+  // delete partial files
+  for (var file in files) {
+    if (path.extname(file) === ".html") {
+      if (path.basename(file) !== "index.html") {
+        delete files[file];
+      }
+    }
+  }
+  //add children data into parent
+  for (var file in files) {
+    var langArray = ['/cn', '/de', '/us'];
+    for (var l = 0; l < langArray.length; l++) {
+      //divide files by lang
+      if (file.match(langArray[l])) {
+        var fileLength = path.dirname(file).split('/').length;
+        var levelMatch = path.dirname(file).replace(langArray[l], "");
+        var subLevel = [];
+        for (var obj in levels) {
+          var levelsPath = levels[obj].path;
+          if (levelsPath.match(langArray[l])) {
+            var levelLength = levelsPath.split('/').length;
+            if (fileLength + 1 === levelLength && levelsPath.match(levelMatch)) {
+              subLevel.push(levels[obj].data);
+            }
+          }
+        }
+        var orderedSubLevel = _.sortBy(subLevel, 'orderLevel');
+        files[file].subLevel = orderedSubLevel;
+      }
+    }
+  }
+  done();
+};
+
+// helper to slugify strings
+swig.setFilter('slug', function(content) {
+  var spacesToDashes = content.split(' ').join('-').toLowerCase();
+  var removeChars = spacesToDashes.replace(/[^a-zA-Z0-9\- ]/g, "");
+  return removeChars;
+});
+
+// helper to un-slugify strings and sentence case
+swig.setFilter('unslug', function(content) {
+  var unslug = content.split('-').join(' ');
+  return unslug.charAt(0).toUpperCase() + unslug.substr(1);
+});
+
+swig.setDefaults({
+  cache: false,
+  locals: {
+    now: function() {
+      return new Date();
+    }
+  }
+});
+
+metalsmith(__dirname)
+  .use(markdown())
+  .use(layouts({
+    engine: 'swig',
+    directory: 'layouts/content'
+  }))
+  .use(makeIndex)
+  .use(layouts({
+    engine: 'swig'
+  }))
+  .use(makeLangFolder)
+  .use(sass({
+    file: "scss/main.scss",
+    outputDir: './assets/css',
+    outputStyle: "compressed"
+  }))
+  .use(sass({
+    file: "scss/main-ie8.scss",
+    outputDir: './assets/css',
+    outputStyle: "compressed"
+  }))
+  .use(sass({
+    file: "scss/main-ie9.scss",
+    outputDir: './assets/css',
+    outputStyle: "compressed"
+  }))
+  .destination('./build')
+  .build(function(err) {
+    if (err) console.log(err)
+  });
