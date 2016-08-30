@@ -10,7 +10,7 @@
   },
   "scripts": {
     "start": "node server.js",
-    "postinstall": "node build.js"
+    "postinstall": "DEBUG=structure-parser node build.js"
   },
   "devDependencies": {
     "debug": "^2.2.0",
