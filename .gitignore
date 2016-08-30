@@ -9,4 +9,6 @@ npm-debug.log.*
 # Heroku
 *.env
 
-
+# Python
+venv
+*.pyc

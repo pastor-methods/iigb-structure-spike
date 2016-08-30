@@ -152,7 +152,8 @@ INSTALLED_APPS = [
     'djangocms_inherit',
     'djangocms_link',
     'reversion',
-    'website'
+    'gunicorn',
+    'website',
 ]
 
 LANGUAGES = (
